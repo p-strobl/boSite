@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/backend" libraries="{recipes/backend/node_modules}" />
     <file url="PROJECT" libraries="{@types/express, recipes/backend/node_modules}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
