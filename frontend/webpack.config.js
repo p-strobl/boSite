@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -38,9 +39,13 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false,
+              url: true,
               sourceMap: true,
-              modules: true,
+              import: true,
+              modules: {
+                mode: 'local',
+                localIdentName: '[local]--[hash:base64:5]',
+              },
             },
           },
           {
@@ -53,11 +58,9 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.scss'],
-  },
   devtool: 'source-map',
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
       template: resolve(__dirname, 'public', 'index.html'),
     }),
