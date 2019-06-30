@@ -21,8 +21,8 @@
       <option name="workingDir" value="$FileDir$" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="false">
-      <option name="arguments" value="--fix $FilePath$" />
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="$FilePath$" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
