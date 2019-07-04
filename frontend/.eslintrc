@@ -24,6 +24,7 @@
     "react/prop-types": ["warn"],
     "no-return-assign": ["off"],
     "no-restricted-syntax": ["error", "SequenceExpression"],
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "quotes": [
       "error",
       "single",

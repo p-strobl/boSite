@@ -23,8 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose
-  .connect(process.env.DB, { useNewUrlParser: true })
+mongoose.connect(process.env.DB, {dbName: 'mongodb', useNewUrlParser: true })
   .then(() => {
     console.log('Connection to MongoDB successful');
   })

@@ -10,13 +10,13 @@ module.exports = (request, response) => {
         count: result.length,
         collection: result.map(item => {
           return {
-            _id: item._id,
+            _id: item.id,
             name: item.name,
             title: item.title,
             recipeImage: item.recipeImage,
             request: {
               type: 'GET',
-              url: `http://localhost:5000/recipes/${item._id}`
+              url: `http://localhost:5000/recipes/${item.id}`
             }
           };
         })

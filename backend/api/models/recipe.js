@@ -9,8 +9,7 @@ const recipeSchema = mongoose.Schema({
   title: {
     type: String,
     required: true
-  },
-  recipeImage: String
+  }
 });
 
-module.exports = mongoose.model('Recipe', recipeSchema);
+module.exports = mongoose.model('Recipe', recipeSchema, 'bollection');

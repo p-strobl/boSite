@@ -23,7 +23,7 @@ module.exports = (request, response) => {
           recipeImage: result.recipeImage,
           request: {
             type: 'POST',
-            url: `http://localhost:5000/recipes/${result._id}`
+            url: `http://localhost:5000/recipes/${result.id}`
           }
         }
       });
