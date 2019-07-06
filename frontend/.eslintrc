@@ -25,6 +25,7 @@
     "no-return-assign": ["off"],
     "no-restricted-syntax": ["error", "SequenceExpression"],
     "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
     "quotes": [
       "error",
       "single",

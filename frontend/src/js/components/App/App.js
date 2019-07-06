@@ -1,34 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect  } from 'react';
 import axios from 'axios';
-import useAxios from '@use-hooks/axios';
 import styles from './App.scss';
 
-export default function App() {
+const fetchData = () => {
+
+};
+
+export default function App () {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState({
+    message: '',
+    state: false,
+  });
 
   const url = 'http://localhost:5000/recipes';
-  const [recipes, setRecipes] = useState({ recipes: [] });
 
   useEffect(() => {
-    const { response, loading, error } = useAxios({
-      url,
-      method: 'GET',
-      options: {
-        params: { recipes },
-      },
-      trigger: recipes
+    axios.get(url).then(result => {
+      setData(result.data.collection);
+      setLoading(false);
+    }).then(fetchedError => {
+      setError({
+        message: fetchedError,
+        state: true
+      })
     });
+  }, []);
 
-    setRecipes({
-      data: response,
-      isLoading: loading,
-      error
-    });
-  });
-  console.log('state', recipes);
+  const handleClick = (event) => {
+    console.log('Fetched', error.state);
+  };
 
   return (
-    <div className={styles.bla} key={1}>
-      <p>This a { recipes.data }</p>
-    </div>
+    <>
+      <h1 className={styles.bla}>Fetched Data</h1>
+      {loading ? <p>...is loading</p> : ''}
+      <div>
+        {
+          data.map(item => {
+            return <p key={item._id}>{item.name}</p>
+          })
+        }
+      </div>
+      <button type="button" onClick={event => handleClick(event)}>Click me</button>
+    </>
   );
-}
+};
