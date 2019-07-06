@@ -1,13 +1,7 @@
-const GET = require('./recipes_GET');
-const GETbyID = require('./recipes_GETbyID');
-const POST = require('./recipes_POST');
-const PATCH = require('./recipes_PATCH');
-const DELETE = require('./recipes_DELETE');
-
 module.exports = {
-  GET,
-  GETbyID,
-  POST,
-  PATCH,
-  DELETE
+  GET: require('./recipes_GET'),
+  GETbyID: require('./recipes_GETbyID'),
+  POST: require('./recipes_POST'),
+  PATCH: require('./recipes_PATCH'),
+  DELETE: require('./recipes_DELETE')
 };

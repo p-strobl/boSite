@@ -1,12 +1,8 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './App.scss';
 
-const fetchData = () => {
-
-};
-
-export default function App () {
+export default function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({
@@ -17,15 +13,19 @@ export default function App () {
   const url = 'http://localhost:5000/recipes';
 
   useEffect(() => {
-    axios.get(url).then(result => {
-      setData(result.data.collection);
-      setLoading(false);
-    }).then(fetchedError => {
-      setError({
-        message: fetchedError,
-        state: true
+    axios
+      .get(url)
+      .then((result) => {
+        console.log('result', result);
+        setData(result.data.collection);
+        setLoading(false);
       })
-    });
+      .then((fetchedError) => {
+        setError({
+          message: fetchedError,
+          state: true,
+        });
+      });
   }, []);
 
   const handleClick = (event) => {
@@ -37,13 +37,13 @@ export default function App () {
       <h1 className={styles.bla}>Fetched Data</h1>
       {loading ? <p>...is loading</p> : ''}
       <div>
-        {
-          data.map(item => {
-            return <p key={item._id}>{item.name}</p>
-          })
-        }
+        {data.map((item) => {
+          return <p key={item._id}>{item.name}</p>;
+        })}
       </div>
-      <button type="button" onClick={event => handleClick(event)}>Click me</button>
+      <button type="button" onClick={(event) => handleClick(event)}>
+        Click me
+      </button>
     </>
   );
-};
+}

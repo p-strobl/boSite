@@ -15,28 +15,29 @@
     "es6": true
   },
   "plugins": [
-    "react"
+    "react", "prettier"
   ],
   "rules": {
     "max-len": ["error", {"code": 100}],
-    "prefer-promise-reject-errors": ["off"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": ["warn"],
     "no-return-assign": ["off"],
     "no-restricted-syntax": ["error", "SequenceExpression"],
     "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "prefer-promise-reject-errors": ["off"],
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": ["warn"],
+    "switch-colon-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
+    ],
     "quotes": [
       "error",
       "single",
       { "avoidEscape": true, "allowTemplateLiterals": false }
-    ],
-    "switch-colon-spacing":
-      ["error",
-        {
-          "after": true,
-          "before": false
-        }
-      ]
+    ]
   }
 }

@@ -1,5 +1,3 @@
-const GET = require('./remaining_GET');
-
 module.exports = {
-  GET
+  GET: require('./remaining_GET')
 };

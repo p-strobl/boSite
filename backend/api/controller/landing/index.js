@@ -1,5 +1,3 @@
-const GET = require('./landing_GET');
-
 module.exports = {
-  GET
+  GET: require('./landing_GET')
 };
