@@ -17,7 +17,7 @@ export default function App() {
       .get(url)
       .then((result) => {
         console.log('result', result);
-        setData(result.data.collection);
+        setData(result);
         setLoading(false);
       })
       .then((fetchedError) => {
@@ -37,9 +37,9 @@ export default function App() {
       <h1 className={styles.bla}>Fetched Data</h1>
       {loading ? <p>...is loading</p> : ''}
       <div>
-        {data.map((item) => {
-          return <p key={item._id}>{item.name}</p>;
-        })}
+        {/* {data.map((item) => { */}
+        {/*  return <p key={item._id}>{item.name}</p>; */}
+        {/* })} */}
       </div>
       <button type="button" onClick={(event) => handleClick(event)}>
         Click me
