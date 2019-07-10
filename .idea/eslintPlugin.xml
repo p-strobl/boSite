@@ -4,5 +4,6 @@
     <option name="eslintRcFile" value="D:\Code-Projects\Privat\recipes\frontend\.eslintrc" />
     <option name="eslintExecutable" value="C:\Users\pstrh\AppData\Roaming\npm\eslint.cmd" />
     <option name="nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <option name="pluginEnabled" value="true" />
   </component>
 </project>
