@@ -1,18 +1,16 @@
 import React from "react";
 import { useRoutes } from "hookrouter";
 
-import Home from "./Home";
-import Recipes from "./Recipes";
-import PageNotFound from "./PageNotFound";
+import LandingPage from "../components/c-001-LandingPage";
+import Recipes from "../components/c-002-Recipes";
+import PageNotFound from "../components/404-PageNotFound";
 
 const routes = {
-  "/": () => <Home />,
+  "/": () => <LandingPage />,
   "/recipes": () => <Recipes />,
 };
 
 export default function AppRoutes() {
-  console.log(routes);
   const usedRoutes = useRoutes(routes);
-
   return usedRoutes || <PageNotFound />;
 }

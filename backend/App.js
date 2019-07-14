@@ -31,7 +31,7 @@ mongoose.connect(process.env.DB, {dbName: 'mongodb', useNewUrlParser: true })
     console.log('Connection to MongoDB failed', err);
   });
 
-// Handle Routes
+// Handle routes
 app.use('/', routes);
 
 // Handle Errors

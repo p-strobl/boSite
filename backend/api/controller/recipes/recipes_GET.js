@@ -2,7 +2,7 @@ const Recipe = require('../../models/recipe');
 
 module.exports = (request, response) => {
   Recipe.find()
-    .select('_id name title recipeImage')
+    .select('_id name title ingredients infos preparation')
     .exec()
     .then(result => {
       console.log('GET request successful', result);
@@ -13,7 +13,9 @@ module.exports = (request, response) => {
             _id: item.id,
             name: item.name,
             title: item.title,
-            recipeImage: item.recipeImage,
+            ingredients: item.ingredients,
+            infos: item.infos,
+            preparation: item.preparation,
             request: {
               type: 'GET',
               url: `http://localhost:5000/recipes/${item.id}`

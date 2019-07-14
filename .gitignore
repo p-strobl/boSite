@@ -3,5 +3,4 @@ node_modules
 /dist
 frontend/dist/
 
-.idea/workspace.xml
-.idea/workspace.xml
+.idea

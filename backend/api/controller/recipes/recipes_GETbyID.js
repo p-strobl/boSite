@@ -4,7 +4,7 @@ module.exports = (request, response) => {
   const id = request.params.id;
 
   Recipe.findById(id)
-    .select('_id name title recipeImage')
+    .select('_id name title ingredients infos preparation')
     .exec()
     .then(collection => {
       console.log('GETbyID request successful', collection);

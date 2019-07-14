@@ -1,15 +1,16 @@
-const { resolve } = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { resolve } = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/",
   },
   stats: {
     children: false,
@@ -20,7 +21,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
       },
       {
@@ -28,7 +29,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'html-loader',
+            loader: "html-loader",
           },
         ],
       },
@@ -37,19 +38,19 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               url: true,
               sourceMap: true,
               import: true,
               modules: {
-                mode: 'local',
-                localIdentName: '[local]--[hash:base64:5]',
+                mode: "local",
+                localIdentName: "[local]--[hash:base64:5]",
               },
             },
           },
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               sourceMap: true,
             },
@@ -58,15 +59,18 @@ module.exports = {
       },
     ],
   },
-  devtool: 'source-map',
+  devServer: {
+    historyApiFallback: true,
+  },
+  devtool: "source-map",
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-      template: resolve(__dirname, 'public', 'index.html'),
+      template: resolve(__dirname, "public", "index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: 'bundle.css',
+      filename: "bundle.css",
     }),
   ],
-  mode: devMode ? 'development' : 'production',
+  mode: devMode ? "development" : "production",
 };
