@@ -4,7 +4,7 @@
   "description": "Recipes Site",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd backend && nodemon server.js\" \"cd frontend && npm start\"",
+    "start": "concurrently \"cd backend && server.js\" \"cd frontend && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Philipp Strobl",

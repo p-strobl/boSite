@@ -23,6 +23,7 @@
     "no-restricted-syntax": ["error", "SequenceExpression"],
     "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "no-default-export": ["off"],
     "prefer-promise-reject-errors": ["off"],
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
