@@ -1,10 +1,10 @@
 import React from "react";
 
-import Navigation from "../c-003-Navigation";
-import Routes from "../../routes";
-import Footer from "../c-004-Footer";
+import { Navigation } from "../c-003-Navigation";
+import { Routes } from "../../routes";
+import { Footer } from "../c-004-Footer";
 
-export default function App() {
+export function App() {
   return (
     <>
       <header>
