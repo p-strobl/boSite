@@ -43,7 +43,10 @@ module.exports = {
               url: true,
               sourceMap: true,
               import: true,
-              modules: true,
+              localsConvention: "asIs",
+              modules: {
+                localIdentName: "[name]|[hash:base64:5]",
+              },
             },
           },
           {

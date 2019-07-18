@@ -8,10 +8,10 @@ import { Footer } from "../Layouts/l-003-Footer";
 
 export function App() {
   return (
-    <App className={styles.app}>
+    <div className={styles.app}>
       <Header />
       <Main />
       <Footer />
-    </App>
+    </div>
   );
 }

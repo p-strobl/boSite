@@ -5,15 +5,14 @@ import RouterContext from "../../../context/RouteContext";
 
 export function LinkList() {
   const routes = useContext(RouterContext);
-  return Object.entries(routes).map(([key, value]) => {
+  const links = Object.entries(routes).map(([key, value]) => {
     return (
-      <ul key={uuidv4()}>
-        <li key={uuidv4()}>
-          <A key={uuidv4()} href={value}>
-            {key}
-          </A>
-        </li>
-      </ul>
+      <li key={uuidv4()}>
+        <A key={uuidv4()} href={value}>
+          {key}
+        </A>
+      </li>
     );
   });
+  return <ul>{links}</ul>;
 }
