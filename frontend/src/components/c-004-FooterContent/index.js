@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Footer() {
+export function FooterContent() {
   return (
     <>
       <div>Footer</div>
