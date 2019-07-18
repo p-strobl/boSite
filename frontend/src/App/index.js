@@ -1,21 +1,17 @@
 import React from "react";
 
-import { Navigation } from "../components/c-003-Navigation";
-import { Routes } from "../routes";
-import { Footer } from "../components/c-004-Footer";
+import styles from "./app.scss";
+
+import { Header } from "../Layouts/l-001-Header";
+import { Main } from "../Layouts/l-002-Main";
+import { Footer } from "../Layouts/l-003-Footer";
 
 export function App() {
   return (
-    <>
-      <header>
-        <Navigation />
-      </header>
-      <main>
-        <Routes />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+    <App className={styles.app}>
+      <Header />
+      <Main />
+      <Footer />
+    </App>
   );
 }
