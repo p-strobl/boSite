@@ -1,3 +1,6 @@
+@import "../../scss/globals";
+
 .header {
-  background-color: blueviolet;
+  @include grid();
+  background-color: green;
 }
