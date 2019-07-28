@@ -2,6 +2,10 @@
 
 .app {
   background-color: red;
-  @include grid-container();
+  @include module-container();
+
+  @include respond-to(1) {
+    color: green;
+  }
 
 }

@@ -1,13 +1,41 @@
-@mixin responsive($sm: null, $md: null, $lg: null, $xl: null) {
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) { ... }
+@mixin respond-to($breakpoint-indices) {
 
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) { ... }
+  @if ($breakpoint-indices > 0) {
+    @each $breakpoint in $breakpoint-indices {
 
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) { ... }
-
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) { ... }
+    }
+    @if $breakpoint-indices == 1 {
+      // Small devices (landscape phones, 576px and up)
+      @media (min-width: 576px) {
+        @content
+      }
+    }
+    @else if $breakpoint-indices == 2 {
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        @content
+      }
+    }
+    @else if $breakpoint-indices == 3 {
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        @content
+      }
+    }
+    @else if $breakpoint-indices == 4 {
+      // Extra large devices (large desktops, 1200px and up)
+      @media (min-width: 1200px) {
+        @content
+      }
+    }
+    @else if $breakpoint-indices == 5 {
+      // Extra large devices (extra large desktops, 1440px and up)
+      @media (min-width: 1440px) {
+        @content
+      }
+    }
+  }
+  @else {
+    @warn 'ERROR: respond-to was called with invalid arguments: ' + $breakpoint-indices '';
+  }
 }

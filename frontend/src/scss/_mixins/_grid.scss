@@ -1,10 +1,10 @@
 @mixin grid() {
   display: grid;
-  grid-column-gap: 20px;
+  grid-column-gap: 1vw;
   grid-template-columns: repeat(12, 1fr);
 }
 
-@mixin grid-container($fluid: null) {
+@mixin module-container($fluid: null) {
   @if $fluid == "fluid"{
     width: 100%;
   } @else {
