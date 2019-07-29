@@ -4,7 +4,7 @@
   background-color: red;
   @include module-container();
 
-  @include respond-to(1 2 3) {
+  @include respond-to(1 2 3 4 5) {
     color: green;
   }
 

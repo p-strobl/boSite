@@ -1,0 +1,9 @@
+@mixin module-container($fluid: null) {
+  @if $fluid == "fluid"{
+    width: 100%;
+  } @else {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}

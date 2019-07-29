@@ -3,13 +3,3 @@
   grid-column-gap: 1vw;
   grid-template-columns: repeat(12, 1fr);
 }
-
-@mixin module-container($fluid: null) {
-  @if $fluid == "fluid"{
-    width: 100%;
-  } @else {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-}
