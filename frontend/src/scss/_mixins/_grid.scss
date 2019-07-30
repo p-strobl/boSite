@@ -3,3 +3,12 @@
   grid-column-gap: 1vw;
   grid-template-columns: repeat(12, 1fr);
 }
+
+@mixin grid-start-end($start, $end) {
+  grid-column-start: $start;
+  grid-column-end: $end;
+}
+
+@mixin grid-span($columns) {
+  grid-column: span #{$columns};
+}

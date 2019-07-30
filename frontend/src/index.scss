@@ -22,6 +22,7 @@ html {
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 /**
@@ -161,8 +162,11 @@ input,
 optgroup,
 select,
 textarea {
+  border-radius: 0;
+  color: inherit;
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
+  letter-spacing: inherit;
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
@@ -196,6 +200,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  pointer-events: none;
 }
 
 /**
@@ -307,6 +312,10 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+}
+
+ul {
+  list-style: none;
 }
 
 /* Interactive
