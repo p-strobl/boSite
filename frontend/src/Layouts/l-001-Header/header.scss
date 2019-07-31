@@ -1,15 +1,1 @@
 @import "../../scss/globals";
-
-.header {
-  background-color: green;
-}
-
-.header ul {
-  background-color: yellow;
-  @include grid();
-}
-
-.header ul li {
-  @include grid-span(4);
-  background-color: coral;
-}

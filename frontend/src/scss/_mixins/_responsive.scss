@@ -1,36 +1,53 @@
-@mixin respond-to($breakpoint-indices: false) {
+@mixin respond-to($breakpoint-indices) {
 
-  $phone: "only screen and (min-width: 321px) and (max-width: 599px)";
-  $tablet-portrait: "only screen and (min-width: 600px) and (max-width: 899px)";
-  $tablet-landscape: "only screen and (min-width: 900px) and (max-width: 1199px)";
-  $desktop: "only screen and (min-width: 1200px) and (max-width: 1799px)";
-  $desktop-large: "only screen and (min-width: 1800px)";
+  $phone-portrait: "only screen and (min-width: 321px) and (max-width: 479.98px)";
+  $phone-landscape: "only screen and (min-width: 480px) and (max-width: 767.98px)";
+  $tablet-portrait: "only screen and (min-width: 768px) and (max-width: 991.98px)";
+  $tablet-landscape: "only screen and (min-width: 992px) and (max-width: 1199.98px)";
+  $desktop-small: "only screen and (min-width: 1200px) and (max-width: 1439.98px)";
+  $desktop: "only screen and (min-width: 1440px) and (max-width: 1920.98px)";
+  $desktop-large: "only screen and (min-width: 1921px)";
 
   @if $breakpoint-indices {
     @for $i from 1 through length($breakpoint-indices) {
       $breakpoint-index: nth($breakpoint-indices, $i);
 
       @if $breakpoint-index == 1 {
-        @media #{$phone} {
+        @media #{$phone-portrait} {
           @content
         }
-      } @else if $breakpoint-index == 2 {
+      }
+      @else if $breakpoint-index == 2 {
+        @media #{$phone-landscape} {
+          @content
+        }
+      }
+      @else if $breakpoint-index == 3 {
         @media #{$tablet-portrait} {
           @content
         }
-      } @else if $breakpoint-index == 3 {
+      }
+      @else if $breakpoint-index == 4 {
         @media #{$tablet-landscape} {
           @content
         }
-      } @else if $breakpoint-index == 4 {
+      }
+      @else if $breakpoint-index == 5 {
+        @media #{$desktop-small} {
+          @content
+        }
+      }
+      @else if $breakpoint-index == 6 {
         @media #{$desktop} {
           @content
         }
-      } @else if $breakpoint-index == 5 {
+      }
+      @else if $breakpoint-index == 7 {
         @media #{$desktop-large} {
           @content
         }
-      } @else {
+      }
+      @else {
         @error 'ERROR: respond-to was called with invalid arguments: ' + $breakpoint-indices;
       }
     }
