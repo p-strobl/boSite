@@ -1,0 +1,7 @@
+@import "../../scss/globals.scss";
+
+.BoundingBar {
+  @include module-container(fluid);
+  background-color: $color_ash-grey;
+  height: 25px;
+}

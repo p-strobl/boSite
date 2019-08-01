@@ -1,12 +1,1 @@
-@import "../scss/globals";
-
-.app {
-  background-color: red;
-
-  @include respond-to(2 3 4 5 6 7) {
-    @include module-container();
-    background-color: $color_white-smoke;
-    @include box-shadow(standard);
-  }
-
-}
+@import "../scss/_globals";

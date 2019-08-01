@@ -4,6 +4,15 @@
   } @else {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+
+    @include respond-to(1) {
+      width: 100%;
+    }
+    @include respond-to(2) {
+      width: 90%;
+    }
+    @include respond-to(3 4 5) {
+      width: 80%;
+    }
   }
 }
