@@ -1,0 +1,10 @@
+@import "../../scss/globals";
+
+.FooterContent {
+  @include module-container();
+  height: 30px;
+  
+  @include respond-to(2 3 4 5) {
+    height: 100px;
+  }
+}

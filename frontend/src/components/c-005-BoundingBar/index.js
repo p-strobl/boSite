@@ -1,11 +1,11 @@
 import React from "react";
 
-import style from "./BoundingBar.scss";
+import styles from "./BoundingBar.scss";
 
 export function BoundingBar() {
   return (
     <>
-      <div className={`${style.BoundingBar}`} />
+      <div className={`${styles.BoundingBar}`} />
     </>
   );
 }

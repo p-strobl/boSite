@@ -1,9 +1,6 @@
 import React from "react";
+import styles from "./FooterContent.scss";
 
 export function FooterContent() {
-  return (
-    <>
-      <div>Footer</div>
-    </>
-  );
+  return <nav className={`${styles.FooterContent}`}>Footer</nav>;
 }

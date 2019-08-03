@@ -1,11 +1,11 @@
 import React from "react";
-import style from "./main.scss";
+import styles from "./main.scss";
 
 import { Routes } from "../../routes";
 
 export function Main() {
   return (
-    <main className={`${style.Main}`}>
+    <main className={`${styles.Main}`}>
       <Routes />
     </main>
   );
