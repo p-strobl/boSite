@@ -1,6 +1,6 @@
 @import "../../scss/globals";
 
-.Header {
+.header {
   @include module-container(fluid);
   background-color: $color_lightest-blue;
 }

@@ -44,9 +44,9 @@ module.exports = {
               sourceMap: true,
               import: true,
               localsConvention: "asIs",
-              modules: {
-                localIdentName: "[name]|[hash:base64:5]",
-              },
+              // modules: {
+              //   localIdentName: "[name]|[hash:base64:5]",
+              // },
             },
           },
           {

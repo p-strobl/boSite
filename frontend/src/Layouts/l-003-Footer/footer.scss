@@ -1,6 +1,6 @@
 @import "../../scss/globals";
 
-.Footer {
+.footer {
   @include module-container(fluid);
   background-color: $color_lightest-blue;
 }

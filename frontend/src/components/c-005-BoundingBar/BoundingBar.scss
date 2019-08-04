@@ -1,7 +1,11 @@
 @import "../../scss/globals.scss";
 
-.BoundingBar {
+.bounding-bar {
   @include module-container(fluid);
   background-color: $color_ash-grey;
   height: 25px;
+}
+
+.bounding-bar--active {
+  color: red;
 }

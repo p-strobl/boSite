@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./FooterContent.scss";
+import cx from "classnames";
+
+import "./FooterContent.scss";
 
 export function FooterContent() {
-  return <nav className={`${styles.FooterContent}`}>Footer</nav>;
+  return <nav className={cx("footer-content")}>Footer</nav>;
 }
