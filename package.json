@@ -7,7 +7,6 @@
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install && run start",
     "start": "concurrently \"cd backend && server.js\" \"cd frontend && npm start\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "run-p install:*"
   },
   "author": "Philipp Strobl",
