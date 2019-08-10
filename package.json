@@ -4,7 +4,6 @@
   "description": "Recipes Site",
   "main": "index.js",
   "scripts": {
-    "install": "npm install",
     "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install && run start",
     "start": "concurrently \"cd backend && server.js\" \"cd frontend && npm start\"",
