@@ -82,6 +82,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
       filename: "assets/css/bundle.css",
+      publicPath: "/",
     }),
   ],
   // Providing the mode configuration option tells webpack to use its built-in optimizations.

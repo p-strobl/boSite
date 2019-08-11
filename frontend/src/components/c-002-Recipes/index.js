@@ -9,7 +9,7 @@ export default function Recipes() {
     state: false,
   });
 
-  const url = "http://localhost:5000/recipes";
+  const url = "/recipes";
 
   useEffect(() => {
     axios
@@ -29,7 +29,7 @@ export default function Recipes() {
 
   return (
     <>
-      <div>Recipes</div>
+      <div>${data}</div>
     </>
   );
 }

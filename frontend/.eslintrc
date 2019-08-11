@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
+  },
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
@@ -18,7 +23,7 @@
     "react", "prettier"
   ],
   "rules": {
-    "max-len": ["error", {"code": 100}],
+    "max-len": ["error", {"code": 120}],
     "no-return-assign": ["off"],
     "no-restricted-syntax": ["error", "SequenceExpression"],
     "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
