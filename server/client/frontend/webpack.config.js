@@ -10,7 +10,7 @@ module.exports = {
   output: {
     // The output property tells webpack where to emit the bundles it creates and file name.
     filename: "assets/js/bundle.js", // Bundle name.
-    path: resolve(__dirname, "dist"), // Bundle path.
+    path: resolve(__dirname, "../dist"), // Bundle path.
   },
   stats: {
     // The stats option lets you precisely control what bundle information gets displayed
