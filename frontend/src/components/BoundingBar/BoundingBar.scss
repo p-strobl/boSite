@@ -1,0 +1,7 @@
+@import "../../config/global-mixins";
+
+.bounding-bar {
+  @include module-container(fluid);
+  background-color: $color_ash-grey;
+  height: 25px;
+}

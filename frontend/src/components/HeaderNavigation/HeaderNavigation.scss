@@ -1,0 +1,10 @@
+@import "../../config/global-mixins";
+
+.header-navigation {
+  @include module-container();
+  height: 30px;
+  
+  @include respond-to(2 3 4 5) {
+    height: 100px;
+  }
+}
