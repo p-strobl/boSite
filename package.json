@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install:backend": "cd backend && npm install",
-    "install:frontend": "cd frontend && npm install && run start",
+    "install:frontend": "cd frontend && npm install",
     "start": "concurrently \"cd backend && server.js\" \"cd frontend && npm start\"",
     "postinstall": "run-p install:*"
   },
