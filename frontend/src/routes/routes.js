@@ -4,7 +4,7 @@ import RouterContext from "../context/RouteContext";
 
 import LandingPage from "../components/LandingPage/LandingPage";
 import Recipes from "../components/Recipes";
-import PageNotFound from "../components/404-PageNotFound/404-PageNotFound";
+import { PageNotFound } from "../components/404-PageNotFound/404-PageNotFound";
 
 export function Routes() {
   const { home, recipes } = useContext(RouterContext);
