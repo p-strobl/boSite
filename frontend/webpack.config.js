@@ -11,6 +11,7 @@ module.exports = {
     // The output property tells webpack where to emit the bundles it creates and file name.
     filename: "assets/js/bundle.js", // Bundle name.
     path: resolve(__dirname, "../backend/client/dist"), // Bundle path.
+    crossOriginLoading: "anonymous",
   },
   stats: {
     // The stats option lets you precisely control what bundle information gets displayed

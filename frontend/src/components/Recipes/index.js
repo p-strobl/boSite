@@ -1,3 +1,4 @@
+import uuidv4 from "uuid/v4";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -9,14 +10,13 @@ export default function Recipes() {
     state: false,
   });
 
-  const url = "/recipes";
+  const url = "http://localhost:5000/recipes";
 
   useEffect(() => {
     axios
       .get(url)
       .then((result) => {
-        console.log("result", result);
-        setData(result);
+        setData(result.data.collection);
         setLoading(false);
       })
       .catch((fetchedError) => {
@@ -29,7 +29,14 @@ export default function Recipes() {
 
   return (
     <>
-      <div>${data}</div>
+      {data.map((item) => {
+        return (
+          <div key={uuidv4()}>
+            <h1 key={uuidv4()}>{item.title}</h1>
+            <p key={uuidv4()}>{item.infos.info}</p>
+          </div>
+        );
+      })}
     </>
   );
 }
