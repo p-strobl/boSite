@@ -1,6 +1,7 @@
-@import "../../config/global-mixins";
+@import "Src/config/global-mixins";
 
-.footer {
+.header {
   @include module-container(fluid);
   background-color: $color_lightest-blue;
+  grid-area: header;
 }

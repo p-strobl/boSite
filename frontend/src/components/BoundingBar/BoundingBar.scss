@@ -1,4 +1,4 @@
-@import "../../config/global-mixins";
+@import "Src/config/global-mixins";
 
 .bounding-bar {
   @include module-container(fluid);

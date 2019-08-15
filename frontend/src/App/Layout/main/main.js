@@ -3,9 +3,9 @@ import Class from "classnames";
 
 import "./main.scss";
 
-import { Routes } from "../../routes/Routes";
+import { Routes } from "Routes/routes";
 
-export function Main() {
+export function main() {
   return (
     <main className={Class("main")}>
       <Routes />

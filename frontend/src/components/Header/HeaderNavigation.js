@@ -3,12 +3,12 @@ import Class from "classnames";
 
 import "./HeaderNavigation.scss";
 
-import { LinkList } from "./LinkList";
+import { HeaderLinkList } from "./HeaderLinkList";
 
 export function HeaderNavigation() {
   return (
-    <nav className={Class("header-navigation")}>
-      <LinkList />
+    <nav className={Class("HeaderNavigation")}>
+      <HeaderLinkList />
     </nav>
   );
 }

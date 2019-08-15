@@ -6,11 +6,23 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: "./src/index.js", // An entry point indicates which module webpack should use.
+  // These options change how modules are resolved
+  resolve: {
+    modules: [resolve(__dirname, "./src"), "node_modules"],
+    extensions: [".js", ".jsx", ".json"],
+    alias: {
+      Src: resolve(__dirname, "./src"),
+      Components: resolve(__dirname, "./src/components"),
+      Routes: resolve(__dirname, "./src/routes"),
+      Context: resolve(__dirname, "./src/context"),
+    },
+  },
+  // An entry point indicates which module webpack should use
+  entry: "./src/index.js",
+  // The output property tells webpack where to emit the bundles it creates and file name
   output: {
-    // The output property tells webpack where to emit the bundles it creates and file name.
     filename: "assets/js/bundle.js", // Bundle name.
-    path: resolve(__dirname, "../backend/client/dist"), // Bundle path.
+    path: resolve(__dirname, "../server/client/dist"), // Bundle path.
     crossOriginLoading: "anonymous",
   },
   stats: {
@@ -62,10 +74,6 @@ module.exports = {
             },
           },
         ],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loaders: "url-loader?limit=1024&assets/css=fonts/[name].[ext]",
       },
     ],
   },

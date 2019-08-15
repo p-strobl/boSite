@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
+import PropType from "prop-types";
 import { useRoutes } from "hookrouter";
-import RouterContext from "../context/RouteContext";
 
-import LandingPage from "../components/LandingPage/LandingPage";
-import Recipes from "../components/Recipes";
-import { PageNotFound } from "../components/404-PageNotFound/404-PageNotFound";
+import RouterContext from "Context/RouteContext";
+
+import LandingPage from "Components/LandingPage/LandingPage";
+import Recipes from "Components/Recipes/Recipes";
+import { PageNotFound } from "Components/404-PageNotFound/404-PageNotFound";
 
 export function Routes() {
   const { home, recipes } = useContext(RouterContext);
@@ -15,3 +17,7 @@ export function Routes() {
   const usedRoutes = useRoutes(routes);
   return usedRoutes || <PageNotFound />;
 }
+
+Routes.PropType = {
+  routes: PropType.object,
+};

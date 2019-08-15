@@ -1,0 +1,17 @@
+@import "Src/config/global-mixins";
+
+.Header {
+  @include module-container(fluid);
+  @include module-container();
+  background-color: $color_lightest-blue;
+  // height: 30px;
+  
+  @include respond-to(2 3 4 5) {
+    // height: 100px;
+  }
+}
+
+.header {
+
+  grid-area: header;
+}

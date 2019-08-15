@@ -1,0 +1,6 @@
+@import "Src/config/global-mixins";
+
+.main {
+  @include module-container();
+  grid-area: main;
+}

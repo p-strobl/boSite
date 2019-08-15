@@ -1,18 +1,18 @@
 import React from "react";
-import cx from "classnames";
+import Class from "classnames";
 
 import "./app.scss";
 
-import { Header } from "../layout/Header/Header";
-import { Main } from "../layout/Main/Main";
-import { Footer } from "../layout/Footer/Footer";
+import { Header } from "Components/Header/Header";
+import { main } from "./Layout/main/main";
+import { footer } from "./Layout/footer/footer";
 
 export function App() {
   return (
-    <div className={cx("app")}>
+    <div className={Class("app")}>
       <Header />
-      <Main />
-      <Footer />
+      <main />
+      <footer />
     </div>
   );
 }
