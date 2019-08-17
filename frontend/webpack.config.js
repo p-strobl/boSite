@@ -9,7 +9,7 @@ module.exports = {
   // These options change how modules are resolved
   resolve: {
     modules: [resolve(__dirname, "./src"), "node_modules"],
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".jsx", ".json", "css", "scss"],
     alias: {
       Assets: resolve(__dirname, "./src/assets"),
       Components: resolve(__dirname, "./src/components"),
