@@ -8,7 +8,7 @@ const devMode = process.env.NODE_ENV !== "production";
 module.exports = {
   // These options change how modules are resolved
   resolve: {
-    modules: [resolve(__dirname, "./src"), "node_modules"],
+    // modules: [resolve(__dirname, "./src"), "node_modules"],
     extensions: [".js", ".jsx", ".json", "css", "scss"],
     alias: {
       Assets: resolve(__dirname, "./src/assets"),
