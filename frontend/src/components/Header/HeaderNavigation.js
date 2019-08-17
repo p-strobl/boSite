@@ -3,11 +3,11 @@ import Class from "classnames";
 
 import "./HeaderNavigation.scss";
 
-import { HeaderLinkList } from "./HeaderLinkList";
+import { HeaderLinkList } from "./HeaderLink";
 
 export function HeaderNavigation() {
   return (
-    <nav className={Class("HeaderNavigation")}>
+    <nav className={Class("header-navigation-wrapper")}>
       <HeaderLinkList />
     </nav>
   );

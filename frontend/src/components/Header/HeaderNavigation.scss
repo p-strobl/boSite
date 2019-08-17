@@ -1,0 +1,5 @@
+@import "Scss/_global-mixins.scss";
+
+.header-navigation-wrapper {
+  @include module-container
+}

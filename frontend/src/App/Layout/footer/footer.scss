@@ -1,7 +1,0 @@
-@import "Src/config/global-mixins";
-
-.footer {
-  @include module-container(fluid);
-  background-color: $color_lightest-blue;
-  grid-area: footer;
-}

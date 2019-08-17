@@ -11,10 +11,12 @@ module.exports = {
     modules: [resolve(__dirname, "./src"), "node_modules"],
     extensions: [".js", ".jsx", ".json"],
     alias: {
-      Src: resolve(__dirname, "./src"),
+      Assets: resolve(__dirname, "./src/assets"),
       Components: resolve(__dirname, "./src/components"),
-      Routes: resolve(__dirname, "./src/routes"),
       Context: resolve(__dirname, "./src/context"),
+      Routes: resolve(__dirname, "./src/routes"),
+      Scss: resolve(__dirname, "./src/scss"),
+      Src: resolve(__dirname, "./src"),
     },
   },
   // An entry point indicates which module webpack should use
@@ -74,6 +76,14 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/images",
+        },
       },
     ],
   },

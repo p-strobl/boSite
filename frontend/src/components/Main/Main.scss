@@ -1,4 +1,4 @@
-@import "Src/config/global-mixins";
+@import "Scss/_global-mixins.scss";
 
 .main {
   @include module-container();

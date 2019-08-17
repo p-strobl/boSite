@@ -1,10 +1,6 @@
-@import "Src/config/global-mixins";
+@import "Scss/_global-mixins.scss";
 
-.Footer {
-  @include module-container();
-  // height: 30px;
-  
-  @include respond-to(2 3 4 5) {
-    // height: 100px;
-  }
+.footer {
+  @include module-container(fluid);
+  background-color: $color_lightest-blue;
 }

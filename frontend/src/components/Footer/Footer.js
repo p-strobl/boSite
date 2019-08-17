@@ -1,8 +1,15 @@
 import React from "react";
 import Class from "classnames";
 
+import { BoundingBar } from "Components/BoundingBar";
+
 import "./Footer.scss";
 
 export function Footer() {
-  return <nav className={Class("Footer")}>Footer</nav>;
+  return (
+    <footer className={Class("footer")}>
+      <BoundingBar />
+      <div>Footer Content</div>
+    </footer>
+  );
 }

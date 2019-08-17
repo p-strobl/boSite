@@ -1,11 +1,6 @@
-@import "Src/config/global";
+@import "Scss/_global.scss";
+@import "Scss/_global-mixins.scss";
 
 html {
   font-family: "Fira Sans", sans-serif;
-}
-
-.app {
-  display: grid;
-  grid-template-rows: 10% auto 10%;
-  height: 100vh;
 }

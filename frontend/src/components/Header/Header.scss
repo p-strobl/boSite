@@ -1,17 +1,6 @@
-@import "Src/config/global-mixins";
-
-.Header {
-  @include module-container(fluid);
-  @include module-container();
-  background-color: $color_lightest-blue;
-  // height: 30px;
-  
-  @include respond-to(2 3 4 5) {
-    // height: 100px;
-  }
-}
+@import "Scss/_global-mixins.scss";
 
 .header {
-
-  grid-area: header;
+  @include module-container(fluid);
+  background-color: $color_lightest-blue; 
 }
