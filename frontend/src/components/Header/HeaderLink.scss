@@ -1,4 +1,5 @@
-@import "Scss/_global-mixins";
+@import "GlobalMixins";
 
-.link {
+.link:first-letter {
+  text-transform: uppercase;
 }

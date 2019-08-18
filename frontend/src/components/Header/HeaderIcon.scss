@@ -1,0 +1,10 @@
+@import "GlobalMixins";
+
+.header-image-wrapper {
+  @include grid-span(4);
+  padding: 25px 0;
+}
+
+.header-image {
+  width: 300px;
+}

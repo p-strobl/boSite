@@ -1,6 +1,5 @@
-@import "Scss/_global-mixins";
+@import "GlobalMixins";
 
 .main {
   @include module-container();
-  grid-area: main;
 }

@@ -14,6 +14,8 @@ module.exports = {
       Assets: resolve(__dirname, "./src/assets"),
       Components: resolve(__dirname, "./src/components"),
       Context: resolve(__dirname, "./src/context"),
+      GlobalMixins: resolve(__dirname, "./src/scss/_global-mixins.scss"),
+      Mixins: resolve(__dirname, "./src/scss/mixins"),
       Routes: resolve(__dirname, "./src/routes"),
       Scss: resolve(__dirname, "./src/scss"),
       Src: resolve(__dirname, "./src"),

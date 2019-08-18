@@ -1,5 +1,6 @@
-@import "Scss/_global-mixins";
+@import "GlobalMixins";
 
 .header-navigation-wrapper {
-  @include module-container
+  @include grid(8);
+  @include grid-span(8);
 }
