@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/App/App.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/scss/_global-mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/scss/_global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/react/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/public/assets/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/bo-site.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/images/bo-Site.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/404-PageNotFound/404-PageNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/404-PageNotFound/404-PageNotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoundingBar/BoundingBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoundingBar/BoundingBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoundingBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderIcon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderLink.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderNavigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/ImageLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/ImageLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/LandingItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/LandingPages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Recipes/Recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Recipes/Recipes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/RouteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/context/RouteContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/_global-mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/_global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/fonts/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/fonts/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/scss/reset/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/reset/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1PZKO65OYZ0LyEUw9PJqJWoFo54" />
+  <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/prettier/bin-prettier.js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Code-Projects\Privat\boSite\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code-Projects\Privat\boSite" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code-Projects\Privat\boSite" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="" />
+      <created>1565891912456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565891912456</updated>
+      <workItem from="1565891914646" duration="122000" />
+      <workItem from="1566075732600" duration="274000" />
+      <workItem from="1566076147036" duration="74000" />
+      <workItem from="1566076265211" duration="5318000" />
+      <workItem from="1566081623406" duration="1593000" />
+      <workItem from="1566164720650" duration="2781000" />
+      <workItem from="1566167517491" duration="32000" />
+      <workItem from="1566324777667" duration="2352000" />
+      <workItem from="1566327141820" duration="8772000" />
+      <workItem from="1566335932984" duration="2237000" />
+      <workItem from="1566338182432" duration="191000" />
+      <workItem from="1566338385351" duration="381000" />
+      <workItem from="1566338778074" duration="758000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

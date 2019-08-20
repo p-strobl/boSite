@@ -1,0 +1,6 @@
+@import "~scss/_global-mixins.scss";
+
+.header-navigation-wrapper {
+  @include grid(8);
+  @include grid-span(8);
+}

@@ -1,6 +1,0 @@
-@import "GlobalMixins";
-
-.header-navigation-wrapper {
-  @include grid(8);
-  @include grid-span(8);
-}

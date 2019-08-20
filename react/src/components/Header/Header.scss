@@ -1,0 +1,11 @@
+@import "~scss/_global-mixins.scss";
+
+.header {
+  @include module-container(fluid);
+  background-color: $color_lightest-blue; 
+}
+
+.header-container {
+  @include module-container();
+  @include grid();
+}

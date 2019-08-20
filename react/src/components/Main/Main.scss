@@ -1,0 +1,5 @@
+@import "~scss/_global-mixins.scss";
+
+.main {
+  @include module-container();
+}

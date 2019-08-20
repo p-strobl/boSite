@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Recipes Backend",
+  "description": "Backend Dependencies",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"

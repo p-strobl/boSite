@@ -1,0 +1,6 @@
+@import "~scss/_global-mixins.scss";
+
+.footer {
+  @include module-container(fluid);
+  background-color: $color_lightest-blue;
+}
