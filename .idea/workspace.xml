@@ -2,69 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/App/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/scss/_global-mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/scss/_global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/scss/mixins/_box-shadow.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/react/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/public/assets/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/bo-site.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/images/bo-Site.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/404-PageNotFound/404-PageNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/404-PageNotFound/404-PageNotFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoundingBar/BoundingBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoundingBar/BoundingBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BoundingBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderIcon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderLink.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/HeaderNavigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/ImageLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/ImageLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/LandingItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/LandingPages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LandingPage/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/Title.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Recipes/Recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Recipes/Recipes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/context/RouteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/context/RouteContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/_global-mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/_global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/fonts/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/fonts/_fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/mixins/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/scss/reset/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/reset/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +19,18 @@
       <executable />
     </execution>
   </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/react/src/App/App.js" />
+      </list>
+    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -86,12 +38,115 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="413" />
+    <option name="width" value="1680" />
+    <option name="height" value="998" />
+  </component>
   <component name="ProjectId" id="1PZKO65OYZ0LyEUw9PJqJWoFo54" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="boSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boSite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boSite" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boSite" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boSite" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boSite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boSite" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="react" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="react" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="react" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="App" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="react" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="react" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BoundingBar" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="react" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Footer" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="boSite" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Code-Projects/boSite" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.2" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/prettier/bin-prettier.js" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -107,8 +162,8 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Code-Projects\Privat\boSite\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -153,8 +208,40 @@
       <workItem from="1566338182432" duration="191000" />
       <workItem from="1566338385351" duration="381000" />
       <workItem from="1566338778074" duration="758000" />
+      <workItem from="1566416474991" duration="194000" />
+      <workItem from="1566416687517" duration="351000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="545000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="998" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44823664" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Quokka" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="RNConsole" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32954547" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -165,11 +252,69 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/react/src/scss/mixins/_responsive.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/Main/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/App/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/scss/_global-mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/App/App.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/Footer/Footer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>

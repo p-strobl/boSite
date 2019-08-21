@@ -3,10 +3,10 @@ import Class from "classnames";
 
 import "./App.scss";
 
-import { BoundingBar } from "Components/BoundingBar";
-import { Header } from "Components/Header";
-import { Footer } from "Components/Footer";
-import { Main } from "Components/Main";
+import { BoundingBar } from "~components/BoundingBar";
+import { Header } from "~components/Header";
+import { Footer } from "~components/Footer";
+import { Main } from "~components/Main";
 
 export function App() {
   return (
