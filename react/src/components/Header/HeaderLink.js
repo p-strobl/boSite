@@ -8,10 +8,13 @@ import "./HeaderLink.scss";
 
 export function HeaderLinkList() {
   const routes = useContext(RouterContext);
-
   const links = Object.entries(routes).map(([key, value]) => {
     return (
-      <A className={Class(`link link__${key}`)} key={uuidv4()} href={value}>
+      <A
+        className={Class(`link link__${key}`)}
+        key={uuidv4()}
+        href={value}
+        title={`Back to ${key}`}>
         {key}
       </A>
     );

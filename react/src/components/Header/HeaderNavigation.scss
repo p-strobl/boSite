@@ -3,4 +3,6 @@
 .header-navigation-wrapper {
   @include grid(8);
   @include grid-span(8);
+  grid-template-areas:
+    ". . . . . . recipes home";
 }

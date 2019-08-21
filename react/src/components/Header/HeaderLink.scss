@@ -1,5 +1,18 @@
 @import "~scss/_global-mixins.scss";
 
+.link {
+  width: 100%;
+  text-align: center;
+}
+
 .link:first-letter {
   text-transform: uppercase;
+}
+
+.link__home {
+  grid-area: home;
+}
+
+.link__recipes {
+  grid-area: recipes;
 }

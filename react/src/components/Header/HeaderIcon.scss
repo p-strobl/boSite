@@ -6,5 +6,9 @@
 }
 
 .header-image {
-  width: 300px;
+  width: 100px;
+
+  @include respond-to(2 3 4) {
+    width: 100%;
+  }
 }
