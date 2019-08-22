@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/p-strobl/boSite/issues"
   },
+  "scripts": {
+    "react": "cd react && npm start"
+  },
   "homepage": "https://github.com/p-strobl/boSite#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.2",

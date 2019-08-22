@@ -1,8 +1,27 @@
 @import "~scss/_global-mixins.scss";
 
 .link {
-  width: 100%;
+  border-radius: 5px;
+  border-style: dashed;
+  border-width: thin;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  padding: 20px 0;
   text-align: center;
+  width: 100%;
+}
+
+.link:hover {
+  color: $c_sunny-bo;
+  border-color: $c_sunny-bo;
+}
+
+.link:hover .link__recipes {
+  color: $c_sunny-bo;
+}
+
+.link__image {
+  width: 50px;
 }
 
 .link:first-letter {
