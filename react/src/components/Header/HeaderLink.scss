@@ -1,10 +1,11 @@
 @import "~scss/_global-mixins.scss";
 
+.link-wrapper {
+  grid-column: span 2;
+}
+
 .link {
-  border-radius: 5px;
-  border-style: dashed;
-  border-width: thin;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 15px;
   padding: 20px 0;
   text-align: center;

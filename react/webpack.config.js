@@ -15,6 +15,7 @@ module.exports = {
       "~context": resolve(__dirname, "./src/context"),
       "~mixins": resolve(__dirname, "./src/scss/mixins"),
       "~routes": resolve(__dirname, "./src/routes"),
+      "~public-assets": resolve(__dirname, "./public/assets"),
       "~scss": resolve(__dirname, "./src/scss"),
       "~src": resolve(__dirname, "./src"),
     },
@@ -79,11 +80,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: "assets/images",
+          outputPath: "assets/images/",
         },
       },
     ],

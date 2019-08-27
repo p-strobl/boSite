@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/public/assets/images/bo-Site.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/public/assets/images/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/public/assets/images/navi-home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/assets/images/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/assets/images/navi-recipes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/assets/fonts/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/assets/images/navi-documents.png" beforeDir="false" afterPath="$PROJECT_DIR$/react/public/assets/images/navi-recipes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/fonts/_fonts.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/public/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/public/assets/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -67,14 +67,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
+      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets" />
       <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\images" />
       <recent name="D:\Code-Projects\Privat\boSite" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets\fonts" />
+      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets" />
+      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
       <recent name="D:\Code-Projects\Privat\boSite" />
     </key>
   </component>
@@ -116,7 +121,10 @@
       <workItem from="1566416474991" duration="194000" />
       <workItem from="1566416687517" duration="351000" />
       <workItem from="1566419620677" duration="3150000" />
-      <workItem from="1566502152161" duration="5775000" />
+      <workItem from="1566502152161" duration="6079000" />
+      <workItem from="1566764284858" duration="3629000" />
+      <workItem from="1566847140266" duration="8265000" />
+      <workItem from="1566929095247" duration="13299000" />
     </task>
     <servers />
   </component>

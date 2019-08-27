@@ -1,0 +1,23 @@
+@import "~scss/_global-mixins.scss";
+
+.grid-layer {
+  @include module-container();
+  @include grid(12);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.grid-layer.show {
+  display: grid;
+}
+
+.grid-bar {
+  align-items: flex-end;
+  display: flex;
+  height: 100vh;
+  background-color: $c_grid-layout;
+}
