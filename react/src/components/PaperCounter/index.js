@@ -1,1 +1,1 @@
-export { PaperCount } from "./PaperCount";
+export { PaperCounter } from "./PaperCounter";
