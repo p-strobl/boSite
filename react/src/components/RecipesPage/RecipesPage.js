@@ -1,8 +1,9 @@
 import uuidv4 from "uuid/v4";
 import React, { useEffect, useState } from "react";
+import { useTitle } from "hookrouter";
 import axios from "axios";
 
-export default function Recipes() {
+export const RecipesPage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({
@@ -11,6 +12,8 @@ export default function Recipes() {
   });
 
   const url = "http://localhost:5000/recipes";
+
+  useTitle("Bo's Recipes");
 
   useEffect(() => {
     axios
@@ -39,4 +42,4 @@ export default function Recipes() {
       })}
     </>
   );
-}
+};

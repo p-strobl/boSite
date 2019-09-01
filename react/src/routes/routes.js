@@ -4,16 +4,19 @@ import { useRoutes } from "hookrouter";
 
 import RouterContext from "~context/RouteContext";
 
-import LandingPage from "~components/LandingPage/LandingPage";
-import Recipes from "~components/Recipes/Recipes";
-import { PageNotFound } from "~components/404-PageNotFound/404-PageNotFound";
+import { LandingPage } from "~components/LandingPage";
+import { RecipesPage } from "~components/RecipesPage";
+import { PageNotFound } from "~components/404-PageNotFound";
+import { PaperCounter } from "~components/PaperCounter";
 
 export function Routes() {
-  const { home, recipes } = useContext(RouterContext);
+  const { home, recipes, paperCounter } = useContext(RouterContext);
   const routes = {
     [home]: () => <LandingPage />,
-    [recipes]: () => <Recipes />,
+    [recipes]: () => <RecipesPage />,
+    [paperCounter]: () => <PaperCounter />,
   };
+
   const usedRoutes = useRoutes(routes);
   return usedRoutes || <PageNotFound />;
 }

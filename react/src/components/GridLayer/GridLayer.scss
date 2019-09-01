@@ -14,10 +14,3 @@
 .grid-layer.show {
   display: grid;
 }
-
-.grid-bar {
-  align-items: flex-end;
-  display: flex;
-  height: 100vh;
-  background-color: $c_grid-layout;
-}

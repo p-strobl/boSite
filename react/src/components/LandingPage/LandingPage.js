@@ -1,7 +1,10 @@
 import React from "react";
+import { useTitle } from "hookrouter";
 
-import LandingItem from "./LandingItems";
+import { LandingItems } from "./LandingItems";
 
-export default function LandingPage() {
-  return <LandingItem />;
-}
+export const LandingPage = () => {
+  useTitle("Bo's Home");
+
+  return <LandingItems />;
+};

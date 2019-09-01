@@ -9,7 +9,10 @@ import "./HeaderLink.scss";
 
 export function HeaderLinkList() {
   const routes = useContext(RouterContext);
+
   const links = Object.entries(routes).map(([key, value]) => {
+    const linkText = key.replace(/([a-zA-Z])(?=[A-Z])/g, " ");
+
     return (
       <div className={Class("link-wrapper")} key={uuidv4()}>
         <A
@@ -17,7 +20,7 @@ export function HeaderLinkList() {
           href={value}
           title={`Back to ${key}`}
           key={uuidv4()}>
-          <div>{key}</div>
+          <div>{linkText}</div>
         </A>
       </div>
     );

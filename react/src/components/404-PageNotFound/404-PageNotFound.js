@@ -1,9 +1,9 @@
 import React from "react";
 
-export function PageNotFound() {
+export const PageNotFound = () => {
   return (
     <>
       <div>Page not found</div>
     </>
   );
-}
+};

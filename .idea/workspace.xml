@@ -2,21 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/assets/fonts/_fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/404-PageNotFound/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/LandingPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/RecipesPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Title/Title.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Title/Title.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Title/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/404-PageNotFound/404-PageNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/404-PageNotFound/404-PageNotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/fonts/_fonts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/LandingPage/LandingItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Recipes/Recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/context/RouteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/context/RouteContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/routes/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +74,8 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="ts.external.directory.path" value="C:\Users\pstrh\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\192.5728.108\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -124,7 +132,13 @@
       <workItem from="1566502152161" duration="6079000" />
       <workItem from="1566764284858" duration="3629000" />
       <workItem from="1566847140266" duration="8265000" />
-      <workItem from="1566929095247" duration="13299000" />
+      <workItem from="1566929095247" duration="13384000" />
+      <workItem from="1567019436750" duration="113000" />
+      <workItem from="1567019559730" duration="167000" />
+      <workItem from="1567019736911" duration="1621000" />
+      <workItem from="1567023559334" duration="5674000" />
+      <workItem from="1567112297602" duration="3371000" />
+      <workItem from="1567364155170" duration="7355000" />
     </task>
     <servers />
   </component>
