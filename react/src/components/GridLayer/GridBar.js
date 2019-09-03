@@ -9,7 +9,7 @@ export function GridBar() {
 
   for (let i = 0; i < 12; i += 1) {
     gridBars.push(
-      <div className={Class("grid-bar")} key={uuidv4()}>
+      <div className={Class("GridBar")} key={uuidv4()}>
         Grid {i + 1}
       </div>,
     );

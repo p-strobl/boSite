@@ -1,0 +1,28 @@
+@import "~scss/_global-mixins.scss";
+
+.Header__LinkList {
+  display: flex;
+  justify-content: center;
+  grid-column: span 2;
+
+  .Header__Link {
+    @include responsive-font-size(15, 20);
+    margin-top: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .Header__Link:first-letter {
+    text-transform: uppercase;
+  }
+
+  .Header__Link:hover {
+    color: $c_sunny-bo;
+    border-color: $c_sunny-bo;
+  }
+
+  .Header__Link:hover {
+    color: $c_sunny-bo;
+  }
+}
+

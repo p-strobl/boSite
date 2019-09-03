@@ -7,7 +7,7 @@ import { HeaderLinkList } from "./HeaderLink";
 
 export function HeaderNavigation() {
   return (
-    <nav className={Class("header-navigation-wrapper")}>
+    <nav className={Class("Header__Navigation")}>
       <HeaderLinkList />
     </nav>
   );

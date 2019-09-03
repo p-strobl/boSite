@@ -1,11 +1,12 @@
 @import "./_responsive.scss";
 
 @mixin module-container($fluid: null) {
-  @if $fluid == "fluid"{
+  @if $fluid == "fluid" {
     width: 100%;
   } @else {
     margin-left: auto;
     margin-right: auto;
+    max-width: 1600px;
 
     @include respond-to(1) {
       width: 100%;

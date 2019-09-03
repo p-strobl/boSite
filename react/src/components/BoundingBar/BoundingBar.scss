@@ -1,6 +1,6 @@
 @import "~scss/_global-mixins.scss";
 
-.bounding-bar {
+.BoundingBar {
   @include module-container(fluid);
   background-color: $c_ash-grey;
   height: 25px;

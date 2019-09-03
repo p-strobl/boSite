@@ -1,0 +1,11 @@
+@import "~scss/_global-mixins.scss";
+
+.Header__LogoContainer {
+  @include grid-span(3);
+  padding: 25px 0;
+
+  .Header__Logo {
+    width: 100%
+  }
+}
+

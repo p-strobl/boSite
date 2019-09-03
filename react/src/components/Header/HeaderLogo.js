@@ -3,17 +3,17 @@ import Class from "classnames";
 import { A } from "hookrouter";
 import RouterContext from "~context/RouteContext";
 
-import "./HeaderIcon.scss";
-import Icon from "~assets/images/bo-Site.png";
+import "./HeaderLogo.scss";
+import Logo from "~assets/images/bo-Site.png";
 
-export function HeaderIcon() {
+export function HeaderLogo() {
   const routes = useContext(RouterContext);
   return (
-    <div className={Class("header-image-wrapper")}>
+    <div className={Class("Header__LogoContainer")}>
       <A href={routes.home}>
         <img
-          className={Class("header-image")}
-          src={Icon}
+          className={Class("Header__Logo")}
+          src={Logo}
           alt="boSite Icon"
           title="Back to Home"
         />

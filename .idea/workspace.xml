@@ -2,28 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/components/404-PageNotFound/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/LandingPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/RecipesPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/Title/Title.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/Title/Title.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/Title/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/assets/js/Utilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/scss/mixins/_font-size.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/404-PageNotFound/404-PageNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/404-PageNotFound/404-PageNotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderIcon.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/LandingPage/LandingItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Recipes/Recipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/context/RouteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/context/RouteContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Main/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/_global-mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/_global-mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/mixins/_module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_module.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,20 +78,21 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Rainbow Brackets" />
     <property name="ts.external.directory.path" value="C:\Users\pstrh\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\192.5728.108\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets\js" />
+      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets\fonts" />
+      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets" />
+      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
+      <recent name="D:\Code-Projects\Privat\boSite" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
       <recent name="D:\Code-Projects\Privat\boSite\react\public\assets" />
       <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\images" />
-      <recent name="D:\Code-Projects\Privat\boSite" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets\fonts" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
       <recent name="D:\Code-Projects\Privat\boSite" />
     </key>
   </component>
@@ -138,7 +143,8 @@
       <workItem from="1567019736911" duration="1621000" />
       <workItem from="1567023559334" duration="5674000" />
       <workItem from="1567112297602" duration="3371000" />
-      <workItem from="1567364155170" duration="7355000" />
+      <workItem from="1567364155170" duration="7546000" />
+      <workItem from="1567538710527" duration="8404000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 @import "~scss/_global-mixins.scss";
 
-.grid-layer {
+.GridLayer {
   @include module-container();
   @include grid(12);
   display: none;
@@ -11,6 +11,6 @@
   bottom: 0;
 }
 
-.grid-layer.show {
+.GridLayer--show {
   display: grid;
 }

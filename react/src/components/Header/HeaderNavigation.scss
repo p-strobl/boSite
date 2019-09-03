@@ -1,6 +1,6 @@
 @import "~scss/_global-mixins.scss";
 
-.header-navigation-wrapper {
+.Header__Navigation {
   @include grid(8);
   @include grid-span(8);
   align-items: flex-end;

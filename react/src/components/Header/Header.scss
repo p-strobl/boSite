@@ -1,11 +1,11 @@
 @import "~scss/_global-mixins.scss";
 
-.header {
+.Header {
   @include module-container(fluid);
   background-color: $c_lightest-blue;
-}
 
-.header-container {
-  @include module-container();
-  @include grid();
+  .Header__Container {
+    @include module-container();
+    @include grid();
+  }
 }

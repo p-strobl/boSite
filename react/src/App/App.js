@@ -12,7 +12,7 @@ import { Main } from "~components/Main";
 
 export function App() {
   return (
-    <div className={Class("app")}>
+    <div className={Class("App")}>
       <GridLayer />
       <Header />
       <BoundingBar />

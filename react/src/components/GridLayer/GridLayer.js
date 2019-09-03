@@ -10,16 +10,16 @@ export function GridLayer() {
   const [gridLayer, setGridLayer] = useState("");
 
   useEffect(() => {
-    setGridLayer(document.querySelector(".grid-layer"));
+    setGridLayer(document.querySelector(".GridLayer"));
   });
 
   const hideGrid = (ev) => {
-    ev.currentTarget.classList.remove("show");
+    ev.currentTarget.classList.remove("GridLayer--show");
   };
 
   const Grid = (
     <div
-      className={Class("grid-layer show")}
+      className={Class("GridLayer GridLayer--show")}
       onClick={hideGrid}
       role="presentation">
       <GridBar />
@@ -27,7 +27,7 @@ export function GridLayer() {
   );
 
   window.addGrid = () => {
-    gridLayer.classList.add("show");
+    gridLayer.classList.add("GridLayer--show");
   };
 
   return ReactDOM.createPortal(Grid, document.getElementById("root"));
