@@ -1,6 +1,8 @@
 import React from "react";
 import Class from "classnames";
 
+import "~assets/fonts";
+
 import "./App.scss";
 
 import { GridLayer } from "~components/GridLayer";

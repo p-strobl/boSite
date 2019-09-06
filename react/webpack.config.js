@@ -85,6 +85,16 @@ module.exports = {
         options: {
           name: "[name].[ext]",
           outputPath: "assets/images/",
+          publicPath: "assets/images/",
+        },
+      },
+      {
+        test: /\.(ttf|svg|woff|otf|eot)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/fonts/",
+          publicPath: "assets/fonts/",
         },
       },
     ],

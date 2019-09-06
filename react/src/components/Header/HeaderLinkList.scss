@@ -1,4 +1,4 @@
-@import "~scss/_global-mixins.scss";
+@import "~scss/_utility.scss";
 
 .Header__LinkList {
   display: flex;
@@ -12,17 +12,24 @@
     text-align: center;
   }
 
-  .Header__Link:first-letter {
-    text-transform: uppercase;
-  }
-
   .Header__Link:hover {
     color: $c_sunny-bo;
-    border-color: $c_sunny-bo;
+  }
+  
+  .Header__Link:before {
+    @include responsive-font-size(40, 40);
+    font-family: "LigatureSymbols", sans-serif;
   }
 
-  .Header__Link:hover {
-    color: $c_sunny-bo;
+  .Header__Link--Home:before {
+    content: $i_home;
+  }
+
+  .Header__Link--PaperCounter:before {
+    content: $i_paper;
+  }
+
+  .Header__Link--Recipes:before {
+    content: $i_recipes;
   }
 }
-
