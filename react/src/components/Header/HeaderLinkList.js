@@ -14,7 +14,13 @@ export function HeaderLinkList() {
     const splitKey = Utils.splitOnCamelCase(key);
 
     return (
-      <div className={Class("Header__LinkList")} key={uuidv4()}>
+      <div
+        className={Class(
+          `Header__LinkList Header__LinkList--${Utils.capitalizeFirstLetter(
+            key,
+          )}`,
+        )}
+        key={uuidv4()}>
         <A
           className={Class(
             `Header__Link Header__Link--${Utils.capitalizeFirstLetter(key)}`,

@@ -3,7 +3,7 @@ import Class from "classnames";
 
 import "./HeaderNavigation.scss";
 
-import { HeaderLinkList } from "./HeaderLink";
+import { HeaderLinkList } from "./HeaderLinkList";
 
 export function HeaderNavigation() {
   return (

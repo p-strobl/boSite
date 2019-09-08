@@ -1,0 +1,9 @@
+@import "~scss/_utility.scss";
+
+.HeaderLinkPointer {
+  @include grid();
+  grid-column: span 12;
+
+  height: 50px;
+  background-color: red;
+}

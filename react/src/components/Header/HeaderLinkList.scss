@@ -3,19 +3,19 @@
 .Header__LinkList {
   display: flex;
   justify-content: center;
-  grid-column: span 2;
+  grid-column: span 1;
 
   .Header__Link {
-    @include responsive-font-size(15, 20);
+    @include responsive-font-size(10, 10);
     margin-top: auto;
-    padding: 20px 10px;
+    padding: 20px 0;
     text-align: center;
   }
 
   .Header__Link:hover {
     color: $c_sunny-bo;
   }
-  
+
   .Header__Link:before {
     @include responsive-font-size(40, 40);
     font-family: "LigatureSymbols", sans-serif;
@@ -32,4 +32,16 @@
   .Header__Link--Recipes:before {
     content: $i_recipes;
   }
+}
+
+.Header__LinkList--Home {
+  grid-area: home;
+}
+
+.Header__LinkList--PaperCounter {
+  grid-area: paper;
+}
+
+.Header__LinkList--Recipes {
+  grid-area: recipes;
 }

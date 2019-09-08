@@ -1,7 +1,9 @@
 @import "~scss/_utility.scss";
 
 .Header__Navigation {
-  @include grid(8);
-  @include grid-span(8);
+  @include grid(9);
+  @include grid-span(9);
   align-items: flex-end;
+  grid-template-areas:
+  ". . . . . . home paper recipes";
 }

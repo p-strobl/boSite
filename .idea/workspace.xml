@@ -2,36 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/assets/fonts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/public/assets/images/bo-Site.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/public/assets/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/public/assets/images/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/public/assets/images/navi-home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/public/assets/images/navi-recipes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/assets/fonts/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/fonts/_fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/assets/js/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/helper/Utilities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/BoundingBar/BoundingBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Main/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Title/Title.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Title/Title.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/_global-mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/_utility.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/mixins/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/variable/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/reset/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/reset/_reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +130,8 @@
       <workItem from="1567538710527" duration="8678000" />
       <workItem from="1567717571676" duration="4418000" />
       <workItem from="1567801515120" duration="107000" />
-      <workItem from="1567801632594" duration="10246000" />
+      <workItem from="1567801632594" duration="10635000" />
+      <workItem from="1567974054785" duration="3908000" />
     </task>
     <servers />
   </component>
