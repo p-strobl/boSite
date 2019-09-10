@@ -1,9 +1,26 @@
 @import "~scss/_utility.scss";
 
-.HeaderLinkPointer {
+.Header__LinkPointerWrapper {
   @include grid();
   grid-column: span 12;
+  grid-template-areas:
+          ". . . . . . . . . home paper recipes";
+}
 
-  height: 50px;
-  background-color: red;
+.Header__LinkPointerArrow {
+  @include responsive-font-size(20, 20);
+  align-content: flex-end;
+  color: $c_ash-grey;
+  display: flex;
+  font-family: "LigatureSymbols", sans-serif;
+  justify-content: center;
+  line-height: 15px;
+  grid-area: home;
+}
+
+.Header__LinkPointerArrow:before {
+  content: $i_arrow-down;
+  bottom: -3px;
+  transform: rotate(180deg);
+  position: relative;
 }

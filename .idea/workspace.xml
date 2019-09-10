@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderNavigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +130,8 @@
       <workItem from="1567801515120" duration="107000" />
       <workItem from="1567801632594" duration="10635000" />
       <workItem from="1567974054785" duration="3908000" />
+      <workItem from="1568058870983" duration="5867000" />
+      <workItem from="1568137699345" duration="10954000" />
     </task>
     <servers />
   </component>

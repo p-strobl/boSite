@@ -7,8 +7,9 @@
 
   .Header__Link {
     @include responsive-font-size(10, 10);
+    font-family: "LigatureSymbols", sans-serif;
     margin-top: auto;
-    padding: 20px 0;
+    padding-top: 20px;
     text-align: center;
   }
 
@@ -18,7 +19,6 @@
 
   .Header__Link:before {
     @include responsive-font-size(40, 40);
-    font-family: "LigatureSymbols", sans-serif;
   }
 
   .Header__Link--Home:before {
