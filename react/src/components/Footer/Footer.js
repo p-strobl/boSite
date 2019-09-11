@@ -6,7 +6,7 @@ import "./Footer.scss";
 export function Footer() {
   return (
     <footer className={Class("Footer")}>
-      <div>Footer Content</div>
+      <div className={Class("Footer__Container")}>Footer Content</div>
     </footer>
   );
 }

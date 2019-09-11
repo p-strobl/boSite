@@ -4,7 +4,7 @@
   @include grid();
   grid-column: span 12;
   grid-template-areas:
-          ". . . . . . . . . home paper recipes";
+          ". . . . . . . . . home paperCounter recipes";
 }
 
 .Header__LinkPointerArrow {
@@ -13,14 +13,27 @@
   color: $c_ash-grey;
   display: flex;
   font-family: "LigatureSymbols", sans-serif;
+  height: 0;
   justify-content: center;
   line-height: 15px;
   grid-area: home;
+
+  &--Home {
+    grid-area: home;
+  }
+
+  &--PaperCounter {
+    grid-area: paperCounter;
+  }
+
+  &--Recipes {
+    grid-area: recipes;
+  }
 }
 
 .Header__LinkPointerArrow:before {
   content: $i_arrow-down;
-  bottom: -3px;
+  bottom: -5px;
   transform: rotate(180deg);
   position: relative;
 }

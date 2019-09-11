@@ -3,4 +3,9 @@
 .Footer {
   @include module-container(fluid);
   background-color: $c_lightest-blue;
+
+  .Footer__Container {
+    @include module-container();
+    @include grid();
+  }
 }
