@@ -60,6 +60,9 @@
       "warn",
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
     ],
+    "no-param-reassign": [2, {
+      "props": false
+    }],
     "prefer-promise-reject-errors": ["off"],
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],

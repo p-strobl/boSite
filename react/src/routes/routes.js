@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropType from "prop-types";
 import { useRoutes } from "hookrouter";
 
 import RouterContext from "~context/RouteContext";
@@ -20,7 +19,3 @@ export function Routes() {
   const usedRoutes = useRoutes(routes);
   return usedRoutes || <PageNotFound />;
 }
-
-Routes.PropType = {
-  routes: PropType.object,
-};

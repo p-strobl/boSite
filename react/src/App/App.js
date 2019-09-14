@@ -1,6 +1,9 @@
 import React from "react";
 import Class from "classnames";
 
+import "~src/helper/ImageLoader";
+
+import "~server-assets/images/favicon.png";
 import "~assets/fonts";
 
 import "./App.scss";

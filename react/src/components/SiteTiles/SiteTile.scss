@@ -1,2 +1,9 @@
 @import "~scss/_utility.scss";
 
+.SiteTile {
+  grid-column: span 4;
+
+  .SiteTile__Image {
+    width: 100%;
+  }
+}

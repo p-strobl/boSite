@@ -18,6 +18,7 @@ module.exports = {
       "~public-assets": resolve(__dirname, "./public/assets"),
       "~scss": resolve(__dirname, "./src/scss"),
       "~src": resolve(__dirname, "./src"),
+      "~server-assets": resolve(__dirname, "../server/assets"),
     },
     extensions: [".js", ".jsx", ".json", "css", "scss"],
   },

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Class from "classnames";
 import { A } from "hookrouter";
 import RouterContext from "~context/RouteContext";
+import Base64 from "~src/helper/Base64ImagePlaceholder";
 import { Images } from "~assets/images";
 
 import "./HeaderLogo.scss";
@@ -12,9 +13,10 @@ export function HeaderLogo() {
     <div className={Class("Header__LogoContainer")}>
       <A href={routes.home}>
         <img
-          className={Class("Header__Logo")}
-          src={Images.logo}
           alt="boSite Icon"
+          className={Class("Header__Logo AsyncImage")}
+          data-image-src={Images.logo}
+          src={Base64.headerIcon}
           title="Back to Home"
         />
       </A>
