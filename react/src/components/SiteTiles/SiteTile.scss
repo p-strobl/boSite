@@ -1,9 +1,10 @@
 @import "~scss/_utility.scss";
 
 .SiteTile {
-  grid-column: span 4;
+  grid-column: span 3;
 
   .SiteTile__Image {
+    border-radius: 5px;
     width: 100%;
   }
 }

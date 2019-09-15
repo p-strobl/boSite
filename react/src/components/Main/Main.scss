@@ -2,4 +2,5 @@
 
 .Main {
   @include module-container();
+  flex-grow: 1;
 }

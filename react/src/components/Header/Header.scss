@@ -3,6 +3,7 @@
 .Header {
   @include module-container(fluid);
   background-color: $c_lightest-blue;
+  flex-shrink: 0;
 
   .Header__Container {
     @include module-container();

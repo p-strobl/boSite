@@ -5,7 +5,7 @@ import "./Header.scss";
 
 import { HeaderLogo } from "./HeaderLogo";
 import { HeaderNavigation } from "./HeaderNavigation";
-import { HeaderLinkPointer } from "./HeaderLinkPointer";
+import { HeaderLinkIndicator } from "./HeaderLinkIndicator";
 
 export function Header() {
   return (
@@ -13,7 +13,7 @@ export function Header() {
       <div className={Class("Header__Container")}>
         <HeaderLogo />
         <HeaderNavigation />
-        <HeaderLinkPointer />
+        <HeaderLinkIndicator />
       </div>
     </header>
   );

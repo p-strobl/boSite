@@ -3,6 +3,7 @@
 .Footer {
   @include module-container(fluid);
   background-color: $c_lightest-blue;
+  flex-shrink: 0;
 
   .Footer__Container {
     @include module-container();
