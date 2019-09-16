@@ -1,0 +1,29 @@
+@import "~scss/_utility.scss";
+
+.Header__Link {
+  @include responsive-font-size(10, 10);
+  font-family: "LigatureSymbols", sans-serif;
+  margin-top: auto;
+  padding-bottom: 25px;
+  text-align: center;
+
+  &:hover {
+    color: $c_sunny-bo;
+  }
+
+  &:before {
+    @include responsive-font-size(40, 40);
+  }
+
+  &--Home:before {
+    content: $i_home;
+  }
+
+  &--PaperCounter:before {
+    content: $i_paper;
+  }
+
+  &--Recipes:before {
+    content: $i_recipes;
+  }
+}

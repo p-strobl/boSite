@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
+=======
+      <change afterPath="$PROJECT_DIR$/react/src/helper/Base64ImagePlaceholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/helper/ImageLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/boSite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boSite.iml" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
@@ -141,8 +148,16 @@
       <workItem from="1567801515120" duration="107000" />
       <workItem from="1567801632594" duration="10246000" />
       <workItem from="1567878484657" duration="175000" />
+<<<<<<< Updated upstream
       <workItem from="1567879845823" duration="5344000" />
       <workItem from="1568236957214" duration="6839000" />
+=======
+      <workItem from="1567879845823" duration="5114000" />
+      <workItem from="1568410109285" duration="10768000" />
+      <workItem from="1568421325541" duration="196000" />
+      <workItem from="1568421538136" duration="639000" />
+      <workItem from="1568422259971" duration="266000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

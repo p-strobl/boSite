@@ -15,31 +15,32 @@ export const RecipesPage = () => {
 
   useTitle("Bo's Recipes");
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((result) => {
-        setData(result.data.collection);
-        setLoading(false);
-      })
-      .catch((fetchedError) => {
-        setError({
-          message: fetchedError,
-          state: true,
-        });
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(url)
+  //     .then((result) => {
+  //       setData(result.data.collection);
+  //       setLoading(false);
+  //     })
+  //     .catch((fetchedError) => {
+  //       setError({
+  //         message: fetchedError,
+  //         state: true,
+  //       });
+  //     });
+  // }, []);
 
   return (
     <>
-      {data.map((item) => {
-        return (
-          <div key={uuidv4()}>
-            <h1 key={uuidv4()}>{item.title}</h1>
-            <p key={uuidv4()}>{item.infos.info}</p>
-          </div>
-        );
-      })}
+      <h1>Recipes Site</h1>
+      {/*{data.map((item) => {*/}
+      {/*  return (*/}
+      {/*    <div key={uuidv4()}>*/}
+      {/*      <h1 key={uuidv4()}>{item.title}</h1>*/}
+      {/*      <p key={uuidv4()}>{item.infos.info}</p>*/}
+      {/*    </div>*/}
+      {/*  );*/}
+      {/*})}*/}
     </>
   );
 };

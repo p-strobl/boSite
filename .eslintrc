@@ -20,8 +20,8 @@
     "sourceType": "module"
   },
   "extends": [
-    "airbnb",
     "eslint:recommended",
+    "airbnb",
     "plugin:react/recommended",
     "prettier",
     "prettier/react"
@@ -30,7 +30,10 @@
     "browser": true,
     "es6": true
   },
-  "plugins": ["react", "prettier"],
+  "plugins": [
+    "react",
+    "prettier"
+  ],
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",

@@ -1,4 +1,4 @@
-const loadImages = () => {
+export const loadImages = () => {
   const images = document.getElementsByClassName("AsyncImage");
 
   Array.from(images).map((item) => {

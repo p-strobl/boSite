@@ -5,5 +5,6 @@
   @include grid-span(9);
   align-items: flex-end;
   grid-template-areas:
-          ". . . . . .   home paper recipes";
+  ". . . . . .   home paper recipes";
+  position: relative;
 }

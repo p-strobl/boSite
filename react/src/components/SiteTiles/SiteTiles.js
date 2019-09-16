@@ -10,9 +10,8 @@ import "./SiteTiles.scss";
 
 export function SiteTiles() {
   const routes = useContext(RouterContext);
-
-  const sites = Object.keys(routes).filter((key) => {
-    return key !== "home" ? key : false;
+  const sites = Object.values(routes).filter((value) => {
+    return value !== "/" ? value : false;
   });
 
   return (

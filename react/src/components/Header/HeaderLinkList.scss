@@ -5,43 +5,25 @@
   justify-content: center;
   grid-column: span 1;
 
-  .Header__Link {
-    @include responsive-font-size(10, 10);
+  &--active:after {
+    @include responsive-font-size(25, 25);
+    bottom: -9px;
+    color: $c_ash-grey;
+    content: $i_arrow-down;
     font-family: "LigatureSymbols", sans-serif;
-    margin-top: auto;
-    padding-bottom: 25px  ;
-    text-align: center;
+    position: absolute;
+    transform: rotate(180deg);
   }
 
-  .Header__Link:hover {
-    color: $c_sunny-bo;
+  &--Home {
+    grid-area: home;
   }
 
-  .Header__Link:before {
-    @include responsive-font-size(40, 40);
+  &--PaperCounter {
+    grid-area: paper;
   }
 
-  .Header__Link--Home:before {
-    content: $i_home;
+  &--Recipes {
+    grid-area: recipes;
   }
-
-  .Header__Link--PaperCounter:before {
-    content: $i_paper;
-  }
-
-  .Header__Link--Recipes:before {
-    content: $i_recipes;
-  }
-}
-
-.Header__LinkList--Home {
-  grid-area: home;
-}
-
-.Header__LinkList--PaperCounter {
-  grid-area: paper;
-}
-
-.Header__LinkList--Recipes {
-  grid-area: recipes;
 }
