@@ -17,9 +17,9 @@ export function HeaderLinkIndicator() {
     }
   });
 
-  let locale = routes[Object.keys(routes).find((k) => k.indexOf(Path) !== -1)];
+  // let locale = routes[Object.keys(routes).find((k) => k.indexOf(Path) !== -1)];
 
-  console.log(locale);
+  // console.log(locale);
 
   console.log("arrow", arrowClass);
   return (
