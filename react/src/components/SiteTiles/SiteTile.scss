@@ -3,8 +3,15 @@
 .SiteTile {
   grid-column: span 3;
 
+  .SiteTile__Anchor {
+    height: 10vw;
+    width: 100%;
+  }
+
   .SiteTile__Image {
     border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
     width: 100%;
   }
 }
