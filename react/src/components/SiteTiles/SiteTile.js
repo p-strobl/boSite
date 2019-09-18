@@ -5,23 +5,23 @@ import Class from "classnames";
 import * as Utils from "~src/helper/Utilities";
 import Base64 from "~src/helper/Base64ImagePlaceholder";
 import { loadImages } from "~src/helper/ImageLoader";
-
+import { Images } from "~assets/images";
 import "./SiteTile.scss";
 
-export function SiteTile({ siteName }) {
+export function SiteTile({ siteName, sitePath }) {
   const title = Utils.splitOnCamelCase(siteName);
-
+  console.log("siteName", siteName);
   useEffect(() => {
     loadImages();
   }, [loadImages]);
 
   return (
     <div className={Class("SiteTile")}>
-      <A className={Class("SiteTile__Anchor")} href={siteName}>
+      <A className={Class("SiteTile__Anchor")} href={sitePath}>
         <img
           alt="Page Icon"
           className={Class("SiteTile__Image AsyncImage")}
-          data-image-src="http://lorempixel.com/400/400/sports"
+          data-image-src={Images.siteName}
           src={Base64.siteTile}
           title={`Visit ${title}`}
         />
@@ -32,8 +32,10 @@ export function SiteTile({ siteName }) {
 
 SiteTile.defaultProps = {
   siteName: PropTypes.string,
+  sitePath: PropTypes.string,
 };
 
 SiteTile.propTypes = {
   siteName: PropTypes.string,
+  sitePath: PropTypes.string,
 };

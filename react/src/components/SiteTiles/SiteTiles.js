@@ -10,14 +10,18 @@ import "./SiteTiles.scss";
 
 export function SiteTiles() {
   const routes = useContext(RouterContext);
-  const sites = Object.values(routes).filter((value) => {
-    return value !== "/" ? value : false;
+  const sites = Object.entries(routes).filter(([key, value]) => {
+    return key !== "home" ? key : false;
   });
 
   return (
     <div className={Class("SiteTiles")}>
-      {sites.map((value) => {
-        return <SiteTile key={uuidv4()} siteName={value} />;
+      {sites.forEach((element) => {
+        const siteName = element[0];
+        const sitePath = element[1];
+        return (
+          <SiteTile key={uuidv4()} siteName={siteName} sitePath={sitePath} />
+        );
       })}
     </div>
   );
