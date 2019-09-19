@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="">
-<<<<<<< Updated upstream
-=======
-      <change afterPath="$PROJECT_DIR$/react/src/helper/Base64ImagePlaceholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/helper/ImageLoader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/boSite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boSite.iml" afterDir="false" />
->>>>>>> Stashed changes
+    <list default="true" id="ee94f60d-ec1b-42ce-a4ba-8e1f185327b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Emoji/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pstrh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pstrh.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkIndicator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkPointer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkIndicator.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Main/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTiles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTiles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/helper/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/helper/Utilities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/mixins/_box-shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Headline/Headline.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Headline/Headline.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,52 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="ProjectId" id="1PZKO65OYZ0LyEUw9PJqJWoFo54" />
+  <component name="ProjectId" id="1R4UW7hE9HhbKzvKyas5bWzCS0y" />
   <component name="PropertiesComponent">
-    <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.15.2" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/public/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.jscs" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.jscs" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
-    <property name="node.js.selected.package.jscs" value="" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="debugger.stepping" />
-    <property name="ts.external.directory.path" value="C:\Users\pstrh\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\192.5728.108\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code-Projects\Privat\boSite\react\src\scss\variable" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\src\assets\fonts" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\css\fonts" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\fonts" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\fonts" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets" />
-      <recent name="D:\Code-Projects\Privat\boSite\react\public\assets\images" />
-      <recent name="D:\Code-Projects\Privat\boSite" />
-    </key>
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,62 +49,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Chrome React" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:8080/">
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cf792135-7781-498e-92e3-bae6cff61199" name="Default Changelist" comment="" />
-      <created>1565891912456</created>
+      <changelist id="ee94f60d-ec1b-42ce-a4ba-8e1f185327b4" name="Default Changelist" comment="" />
+      <created>1568925891417</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1565891912456</updated>
-      <workItem from="1565891914646" duration="122000" />
-      <workItem from="1566075732600" duration="274000" />
-      <workItem from="1566076147036" duration="74000" />
-      <workItem from="1566076265211" duration="5318000" />
-      <workItem from="1566081623406" duration="1593000" />
-      <workItem from="1566164720650" duration="2781000" />
-      <workItem from="1566167517491" duration="32000" />
-      <workItem from="1566324777667" duration="2352000" />
-      <workItem from="1566327141820" duration="8772000" />
-      <workItem from="1566335932984" duration="2237000" />
-      <workItem from="1566338182432" duration="191000" />
-      <workItem from="1566338385351" duration="381000" />
-      <workItem from="1566338778074" duration="758000" />
-      <workItem from="1566416474991" duration="194000" />
-      <workItem from="1566416687517" duration="351000" />
-      <workItem from="1566419620677" duration="3150000" />
-      <workItem from="1566502152161" duration="6079000" />
-      <workItem from="1566764284858" duration="3629000" />
-      <workItem from="1566847140266" duration="8265000" />
-      <workItem from="1566929095247" duration="13384000" />
-      <workItem from="1567019436750" duration="113000" />
-      <workItem from="1567019559730" duration="167000" />
-      <workItem from="1567019736911" duration="1621000" />
-      <workItem from="1567023559334" duration="5674000" />
-      <workItem from="1567112297602" duration="3371000" />
-      <workItem from="1567364155170" duration="7546000" />
-      <workItem from="1567538710527" duration="8678000" />
-      <workItem from="1567717571676" duration="4418000" />
-      <workItem from="1567801515120" duration="107000" />
-      <workItem from="1567801632594" duration="10246000" />
-      <workItem from="1567878484657" duration="175000" />
-<<<<<<< Updated upstream
-      <workItem from="1567879845823" duration="5344000" />
-      <workItem from="1568236957214" duration="6839000" />
-=======
-      <workItem from="1567879845823" duration="5114000" />
-      <workItem from="1568410109285" duration="10768000" />
-      <workItem from="1568421325541" duration="196000" />
-      <workItem from="1568421538136" duration="639000" />
-      <workItem from="1568422259971" duration="266000" />
->>>>>>> Stashed changes
+      <updated>1568925891417</updated>
+      <workItem from="1568925893747" duration="722000" />
+      <workItem from="1568926776604" duration="3219000" />
     </task>
     <servers />
   </component>
@@ -172,20 +75,6 @@
             <State>
               <option name="COLUMN_ORDER" />
             </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
           </value>
         </entry>
       </map>
