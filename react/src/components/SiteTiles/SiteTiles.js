@@ -11,14 +11,13 @@ import "./SiteTiles.scss";
 export function SiteTiles() {
   const routes = useContext(RouterContext);
   const sites = Object.entries(routes).filter(([key, value]) => {
-    return key !== "home" ? key : false;
+    return key !== "home";
   });
 
   return (
     <div className={Class("SiteTiles")}>
-      {sites.forEach((element) => {
-        const siteName = element[0];
-        const sitePath = element[1];
+      {sites.map((element) => {
+        const [siteName, sitePath] = element;
         return (
           <SiteTile key={uuidv4()} siteName={siteName} sitePath={sitePath} />
         );

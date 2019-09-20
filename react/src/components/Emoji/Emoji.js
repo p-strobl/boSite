@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Class from "classnames";
 
-export function Emoji(props) {
-  const { label, symbol, classs } = props;
-
+export function Emoji({ label, symbol, classs }) {
   return (
     <span
       className={Class(`Emoji ${classs || ""}`)}

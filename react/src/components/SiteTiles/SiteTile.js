@@ -1,16 +1,19 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { A } from "hookrouter";
 import Class from "classnames";
-import * as Utils from "~src/helper/Utilities";
+import { A } from "hookrouter";
+
 import Base64 from "~src/helper/Base64ImagePlaceholder";
+import * as Utils from "~src/helper/Utilities";
+
 import { loadImages } from "~src/helper/ImageLoader";
-import { Images } from "~assets/images";
+import { Image } from "~components/Image";
+
 import "./SiteTile.scss";
 
 export function SiteTile({ siteName, sitePath }) {
   const title = Utils.splitOnCamelCase(siteName);
-  console.log("siteName", siteName);
+
   useEffect(() => {
     loadImages();
   }, [loadImages]);
@@ -18,12 +21,12 @@ export function SiteTile({ siteName, sitePath }) {
   return (
     <div className={Class("SiteTile")}>
       <A className={Class("SiteTile__Anchor")} href={sitePath}>
-        <img
+        <Image
           alt="Page Icon"
-          className={Class("SiteTile__Image AsyncImage")}
-          data-image-src={Images.siteName}
+          classs="SiteTile__Image"
+          dataImageSrc={siteName}
           src={Base64.siteTile}
-          title={`Visit ${title}`}
+          title={title}
         />
       </A>
     </div>

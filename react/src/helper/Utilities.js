@@ -1,6 +1,6 @@
 export const capitalizeFirstLetter = (string) => {
   if (string.length === 0) {
-    return;
+    return false;
   }
 
   return string.replace(string[0], string[0].toUpperCase());

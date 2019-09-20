@@ -16,6 +16,7 @@ export const loadImages = () => {
 
       item.src = item.dataset.imageSrc;
     };
+    return false;
   });
 };
 

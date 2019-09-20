@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee94f60d-ec1b-42ce-a4ba-8e1f185327b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/Emoji/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pstrh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pstrh.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Image/Image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/Image/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Headline/Headline.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Headline/Headline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/assets/images/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/images/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/helper/ImageLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/helper/ImageLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/helper/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/helper/Utilities.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,13 +39,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1R4UW7hE9HhbKzvKyas5bWzCS0y" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,7 +81,9 @@
       <option name="presentableId" value="Default" />
       <updated>1568925891417</updated>
       <workItem from="1568925893747" duration="722000" />
-      <workItem from="1568926776604" duration="3219000" />
+      <workItem from="1568926776604" duration="3270000" />
+      <workItem from="1569011717986" duration="617000" />
+      <workItem from="1569014883204" duration="8056000" />
     </task>
     <servers />
   </component>

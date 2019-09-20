@@ -7,7 +7,6 @@ import "~assets/fonts";
 import "./App.scss";
 
 import { GridLayer } from "~components/GridLayer";
-
 import { BoundingBar } from "~components/BoundingBar";
 import { Header } from "~components/Header";
 import { Footer } from "~components/Footer";

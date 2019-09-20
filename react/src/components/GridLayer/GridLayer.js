@@ -13,8 +13,8 @@ export function GridLayer() {
     setGridLayer(document.querySelector(".GridLayer"));
   });
 
-  const hideGrid = (ev) => {
-    ev.currentTarget.classList.remove("GridLayer--show");
+  const hideGrid = (event) => {
+    event.currentTarget.classList.remove("GridLayer--show");
   };
 
   const Grid = (
