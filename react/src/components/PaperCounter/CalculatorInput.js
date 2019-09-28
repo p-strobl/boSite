@@ -6,7 +6,7 @@ import { CalculatorContext } from "~context/CalculatorContext";
 
 import "./CalculatorInput.scss";
 
-export const CalculatorInput = ({ context, placeholder }) => {
+export const CalculatorInput = ({ context, placeholder, type }) => {
   const {
     [context]: [input, setInput],
   } = useContext(CalculatorContext);
@@ -27,10 +27,16 @@ export const CalculatorInput = ({ context, placeholder }) => {
       return;
     }
 
-    const validInput = numbersOnly(element, inputValue);
+    const inputIsValid = numbersOnly(element, inputValue);
 
-    if (validInput) {
+    if (inputIsValid) {
+      console.log("inputValue", inputValue);
       setInput(parseInt(element.target.value, 10));
+      if (type === "price") {
+        element.target.value = inputValue
+          .replace(/\D/g, "")
+          .replace(/\B(?=(\d{2})(?!\d))/g, ",");
+      }
     }
   };
 
@@ -41,15 +47,19 @@ export const CalculatorInput = ({ context, placeholder }) => {
       placeholder={placeholder}
       alt={placeholder}
       onKeyUp={validateInput}
-      title="Bitte nur Nummern eintragen."
+      title="Bitte nur Nummern eingeben."
     />
   );
 };
 
 CalculatorInput.defaultProps = {
+  context: PropTypes.string,
   placeholder: PropTypes.string,
+  type: PropTypes.string,
 };
 
 CalculatorInput.propTypes = {
+  context: PropTypes.string,
   placeholder: PropTypes.string,
+  type: PropTypes.string,
 };

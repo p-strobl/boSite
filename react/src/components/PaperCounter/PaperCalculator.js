@@ -30,31 +30,49 @@ export const PaperCalculator = () => {
   const calculatePrice = () => {
     if (rollCount > 0 && sheetCount > 0 && layerCount > 0 && price > 0) {
       const totalLayerCount = rollCount * sheetCount * layerCount;
-      const singleLayerPrice = price / totalLayerCount;
-      console.log("rollCount", rollCount);
-      console.log("sheetCount", sheetCount);
-      console.log("layerCount", layerCount);
-      console.log("price", price);
-      console.log("totalLayerCount", totalLayerCount);
-      console.log("singleLayerPrice", singleLayerPrice);
-      console.log("singleLayerPriceFixed", singleLayerPrice.toFixed(10));
+      const stripedPrice = price * 100;
+      const singleLayerPrice = stripedPrice / totalLayerCount;
 
-      setTotalPrice(singleLayerPrice);
+      // console.log("rollCount", rollCount);
+      // console.log("sheetCount", sheetCount);
+      // console.log("layerCount", layerCount);
+      // console.log("price", price);
+      // console.log("totalLayerCount", totalLayerCount);
+      // console.log("singleLayerPrice", singleLayerPrice);
+      // console.log("singleLayerPriceFixed", singleLayerPrice.toFixed(10));
+
+      setTotalPrice(singleLayerPrice / 100);
     }
   };
 
   useEffect(() => {
-    console.log("price", price);
+    // console.log("price", price);
     calculatePrice();
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
     <div className={Class("PaperCalculator")}>
       <div className={Class("CalculatorInputContainer")}>
-        <CalculatorInput placeholder="Rollen" context="rollCountContext" />
-        <CalculatorInput placeholder="Blatt" context="sheetCountContext" />
-        <CalculatorInput placeholder="Lagen" context="layerCountContext" />
-        <CalculatorInput placeholder="Preis" context="priceContext" />
+        <CalculatorInput
+          placeholder="Rollen"
+          context="rollCountContext"
+          type="number"
+        />
+        <CalculatorInput
+          placeholder="Blatt"
+          context="sheetCountContext"
+          type="number"
+        />
+        <CalculatorInput
+          placeholder="Lagen"
+          context="layerCountContext"
+          type="number"
+        />
+        <CalculatorInput
+          placeholder="Preis"
+          context="priceContext"
+          type="price"
+        />
       </div>
       <div className={Class("CalculatorOutputContainer")}>
         <CalculatorOutput totalPrice={parseFloat(totalPrice)} />

@@ -5,7 +5,13 @@ import PropTypes from "prop-types";
 import "./CalculatorOutput.scss";
 
 export const CalculatorOutput = ({ totalPrice }) => {
-  return <div className={Class("CalculatorOutput")}>{totalPrice}</div>;
+  const localePrice = totalPrice.toLocaleString("de-DE", {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 10,
+  });
+
+  return <div className={Class("CalculatorOutput")}>{localePrice}</div>;
 };
 
 CalculatorOutput.defaultProps = {
