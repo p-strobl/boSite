@@ -1,0 +1,8 @@
+@import "~scss/_utility.scss";
+
+.CalculatorInput {
+  grid-column: span 1;
+}
+
+input:required:invalid {
+}

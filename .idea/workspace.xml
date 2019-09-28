@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee94f60d-ec1b-42ce-a4ba-8e1f185327b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/components/Image/Image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/Image/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/CalculatorInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/CalculatorInput.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/CalculatorOutput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/CalculatorOutput.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCalculator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCalculator.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCalculatorProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/context/CalculatorContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/assets/images/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/assets/images/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/GridLayer/GridLayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLinkList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLogo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Headline/Headline.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Headline/Headline.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/helper/ImageLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/helper/ImageLoader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/helper/Utilities.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/helper/Utilities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/PaperCounter/PaperCounter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/routes/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +55,21 @@
   </component>
   <component name="ProjectId" id="1R4UW7hE9HhbKzvKyas5bWzCS0y" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.splitter.proportion" value="0.1868613" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -84,6 +97,17 @@
       <workItem from="1568926776604" duration="3270000" />
       <workItem from="1569011717986" duration="617000" />
       <workItem from="1569014883204" duration="8056000" />
+      <workItem from="1569071345826" duration="293000" />
+      <workItem from="1569071801826" duration="706000" />
+      <workItem from="1569073877266" duration="1117000" />
+      <workItem from="1569076208671" duration="388000" />
+      <workItem from="1569076609020" duration="303000" />
+      <workItem from="1569089173060" duration="2909000" />
+      <workItem from="1569092098708" duration="2937000" />
+      <workItem from="1569099770944" duration="221000" />
+      <workItem from="1569100008942" duration="21241000" />
+      <workItem from="1569204302712" duration="8377000" />
+      <workItem from="1569430712513" duration="6294000" />
     </task>
     <servers />
   </component>
@@ -102,5 +126,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/react/src/components/PaperCounter/PaperCalculator.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
