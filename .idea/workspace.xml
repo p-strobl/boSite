@@ -56,7 +56,11 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
     <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< Updated upstream
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+=======
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+>>>>>>> Stashed changes
     <property name="settings.editor.splitter.proportion" value="0.1868613" />
   </component>
   <component name="RunDashboard">
@@ -95,12 +99,16 @@
       <workItem from="1569099770944" duration="221000" />
       <workItem from="1569100008942" duration="21241000" />
       <workItem from="1569204302712" duration="8377000" />
+<<<<<<< Updated upstream
       <workItem from="1569430712513" duration="6294000" />
       <workItem from="1569692591833" duration="7000" />
       <workItem from="1569692608665" duration="32000" />
       <workItem from="1569692658526" duration="645000" />
       <workItem from="1569693862947" duration="300000" />
       <workItem from="1569694171922" duration="6353000" />
+=======
+      <workItem from="1569430712513" duration="6359000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

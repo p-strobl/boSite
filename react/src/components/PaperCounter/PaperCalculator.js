@@ -11,17 +11,8 @@ import "./PaperCalculator.scss";
 export const PaperCalculator = () => {
   const {
     rollCountContext: [rollCount],
-  } = useContext(CalculatorContext);
-
-  const {
     sheetCountContext: [sheetCount],
-  } = useContext(CalculatorContext);
-
-  const {
     layerCountContext: [layerCount],
-  } = useContext(CalculatorContext);
-
-  const {
     priceContext: [price],
   } = useContext(CalculatorContext);
 
@@ -30,23 +21,14 @@ export const PaperCalculator = () => {
   const calculatePrice = () => {
     if (rollCount > 0 && sheetCount > 0 && layerCount > 0 && price > 0) {
       const totalLayerCount = rollCount * sheetCount * layerCount;
-      const stripedPrice = price * 100;
-      const singleLayerPrice = stripedPrice / totalLayerCount;
+      const singleLayerPrice = price / totalLayerCount;
+      const displayedSingleLayerPrice = singleLayerPrice.toFixed(6) / 100;
 
-      // console.log("rollCount", rollCount);
-      // console.log("sheetCount", sheetCount);
-      // console.log("layerCount", layerCount);
-      // console.log("price", price);
-      // console.log("totalLayerCount", totalLayerCount);
-      // console.log("singleLayerPrice", singleLayerPrice);
-      // console.log("singleLayerPriceFixed", singleLayerPrice.toFixed(10));
-
-      setTotalPrice(singleLayerPrice / 100);
+      setTotalPrice(displayedSingleLayerPrice);
     }
   };
 
   useEffect(() => {
-    // console.log("price", price);
     calculatePrice();
   }, [rollCount, sheetCount, layerCount, price]);
 

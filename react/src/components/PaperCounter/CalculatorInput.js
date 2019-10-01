@@ -30,13 +30,12 @@ export const CalculatorInput = ({ context, placeholder, type }) => {
     const inputIsValid = numbersOnly(element, inputValue);
 
     if (inputIsValid) {
-      console.log("inputValue", inputValue);
-      setInput(parseInt(element.target.value, 10));
       if (type === "price") {
         element.target.value = inputValue
           .replace(/\D/g, "")
           .replace(/\B(?=(\d{2})(?!\d))/g, ",");
       }
+      setInput(parseInt(inputValue, 10));
     }
   };
 
@@ -47,7 +46,7 @@ export const CalculatorInput = ({ context, placeholder, type }) => {
       placeholder={placeholder}
       alt={placeholder}
       onKeyUp={validateInput}
-      title="Bitte nur Nummern eingeben."
+      title="Bitte nur Zahlen eingeben."
     />
   );
 };

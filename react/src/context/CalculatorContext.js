@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 export const CalculatorContext = createContext(null);
 
 export default function CalculatorStore({ children }) {
-  const [rollCount, setRollCount] = useState("");
-  const [sheetCount, setSheetCount] = useState("");
-  const [layerCount, setLayerCount] = useState("");
+  const [rollCount, setRollCount] = useState(0);
+  const [sheetCount, setSheetCount] = useState(0);
+  const [layerCount, setLayerCount] = useState(0);
   const [price, setPrice] = useState(0);
 
   const calculatorStore = {
