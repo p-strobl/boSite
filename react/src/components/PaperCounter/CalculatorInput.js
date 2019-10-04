@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
 
@@ -13,6 +13,7 @@ export const CalculatorInput = ({ context, placeholder, type }) => {
 
   const numbersOnly = (element, inputValue) => {
     const numberRegex = /[^0-9,]/g;
+
     if (numberRegex.test(inputValue)) {
       element.target.value = inputValue.replace(numberRegex, "");
       return false;
@@ -31,9 +32,12 @@ export const CalculatorInput = ({ context, placeholder, type }) => {
 
     if (inputIsValid) {
       if (type === "price") {
+        const digitRegex = /\D/g;
+        const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
+
         element.target.value = inputValue
-          .replace(/\D/g, "")
-          .replace(/\B(?=(\d{2})(?!\d))/g, ",");
+          .replace(digitRegex, "")
+          .replace(decimalCommaRegex, ",");
       }
       setInput(parseInt(inputValue, 10));
     }

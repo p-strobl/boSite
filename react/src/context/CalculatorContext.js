@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
 export const CalculatorContext = createContext(null);

@@ -1,11 +1,28 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
+import PropTypes from "prop-types";
 
-export const CheapestPrice = () => {};
+export const CheapestPriceContext = createContext(null);
 
-const [cheapestPrice, setCheapestPrice] = useState([]);
+export default function CheapestPriceStore({ children }) {
+  const [cheapestPrice, setCheapestPrice] = useState([]);
 
-export default createContext({
-  cheapestPrice: [cheapestPrice, setCheapestPrice],
-});
+  const cheapestPriceStore = {
+    cheapestPriceContext: [cheapestPrice, setCheapestPrice],
+  };
 
-const UserContext = createContext({});
+  return (
+    <CheapestPriceContext.Provider value={cheapestPriceStore}>
+      {children}
+    </CheapestPriceContext.Provider>
+  );
+}
+
+CheapestPriceStore.displayName = "CheapestPriceStore";
+
+CheapestPriceStore.defaultProps = {
+  children: PropTypes.element,
+};
+
+CheapestPriceStore.propTypes = {
+  children: PropTypes.element,
+};
