@@ -20,9 +20,5 @@ export default function CheapestPriceStore({ children }) {
 CheapestPriceStore.displayName = "CheapestPriceStore";
 
 CheapestPriceStore.defaultProps = {
-  children: PropTypes.element,
-};
-
-CheapestPriceStore.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.array,
 };

@@ -1,7 +1,8 @@
-import React, { createContext, useState } from "react";
+import React from "react";
 import Class from "classnames";
 import { useTitle } from "hookrouter";
 
+import CheapestPriceStore from "~context/CheapestPriceContext";
 import { Headline } from "~components/Headline";
 import { CalculatorProvider } from "./CalculatorProvider";
 
@@ -13,9 +14,10 @@ export const PaperCounter = () => {
   return (
     <div className={Class("PaperCounter")}>
       <Headline h1="Paper Counter" h2="Vergleiche die Rollen Preise" emoji="" />
-      <CalculatorProvider />
-      <CalculatorProvider />
-      <CalculatorProvider />
+      <CheapestPriceStore>
+        <CalculatorProvider />
+        <CalculatorProvider />
+      </CheapestPriceStore>
     </div>
   );
 };

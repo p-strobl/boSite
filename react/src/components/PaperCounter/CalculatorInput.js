@@ -39,7 +39,7 @@ export const CalculatorInput = ({ context, placeholder, type }) => {
           .replace(digitRegex, "")
           .replace(decimalCommaRegex, ",");
       }
-      setInput(parseInt(inputValue, 10));
+      setInput(parseFloat(inputValue));
     }
   };
 
