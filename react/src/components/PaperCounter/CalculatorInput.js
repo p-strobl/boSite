@@ -3,6 +3,7 @@ import Class from "classnames";
 import PropTypes from "prop-types";
 
 import { CalculatorContext } from "~context/CalculatorContext";
+import { validate } from "./CalculatorController";
 
 import "./CalculatorInput.scss";
 
@@ -11,36 +12,8 @@ export const CalculatorInput = ({ context, placeholder, type }) => {
     [context]: [input, setInput],
   } = useContext(CalculatorContext);
 
-  const numbersOnly = (element, inputValue) => {
-    const numberRegex = /[^0-9,]/g;
-
-    if (numberRegex.test(inputValue)) {
-      element.target.value = inputValue.replace(numberRegex, "");
-      return false;
-    }
-    return true;
-  };
-
-  const validateInput = (element) => {
-    const inputValue = element.target.value;
-
-    if (inputValue.length === 0) {
-      return;
-    }
-
-    const inputIsValid = numbersOnly(element, inputValue);
-
-    if (inputIsValid) {
-      if (type === "price") {
-        const digitRegex = /\D/g;
-        const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
-
-        element.target.value = inputValue
-          .replace(digitRegex, "")
-          .replace(decimalCommaRegex, ",");
-      }
-      setInput(parseFloat(inputValue));
-    }
+  const validateInput = (clickedElement) => {
+    setInput(validate(clickedElement, type));
   };
 
   return (

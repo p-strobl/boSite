@@ -6,4 +6,12 @@
   .CalculatorInputContainer {
     @include grid();
   }
+
+  .AddPaperCalculator {
+    display: none;
+
+    &--Show {
+      display: inline-block;
+    }
+  }
 }

@@ -1,5 +1,13 @@
 @import "~scss/_utility.scss";
 
-.CalculatorInput--Cheapest {
-  background-color: green;
+.CalculatorOutput {
+  display: none;
+
+  &--Show {
+    display: block;
+  }
+
+  &--Cheapest {
+    background-color: green;
+  }
 }
