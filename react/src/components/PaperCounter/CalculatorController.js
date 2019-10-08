@@ -1,4 +1,3 @@
-import { CalculatorProvider } from "./CalculatorProvider";
 /**
  * Replace all non numbers.
  * @exports numbersOnly
@@ -52,13 +51,15 @@ export const determineCheapestPrice = () => {
 
   const parsedElement = [];
 
-  calculatorOutput.forEach((element, index) => {
+  calculatorOutput.forEach((element) => {
     const commaRegex = /,/g;
     const dotRegex = ".";
     const euroRegex = /[€]+/g;
+    const layerRegex = /pro Lage/g;
     const parsedPrice = element.textContent
       .replace(commaRegex, dotRegex)
-      .replace(euroRegex, "");
+      .replace(euroRegex, "")
+      .replace(layerRegex, "");
 
     parsedElement.push([element, parsedPrice]);
   });
@@ -73,12 +74,12 @@ export const determineCheapestPrice = () => {
 };
 
 export const setClassOnCheapestElement = (cheapestElements) => {
-  const calculatorOutput = Array.from(
-    document.querySelectorAll(".CalculatorOutput"),
+  const paperCalculator = Array.from(
+    document.querySelectorAll(".PaperCalculator"),
   );
 
-  calculatorOutput.forEach((outputElement) => {
-    outputElement.classList.remove("CalculatorOutput--Cheapest");
+  paperCalculator.forEach((outputElement) => {
+    outputElement.classList.remove("PaperCalculator--Cheapest");
   });
 
   cheapestElements.forEach(([element, price]) => {
@@ -88,34 +89,37 @@ export const setClassOnCheapestElement = (cheapestElements) => {
       return false;
     }
 
-    element.classList.add("CalculatorOutput--Cheapest");
+    element
+      .closest(".PaperCalculator")
+      .classList.add("PaperCalculator--Cheapest");
+
     return true;
   });
 };
 
-export const showAddButton = () => {
-  const paperCalculator = document.querySelectorAll(".PaperCalculator");
-
-  paperCalculator.forEach((element) => {
-    element.classList.remove("AddPaperCalculator--Show");
-  });
-
-  if (paperCalculator.length < 3) {
-    const lastPaperCalculator = paperCalculator[paperCalculator.length - 1];
-    const lastPaperCalculatorButton = lastPaperCalculator.querySelector(
-      "button",
-    );
-
-    lastPaperCalculatorButton.classList.add("AddPaperCalculator--Show");
-  }
-};
-
-export const addPaperCalculator = () => {
-  const paperCounterContainer = document.querySelector(".PaperCounter");
-
-  // paperCounter.appendChild(CalculatorProvider);
-  console.log("paperCounterContainer", paperCounterContainer);
-  // if (paperCalculator.length >= 3) return false;
-
-  return true;
-};
+// export const showAddButton = () => {
+//   const paperCalculator = document.querySelectorAll(".PaperCalculator");
+//
+//   paperCalculator.forEach((element) => {
+//     element.classList.remove("AddPaperCalculator--Show");
+//   });
+//
+//   if (paperCalculator.length < 3) {
+//     const lastPaperCalculator = paperCalculator[paperCalculator.length - 1];
+//     const lastPaperCalculatorButton = lastPaperCalculator.querySelector(
+//       "button",
+//     );
+//
+//     lastPaperCalculatorButton.classList.add("AddPaperCalculator--Show");
+//   }
+// };
+//
+// export const addPaperCalculator = () => {
+//   const paperCounterContainer = document.querySelector(".PaperCounter");
+//
+//   // paperCounter.appendChild(CalculatorProvider);
+//   console.log("paperCounterContainer", paperCounterContainer);
+//   // if (paperCalculator.length >= 3) return false;
+//
+//   return true;
+// };

@@ -2,6 +2,6 @@
 
 .BoundingBar {
   @include module-container(fluid);
-  background-color: $c_ash-grey;
+  background-color: $c_light-grey;
   height: 25px;
 }

@@ -1,13 +1,28 @@
 @import "~scss/_utility.scss";
 
-.CalculatorOutput {
-  display: none;
+.CalculatorOutputContainer {
+  min-height: 42px;
+  width: 100%;
 
-  &--Show {
-    display: block;
+  .CalculatorOutput {
+    @include responsive-font-size(30, 40);
+    @include transition(opacity, 0.5s, linear);
+    margin-top: 5px;
+    text-align: center;
+    opacity: 0;
+
+    &--Show {
+      opacity: 1;
+    }
+
+    &__Currency {
+      @include responsive-font-size(30, 30);
+    }
+
+    &__text {
+      @include responsive-font-size(15, 15);
+      margin-left: 5px;
+    }
   }
 
-  &--Cheapest {
-    background-color: green;
-  }
 }

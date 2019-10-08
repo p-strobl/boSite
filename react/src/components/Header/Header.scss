@@ -2,10 +2,10 @@
 
 .Header {
   @include module-container(fluid);
-  background-color: $c_holy-green;
+  background-color: $c_lighter-grey;
   flex-shrink: 0;
 
-  .Header__Container {
+  &__Container {
     @include module-container();
     @include grid();
   }

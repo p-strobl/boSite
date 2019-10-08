@@ -2,13 +2,9 @@ import React, { useContext, useState, useEffect } from "react";
 import Class from "classnames";
 
 import { CalculatorContext } from "~context/CalculatorContext";
-import {
-  calculatePrice,
-  addPaperCalculator,
-  showAddButton,
-} from "./CalculatorController";
-import { CalculatorInput } from "./CalculatorInput";
-import { CalculatorOutput } from "./CalculatorOutput";
+import { calculatePrice } from "~components/PaperCounter/CalculatorController";
+import { CalculatorInput } from "~components/PaperCounter/CalculatorInput";
+import { CalculatorOutput } from "~components/PaperCounter/CalculatorOutput";
 
 import "./PaperCalculator.scss";
 
@@ -31,8 +27,6 @@ export const PaperCalculator = () => {
     );
 
     setTotalPrice(calculatedPrice);
-
-    showAddButton();
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
@@ -62,12 +56,6 @@ export const PaperCalculator = () => {
       <div className={Class("CalculatorOutputContainer")}>
         <CalculatorOutput totalPrice={totalPrice} />
       </div>
-      <button
-        className={Class("AddPaperCalculator")}
-        type="button"
-        onClick={addPaperCalculator}>
-        This is a Add Button
-      </button>
     </div>
   );
 };

@@ -14,6 +14,7 @@ export const PaperCounter = () => {
     <div className={Class("PaperCounter")}>
       <Headline h1="Paper Counter" h2="Vergleiche die Rollen Preise" emoji="" />
       <CalculatorProvider />
+      <CalculatorProvider />
     </div>
   );
 };

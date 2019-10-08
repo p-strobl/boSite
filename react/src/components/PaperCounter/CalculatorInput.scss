@@ -1,8 +1,36 @@
 @import "~scss/_utility.scss";
+.CalculatorInputContainer {
+  @include grid(2);
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
 
-.CalculatorInput {
-  grid-column: span 1;
-}
+  .CalculatorInput {
+    @include responsive-font-size(25, 30);
+    @include transition(box-shadow, 200ms, linear);
+    border: 0;
+    border-radius: 12px;
+    line-height: 40px;
+    padding: 20px 10px;
+    position: relative;
+    outline: none;
+    text-align: center;
+    width: 120px;
 
-input:required:invalid {
+    @include respond-to(1) {
+      line-height: 26px;
+      padding: 15px 10px;
+      width: 100px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      text-align: center;
+      transform: translateY(-4px);
+    }
+
+    &:focus {
+      @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
+    }
+  }
+
 }

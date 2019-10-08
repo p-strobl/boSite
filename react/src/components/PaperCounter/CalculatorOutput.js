@@ -24,7 +24,8 @@ export const CalculatorOutput = ({ totalPrice }) => {
         `CalculatorOutput ${totalPrice ? "CalculatorOutput--Show" : ""}`,
       )}>
       {localePrice}
-      <span>€</span>
+      <span className={Class("CalculatorOutput__Currency")}>€</span>
+      <span className={Class("CalculatorOutput__text")}>pro Lage</span>
     </div>
   );
 };

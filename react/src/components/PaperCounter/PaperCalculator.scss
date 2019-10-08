@@ -1,17 +1,21 @@
 @import "~scss/_utility.scss";
 
 .PaperCalculator {
+  @include module-container();
   @include module-margin();
+  @include flex();
+  background-color: $c_lighter-grey;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 
-  .CalculatorInputContainer {
-    @include grid();
+  @include respond-to(1) {
+    &:nth-child(n+2) {
+      margin-top: 20px;
+    }
   }
 
-  .AddPaperCalculator {
-    display: none;
-
-    &--Show {
-      display: inline-block;
-    }
+  &--Cheapest {
+    background-color: $c_light-green;
   }
 }
