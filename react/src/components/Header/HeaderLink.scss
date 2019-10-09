@@ -1,7 +1,7 @@
 @import "~scss/_utility.scss";
 
 .Header__Link {
-  @include responsive-font-size(10, 10);
+  @include responsive-font-size(10, 15);
   font-family: "LigatureSymbols", sans-serif;
   margin-top: auto;
   padding-bottom: 25px;

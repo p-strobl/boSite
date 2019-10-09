@@ -1,19 +1,19 @@
 @import "~scss/_utility.scss";
 
 .PaperCalculator {
-  @include module-container();
-  @include module-margin();
-  @include flex();
+  //@include module-container();
+  //@include module-margin();
+  //@include flex();
   background-color: $c_lighter-grey;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+  //flex-wrap: wrap;
+  //justify-content: center;
+  //padding: 20px;
 
-  @include respond-to(1) {
-    &:nth-child(n+2) {
-      margin-top: 20px;
-    }
-  }
+  //@include respond-to(1) {
+  //  &:nth-child(n+2) {
+  //    margin-top: 20px;
+  //  }
+  //}
 
   &--Cheapest {
     background-color: $c_light-green;

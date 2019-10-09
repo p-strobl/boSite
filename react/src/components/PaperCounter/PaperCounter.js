@@ -13,8 +13,10 @@ export const PaperCounter = () => {
   return (
     <div className={Class("PaperCounter")}>
       <Headline h1="Paper Counter" h2="Vergleiche die Rollen Preise" emoji="" />
-      <CalculatorProvider />
-      <CalculatorProvider />
+      <div className={Class("CalculatorContainer")}>
+        <CalculatorProvider />
+        <CalculatorProvider />
+      </div>
     </div>
   );
 };

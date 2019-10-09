@@ -1,1 +1,13 @@
 @import "~scss/_utility.scss";
+
+.PaperCounter {
+  @include grid(12);
+
+  .Headline {
+    @include grid-span(12);
+  }
+
+  .CalculatorContainer {
+    @include grid-column(2,12);
+  }
+}

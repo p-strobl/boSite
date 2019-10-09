@@ -1,7 +1,7 @@
 @import "~scss/_utility.scss";
 
 .Header__LogoContainer {
-  @include grid-span(3);
+  @include grid-column(2, 5);
   padding: 25px 0;
 
   .Header__Logo {

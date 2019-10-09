@@ -1,10 +1,15 @@
 @import "~scss/_utility.scss";
 
 .Header__Navigation {
-  @include grid(9);
-  @include grid-span(9);
+  @include grid(8);
+  @include grid-column(5, 13);
   align-items: flex-end;
   grid-template-areas:
-  ". . . . . .   home paper recipes";
+          ". . . home paper paper recipes .";
   position: relative;
+
+  @include respond-to(1) {
+    grid-template-areas:
+            "home home paper paper paper recipes recipes .";
+  }
 }

@@ -11,3 +11,11 @@ html {
   min-height: 100vh;
 }
 
+h1 {
+  @include responsive-font-size(26, 32);
+}
+
+h2 {
+  @include responsive-font-size(18, 24);
+}
+

@@ -9,6 +9,14 @@
   grid-column-end: $end;
 }
 
-@mixin grid-span($columns) {
-  grid-column: span #{$columns};
+@mixin grid-span($span) {
+  grid-column: span #{$span};
+}
+
+@mixin grid-column($start, $end) {
+  grid-column: #{$start} / #{$end};
+}
+
+@mixin grid-row($start, $end) {
+  grid-row: #{$start} / #{$end};
 }
