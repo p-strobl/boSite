@@ -1,8 +1,6 @@
 @import "~scss/_utility.scss";
 
 .Headline {
-  @include module-margin();
-
   .Headline__Container {
     text-align: center;
 

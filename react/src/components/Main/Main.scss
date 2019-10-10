@@ -2,5 +2,6 @@
 
 .Main {
   @include module-container();
+  @include module-margin-top-bottom();
   flex-grow: 1;
 }

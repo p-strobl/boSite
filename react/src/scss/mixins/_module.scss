@@ -20,6 +20,24 @@
   }
 }
 
-@mixin module-margin() {
-  margin-top: 40px;
+@mixin module-margin-top() {
+  @include respond-to(1 2) {
+    margin-top: 20px;
+  }
+
+  @include respond-to(3 4 5) {
+    margin-top: 40px;
+  }
+}
+
+@mixin module-margin-top-bottom() {
+  @include respond-to(1 2) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(3 4 5) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }

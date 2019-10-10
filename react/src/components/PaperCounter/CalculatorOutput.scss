@@ -5,7 +5,7 @@
   width: 100%;
 
   .CalculatorOutput {
-    @include responsive-font-size(30, 40);
+    @include responsive-font-size(20, 40);
     @include transition(opacity, 0.5s, linear);
     margin-top: 5px;
     text-align: center;
@@ -16,11 +16,11 @@
     }
 
     &__Currency {
-      @include responsive-font-size(30, 30);
+      @include responsive-font-size(15, 30);
     }
 
     &__text {
-      @include responsive-font-size(15, 15);
+      @include responsive-font-size(10, 15);
       margin-left: 5px;
     }
   }
