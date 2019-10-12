@@ -5,8 +5,25 @@
   box-shadow: #{$horizontal}px #{$vertical}px #{$blur}px #{$spread}px #{$color};
 }
 
-@mixin transition($prop, $speed, $type) {
-  -webkit-transition: $prop $speed $type;
-  -o-transition: $prop $speed $type;
-  transition: $prop $speed $type;
+// @include transform(translateY, (-4px));
+@mixin transform($prop, $arguments...) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o- {
+    #{$prefix + transform}: #{$prop}#{unquote("(")}#{$arguments}#{unquote(")")};
+  }
+  #{transform}: #{$prop}#{unquote("(")}#{$arguments}#{unquote(")")};
+}
+
+// @include transition(box-shadow, 200ms, linear, 2000ms);
+@mixin transition($arguments...) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o- {
+    #{$prefix + transition}: #{$arguments};
+  }
+  #{transition}: #{$arguments};
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder {@content};
+  &::-moz-placeholder {@content};
+  &:-ms-input-placeholder {@content};
 }

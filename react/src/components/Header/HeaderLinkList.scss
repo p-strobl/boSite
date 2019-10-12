@@ -4,26 +4,26 @@
   display: flex;
   justify-content: center;
   grid-column: span 1;
+}
 
-  &--active:after {
-    @include responsive-font-size(25, 25);
-    bottom: -9px;
-    color: $c_light-grey;
-    content: $i_arrow-down;
-    font-family: "LigatureSymbols", sans-serif;
-    position: absolute;
-    transform: rotate(180deg);
-  }
+.Header__LinkList--active:after {
+  @include responsive-font-size(25, 25);
+  @include transform(rotate, (180deg));
+  bottom: -10px;
+  color: $c_light-grey;
+  content: $i_arrow-down;
+  font-family: "LigatureSymbols", sans-serif;
+  position: absolute;
+}
 
-  &--Home {
-    grid-area: home;
-  }
+.Header__LinkList--Home {
+  grid-area: home;
+}
 
-  &--PaperCounter {
-    grid-area: paper;
-  }
+.Header__LinkList--PaperCounter {
+  grid-area: paper;
+}
 
-  &--Recipes {
-    grid-area: recipes;
-  }
+.Header__LinkList--Recipes {
+  grid-area: recipes;
 }

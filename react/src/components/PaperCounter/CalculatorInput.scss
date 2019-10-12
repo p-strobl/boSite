@@ -1,36 +1,37 @@
 @import "~scss/_utility.scss";
+
 .CalculatorInputContainer {
   @include grid(4);
   grid-column-gap: 2vw;
   grid-row-gap: 2vw;
+}
 
-  .CalculatorInput {
-    @include responsive-font-size(25, 30);
-    @include transition(box-shadow, 200ms, linear);
-    @include grid-span(2);
-    border: 0;
-    border-radius: 12px;
+.CalculatorInput {
+  @include responsive-font-size(25, 30);
+  @include transition(box-shadow, 100ms, linear);
+  @include grid-span(2);
+  border: 0;
+  border-radius: 12px;
+  line-height: 26px;
+  padding: 10px;
+  position: relative;
+  outline: none;
+  text-align: center;
+  width: 100%;
+
+  @include respond-to(2 3 4) {
     line-height: 40px;
-    padding: 20px 10px;
-    position: relative;
-    outline: none;
-    text-align: center;
-    width: 100%;
-
-    @include respond-to(1) {
-      line-height: 26px;
-      padding: 15px 10px;
-    }
-
-    &::placeholder {
-      font-size: 16px;
-      text-align: center;
-      transform: translateY(-4px);
-    }
-
-    &:focus {
-      @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
-    }
+    padding: 15px 10px;
   }
 
+  @include placeholder {
+    @include responsive-font-size(16, 20);
+    @include transform(translateY, (-3px));
+    color: $c_holy-green;
+    text-align: center;
+  }
+}
+
+.CalculatorInput:focus {
+  @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
 }

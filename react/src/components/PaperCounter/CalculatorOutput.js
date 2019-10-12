@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
 
@@ -6,6 +6,7 @@ import "./CalculatorOutput.scss";
 import {
   determineCheapestPrice,
   setClassOnCheapestElement,
+  clearInput,
 } from "./CalculatorController";
 
 export const CalculatorOutput = ({ totalPrice }) => {
@@ -25,7 +26,13 @@ export const CalculatorOutput = ({ totalPrice }) => {
       )}>
       {localePrice}
       <span className={Class("CalculatorOutput__Currency")}>€</span>
-      <span className={Class("CalculatorOutput__text")}>pro Lage</span>
+      <span className={Class("CalculatorOutput__Text")}>pro Lage</span>
+      <button
+        aria-label="Clear Button"
+        className={Class("CalculatorOutput__ClearButton")}
+        onClick={clearInput}
+        type="button"
+      />
     </div>
   );
 };

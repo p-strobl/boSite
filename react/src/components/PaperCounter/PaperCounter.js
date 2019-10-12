@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Class from "classnames";
 import { useTitle } from "hookrouter";
 
@@ -12,7 +12,12 @@ export const PaperCounter = () => {
 
   return (
     <div className={Class("PaperCounter")}>
-      <Headline h1="Paper Counter" h2="Vergleiche die Rollen Preise" emoji="" />
+      <Headline
+        parentClass="PaperCounter"
+        h1="Paper Counter"
+        h2="Vergleiche die Rollen Preise"
+        emoji=""
+      />
       <div className={Class("PaperCounter__CalculatorContainer")}>
         <CalculatorProvider />
         <CalculatorProvider />

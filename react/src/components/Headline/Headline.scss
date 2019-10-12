@@ -1,11 +1,9 @@
 @import "~scss/_utility.scss";
 
-.Headline {
-  .Headline__Container {
-    text-align: center;
+.Headline__Container {
+  text-align: center;
+}
 
-    h2 {
-      margin-top: 10px;
-    }
-  }
+.Headline__Container h2 {
+  margin-top: 10px;
 }

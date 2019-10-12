@@ -97,6 +97,21 @@ export const setClassOnCheapestElement = (cheapestElements) => {
   });
 };
 
+export const clearInput = (element) => {
+  // if (!element.classList.contains("button")) {
+  //   return;
+  // }
+  const clickedElement = element.target;
+  console.log("clickedElement", clickedElement);
+  const outputContainer = clickedElement.closest(".CalculatorOutputContainer");
+  const inputContainer = outputContainer.previousSibling;
+
+  console.log("inputContainer", inputContainer);
+  // inputContainer.forEach((input) => {
+  //   console.log("input", input);
+  // });
+};
+
 // export const showAddButton = () => {
 //   const paperCalculator = document.querySelectorAll(".PaperCalculator");
 //

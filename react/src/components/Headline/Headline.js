@@ -4,10 +4,13 @@ import PropTypes from "prop-types";
 
 import "./Headline.scss";
 
-export function Headline({ h1, h2, emoji }) {
+export function Headline({ parentClass, h1, h2, emoji }) {
   return (
-    <div className={Class("Headline")}>
-      <div className={Class("Headline__Container")}>
+    <div className={Class(`${parentClass}__Headline Headline`)}>
+      <div
+        className={Class(
+          `${parentClass}__HeadlineContainer Headline__Container`,
+        )}>
         <h1>{h1}</h1>
         <h2>
           {h2}

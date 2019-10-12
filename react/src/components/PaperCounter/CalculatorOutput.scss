@@ -1,28 +1,53 @@
 @import "~scss/_utility.scss";
 
 .CalculatorOutputContainer {
-  min-height: 42px;
+  padding: 0 5px;
   width: 100%;
+}
 
-  .CalculatorOutput {
-    @include responsive-font-size(20, 40);
-    @include transition(opacity, 0.5s, linear);
-    margin-top: 5px;
-    text-align: center;
-    opacity: 0;
+.CalculatorOutputContainer:first-of-type {
+  order: 1;
+}
 
-    &--Show {
-      opacity: 1;
-    }
+.CalculatorOutputContainer:last-of-type {
+  order: 2;
+}
 
-    &__Currency {
-      @include responsive-font-size(15, 30);
-    }
+.CalculatorOutput {
+  @include flex();
+  @include responsive-font-size(20, 40);
+  @include transition(opacity, 0.5s, linear);
+  align-items: baseline;
+  opacity: 0.1;
+}
 
-    &__text {
-      @include responsive-font-size(10, 15);
-      margin-left: 5px;
-    }
-  }
+.CalculatorOutput__Currency {
+  @include responsive-font-size(15, 30);
+}
 
+.CalculatorOutput__Text {
+  @include responsive-font-size(10, 15);
+  margin-left: 5px;
+}
+
+.CalculatorOutput__ClearButton {
+  @include flex();
+  @include responsive-font-size(25, 25);
+  padding: 0 6px;
+  margin-left: auto;
+  opacity: 0;
+}
+
+.CalculatorOutput__ClearButton:hover {
+  color: $c_holy-green;
+}
+
+.CalculatorOutput__ClearButton:after {
+  @include ligature-symbols-icon($i_plus);
+  @include transform(rotate, 45deg);
+}
+
+.CalculatorOutput--Show,
+.CalculatorOutput--Show .CalculatorOutput__ClearButton {
+  opacity: 1;
 }

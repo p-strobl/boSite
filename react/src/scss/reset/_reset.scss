@@ -73,10 +73,6 @@ pre {
   font-size: 1em; /* 2 */
 }
 
-div {
-  display: block;
-}
-
 /* Text-level semantics
    ========================================================================== */
 
@@ -211,6 +207,9 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
 }
 
 button:hover {

@@ -2,23 +2,35 @@
 
 .PaperCounter {
   @include grid(12);
+}
 
-  .Headline {
-    @include grid-span(12);
-  }
+.PaperCounter__Headline {
+  @include grid-span(12);
+}
 
-  &__CalculatorContainer {
-    @include grid(8);
+.PaperCounter__CalculatorContainer {
+  @include grid(8);
+  @include grid-column(3, 11);
+  @include grid-column(2,12);
+
+  @include module-margin-top();
+  background-color: $c_lighter-grey;
+  border-radius: 20px;
+  padding: 20px 0;
+  position: relative;
+
+  @include respond-to(2 3 4) {
     @include grid-column(3, 11);
-    @include grid-column(2,12);
-
-    @include module-margin-top();
-    background-color: $c_lighter-grey;
-    border-radius: 20px;
-    padding: 10px 0;
-
-    @include respond-to(2 3 4) {
-      @include grid-column(3, 11);
-    }
   }
+}
+
+.PaperCounter__CalculatorContainer:after {
+  @include grid-column(2, 8);
+  @include transform(translateY, (-50%));
+  border-top: 5px dotted $c_sunny-bo;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
 }

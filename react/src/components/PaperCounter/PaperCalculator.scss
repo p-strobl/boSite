@@ -2,14 +2,45 @@
 
 .PaperCalculator {
   @include grid-column(2, 8);
-  border-radius: 20px;
-  padding: 20px 10px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
 
-  &:nth-child(n+2) {
-    margin-top: 10px;
-  }
+.PaperCalculator:nth-child(1) {
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 15px;
+}
 
-  &--Cheapest {
-    background-color: $c_light-green;
-  }
+.PaperCalculator:nth-child(1) .CalculatorInputContainer {
+  order: 2;
+}
+
+.PaperCalculator:nth-child(1) .CalculatorOutputContainer {
+  order: 1;
+}
+
+.PaperCalculator:nth-child(1) .CalculatorOutputContainer .CalculatorOutput {
+  margin-bottom: 5px;
+}
+
+.PaperCalculator:nth-child(2) {
+  border-radius: 0 0 20px 20px;
+  padding-top: 15px;
+}
+
+.PaperCalculator:nth-child(2) .CalculatorInputContainer {
+  order: 1;
+}
+
+.PaperCalculator:nth-child(2) .CalculatorOutputContainer {
+  order: 2;
+}
+
+.PaperCalculator:nth-child(2) .CalculatorOutputContainer .CalculatorOutput {
+  margin-top: 5px;
+}
+
+.PaperCalculator--Cheapest {
+  background-color: $c_light-green;
 }

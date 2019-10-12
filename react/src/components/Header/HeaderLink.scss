@@ -6,24 +6,24 @@
   margin-top: auto;
   padding-bottom: 25px;
   text-align: center;
+}
 
-  &:hover {
-    color: $c_sunny-bo;
-  }
+.Header__Link:hover {
+  color: $c_sunny-bo;
+}
 
-  &:before {
-    @include responsive-font-size(40, 40);
-  }
+.Header__Link:before {
+  @include responsive-font-size(40, 40);
+}
 
-  &--Home:before {
-    content: $i_home;
-  }
+.Header__Link--Home:before {
+  content: $i_home;
+}
 
-  &--PaperCounter:before {
-    content: $i_paper;
-  }
+.Header__Link--PaperCounter:before {
+  content: $i_paper;
+}
 
-  &--Recipes:before {
-    content: $i_recipes;
-  }
+.Header__Link--Recipes:before {
+  content: $i_recipes;
 }

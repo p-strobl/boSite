@@ -4,9 +4,9 @@
   @include module-container(fluid);
   background-color: $c_lighter-grey;
   flex-shrink: 0;
+}
 
-  .Footer__Container {
-    @include module-container();
-    @include grid();
-  }
+.Footer__Container {
+  @include module-container();
+  @include grid();
 }
