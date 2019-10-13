@@ -10,13 +10,19 @@ import "./PaperCalculator.scss";
 
 export const PaperCalculator = () => {
   const {
-    rollCountContext: [rollCount],
-    sheetCountContext: [sheetCount],
-    layerCountContext: [layerCount],
-    priceContext: [price],
+    rollCountContext: [rollCount, setRollerCount],
+    sheetCountContext: [sheetCount, setSheetCount],
+    layerCountContext: [layerCount, setLayerCount],
+    priceContext: [price, setPrice],
   } = useContext(CalculatorContext);
 
   const [totalPrice, setTotalPrice] = useState(0);
+  const calculatorSetter = [
+    setRollerCount,
+    setSheetCount,
+    setLayerCount,
+    setPrice,
+  ];
 
   useEffect(() => {
     const calculatedPrice = calculatePrice(
@@ -54,7 +60,10 @@ export const PaperCalculator = () => {
         />
       </div>
       <div className={Class("CalculatorOutputContainer")}>
-        <CalculatorOutput totalPrice={totalPrice} />
+        <CalculatorOutput
+          totalPrice={totalPrice}
+          calculatorSetter={calculatorSetter}
+        />
       </div>
     </div>
   );

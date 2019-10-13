@@ -16,7 +16,7 @@
 .CalculatorOutput {
   @include flex();
   @include responsive-font-size(20, 40);
-  @include transition(opacity, 0.5s, linear);
+  @include transition(opacity 400ms linear);
   align-items: baseline;
   opacity: 0.1;
 }
@@ -33,12 +33,13 @@
 .CalculatorOutput__ClearButton {
   @include flex();
   @include responsive-font-size(25, 25);
+  @include transition(opacity 400ms linear);
   padding: 0 6px;
   margin-left: auto;
   opacity: 0;
 }
 
-.CalculatorOutput__ClearButton:hover {
+.no-touch .CalculatorOutput__ClearButton:hover {
   color: $c_holy-green;
 }
 

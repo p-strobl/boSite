@@ -6,16 +6,38 @@ import "./CalculatorOutput.scss";
 import {
   determineCheapestPrice,
   setClassOnCheapestElement,
-  clearInput,
+  resetCalculatorView,
 } from "./CalculatorController";
 
-export const CalculatorOutput = ({ totalPrice }) => {
+export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
+  if (typeof totalPrice === "undefined") return false;
+
   const localePrice = totalPrice.toLocaleString("de-DE", {
     minimumFractionDigits: 6,
   });
 
+  const resetCalculatorSetter = () => {
+    if (calculatorSetter.length === 0) return false;
+
+    calculatorSetter.forEach((setterFunction) => {
+      if (setterFunction.length === 0) return false;
+
+      setterFunction(0);
+      return true;
+    });
+  };
+
+  const handleResetCalculatorClick = (event) => {
+    if (event.target.type !== "button") return false;
+
+    resetCalculatorSetter();
+    resetCalculatorView(event);
+    return true;
+  };
+
   useEffect(() => {
     const cheapestElements = determineCheapestPrice();
+
     setClassOnCheapestElement(cheapestElements);
   }, [localePrice]);
 
@@ -30,7 +52,7 @@ export const CalculatorOutput = ({ totalPrice }) => {
       <button
         aria-label="Clear Button"
         className={Class("CalculatorOutput__ClearButton")}
-        onClick={clearInput}
+        onClick={handleResetCalculatorClick}
         type="button"
       />
     </div>
@@ -39,8 +61,14 @@ export const CalculatorOutput = ({ totalPrice }) => {
 
 CalculatorOutput.defaultProps = {
   totalPrice: PropTypes.number,
+  calculatorSetter: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
+  ),
 };
 
 CalculatorOutput.propTypes = {
   totalPrice: PropTypes.number,
+  calculatorSetter: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
+  ),
 };

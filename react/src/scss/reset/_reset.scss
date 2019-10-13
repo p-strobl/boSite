@@ -212,7 +212,7 @@ button,
   outline: 0;
 }
 
-button:hover {
+.no-touch button:hover {
   cursor: pointer;
 }
 
@@ -337,7 +337,7 @@ li {
   text-indent: 0;
 }
 
-li:hover {
+.no-touch li:hover {
   cursor: none;
 }
 
@@ -384,7 +384,7 @@ template {
 
 a:link,
 a:visited,
-a:hover,
+.no-touch a:hover,
 a:active {
   color: black;
   display: inline-block;

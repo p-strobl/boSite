@@ -97,44 +97,18 @@ export const setClassOnCheapestElement = (cheapestElements) => {
   });
 };
 
-export const clearInput = (element) => {
-  // if (!element.classList.contains("button")) {
-  //   return;
-  // }
-  const clickedElement = element.target;
-  console.log("clickedElement", clickedElement);
-  const outputContainer = clickedElement.closest(".CalculatorOutputContainer");
+export const resetCalculatorView = (event) => {
+  if (event.target.type !== "button") {
+    return;
+  }
+
+  const outputContainer = event.target.closest(".CalculatorOutputContainer");
   const inputContainer = outputContainer.previousSibling;
+  const containerInputs = Array.from(inputContainer.children);
 
-  console.log("inputContainer", inputContainer);
-  // inputContainer.forEach((input) => {
-  //   console.log("input", input);
-  // });
+  containerInputs.forEach((input) => {
+    input.value = "";
+  });
+
+  containerInputs[0].focus();
 };
-
-// export const showAddButton = () => {
-//   const paperCalculator = document.querySelectorAll(".PaperCalculator");
-//
-//   paperCalculator.forEach((element) => {
-//     element.classList.remove("AddPaperCalculator--Show");
-//   });
-//
-//   if (paperCalculator.length < 3) {
-//     const lastPaperCalculator = paperCalculator[paperCalculator.length - 1];
-//     const lastPaperCalculatorButton = lastPaperCalculator.querySelector(
-//       "button",
-//     );
-//
-//     lastPaperCalculatorButton.classList.add("AddPaperCalculator--Show");
-//   }
-// };
-//
-// export const addPaperCalculator = () => {
-//   const paperCounterContainer = document.querySelector(".PaperCounter");
-//
-//   // paperCounter.appendChild(CalculatorProvider);
-//   console.log("paperCounterContainer", paperCounterContainer);
-//   // if (paperCalculator.length >= 3) return false;
-//
-//   return true;
-// };
