@@ -3,11 +3,7 @@ import Class from "classnames";
 import PropTypes from "prop-types";
 
 import "./CalculatorOutput.scss";
-import {
-  determineCheapestPrice,
-  setClassOnCheapestElement,
-  resetCalculatorView,
-} from "./CalculatorController";
+import { determineCheapestPrice, setClassOnCheapestElement, resetCalculatorView } from "./CalculatorController";
 
 export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   if (typeof totalPrice === "undefined") return false;
@@ -25,6 +21,7 @@ export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
       setterFunction(0);
       return true;
     });
+    return false;
   };
 
   const handleResetCalculatorClick = (event) => {
@@ -42,10 +39,7 @@ export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   }, [localePrice]);
 
   return (
-    <div
-      className={Class(
-        `CalculatorOutput ${totalPrice ? "CalculatorOutput--Show" : ""}`,
-      )}>
+    <div className={Class("CalculatorOutput", { "CalculatorOutput--Show": totalPrice })}>
       {localePrice}
       <span className={Class("CalculatorOutput__Currency")}>€</span>
       <span className={Class("CalculatorOutput__Text")}>pro Lage</span>
@@ -61,14 +55,10 @@ export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
 
 CalculatorOutput.defaultProps = {
   totalPrice: PropTypes.number,
-  calculatorSetter: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
-  ),
+  calculatorSetter: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.func])),
 };
 
 CalculatorOutput.propTypes = {
   totalPrice: PropTypes.number,
-  calculatorSetter: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
-  ),
+  calculatorSetter: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.func])),
 };

@@ -8,7 +8,7 @@ export function GridBar() {
   const gridBars = [];
 
   for (let i = 0; i < 12; i += 1) {
-    gridBars.push(<div className={Class("GridBar")} key={uuidv4()}></div>);
+    gridBars.push(<div className={Class("GridBar")} key={uuidv4()} />);
   }
 
   return gridBars;

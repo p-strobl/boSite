@@ -13,7 +13,7 @@ export const LandingPage = () => {
         parentClass="Main"
         h1="boSite's Project"
         h2="use my little tools as you like"
-        emoji={<Emoji emoji="❤️" label="heart" classs="" />}
+        emoji={<Emoji emoji="❤️" label="heart" classs="Headline__" />}
       />
       <SiteTiles />
     </div>

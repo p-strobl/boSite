@@ -17,20 +17,10 @@ export const PaperCalculator = () => {
   } = useContext(CalculatorContext);
 
   const [totalPrice, setTotalPrice] = useState(0);
-  const calculatorSetter = [
-    setRollerCount,
-    setSheetCount,
-    setLayerCount,
-    setPrice,
-  ];
+  const calculatorSetter = [setRollerCount, setSheetCount, setLayerCount, setPrice];
 
   useEffect(() => {
-    const calculatedPrice = calculatePrice(
-      rollCount,
-      sheetCount,
-      layerCount,
-      price,
-    );
+    const calculatedPrice = calculatePrice(rollCount, sheetCount, layerCount, price);
 
     setTotalPrice(calculatedPrice);
   }, [rollCount, sheetCount, layerCount, price]);
@@ -38,32 +28,13 @@ export const PaperCalculator = () => {
   return (
     <div className={Class("PaperCalculator")}>
       <div className={Class("CalculatorInputContainer")}>
-        <CalculatorInput
-          placeholder="Rollen"
-          context="rollCountContext"
-          type="number"
-        />
-        <CalculatorInput
-          placeholder="Blatt"
-          context="sheetCountContext"
-          type="number"
-        />
-        <CalculatorInput
-          placeholder="Lagen"
-          context="layerCountContext"
-          type="number"
-        />
-        <CalculatorInput
-          placeholder="Preis"
-          context="priceContext"
-          type="price"
-        />
+        <CalculatorInput placeholder="Rollen" context="rollCountContext" type="number" />
+        <CalculatorInput placeholder="Blatt" context="sheetCountContext" type="number" />
+        <CalculatorInput placeholder="Lagen" context="layerCountContext" type="number" />
+        <CalculatorInput placeholder="Preis" context="priceContext" type="price" />
       </div>
       <div className={Class("CalculatorOutputContainer")}>
-        <CalculatorOutput
-          totalPrice={totalPrice}
-          calculatorSetter={calculatorSetter}
-        />
+        <CalculatorOutput totalPrice={totalPrice} calculatorSetter={calculatorSetter} />
       </div>
     </div>
   );

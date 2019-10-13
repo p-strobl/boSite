@@ -21,13 +21,7 @@ export function SiteTile({ siteName, sitePath }) {
   return (
     <div className={Class("SiteTile")}>
       <A className={Class("SiteTile__Anchor")} href={sitePath}>
-        <Image
-          alt="Page Icon"
-          classs="SiteTile__Image"
-          dataImageSrc={siteName}
-          src={Base64.siteTile}
-          title={title}
-        />
+        <Image alt="Page Icon" classs="SiteTile__Image" dataImageSrc={siteName} src={Base64.siteTile} title={title} />
       </A>
     </div>
   );

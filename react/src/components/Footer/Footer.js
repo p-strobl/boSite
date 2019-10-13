@@ -10,7 +10,7 @@ export function Footer() {
       <div className={Class("Footer__Container")}>
         <div className={Class("Footer__Text")}>
           boSite
-          <Emoji emoji="❤️" label="heart" classs="Footer__ContainerEmoji" />
+          <Emoji emoji="❤️" label="heart" classs="Footer__" />
           2019
         </div>
       </div>

@@ -16,11 +16,7 @@ export default function CalculatorStore({ children }) {
     priceContext: [price, setPrice],
   };
 
-  return (
-    <CalculatorContext.Provider value={calculatorStore}>
-      {children}
-    </CalculatorContext.Provider>
-  );
+  return <CalculatorContext.Provider value={calculatorStore}>{children}</CalculatorContext.Provider>;
 }
 
 CalculatorStore.displayName = "CalculatorStore";

@@ -12,14 +12,7 @@ export function HeaderLinkList() {
   const routes = useContext(RouterContext);
   const currentPath = usePath();
   const headerLinks = Object.entries(routes).map(([key, value]) => {
-    return (
-      <HeaderLink
-        key={uuidv4()}
-        linkList={key}
-        currentPath={currentPath}
-        routePath={value}
-      />
-    );
+    return <HeaderLink key={uuidv4()} linkList={key} currentPath={currentPath} routePath={value} />;
   });
 
   return <>{headerLinks}</>;

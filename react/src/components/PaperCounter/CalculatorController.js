@@ -24,9 +24,7 @@ export const validate = (element, type) => {
       const digitRegex = /\D/g;
       const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
 
-      element.target.value = inputValue
-        .replace(digitRegex, "")
-        .replace(decimalCommaRegex, ",");
+      element.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
     }
     return parseFloat(inputValue);
   }
@@ -45,9 +43,7 @@ export const calculatePrice = (rollCount, sheetCount, layerCount, price) => {
 };
 
 export const determineCheapestPrice = () => {
-  const calculatorOutput = Array.from(
-    document.querySelectorAll(".CalculatorOutput"),
-  );
+  const calculatorOutput = Array.from(document.querySelectorAll(".CalculatorOutput"));
 
   const parsedElement = [];
 
@@ -74,9 +70,7 @@ export const determineCheapestPrice = () => {
 };
 
 export const setClassOnCheapestElement = (cheapestElements) => {
-  const paperCalculator = Array.from(
-    document.querySelectorAll(".PaperCalculator"),
-  );
+  const paperCalculator = Array.from(document.querySelectorAll(".PaperCalculator"));
 
   paperCalculator.forEach((outputElement) => {
     outputElement.classList.remove("PaperCalculator--Cheapest");
@@ -89,9 +83,7 @@ export const setClassOnCheapestElement = (cheapestElements) => {
       return false;
     }
 
-    element
-      .closest(".PaperCalculator")
-      .classList.add("PaperCalculator--Cheapest");
+    element.closest(".PaperCalculator").classList.add("PaperCalculator--Cheapest");
 
     return true;
   });

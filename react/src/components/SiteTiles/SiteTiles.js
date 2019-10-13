@@ -18,9 +18,7 @@ export function SiteTiles() {
     <div className={Class("SiteTiles")}>
       {sites.map((element) => {
         const [siteName, sitePath] = element;
-        return (
-          <SiteTile key={uuidv4()} siteName={siteName} sitePath={sitePath} />
-        );
+        return <SiteTile key={uuidv4()} siteName={siteName} sitePath={sitePath} />;
       })}
     </div>
   );

@@ -10,11 +10,7 @@ export default function CheapestPriceStore({ children }) {
     cheapestPriceContext: [cheapestPrice, setCheapestPrice],
   };
 
-  return (
-    <CheapestPriceContext.Provider value={cheapestPriceStore}>
-      {children}
-    </CheapestPriceContext.Provider>
-  );
+  return <CheapestPriceContext.Provider value={cheapestPriceStore}>{children}</CheapestPriceContext.Provider>;
 }
 
 CheapestPriceStore.displayName = "CheapestPriceStore";

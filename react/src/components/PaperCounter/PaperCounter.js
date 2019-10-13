@@ -6,6 +6,7 @@ import { Headline } from "~components/Headline";
 import { CalculatorProvider } from "./CalculatorProvider";
 
 import "./PaperCounter.scss";
+import { Emoji } from "~components/Emoji";
 
 export const PaperCounter = () => {
   useTitle("Bo's Paper Counter");
@@ -16,7 +17,7 @@ export const PaperCounter = () => {
         parentClass="PaperCounter"
         h1="Paper Counter"
         h2="Vergleiche die Rollen Preise"
-        emoji=""
+        emoji={<Emoji emoji="🧻" label="heart" classs="Headline__" />}
       />
       <div className={Class("PaperCounter__CalculatorContainer")}>
         <CalculatorProvider />

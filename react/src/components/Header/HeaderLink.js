@@ -14,17 +14,12 @@ export function HeaderLink({ linkList, routePath }) {
 
   return (
     <div
-      className={Class(
-        `Header__LinkList Header__LinkList--${Utils.capitalizeFirstLetter(
-          linkList,
-        )}
-          ${currentPath === routePath ? "Header__LinkList--active" : ""}`,
-      )}
+      className={Class(`Header__LinkList Header__LinkList--${Utils.capitalizeFirstLetter(linkList)}`, {
+        "Header__LinkList--active": currentPath === routePath,
+      })}
       key={uuidv4()}>
       <A
-        className={Class(
-          `Header__Link Header__Link--${Utils.capitalizeFirstLetter(linkList)}`,
-        )}
+        className={Class(`Header__Link Header__Link--${Utils.capitalizeFirstLetter(linkList)}`)}
         href={routePath}
         title={`Back to ${linkList}`}
         key={uuidv4()}>
