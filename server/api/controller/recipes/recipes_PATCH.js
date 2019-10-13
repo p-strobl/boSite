@@ -1,4 +1,4 @@
-const Recipe = require('../../models/recipe');
+const Recipe = require("../../models/recipe");
 
 module.exports = (request, response) => {
   const id = request.params.id;
@@ -11,20 +11,20 @@ module.exports = (request, response) => {
   // Update pattern is an Array with prop names and values: [{"propName": "name", "value": "..."}]
   Recipe.update({ _id: id }, { $set: updatedProps })
     .exec()
-    .then(result => {
-      console.log('UPDATE request successful', result);
+    .then((result) => {
+      console.log("UPDATE request successful", result);
       response.status(200).json({
-        message: 'Recipe updated',
+        message: "Recipe updated",
         request: {
-          type: 'UPDATE',
-          url: `http://localhost:5000/recipes/${id}`
-        }
+          type: "UPDATE",
+          url: `http://localhost:5000/recipes/${id}`,
+        },
       });
     })
-    .catch(err => {
-      console.log('UPDATE request failed', err);
+    .catch((err) => {
+      console.log("UPDATE request failed", err);
       response.status(500).json({
-        error: err
+        error: err,
       });
     });
 };

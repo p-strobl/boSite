@@ -1,41 +1,41 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const recipeSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   title: {
     type: String,
-    required: true
+    required: true,
   },
   ingredients: {
     type: Object,
     amount: {
-      type: Number
+      type: Number,
     },
     unit: {
-      type: String
+      type: String,
     },
     name: {
-      type: String
-    }
+      type: String,
+    },
   },
   infos: {
     type: Object,
     kind: {
-      type: String
+      type: String,
     },
     info: {
-      type: String
-    }
+      type: String,
+    },
   },
   preparation: {
     type: Object,
     step: {
-      type: Number
+      type: Number,
     },
     process: {
-      type: String
-    }
-  }
+      type: String,
+    },
+  },
 });
 
-module.exports = mongoose.model('Recipe', recipeSchema, 'bollection');
+module.exports = mongoose.model("Recipe", recipeSchema, "bollection");
