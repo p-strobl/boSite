@@ -1,3 +1,3 @@
 module.exports = {
-  GET: require('./landing_GET')
+  GET: require("./landing_GET"),
 };

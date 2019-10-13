@@ -1,5 +1,5 @@
 module.exports = {
-  landing: require('./landing'),
-  recipes: require('./recipes'),
-  remaining: require('./remaining')
+  landing: require("./landing"),
+  recipes: require("./recipes"),
+  remaining: require("./remaining"),
 };

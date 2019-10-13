@@ -1,3 +1,3 @@
 module.exports = {
-  GET: require('./remaining_GET')
+  GET: require("./remaining_GET"),
 };
