@@ -5,7 +5,9 @@ import Class from "classnames";
 export function Emoji({ label, emoji, classs }) {
   return (
     <span
-      className={Class(`Emoji ${classs || ""}`)}
+      className={Class("Emoji", {
+        [`${classs}`]: classs.length > 0,
+      })}
       role="img"
       aria-label={label || ""}
       aria-hidden={label ? "false" : "true"}>

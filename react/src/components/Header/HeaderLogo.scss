@@ -3,6 +3,10 @@
 .Header__LogoContainer {
   @include grid-column(2, 5);
   padding: 25px 0;
+
+  @include respond-to(2 3 4) {
+    @include grid-column(1, 4);
+  }
 }
 
 .Header__Logo {

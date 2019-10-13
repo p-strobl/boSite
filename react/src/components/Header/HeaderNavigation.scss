@@ -5,11 +5,11 @@
   @include grid-column(5, 13);
   align-items: flex-end;
   grid-template-areas:
-          ". . . home paper paper recipes .";
+          "home home paper paper paper recipes recipes .";
   position: relative;
 
-  @include respond-to(1) {
+  @include respond-to(2 3 4) {
     grid-template-areas:
-            "home home paper paper paper recipes recipes .";
+            ". . . . home paper paper recipes";
   }
 }

@@ -6,10 +6,19 @@ import "./Headline.scss";
 
 export function Headline({ parentClass, h1, h2, emoji }) {
   return (
-    <div className={Class(`${parentClass}__Headline Headline`)}>
+    <div
+      className={Class(
+        {
+          [`${parentClass}__Headline`]: parentClass.length > 0,
+        },
+        "Headline",
+      )}>
       <div
         className={Class(
-          `${parentClass}__HeadlineContainer Headline__Container`,
+          {
+            [`${parentClass}__HeadlineContainer`]: parentClass.length > 0,
+          },
+          "Headline__Container",
         )}>
         <h1>{h1}</h1>
         <h2>
@@ -22,12 +31,14 @@ export function Headline({ parentClass, h1, h2, emoji }) {
 }
 
 Headline.defaultProps = {
+  parentClass: PropTypes.string,
   h1: PropTypes.string,
   h2: PropTypes.string,
   emoji: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 Headline.propTypes = {
+  parentClass: PropTypes.string,
   h1: PropTypes.string,
   h2: PropTypes.string,
   emoji: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
