@@ -7,28 +7,25 @@
 }
 
 .CalculatorInput {
-  @include responsive-font-size(25, 30);
+  @include responsive-font-size(25, 35);
   @include transition(box-shadow 200ms ease-out);
   @include grid-span(2);
   border: 0;
   border-radius: 12px;
-  line-height: 26px;
   padding: 10px;
   position: relative;
   outline: none;
   text-align: center;
-  width: 100%;
 
   @include respond-to(2 3 4) {
-    line-height: 40px;
     padding: 15px 10px;
   }
 
   @include placeholder {
-    @include responsive-font-size(16, 20);
-    @include transform(translateY, (-3px));
+    @include responsive-font-size(20, 30);
+    @include transform(translateY, 3px);
     color: $c_holy-green;
-    text-align: center;
+    line-height: normal !important;
   }
 }
 

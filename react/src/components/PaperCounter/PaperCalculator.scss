@@ -2,43 +2,30 @@
 
 .PaperCalculator {
   @include grid-column(2, 8);
+  border: 1px solid $c_light-grey;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 15px;
+
+  @include respond-to(3) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include respond-to(4 5) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .PaperCalculator:nth-child(1) {
+  border-bottom: 0;
   border-radius: 20px 20px 0 0;
-  padding-bottom: 15px;
-}
-
-.PaperCalculator:nth-child(1) .CalculatorInputContainer {
-  order: 2;
-}
-
-.PaperCalculator:nth-child(1) .CalculatorOutputContainer {
-  order: 1;
-}
-
-.PaperCalculator:nth-child(1) .CalculatorOutputContainer .CalculatorOutput {
-  margin-bottom: 5px;
 }
 
 .PaperCalculator:nth-child(2) {
   border-radius: 0 0 20px 20px;
-  padding-top: 15px;
-}
-
-.PaperCalculator:nth-child(2) .CalculatorInputContainer {
-  order: 1;
-}
-
-.PaperCalculator:nth-child(2) .CalculatorOutputContainer {
-  order: 2;
-}
-
-.PaperCalculator:nth-child(2) .CalculatorOutputContainer .CalculatorOutput {
-  margin-top: 5px;
+  border-top: 0;
 }
 
 .PaperCalculator--Cheapest {
