@@ -1,21 +1,13 @@
 @import "~scss/_utility.scss";
 
 .CalculatorOutputContainer {
-  padding: 0 5px;
+  margin-top: 5px;
   width: 100%;
-}
-
-.CalculatorOutputContainer:first-of-type {
-  order: 1;
-}
-
-.CalculatorOutputContainer:last-of-type {
-  order: 2;
 }
 
 .CalculatorOutput {
   @include flex();
-  @include responsive-font-size(20, 40);
+  @include responsive-font-size(20, 30);
   @include transition(opacity 400ms linear);
   align-items: baseline;
   opacity: 0.1;
