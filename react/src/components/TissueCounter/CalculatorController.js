@@ -1,7 +1,3 @@
-/**
- * Replace all non numbers.
- * @exports numbersOnly
- */
 export const numbersOnly = (element, inputValue) => {
   const numberRegex = /[^0-9,]/g;
 
@@ -70,11 +66,11 @@ export const determineCheapestPrice = () => {
 };
 
 export const setClassOnOutputElements = (cheapestElements) => {
-  const paperCalculator = Array.from(document.querySelectorAll(".PaperCalculator"));
+  const tissueCalculator = Array.from(document.querySelectorAll(".TissueCalculator"));
 
-  const clearPaperCalculatorClasses = () => {
-    paperCalculator.forEach((outputElement) => {
-      outputElement.classList.remove("PaperCalculator--Lowest", "PaperCalculator--Pricey");
+  const clearTissueCalculatorClasses = () => {
+    tissueCalculator.forEach((outputElement) => {
+      outputElement.classList.remove("TissueCalculator--Lowest", "TissueCalculator--Pricey");
     });
   };
 
@@ -83,20 +79,20 @@ export const setClassOnOutputElements = (cheapestElements) => {
       const parsedPrice = parseFloat(price);
 
       if (parsedPrice === 0) return;
-      element.closest(".PaperCalculator").classList.add("PaperCalculator--Lowest");
+      element.closest(".TissueCalculator").classList.add("TissueCalculator--Lowest");
     });
   };
 
   const addClassToPriceyElement = () => {
-    const notCheapestElement = paperCalculator.filter((element) => {
-      return !element.classList.contains("PaperCalculator--Lowest");
+    const notCheapestElement = tissueCalculator.filter((element) => {
+      return !element.classList.contains("TissueCalculator--Lowest");
     });
 
     if (notCheapestElement.length !== 1) return;
-    notCheapestElement[0].classList.add("PaperCalculator--Pricey");
+    notCheapestElement[0].classList.add("TissueCalculator--Pricey");
   };
 
-  clearPaperCalculatorClasses();
+  clearTissueCalculatorClasses();
   addClassToCheapestElement();
   addClassToPriceyElement();
 };

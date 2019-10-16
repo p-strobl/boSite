@@ -2,13 +2,13 @@ import React, { useContext, useState, useEffect } from "react";
 import Class from "classnames";
 
 import { CalculatorContext } from "~context/CalculatorContext";
-import { calculatePrice } from "~components/PaperCounter/CalculatorController";
-import { CalculatorInput } from "~components/PaperCounter/CalculatorInput";
-import { CalculatorOutput } from "~components/PaperCounter/CalculatorOutput";
+import { calculatePrice } from "~components/TissueCounter/CalculatorController";
+import { CalculatorInput } from "~components/TissueCounter/CalculatorInput";
+import { CalculatorOutput } from "~components/TissueCounter/CalculatorOutput";
 
-import "./PaperCalculator.scss";
+import "./TissueCalculator.scss";
 
-export const PaperCalculator = () => {
+export const TissueCalculator = () => {
   const {
     rollCountContext: [rollCount, setRollerCount],
     sheetCountContext: [sheetCount, setSheetCount],
@@ -26,7 +26,7 @@ export const PaperCalculator = () => {
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
-    <div className={Class("PaperCalculator")}>
+    <div className={Class("TissueCalculator")}>
       <div className={Class("CalculatorInputContainer")}>
         <CalculatorInput placeholder="Rollen" context="rollCountContext" type="number" />
         <CalculatorInput placeholder="Blatt" context="sheetCountContext" type="number" />

@@ -5,11 +5,11 @@ import RouterContext from "~context/RouteContext";
 
 import { LandingPage } from "~components/LandingPage";
 import { RecipesPage } from "~components/RecipesPage";
-import { PaperCounter } from "~components/PaperCounter";
+import { TissueCounter } from "~components/TissueCounter";
 import { PageNotFound } from "~components/404-PageNotFound";
 
 export function Routes() {
-  const { home, recipes, paperCounter } = useContext(RouterContext);
+  const { home, recipes, tissueCounter } = useContext(RouterContext);
   const routes = {
     [home]: function landingPage() {
       return <LandingPage />;
@@ -17,8 +17,8 @@ export function Routes() {
     [recipes]: function recipesPage() {
       return <RecipesPage />;
     },
-    [paperCounter]: function paperCounterPage() {
-      return <PaperCounter />;
+    [tissueCounter]: function tissueCounterPage() {
+      return <TissueCounter />;
     },
   };
 

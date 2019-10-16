@@ -1,12 +1,12 @@
 import React from "react";
 
 import CalculatorStore from "~context/CalculatorContext";
-import { PaperCalculator } from "~components/PaperCounter/PaperCalculator";
+import { TissueCalculator } from "~components/TissueCounter/TissueCalculator";
 
 export const CalculatorProvider = () => {
   return (
     <CalculatorStore>
-      <PaperCalculator />
+      <TissueCalculator />
     </CalculatorStore>
   );
 };

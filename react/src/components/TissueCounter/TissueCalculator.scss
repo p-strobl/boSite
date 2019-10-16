@@ -1,6 +1,6 @@
 @import "~scss/_utility.scss";
 
-.PaperCalculator {
+.TissueCalculator {
   @include grid-column(2, 8);
   border: 1px solid $c_light-grey;
   display: flex;
@@ -18,20 +18,20 @@
   }
 }
 
-.PaperCalculator:nth-child(1) {
+.TissueCalculator:nth-child(1) {
   border-bottom: 0;
   border-radius: 20px 20px 0 0;
 }
 
-.PaperCalculator:nth-child(2) {
+.TissueCalculator:nth-child(2) {
   border-radius: 0 0 20px 20px;
   border-top: 0;
 }
 
-.PaperCalculator--Pricey {
+.TissueCalculator--Pricey {
   background-color: $c_tomato-red;
 }
 
-.PaperCalculator--Lowest {
+.TissueCalculator--Lowest {
   background-color: $c_light-green;
 }

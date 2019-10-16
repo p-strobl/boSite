@@ -1,1 +1,0 @@
-export { PaperCounter } from "./PaperCounter";
