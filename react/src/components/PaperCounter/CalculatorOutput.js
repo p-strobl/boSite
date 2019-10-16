@@ -3,7 +3,7 @@ import Class from "classnames";
 import PropTypes from "prop-types";
 
 import "./CalculatorOutput.scss";
-import { determineCheapestPrice, setClassOnCheapestElement, resetCalculatorView } from "./CalculatorController";
+import { determineCheapestPrice, setClassOnOutputElements, resetCalculatorView } from "./CalculatorController";
 
 export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   if (typeof totalPrice === "undefined") return false;
@@ -33,9 +33,8 @@ export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   };
 
   useEffect(() => {
-    const cheapestElements = determineCheapestPrice();
-
-    setClassOnCheapestElement(cheapestElements);
+    const filledOutputElements = determineCheapestPrice();
+    setClassOnOutputElements(filledOutputElements);
   }, [localePrice]);
 
   return (

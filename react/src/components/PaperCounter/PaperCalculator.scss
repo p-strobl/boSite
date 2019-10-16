@@ -28,6 +28,10 @@
   border-top: 0;
 }
 
-.PaperCalculator--Cheapest {
+.PaperCalculator--Pricey {
+  background-color: $c_tomato-red;
+}
+
+.PaperCalculator--Lowest {
   background-color: $c_light-green;
 }

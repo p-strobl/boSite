@@ -57,7 +57,7 @@ export const determineCheapestPrice = () => {
       .replace(euroRegex, "")
       .replace(layerRegex, "");
 
-    parsedElement.push([element, parsedPrice]);
+    parsedElement.push([element, parseFloat(parsedPrice)]);
   });
 
   const cheapestElement = parsedElement.reduce((acc, current) => {
@@ -69,30 +69,40 @@ export const determineCheapestPrice = () => {
   });
 };
 
-export const setClassOnCheapestElement = (cheapestElements) => {
+export const setClassOnOutputElements = (cheapestElements) => {
   const paperCalculator = Array.from(document.querySelectorAll(".PaperCalculator"));
 
-  paperCalculator.forEach((outputElement) => {
-    outputElement.classList.remove("PaperCalculator--Cheapest");
-  });
+  const clearPaperCalculatorClasses = () => {
+    paperCalculator.forEach((outputElement) => {
+      outputElement.classList.remove("PaperCalculator--Lowest", "PaperCalculator--Pricey");
+    });
+  };
 
-  cheapestElements.forEach(([element, price]) => {
-    const elementPrice = parseFloat(price);
+  const addClassToCheapestElement = () => {
+    cheapestElements.forEach(([element, price]) => {
+      const parsedPrice = parseFloat(price);
 
-    if (elementPrice === 0) {
-      return false;
-    }
+      if (parsedPrice === 0) return;
+      element.closest(".PaperCalculator").classList.add("PaperCalculator--Lowest");
+    });
+  };
 
-    element.closest(".PaperCalculator").classList.add("PaperCalculator--Cheapest");
+  const addClassToPriceyElement = () => {
+    const notCheapestElement = paperCalculator.filter((element) => {
+      return !element.classList.contains("PaperCalculator--Lowest");
+    });
 
-    return true;
-  });
+    if (notCheapestElement.length !== 1) return;
+    notCheapestElement[0].classList.add("PaperCalculator--Pricey");
+  };
+
+  clearPaperCalculatorClasses();
+  addClassToCheapestElement();
+  addClassToPriceyElement();
 };
 
 export const resetCalculatorView = (event) => {
-  if (event.target.type !== "button") {
-    return;
-  }
+  if (event.target.type !== "button") return;
 
   const outputContainer = event.target.closest(".CalculatorOutputContainer");
   const inputContainer = outputContainer.previousSibling;
