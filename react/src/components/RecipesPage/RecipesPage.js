@@ -13,7 +13,7 @@ export const RecipesPage = () => {
 
   const url = "http://localhost:5000/recipes";
 
-  useTitle("Bo's Recipes");
+  useTitle("boSite's Recipes");
 
   // useEffect(() => {
   //   axios

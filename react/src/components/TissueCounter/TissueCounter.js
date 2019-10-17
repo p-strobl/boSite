@@ -4,24 +4,20 @@ import { useTitle } from "hookrouter";
 
 import { Headline } from "~components/Headline";
 import { CalculatorProvider } from "./CalculatorProvider";
-
-import "./TissueCounter.scss";
 import { Emoji } from "~components/Emoji";
 
-export const TissueCounter = () => {
-  useTitle("Bo's Tissue Counter");
+import "./TissueCounter.scss";
 
-  const emoji = <Emoji classs="TissueCounterHeadline__" emoji="🧻" label="heart" />;
-  const h1 = <h1 className={Class("TissueCounter_Headline")}>Tissue Counter</h1>;
-  const h2 = (
-    <h2 className={Class("TissueCounter_SubHeadline")}>
-      Vergleiche Sie die <>{emoji}</> Preise
-    </h2>
-  );
+export const TissueCounter = () => {
+  useTitle("boSite's Tissue Counter");
+
+  const emojiTissue = <Emoji classs="TissueCounterHeadline__" emojiClass="Emoji__Tissue" label="tissue" />;
+  const headline = <h1 className={Class("TissueCounter_Headline")}>Tissue Counter</h1>;
+  const subHeadline = <h2 className={Class("TissueCounter_SubHeadline")}>Vergleichen Sie die {emojiTissue} Preise</h2>;
 
   return (
     <div className={Class("TissueCounter")}>
-      <Headline parentClass="TissueCounter" h1={h1} h2={h2} />
+      <Headline parentClass="TissueCounter" h1={headline} h2={subHeadline} />
       <div className={Class("TissueCounter__CalculatorContainer")}>
         <CalculatorProvider />
         <CalculatorProvider />

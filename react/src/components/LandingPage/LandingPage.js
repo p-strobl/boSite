@@ -1,4 +1,5 @@
 import React from "react";
+import Class from "classnames";
 import { useTitle } from "hookrouter";
 
 import { SiteTiles } from "~components/SiteTiles";
@@ -6,15 +7,17 @@ import { Headline } from "~components/Headline";
 import { Emoji } from "~components/Emoji";
 
 export const LandingPage = () => {
-  useTitle("Bo's Home");
+  useTitle("boSite's Home");
+
+  const emojiHeart = <Emoji classs="Headline__" emojiClass="Emoji__Heart" label="heart" />;
+  const headline = <h1 className={Class("TissueCounter_Headline")}>boSite&apos;s Toolbox</h1>;
+  const subHeadline = (
+    <h2 className={Class("TissueCounter_SubHeadline")}>use my little {emojiHeart} tools as you like</h2>
+  );
+
   return (
     <div className="Main__Container">
-      <Headline
-        parentClass="Main"
-        h1="boSite's Project"
-        h2="use my little tools as you like"
-        emoji={<Emoji emoji="❤️" label="heart" classs="Headline__" />}
-      />
+      <Headline parentClass="Main" h1={headline} h2={subHeadline} />
       <SiteTiles />
     </div>
   );

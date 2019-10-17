@@ -1,0 +1,19 @@
+@import "~scss/_utility.scss";
+
+.Emoji {
+  &.Emoji__Heart:after {
+    content: $emoji_heart;
+  }
+
+  &.Emoji__House:after {
+    content: $emoji_house;
+  }
+
+  &.Emoji__Memo:after {
+    content: $emoji_memo;
+  }
+
+  &.Emoji__Tissue:after {
+    content: $emoji_tissue;
+  }
+}
