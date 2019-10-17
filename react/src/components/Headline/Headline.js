@@ -20,8 +20,8 @@ export function Headline({ parentClass, h1, h2 }) {
           },
           "Headline__Container",
         )}>
-        <h1>{h1}</h1>
-        <h2>{h2}</h2>
+        {h1}
+        {h2}
       </div>
     </div>
   );
@@ -29,12 +29,12 @@ export function Headline({ parentClass, h1, h2 }) {
 
 Headline.defaultProps = {
   parentClass: PropTypes.string,
-  h1: PropTypes.string,
-  h2: PropTypes.string,
+  h1: PropTypes.node,
+  h2: PropTypes.node,
 };
 
 Headline.propTypes = {
   parentClass: PropTypes.string,
-  h1: PropTypes.string,
-  h2: PropTypes.string,
+  h1: PropTypes.node,
+  h2: PropTypes.node,
 };

@@ -12,17 +12,16 @@ export const TissueCounter = () => {
   useTitle("Bo's Tissue Counter");
 
   const emoji = <Emoji classs="TissueCounterHeadline__" emoji="🧻" label="heart" />;
+  const h1 = <h1 className={Class("TissueCounter_Headline")}>Tissue Counter</h1>;
+  const h2 = (
+    <h2 className={Class("TissueCounter_SubHeadline")}>
+      Vergleiche Sie die <>{emoji}</> Preise
+    </h2>
+  );
 
   return (
     <div className={Class("TissueCounter")}>
-      <div className="Headline">
-        <div className="Headline__Container">
-          <h1 className={Class("TissueCounter_Headline")}>Tissue Counter</h1>
-          <h2 className={Class("TissueCounter_SubHeadline")}>
-            Vergleiche Sie die <>{emoji}</> Preise
-          </h2>
-        </div>
-      </div>
+      <Headline parentClass="TissueCounter" h1={h1} h2={h2} />
       <div className={Class("TissueCounter__CalculatorContainer")}>
         <CalculatorProvider />
         <CalculatorProvider />
