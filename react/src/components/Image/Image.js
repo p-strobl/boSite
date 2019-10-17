@@ -10,13 +10,7 @@ export function Image({ alt, classs, dataImageSrc, src, title }) {
   });
 
   return (
-    <img
-      alt={alt}
-      className={Class(`${classs} AsyncImage`)}
-      data-image-src={path}
-      src={src}
-      title={`Visit ${title}`}
-    />
+    <img alt={alt} className={Class(`${classs} AsyncImage`)} data-image-src={path} src={src} title={`Visit ${title}`} />
   );
 }
 

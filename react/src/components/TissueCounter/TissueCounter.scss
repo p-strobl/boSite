@@ -4,8 +4,9 @@
   @include grid(12);
 }
 
-.TissueCounter__Headline {
-  @include grid-span(12);
+.TissueCounterHeadline__Emoji {
+  display: inline-flex;
+  line-height: 25px;
 }
 
 .TissueCounter__CalculatorContainer {

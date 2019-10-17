@@ -11,14 +11,18 @@ import { Emoji } from "~components/Emoji";
 export const TissueCounter = () => {
   useTitle("Bo's Tissue Counter");
 
+  const emoji = <Emoji classs="TissueCounterHeadline__" emoji="🧻" label="heart" />;
+
   return (
     <div className={Class("TissueCounter")}>
-      <Headline
-        parentClass="TissueCounter"
-        h1="Tissue Counter"
-        h2="Vergleiche die Rollen Preise"
-        emoji={<Emoji emoji="🧻" label="heart" classs="Headline__" />}
-      />
+      <div className="Headline">
+        <div className="Headline__Container">
+          <h1 className={Class("TissueCounter_Headline")}>Tissue Counter</h1>
+          <h2 className={Class("TissueCounter_SubHeadline")}>
+            Vergleiche Sie die <>{emoji}</> Preise
+          </h2>
+        </div>
+      </div>
       <div className={Class("TissueCounter__CalculatorContainer")}>
         <CalculatorProvider />
         <CalculatorProvider />

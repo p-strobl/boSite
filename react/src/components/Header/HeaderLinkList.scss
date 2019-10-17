@@ -1,9 +1,10 @@
 @import "~scss/_utility.scss";
 
 .Header__LinkList {
-  display: flex;
+@include flex();
+  align-items: flex-end;
+  height: 100%;
   justify-content: center;
-  grid-column: span 1;
 }
 
 .Header__LinkList--active:after {

@@ -14,8 +14,12 @@
 
 .Footer__Text {
   @include flex();
-  @include grid-column(11, 13);
+  @include grid-column(8, 12);
   justify-content: flex-end;
+
+  @include respond-to(2 3 4 5) {
+    @include grid-column(10, 13);
+  }
 }
 
 .Footer__Emoji {

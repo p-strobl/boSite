@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import "./Headline.scss";
 
-export function Headline({ parentClass, h1, h2, emoji }) {
+export function Headline({ parentClass, h1, h2 }) {
   return (
     <div
       className={Class(
@@ -21,10 +21,7 @@ export function Headline({ parentClass, h1, h2, emoji }) {
           "Headline__Container",
         )}>
         <h1>{h1}</h1>
-        <h2>
-          {h2}
-          {emoji || ""}
-        </h2>
+        <h2>{h2}</h2>
       </div>
     </div>
   );
@@ -34,12 +31,10 @@ Headline.defaultProps = {
   parentClass: PropTypes.string,
   h1: PropTypes.string,
   h2: PropTypes.string,
-  emoji: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 Headline.propTypes = {
   parentClass: PropTypes.string,
   h1: PropTypes.string,
   h2: PropTypes.string,
-  emoji: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };

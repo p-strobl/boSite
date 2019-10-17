@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Class from "classnames";
 
-export function Emoji({ label, emoji, classs }) {
+export function Emoji({ classs, emoji, label }) {
   return (
     <span
       className={Class(
         {
-          [`${classs}Emoji`]: classs.length > 0,
+          [`${classs}Emoji Emoji`]: classs.length > 0,
         },
         "Emoji",
       )}

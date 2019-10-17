@@ -3,9 +3,9 @@
 .Header__Link {
   @include responsive-font-size(10, 15);
   font-family: "LigatureSymbols", sans-serif;
-  margin-top: auto;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   text-align: center;
+  width: 100%;
 }
 
 .no-touch .Header__Link:hover {
@@ -13,20 +13,23 @@
 }
 
 .Header__Link:before {
-  @include responsive-font-size(30, 30);
+  @include responsive-font-size(25, 25);
+  display: block;
+  line-height: 40px;
+
   @include respond-to(2 3 4) {
     @include responsive-font-size(40, 40);
   }
 }
 
 .Header__Link--Home:before {
-  content: $i_home;
+  content: $emoji_heart;
 }
 
 .Header__Link--TissueCounter:before {
-  content: $i_tissue;
+  content: $emoji_tissue;
 }
 
 .Header__Link--Recipes:before {
-  content: $i_recipes;
+  content: $emoji_memo;
 }
