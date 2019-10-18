@@ -4,29 +4,20 @@ import Class from "classnames";
 import "~server-assets/images/favicon.png";
 import "~assets/fonts";
 
-import "./App.scss";
-
+import { isTouchDevice } from "~src/helper/Utilities";
 import { GridLayer } from "~components/GridLayer";
 import { BoundingBar } from "~components/BoundingBar";
 import { Header } from "~components/Header";
 import { Footer } from "~components/Footer";
 import { Main } from "~components/Main";
 
+import "./App.scss";
+
 export function App() {
   const [touchDevice, setTouchDevice] = useState(true);
 
-  const isTouchDevice = () => {
-    if (
-      "ontouchstart" in window ||
-      navigator.MaxTouchPoints > 0 ||
-      navigator.msMaxTouchPoints > 0
-    ) {
-      setTouchDevice(false);
-    }
-  };
-
   useEffect(() => {
-    isTouchDevice();
+    setTouchDevice(isTouchDevice());
   }, []);
 
   return (

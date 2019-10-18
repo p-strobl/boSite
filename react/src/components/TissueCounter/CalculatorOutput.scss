@@ -28,7 +28,6 @@
   @include transition(opacity 400ms linear);
   padding: 0 6px;
   margin-left: auto;
-  opacity: 0;
 }
 
 .no-touch .CalculatorOutput__ClearButton:hover {
