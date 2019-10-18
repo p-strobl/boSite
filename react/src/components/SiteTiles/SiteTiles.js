@@ -9,16 +9,16 @@ import { SiteTile } from "./SiteTile";
 import "./SiteTiles.scss";
 
 export function SiteTiles() {
-  const routes = useContext(RouterContext);
-  const sites = Object.entries(routes).filter(([key, value]) => {
-    return key !== "home";
+  const routerContext = useContext(RouterContext);
+  const routes = Object.entries(routerContext.routes).filter(([route]) => {
+    return route !== "home";
   });
-
   return (
     <div className={Class("SiteTiles")}>
-      {sites.map((element) => {
-        const [siteName, sitePath] = element;
-        return <SiteTile key={uuidv4()} siteName={siteName} sitePath={sitePath} />;
+      {routes.map((route) => {
+        return (
+          <SiteTile key={uuidv4()} siteObjectName={route[0]} siteTitle={route[1].title} sitePath={route[1].path} />
+        );
       })}
     </div>
   );

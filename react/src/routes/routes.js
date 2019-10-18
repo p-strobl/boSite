@@ -9,19 +9,22 @@ import { TissueCounter } from "~components/TissueCounter";
 import { PageNotFound } from "~components/404-PageNotFound";
 
 export function Routes() {
-  const { home, recipes, tissueCounter } = useContext(RouterContext);
-  const routes = {
-    [home]: function landingPage() {
-      return <LandingPage />;
-    },
-    [recipes]: function recipesPage() {
-      return <RecipesPage />;
-    },
-    [tissueCounter]: function tissueCounterPage() {
-      return <TissueCounter />;
-    },
+  const routerContext = useContext(RouterContext);
+  const landingPage = () => {
+    return <LandingPage />;
   };
-
+  const recipesPage = () => {
+    return <RecipesPage />;
+  };
+  const tissueCounterPage = () => {
+    return <TissueCounter />;
+  };
+  const routes = {
+    [routerContext.routes.home.path]: landingPage,
+    [routerContext.routes.recipes.path]: recipesPage,
+    [routerContext.routes.tissueCounter.path]: tissueCounterPage,
+  };
   const usedRoutes = useRoutes(routes);
+
   return usedRoutes || <PageNotFound />;
 }
