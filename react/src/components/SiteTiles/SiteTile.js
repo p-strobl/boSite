@@ -4,16 +4,13 @@ import Class from "classnames";
 import { A } from "hookrouter";
 
 import Base64 from "~src/helper/Base64ImagePlaceholder";
-import * as Utils from "~src/helper/Utilities";
 
 import { loadImages } from "~src/helper/ImageLoader";
 import { Image } from "~components/Image";
 
 import "./SiteTile.scss";
 
-export function SiteTile({ siteName, sitePath }) {
-  const title = Utils.splitOnCamelCase(siteName);
-
+export function SiteTile({ siteObjectName, siteTitle, sitePath }) {
   useEffect(() => {
     loadImages();
   }, [loadImages]);
@@ -21,7 +18,13 @@ export function SiteTile({ siteName, sitePath }) {
   return (
     <div className={Class("SiteTile")}>
       <A className={Class("SiteTile__Anchor")} href={sitePath}>
-        <Image alt="Page Icon" classs="SiteTile__Image" dataImageSrc={siteName} src={Base64.siteTile} title={title} />
+        <Image
+          alt="Page Icon"
+          classs="SiteTile__Image"
+          imageObjectSrc={siteObjectName}
+          src={Base64.siteTile}
+          title={siteTitle}
+        />
         <h4>Text</h4>
       </A>
     </div>
@@ -29,11 +32,13 @@ export function SiteTile({ siteName, sitePath }) {
 }
 
 SiteTile.defaultProps = {
-  siteName: PropTypes.string,
+  siteObjectName: PropTypes.string,
+  siteTitle: PropTypes.string,
   sitePath: PropTypes.string,
 };
 
 SiteTile.propTypes = {
-  siteName: PropTypes.string,
+  siteObjectName: PropTypes.string,
+  siteTitle: PropTypes.string,
   sitePath: PropTypes.string,
 };

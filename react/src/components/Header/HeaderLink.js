@@ -8,10 +8,8 @@ import * as Utils from "~src/helper/Utilities";
 
 import "./HeaderLink.scss";
 
-export function HeaderLink({ linkList, routePath }) {
+export function HeaderLink({ linkList, routePath, routeTitle }) {
   const currentPath = usePath();
-  const splitKey = Utils.splitOnCamelCase(linkList);
-
   return (
     <div
       className={Class(`Header__LinkList Header__LinkList--${Utils.capitalizeFirstLetter(linkList)}`, {
@@ -21,9 +19,9 @@ export function HeaderLink({ linkList, routePath }) {
       <A
         className={Class(`Header__Link Header__Link--${Utils.capitalizeFirstLetter(linkList)}`)}
         href={routePath}
-        title={`Back to ${linkList}`}
+        title={`Back to ${routeTitle}`}
         key={uuidv4()}>
-        <div>{Utils.capitalizeFirstLetter(splitKey)}</div>
+        <div>{routeTitle}</div>
       </A>
     </div>
   );

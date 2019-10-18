@@ -9,10 +9,18 @@ import { HeaderLink } from "./HeaderLink";
 import "./HeaderLinkList.scss";
 
 export function HeaderLinkList() {
-  const routes = useContext(RouterContext);
+  const routerContext = useContext(RouterContext);
   const currentPath = usePath();
-  const headerLinks = Object.entries(routes).map(([key, value]) => {
-    return <HeaderLink key={uuidv4()} linkList={key} currentPath={currentPath} routePath={value} />;
+  const headerLinks = Object.entries(routerContext.routes).map(([routeObjectKey, routeObjectValue]) => {
+    return (
+      <HeaderLink
+        key={uuidv4()}
+        linkList={routeObjectKey}
+        currentPath={currentPath}
+        routePath={routeObjectValue.path}
+        routeTitle={routeObjectValue.title}
+      />
+    );
   });
 
   return <>{headerLinks}</>;

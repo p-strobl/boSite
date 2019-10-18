@@ -1,7 +1,18 @@
 import { createContext } from "react";
 
 export default createContext({
-  home: "/",
-  tissueCounter: "/tissue-counter",
-  recipes: "/recipes",
+  routes: {
+    home: {
+      path: "/",
+      title: "boSite Home",
+    },
+    tissueCounter: {
+      path: "/tissue-counter",
+      title: "Tissue Price Compare",
+    },
+    recipes: {
+      path: "/recipes",
+      title: "boSite's Recipes",
+    },
+  },
 });
