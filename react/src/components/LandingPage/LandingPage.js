@@ -6,19 +6,23 @@ import { SiteTiles } from "~components/SiteTiles";
 import { Headline } from "~components/Headline";
 import { Emoji } from "~components/Emoji";
 
+import "./LandingPages.scss";
+
 export const LandingPage = () => {
   useTitle("boSite's Home");
 
-  const emojiHeart = <Emoji classs="Headline__" emojiClass="Emoji__Heart" label="heart" />;
-  const headline = <h1 className={Class("TissueCounter_Headline")}>boSite&apos;s Toolbox</h1>;
+  const emojiHeart = <Emoji classs="LandingPageHeadline__" emojiClass="Emoji__Heart" label="heart" />;
+  const headline = <h1 className={Class("LandingPage_Headline")}>boSite&apos;s Toolbox</h1>;
   const subHeadline = (
-    <h2 className={Class("TissueCounter_SubHeadline")}>use my little {emojiHeart} tools as you like</h2>
+    <h2 className={Class("LandingPage_SubHeadline")}>use my little {emojiHeart} tools as you like</h2>
   );
 
   return (
-    <div className="Main__Container">
+    <>
       <Headline parentClass="Main" h1={headline} h2={subHeadline} />
-      <SiteTiles />
-    </div>
+      <div className="LandingPage__Container">
+        <SiteTiles />
+      </div>
+    </>
   );
 };

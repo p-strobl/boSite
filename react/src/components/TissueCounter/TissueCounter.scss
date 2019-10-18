@@ -20,6 +20,7 @@
 
   @include respond-to(2 3 4) {
     @include grid-column(3, 11);
+    padding: 60px 0;
   }
 }
 

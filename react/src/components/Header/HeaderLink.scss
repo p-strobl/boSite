@@ -3,8 +3,8 @@
 .Header__Link {
   @include responsive-font-size(10, 15);
   font-family: "LigatureSymbols", sans-serif;
-  padding-bottom: 15px;
   text-align: center;
+  white-space: nowrap;
   width: 100%;
 }
 
@@ -15,7 +15,6 @@
 .Header__Link:before {
   @include responsive-font-size(25, 25);
   display: block;
-  line-height: 40px;
 
   @include respond-to(2 3 4) {
     @include responsive-font-size(40, 40);
