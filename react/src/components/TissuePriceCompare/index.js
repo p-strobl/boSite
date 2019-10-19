@@ -1,1 +1,1 @@
-export { TissueCounter } from "./TissueCounter";
+export { TissuePriceCompare } from "./TissuePriceCompare";
