@@ -4,7 +4,7 @@ export default createContext({
   routes: {
     home: {
       path: "/",
-      title: "boSite Home",
+      title: "Home",
     },
     tissueCounter: {
       path: "/tissue-counter",
@@ -12,7 +12,7 @@ export default createContext({
     },
     recipes: {
       path: "/recipes",
-      title: "boSite's Recipes",
+      title: "Recipes",
     },
   },
 });

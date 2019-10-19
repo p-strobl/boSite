@@ -1,12 +1,12 @@
 @import "~scss/_utility.scss";
 
-.CalculatorInputContainer {
+.TissuePriceCalculatorInputContainer {
   @include grid(4);
   grid-column-gap: 2vw;
   grid-row-gap: 2vw;
 }
 
-.CalculatorInput {
+.TissuePriceCalculatorInput {
   @include responsive-font-size(25, 35);
   @include transition(box-shadow 200ms ease-out);
   @include grid-span(2);
@@ -17,7 +17,7 @@
   outline: none;
   text-align: center;
 
-  @include respond-to(2 3 4) {
+  @include respond-to(2) {
     padding: 15px 10px;
   }
 
@@ -29,6 +29,18 @@
   }
 }
 
-.CalculatorInput:focus {
+.TissuePriceCalculatorInput:nth-child(odd) {
+  @include respond-to(2) {
+    margin-left: 20px;
+  }
+}
+
+.TissuePriceCalculatorInput:nth-child(even) {
+  @include respond-to(2) {
+    margin-right: 20px;
+  }
+}
+
+.TissuePriceCalculatorInput:focus {
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
 }

@@ -1,11 +1,11 @@
 @import "~scss/_utility.scss";
-
-.TissueCalculator {
+.TissuePriceCalculator {
+  @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid-column(2, 8);
   border: 1px solid $c_light-grey;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 30px 15px 15px;
 
   @include respond-to(3) {
     padding-left: 30px;
@@ -18,20 +18,20 @@
   }
 }
 
-.TissueCalculator:nth-child(1) {
+.TissuePriceCalculator:nth-child(1) {
   border-bottom: 0;
   border-radius: 20px 20px 0 0;
 }
 
-.TissueCalculator:nth-child(2) {
+.TissuePriceCalculator:nth-child(2) {
   border-radius: 0 0 20px 20px;
   border-top: 0;
 }
 
-.TissueCalculator--Pricey {
+.TissuePriceCalculator--Pricey {
   background-color: $c_tomato-red;
 }
 
-.TissueCalculator--Lowest {
+.TissuePriceCalculator--Lowest {
   background-color: $c_light-green;
 }

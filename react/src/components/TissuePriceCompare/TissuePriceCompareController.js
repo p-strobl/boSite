@@ -39,7 +39,7 @@ export const calculatePrice = (rollCount, sheetCount, layerCount, price) => {
 };
 
 export const determineCheapestPrice = () => {
-  const calculatorOutput = Array.from(document.querySelectorAll(".CalculatorOutput"));
+  const calculatorOutput = Array.from(document.querySelectorAll(".TissuePriceCalculatorOutput"));
 
   const parsedElement = [];
 
@@ -66,11 +66,11 @@ export const determineCheapestPrice = () => {
 };
 
 export const setClassOnOutputElements = (cheapestElements) => {
-  const tissueCalculator = Array.from(document.querySelectorAll(".TissueCalculator"));
+  const tissueCalculator = Array.from(document.querySelectorAll(".TissuePriceCalculator"));
 
   const clearTissueCalculatorClasses = () => {
     tissueCalculator.forEach((outputElement) => {
-      outputElement.classList.remove("TissueCalculator--Lowest", "TissueCalculator--Pricey");
+      outputElement.classList.remove("TissuePriceCalculator--Lowest", "TissuePriceCalculator--Pricey");
     });
   };
 
@@ -79,17 +79,17 @@ export const setClassOnOutputElements = (cheapestElements) => {
       const parsedPrice = parseFloat(price);
 
       if (parsedPrice === 0) return;
-      element.closest(".TissueCalculator").classList.add("TissueCalculator--Lowest");
+      element.closest(".TissuePriceCalculator").classList.add("TissuePriceCalculator--Lowest");
     });
   };
 
   const addClassToPriceyElement = () => {
     const notCheapestElement = tissueCalculator.filter((element) => {
-      return !element.classList.contains("TissueCalculator--Lowest");
+      return !element.classList.contains("TissuePriceCalculator--Lowest");
     });
 
     if (notCheapestElement.length !== 1) return;
-    notCheapestElement[0].classList.add("TissueCalculator--Pricey");
+    notCheapestElement[0].classList.add("TissuePriceCalculator--Pricey");
   };
 
   clearTissueCalculatorClasses();
@@ -100,7 +100,7 @@ export const setClassOnOutputElements = (cheapestElements) => {
 export const resetCalculatorView = (event) => {
   if (event.target.type !== "button") return;
 
-  const outputContainer = event.target.closest(".CalculatorOutputContainer");
+  const outputContainer = event.target.closest(".TissuePriceCalculatorOutputContainer");
   const inputContainer = outputContainer.previousSibling;
   const containerInputs = Array.from(inputContainer.children);
 

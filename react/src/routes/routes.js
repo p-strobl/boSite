@@ -5,7 +5,7 @@ import RouterContext from "~context/RouteContext";
 
 import { LandingPage } from "~components/LandingPage";
 import { RecipesPage } from "~components/RecipesPage";
-import { TissueCounter } from "~components/TissueCounter";
+import { TissuePriceCompare } from "~components/TissuePriceCompare";
 import { PageNotFound } from "~components/404-PageNotFound";
 
 export function Routes() {
@@ -17,7 +17,7 @@ export function Routes() {
     return <RecipesPage />;
   };
   const tissueCounterPage = () => {
-    return <TissueCounter />;
+    return <TissuePriceCompare />;
   };
   const routes = {
     [routerContext.routes.home.path]: landingPage,

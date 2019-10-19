@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
 
-import "./CalculatorOutput.scss";
-import { determineCheapestPrice, setClassOnOutputElements, resetCalculatorView } from "./CalculatorController";
+import "./TissuePriceCalculatorOutput.scss";
+import { determineCheapestPrice, setClassOnOutputElements, resetCalculatorView } from "./TissuePriceCompareController";
 
-export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
+export const TissuePriceCalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   if (typeof totalPrice === "undefined") return false;
 
   const localePrice = totalPrice.toLocaleString("de-DE", {
@@ -38,13 +38,13 @@ export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   }, [localePrice]);
 
   return (
-    <div className={Class("CalculatorOutput", { "CalculatorOutput--Show": totalPrice })}>
+    <div className={Class("TissuePriceCalculatorOutput", { "TissuePriceCalculatorOutput--Show": totalPrice })}>
       {localePrice}
-      <span className={Class("CalculatorOutput__Currency")}>€</span>
-      <span className={Class("CalculatorOutput__Text")}>pro Lage</span>
+      <span className={Class("TissuePriceCalculatorOutput__Currency")}>€</span>
+      <span className={Class("TissuePriceCalculatorOutput__Text")}>pro Lage</span>
       <button
         aria-label="Clear Button"
-        className={Class("CalculatorOutput__ClearButton")}
+        className={Class("TissuePriceCalculatorOutput__ClearButton")}
         onClick={handleResetCalculatorClick}
         type="button"
       />
@@ -52,12 +52,12 @@ export const CalculatorOutput = ({ totalPrice, calculatorSetter }) => {
   );
 };
 
-CalculatorOutput.defaultProps = {
+TissuePriceCalculatorOutput.defaultProps = {
   totalPrice: PropTypes.number,
   calculatorSetter: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.func])),
 };
 
-CalculatorOutput.propTypes = {
+TissuePriceCalculatorOutput.propTypes = {
   totalPrice: PropTypes.number,
   calculatorSetter: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.func])),
 };

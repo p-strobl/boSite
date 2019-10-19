@@ -12,7 +12,8 @@
     "url": "https://github.com/p-strobl/boSite/issues"
   },
   "scripts": {
-    "react": "cd react && npm start"
+    "react": "cd react && npm start",
+    "build": "cd react && npm run build"
   },
   "homepage": "https://github.com/p-strobl/boSite#readme",
   "devDependencies": {

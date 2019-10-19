@@ -8,7 +8,15 @@
   width: 100%;
 }
 
+.SiteTile__Anchor:hover .SiteTile__Image {
+  @include transform(scale, 1.03);
+}
+
 .SiteTile__Image {
   border-radius: 5px;
   width: 100%;
+}
+
+.SiteTile__Text {
+
 }

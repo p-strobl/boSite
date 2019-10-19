@@ -6,7 +6,13 @@
 }
 
 .Header__LinkList:nth-child(n+2) {
-  margin-left: 20px;
+  border-left: 1px dashed $c_holy-green;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.no-touch .Header__LinkList:hover .Header__Link {
+  @include transform(scale, 1.1);
 }
 
 .Header__LinkList--active:after {

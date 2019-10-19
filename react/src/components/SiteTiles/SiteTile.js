@@ -25,7 +25,7 @@ export function SiteTile({ siteObjectName, siteTitle, sitePath }) {
           src={Base64.siteTile}
           title={siteTitle}
         />
-        <h4>Text</h4>
+        <h4 className={Class("SiteTile__Text")}>{siteTitle}</h4>
       </A>
     </div>
   );

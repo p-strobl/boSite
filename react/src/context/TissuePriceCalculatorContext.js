@@ -1,9 +1,9 @@
 import React, { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
-export const CalculatorContext = createContext(null);
+export const TissuePriceCalculatorContext = createContext(null);
 
-export default function CalculatorStore({ children }) {
+export default function TissuePriceCalculatorStore({ children }) {
   const [rollCount, setRollCount] = useState(0);
   const [sheetCount, setSheetCount] = useState(0);
   const [layerCount, setLayerCount] = useState(0);
@@ -16,15 +16,17 @@ export default function CalculatorStore({ children }) {
     priceContext: [price, setPrice],
   };
 
-  return <CalculatorContext.Provider value={calculatorStore}>{children}</CalculatorContext.Provider>;
+  return (
+    <TissuePriceCalculatorContext.Provider value={calculatorStore}>{children}</TissuePriceCalculatorContext.Provider>
+  );
 }
 
-CalculatorStore.displayName = "CalculatorStore";
+TissuePriceCalculatorStore.displayName = "CalculatorStore";
 
-CalculatorStore.defaultProps = {
+TissuePriceCalculatorStore.defaultProps = {
   children: PropTypes.element,
 };
 
-CalculatorStore.propTypes = {
+TissuePriceCalculatorStore.propTypes = {
   children: PropTypes.element,
 };
