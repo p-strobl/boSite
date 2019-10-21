@@ -16,9 +16,7 @@ export function SiteTiles() {
   return (
     <div className={Class("SiteTiles")}>
       {routes.map((route) => {
-        return (
-          <SiteTile key={uuidv4()} siteObjectName={route[0]} siteTitle={route[1].title} sitePath={route[1].path} />
-        );
+        return <SiteTile key={uuidv4()} siteObject={route[1]} />;
       })}
     </div>
   );

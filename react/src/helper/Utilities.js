@@ -14,6 +14,6 @@ export const splitOnCamelCase = (string) => {
   return string.replace(/(?=[A-Z])/g, " ");
 };
 
-export const isTouchDevice = () => {
+export const determineIfTouchDevice = () => {
   return !("ontouchstart" in window || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
 };

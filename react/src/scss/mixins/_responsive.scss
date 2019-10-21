@@ -1,4 +1,4 @@
-@mixin respond-to($breakpoint-indices) {
+@mixin respond-as-of($breakpoint-indices) {
 
   $for-phone-only: "only screen and (max-width: 599.98px)";
   $for-tablet-portrait-up: "only screen and (min-width: 600px)";
@@ -10,23 +10,23 @@
     @for $i from 1 through length($breakpoint-indices) {
       $breakpoint-index: nth($breakpoint-indices, $i);
 
-      @if $breakpoint-index == 1 {
+      @if $breakpoint-index == 0 {
         @media #{$for-phone-only} { @content }
-      } @else if $breakpoint-index == 2 {
+      } @else if $breakpoint-index == 1 {
         @media #{$for-tablet-portrait-up} { @content }
-      } @else if $breakpoint-index == 3 {
+      } @else if $breakpoint-index == 2 {
         @media #{$for-tablet-landscape-up} { @content }
-      } @else if $breakpoint-index == 4 {
+      } @else if $breakpoint-index == 3 {
         @media #{$for-desktop-up} { @content }
-      } @else if $breakpoint-index == 5 {
+      } @else if $breakpoint-index == 4 {
         @media #{$for-big-desktop-up} { @content }
       } 
       @else {
-        @error 'ERROR: respond-to was called with invalid arguments: ' + $breakpoint-indices;
+        @error 'ERROR: respond-as-of was called with invalid arguments: ' + $breakpoint-indices;
       }
     }
   }
   @else {
-    @error 'ERROR: respond-to was called with invalid arguments: ' + $breakpoint-indices;
+    @error 'ERROR: respond-as-of was called with invalid arguments: ' + $breakpoint-indices;
   }
 }

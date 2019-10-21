@@ -7,38 +7,40 @@ import Base64 from "~src/helper/Base64ImagePlaceholder";
 
 import { loadImages } from "~src/helper/ImageLoader";
 import { Image } from "~components/Image";
+import { Emoji } from "~components/Emoji";
 
 import "./SiteTile.scss";
 
-export function SiteTile({ siteObjectName, siteTitle, sitePath }) {
+export function SiteTile({ siteObject }) {
+  const emoji = <Emoji classs="SiteTileText__" emojiClass={`Emoji__${siteObject.emoji}`} label={siteObject.emoji} />;
+
   useEffect(() => {
     loadImages();
   }, [loadImages]);
 
   return (
     <div className={Class("SiteTile")}>
-      <A className={Class("SiteTile__Anchor")} href={sitePath}>
+      <A className={Class("SiteTile__Anchor")} href={siteObject.path}>
         <Image
           alt="Page Icon"
           classs="SiteTile__Image"
-          imageObjectSrc={siteObjectName}
+          imageObjectSrc={siteObject.name}
           src={Base64.siteTile}
-          title={siteTitle}
+          title={siteObject.title}
         />
-        <h4 className={Class("SiteTile__Text")}>{siteTitle}</h4>
+        <div className="SiteTileText__Container">
+          {emoji}
+          <h4 className={Class("SiteTile__Text")}>{siteObject.title}</h4>
+        </div>
       </A>
     </div>
   );
 }
 
 SiteTile.defaultProps = {
-  siteObjectName: PropTypes.string,
-  siteTitle: PropTypes.string,
-  sitePath: PropTypes.string,
+  siteObject: PropTypes.oneOfType([PropTypes.object]),
 };
 
 SiteTile.propTypes = {
-  siteObjectName: PropTypes.string,
-  siteTitle: PropTypes.string,
-  sitePath: PropTypes.string,
+  siteObject: PropTypes.oneOfType([PropTypes.object]),
 };

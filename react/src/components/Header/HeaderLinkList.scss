@@ -6,9 +6,7 @@
 }
 
 .Header__LinkList:nth-child(n+2) {
-  border-left: 1px dashed $c_holy-green;
-  margin-left: 10px;
-  padding-left: 10px;
+  margin-left: 1px;
 }
 
 .no-touch .Header__LinkList:hover .Header__Link {
@@ -21,6 +19,7 @@
   bottom: -15px;
   color: $c_light-grey;
   content: $i_arrow-down;
+  display: block;
   font-family: "LigatureSymbols", sans-serif;
   position: absolute;
 }

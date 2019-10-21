@@ -12,9 +12,9 @@ export const LandingPage = () => {
   useTitle("boSite's Home");
 
   const emojiHeart = <Emoji classs="LandingPageHeadline__" emojiClass="Emoji__Heart" label="heart" />;
-  const headline = <h1 className={Class("LandingPage_Headline")}>boSite&apos;s Toolbox</h1>;
+  const headline = <h1 className={Class("LandingPage__Headline")}>boSite&apos;s Toolbox</h1>;
   const subHeadline = (
-    <h2 className={Class("LandingPage_SubHeadline")}>use my little {emojiHeart} tools as you like</h2>
+    <h2 className={Class("LandingPage__SubHeadline")}>use my little {emojiHeart} tools as you like</h2>
   );
 
   return (

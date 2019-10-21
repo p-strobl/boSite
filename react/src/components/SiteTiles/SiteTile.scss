@@ -1,22 +1,51 @@
 @import "~scss/_utility.scss";
 
 .SiteTile {
-  grid-column: span 3;
+  grid-column: span 6;
+
+  @include respond-as-of(1) {
+    @include grid-span(3)
+  }
+}
+
+.SiteTile:nth-child(n+2) {
+  margin-top: 20px;
+
+  @include respond-as-of(1) {
+    margin-top: 0;
+  }
 }
 
 .SiteTile__Anchor {
   width: 100%;
 }
 
-.SiteTile__Anchor:hover .SiteTile__Image {
+.no-touch .SiteTile__Anchor:hover .SiteTile__Image {
   @include transform(scale, 1.03);
 }
 
 .SiteTile__Image {
   border-radius: 5px;
+  height: 200px;
+  min-width: 100%;
+  object-fit: cover;
   width: 100%;
+
+  @include respond-as-of(2) {
+    height: 250px;
+  }
+}
+
+.SiteTileText__Container {
+  @include flex();
+  align-items: center;
+}
+
+.SiteTileText__Emoji {
+  @include responsive-font-size(20, 25);
 }
 
 .SiteTile__Text {
-
+  @include responsive-font-size(20, 25);
+  margin-left: 5px;
 }

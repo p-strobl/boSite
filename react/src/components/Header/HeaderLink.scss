@@ -1,10 +1,9 @@
 @import "~scss/_utility.scss";
 
 .Header__Link {
-  @include responsive-font-size(10, 15);
   font-family: "LigatureSymbols", sans-serif;
+  font-size: 0;
   text-align: center;
-  white-space: nowrap;
   width: 100%;
 }
 
@@ -14,15 +13,22 @@
 
 .Header__Link:before {
   @include responsive-font-size(25, 25);
+  @include box-shadow(0, 0, 8, -5, rgba($c_vanta-black, 0.8));
+  border-radius: 5px;
   display: block;
+  padding: 10px;
 
-  @include respond-to(2 3 4) {
-    @include responsive-font-size(40, 40);
+  @include respond-as-of(1) {
+    @include responsive-font-size(25, 40);
   }
 }
 
 .Header__Link--Home:before {
   content: $emoji_toolbox;
+}
+
+.Header__Link--AudioSampleBox:before {
+  content: $emoji_headphone;
 }
 
 .Header__Link--TissueCounter:before {

@@ -7,36 +7,30 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1440px;
+    width: 100%;
 
-    @include respond-to(1) {
-      width: 100%;
-    }
-    @include respond-to(2) {
+    @include respond-as-of(1) {
       width: 90%;
     }
-    @include respond-to(3 4 5) {
+    @include respond-as-of(2) {
       width: 80%;
     }
   }
 }
 
 @mixin module-margin-top() {
-  @include respond-to(1 2) {
-    margin-top: 20px;
-  }
+  margin-top: 20px;
 
-  @include respond-to(3 4 5) {
+  @include respond-as-of(2) {
     margin-top: 40px;
   }
 }
 
 @mixin module-margin-top-bottom() {
-  @include respond-to(1 2) {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
 
-  @include respond-to(3 4 5) {
+  @include respond-as-of(2) {
     margin-top: 40px;
     margin-bottom: 40px;
   }

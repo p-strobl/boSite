@@ -16,4 +16,8 @@
   &.Emoji__Tissue:after {
     content: $emoji_tissue;
   }
+
+  &.Emoji__Audio:after {
+    content: $emoji_headphone;
+  }
 }

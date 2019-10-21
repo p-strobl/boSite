@@ -10,9 +10,7 @@ export const loadImages = () => {
     image.onload = () => {
       item.classList.remove("AsyncImage");
 
-      if (item.nodeName !== "IMG") {
-        return;
-      }
+      if (item.nodeName !== "IMG") return;
 
       item.src = item.dataset.imageSrc;
     };

@@ -4,7 +4,7 @@ import Class from "classnames";
 import "~server-assets/images/favicon.png";
 import "~assets/fonts";
 
-import { isTouchDevice } from "~src/helper/Utilities";
+import { determineIfTouchDevice } from "~src/helper/Utilities";
 import { GridLayer } from "~components/GridLayer";
 import { BoundingBar } from "~components/BoundingBar";
 import { Header } from "~components/Header";
@@ -14,14 +14,14 @@ import { Main } from "~components/Main";
 import "./App.scss";
 
 export function App() {
-  const [touchDevice, setTouchDevice] = useState(true);
+  const [ifIsTouchDevice, setIfIsTouchDevice] = useState(true);
 
   useEffect(() => {
-    setTouchDevice(isTouchDevice());
+    setIfIsTouchDevice(determineIfTouchDevice());
   }, []);
 
   return (
-    <div className={Class("App", { "no-touch": touchDevice })}>
+    <div className={Class("App", { "no-touch": ifIsTouchDevice })}>
       <GridLayer />
       <Header />
       <BoundingBar />

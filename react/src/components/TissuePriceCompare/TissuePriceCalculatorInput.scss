@@ -7,7 +7,7 @@
 }
 
 .TissuePriceCalculatorInput {
-  @include responsive-font-size(25, 35);
+  @include responsive-font-size(20, 35);
   @include transition(box-shadow 200ms ease-out);
   @include grid-span(2);
   border: 0;
@@ -17,26 +17,35 @@
   outline: none;
   text-align: center;
 
-  @include respond-to(2) {
+  @include respond-as-of(1) {
+    @include responsive-font-size(30, 35);
     padding: 15px 10px;
   }
 
   @include placeholder {
-    @include responsive-font-size(20, 30);
+    @include responsive-font-size(15, 30);
     @include transform(translateY, 3px);
     color: $c_holy-green;
     line-height: normal !important;
+
+    @include respond-as-of(1) {
+      @include responsive-font-size(20, 30);
+    }
   }
 }
 
 .TissuePriceCalculatorInput:nth-child(odd) {
-  @include respond-to(2) {
+  margin-left: 10px;
+
+  @include respond-as-of(1) {
     margin-left: 20px;
   }
 }
 
 .TissuePriceCalculatorInput:nth-child(even) {
-  @include respond-to(2) {
+  margin-right: 10px;
+
+  @include respond-as-of(1) {
     margin-right: 20px;
   }
 }

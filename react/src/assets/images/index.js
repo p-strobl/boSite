@@ -1,9 +1,11 @@
 import logo from "~server-assets/images/bo-Site.png";
-import recipes from "~server-assets/images/recipes.jpg";
 import tissueCounter from "~server-assets/images/paper-counter.png";
+import audioSampleBox from "~server-assets/images/equalizer.jpg";
+import recipes from "~server-assets/images/recipes.jpg";
 
 export const Images = {
   logo,
-  recipes,
   tissueCounter,
+  audioSampleBox,
+  recipes,
 };
