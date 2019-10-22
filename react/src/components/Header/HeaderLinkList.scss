@@ -2,8 +2,8 @@
 
 .Header__LinkList {
   @include flex();
+  background-color: transparent;
   justify-content: center;
-  pointer-events: none;
 }
 
 .Header__LinkList:nth-child(n+2) {
@@ -16,10 +16,9 @@
 
 .Header__LinkList--active:after {
   @include responsive-font-size(25, 25);
-  @include transform(rotate, (180deg));
-  bottom: -15px;
+  bottom: -18px;
   color: $c_light-grey;
-  content: $i_arrow-down;
+  content: $i_arrow-up;
   display: block;
   font-family: "LigatureSymbols", sans-serif;
   position: absolute;
