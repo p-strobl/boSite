@@ -11,8 +11,8 @@ import { Emoji } from "~components/Emoji";
 
 import "./SiteTile.scss";
 
-export function SiteTile({ siteObject }) {
-  const emoji = <Emoji classs="SiteTileText__" emojiClass={`Emoji__${siteObject.emoji}`} label={siteObject.emoji} />;
+export function SiteTile({ site }) {
+  const emoji = <Emoji classs="SiteTileText__" emojiClass={`Emoji__${site.emoji}`} label={site.emoji} />;
 
   useEffect(() => {
     loadImages();
@@ -20,17 +20,17 @@ export function SiteTile({ siteObject }) {
 
   return (
     <div className={Class("SiteTile")}>
-      <A className={Class("SiteTile__Anchor")} href={siteObject.path}>
+      <A className={Class("SiteTile__Anchor")} href={site.path}>
         <Image
           alt="Page Icon"
           classs="SiteTile__Image"
-          imageObjectSrc={siteObject.name}
+          imageSrc={site.imageSrc}
           src={Base64.siteTile}
-          title={siteObject.title}
+          title={site.title}
         />
         <div className="SiteTileText__Container">
           {emoji}
-          <h4 className={Class("SiteTile__Text")}>{siteObject.title}</h4>
+          <h4 className={Class("SiteTile__Text")}>{site.title}</h4>
         </div>
       </A>
     </div>
@@ -38,9 +38,9 @@ export function SiteTile({ siteObject }) {
 }
 
 SiteTile.defaultProps = {
-  siteObject: PropTypes.oneOfType([PropTypes.object]),
+  site: PropTypes.oneOfType([PropTypes.object]),
 };
 
 SiteTile.propTypes = {
-  siteObject: PropTypes.oneOfType([PropTypes.object]),
+  site: PropTypes.oneOfType([PropTypes.object]),
 };

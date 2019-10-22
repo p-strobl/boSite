@@ -3,6 +3,7 @@
 .Header__LinkList {
   @include flex();
   justify-content: center;
+  pointer-events: none;
 }
 
 .Header__LinkList:nth-child(n+2) {

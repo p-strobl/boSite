@@ -18,7 +18,7 @@ export function GridLayer() {
   };
 
   const Grid = (
-    <div className={Class("GridLayer GridLayer--show")} onClick={hideGrid} role="presentation">
+    <div className={Class("GridLayer")} onClick={hideGrid} role="presentation">
       <GridBar />
     </div>
   );

@@ -2,18 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Class from "classnames";
 
-import { Images } from "~assets/images";
-
-export function Image({ alt, classs, imageObjectSrc, src, title }) {
-  const [, imageUrlPath] = Object.entries(Images).find(([key, value]) => {
-    return imageObjectSrc === key ? value : false;
-  });
-
+export function Image({ alt, classs, imageSrc, src, title }) {
   return (
     <img
       alt={alt}
       className={Class(`${classs} AsyncImage`)}
-      data-image-src={imageUrlPath}
+      data-image-src={imageSrc}
       src={src}
       title={`Visit ${title}`}
     />
@@ -23,7 +17,7 @@ export function Image({ alt, classs, imageObjectSrc, src, title }) {
 Image.defaultProps = {
   alt: PropTypes.string,
   classs: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  imageObjectSrc: PropTypes.string,
+  imageSrc: PropTypes.string,
   src: PropTypes.string,
   title: PropTypes.string,
 };
@@ -31,7 +25,7 @@ Image.defaultProps = {
 Image.propTypes = {
   alt: PropTypes.string,
   classs: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  imageObjectSrc: PropTypes.string,
+  imageSrc: PropTypes.string,
   src: PropTypes.string,
   title: PropTypes.string,
 };
