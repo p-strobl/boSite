@@ -20,7 +20,8 @@ export function HeaderLink({ linkList, routePath, routeTitle }) {
         className={Class(`Header__Link Header__Link--${capitalizeFirstLetter(linkList)}`)}
         href={routePath}
         title={`Back to ${routeTitle}`}
-        key={uuidv4()}></A>
+        key={uuidv4()}
+      />
     </div>
   );
 }

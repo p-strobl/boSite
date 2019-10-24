@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 import tissueCounter from "~server-assets/images/paper-counter.png";
-import audioSampleBox from "~server-assets/images/equalizer.jpg";
+import audioSampleBox from "~server-assets/images/equalizer.png";
 import recipes from "~server-assets/images/recipes.jpg";
 
 export default createContext({

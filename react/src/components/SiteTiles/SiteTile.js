@@ -25,7 +25,7 @@ export function SiteTile({ site }) {
           alt="Page Icon"
           classs="SiteTile__Image"
           imageSrc={site.imageSrc}
-          src={Base64.siteTile}
+          src={Base64.dataImageSvgXml}
           title={site.title}
         />
         <div className="SiteTileText__Container">

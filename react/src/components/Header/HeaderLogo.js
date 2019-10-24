@@ -11,14 +11,15 @@ import "./HeaderLogo.scss";
 
 export function HeaderLogo() {
   const { routes } = useContext(RouterContext);
+
   return (
     <div className={Class("Header__LogoContainer")}>
-      <A href={routes.home.path}>
+      <A className={Class("Header__LogoLink")} href={routes.home.path}>
         <img
           alt="boSite Icon"
           className={Class("Header__Logo AsyncImage")}
           data-image-src={Images.logo}
-          src={Base64.headerIcon}
+          src={Base64.dataImageSvgXml}
           title="Back to Home"
         />
       </A>
