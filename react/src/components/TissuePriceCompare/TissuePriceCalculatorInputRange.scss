@@ -1,9 +1,30 @@
 @import "~scss/_utility.scss";
 
 .TissuePriceCalculatorInputContainer {
-  @include grid(4);
-  grid-column-gap: 2vw;
-  grid-row-gap: 2vw;
+  @include flex();
+  flex-direction: column;
+}
+
+.TissuePriceCalculatorInput__RangeContainer {
+  @include flex();
+  flex-direction: column;
+}
+
+.TissuePriceCalculatorInput__RangeContainer:nth-child(n+2) {
+  margin-top: 10px;
+}
+
+.TissuePriceCalculatorInput__Output {
+  @include grid(12);
+}
+
+.TissuePriceCalculatorInput__OutputText {
+  @include grid-span(4);
+}
+
+.TissuePriceCalculatorInput__OutputValue {
+  @include grid-span(4);
+  text-align: center;
 }
 
 .TissuePriceCalculatorInput {
