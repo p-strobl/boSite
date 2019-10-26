@@ -14,17 +14,59 @@
   margin-top: 10px;
 }
 
+.TissuePriceCalculatorInput__Range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: $c_tomato-red;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  // Range Handle
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $c_tomato-red;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: $c_sunny-bo;
+    }
+  }
+
+  &:active::-webkit-slider-thumb {
+    background: $c_tomato-red;
+  }
+
+  &::-moz-range-thumb {
+    width: 100%;
+    height: 5px;
+    border: 0;
+    border-radius: 50%;
+    background: $c_tomato-red;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: $c_sunny-bo;
+    }
+  }
+
+}
+
 .TissuePriceCalculatorInput__Output {
   @include grid(12);
 }
 
 .TissuePriceCalculatorInput__OutputText {
-  @include grid-span(4);
 }
 
 .TissuePriceCalculatorInput__OutputValue {
-  @include grid-span(4);
-  text-align: center;
+  @include grid-span(2);
 }
 
 .TissuePriceCalculatorInput {

@@ -47,7 +47,7 @@
     "max-len": [
       "error",
       {
-        "code": 100
+        "code": 120
       }
     ],
     "no-extraneous-dependencies": "off",

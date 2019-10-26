@@ -11,38 +11,64 @@ import "./TissuePriceCalculator.scss";
 
 export const TissuePriceCalculator = () => {
   const {
-    rollCountContext: [rollCount, setRollerCount],
-    sheetCountContext: [sheetCount, setSheetCount],
-    layerCountContext: [layerCount, setLayerCount],
-    priceContext: [price, setPrice],
+    rollCountContext: [rollCount],
+    sheetCountContext: [sheetCount],
+    layerCountContext: [layerCount],
+    priceContext: [price],
+    defaultValues,
   } = useContext(TissuePriceCalculatorContext);
 
   const [totalPrice, setTotalPrice] = useState(0);
-  const calculatorSetter = [setRollerCount, setSheetCount, setLayerCount, setPrice];
 
   useEffect(() => {
-    const calculatedPrice = calculatePrice(rollCount, sheetCount, layerCount, price);
+    const calculatedPrice = calculatePrice(
+      rollCount,
+      sheetCount,
+      layerCount,
+      price,
+    );
 
     setTotalPrice(calculatedPrice);
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
-    <div className={Class("TissuePriceCalculator")}>
+    <form className={Class("TissuePriceCalculator")}>
       <div className={Class("TissuePriceCalculatorInputContainer")}>
-        <TissuePriceCalculatorInputRange context="rollCountContext" text="Rollen" defaultValue={12} max={30} step={2} />
+        <TissuePriceCalculatorInputRange
+          context="rollCountContext"
+          dataDefaultValue={defaultValues.rollCount}
+          defaultValue={rollCount}
+          max={30}
+          step={2}
+          text="Rollen"
+        />
         <TissuePriceCalculatorInputRange
           context="sheetCountContext"
-          text="Blatt"
-          defaultValue={200}
+          dataDefaultValue={defaultValues.sheetCount}
+          defaultValue={sheetCount}
           max={300}
           step={10}
+          text="Blatt"
         />
-        <TissuePriceCalculatorInputRange context="layerCountContext" text="Lagen" defaultValue={3} max={5} step={1} />
-        <TissuePriceCalculatorInputNumber placeholder="Preis" text="Preis" context="priceContext" type="price" />
+        <TissuePriceCalculatorInputRange
+          context="layerCountContext"
+          dataDefaultValue={defaultValues.layerCount}
+          defaultValue={layerCount}
+          max={5}
+          step={1}
+          text="Lagen"
+        />
+        <TissuePriceCalculatorInputNumber
+          context="priceContext"
+          dataDefaultValue={defaultValues.price}
+          defaultValue={price}
+          placeholder="Preis"
+          text="Preis"
+        />
       </div>
       <div className={Class("TissuePriceCalculatorOutputContainer")}>
-        <TissuePriceCalculatorOutput totalPrice={totalPrice} calculatorSetter={calculatorSetter} />
+        <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
       </div>
-    </div>
+    </form>
   );
 };

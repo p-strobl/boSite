@@ -8,7 +8,7 @@ export const numbersOnly = (element, inputValue) => {
   return true;
 };
 
-export const validate = (element, type) => {
+export const validatePrice = (element) => {
   const inputValue = element.target.value;
 
   if (inputValue.length === 0) return false;
@@ -16,12 +16,13 @@ export const validate = (element, type) => {
   const inputIsValid = numbersOnly(element, inputValue);
 
   if (inputIsValid) {
-    if (type === "price") {
-      const digitRegex = /\D/g;
-      const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
+    const digitRegex = /\D/g;
+    const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
 
-      element.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
-    }
+    element.target.value = inputValue
+      .replace(digitRegex, "")
+      .replace(decimalCommaRegex, ",");
+
     return parseFloat(inputValue);
   }
   return false;
@@ -39,7 +40,9 @@ export const calculatePrice = (rollCount, sheetCount, layerCount, price) => {
 };
 
 export const determineCheapestPrice = () => {
-  const calculatorOutput = Array.from(document.querySelectorAll(".TissuePriceCalculatorOutput"));
+  const calculatorOutput = Array.from(
+    document.querySelectorAll(".TissuePriceCalculatorOutput"),
+  );
 
   const parsedElement = [];
 
@@ -66,11 +69,16 @@ export const determineCheapestPrice = () => {
 };
 
 export const setClassOnOutputElements = (cheapestElements) => {
-  const tissueCalculator = Array.from(document.querySelectorAll(".TissuePriceCalculator"));
+  const tissueCalculator = Array.from(
+    document.querySelectorAll(".TissuePriceCalculator"),
+  );
 
   const clearTissueCalculatorClasses = () => {
     tissueCalculator.forEach((outputElement) => {
-      outputElement.classList.remove("TissuePriceCalculator--Lowest", "TissuePriceCalculator--Pricey");
+      outputElement.classList.remove(
+        "TissuePriceCalculator--Lowest",
+        "TissuePriceCalculator--Pricey",
+      );
     });
   };
 
@@ -79,7 +87,9 @@ export const setClassOnOutputElements = (cheapestElements) => {
       const parsedPrice = parseFloat(price);
 
       if (parsedPrice === 0) return;
-      element.closest(".TissuePriceCalculator").classList.add("TissuePriceCalculator--Lowest");
+      element
+        .closest(".TissuePriceCalculator")
+        .classList.add("TissuePriceCalculator--Lowest");
     });
   };
 
@@ -100,13 +110,44 @@ export const setClassOnOutputElements = (cheapestElements) => {
 export const resetCalculatorView = (event) => {
   if (event.target.type !== "button") return;
 
-  const outputContainer = event.target.closest(".TissuePriceCalculatorOutputContainer");
+  const outputContainer = event.target.closest(
+    ".TissuePriceCalculatorOutputContainer",
+  );
   const inputContainer = outputContainer.previousSibling;
-  const containerInputs = Array.from(inputContainer.children);
 
-  containerInputs.forEach((input) => {
-    input.value = "";
+  const resetInputTypeRange = () => {
+    const inputTypeRange = inputContainer.querySelectorAll("input[type=range]");
+    Array.from(inputTypeRange).forEach((slider) => {
+      slider.value = slider.dataset.default;
+    });
+  };
+
+  const resetInputTypeTel = () => {
+    const inputTypeTel = inputContainer.querySelectorAll("input[type=tel]");
+    Array.from(inputTypeTel).forEach((telInput) => {
+      telInput.value = telInput.dataset.default.toLocaleString("de-DE", {
+        minimumFractionDigits: 3,
+      });
+    });
+  };
+
+  resetInputTypeRange();
+  resetInputTypeTel();
+};
+
+export const resetCalculatorState = (calculatorSetter, defaultValues) => {
+  if (
+    typeof calculatorSetter === "undefined" ||
+    typeof defaultValues === "undefined"
+  )
+    return false;
+
+  Object.entries(defaultValues).forEach(([defaultKey, defaultValue]) => {
+    const setter = Object.entries(calculatorSetter).find(
+      ([setterKey]) => defaultKey === setterKey,
+    );
+    setter[1](defaultValue);
+    return true;
   });
-
-  containerInputs[0].focus();
+  return false;
 };

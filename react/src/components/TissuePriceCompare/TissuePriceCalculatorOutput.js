@@ -1,33 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
 
-import "./TissuePriceCalculatorOutput.scss";
-import { determineCheapestPrice, setClassOnOutputElements, resetCalculatorView } from "./TissuePriceCompareController";
+import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
+import {
+  determineCheapestPrice,
+  setClassOnOutputElements,
+  resetCalculatorView,
+  resetCalculatorState,
+} from "./TissuePriceCompareController";
 
-export const TissuePriceCalculatorOutput = ({ totalPrice, calculatorSetter }) => {
+import "./TissuePriceCalculatorOutput.scss";
+
+export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   if (typeof totalPrice === "undefined") return false;
+
+  const {
+    rollCountContext: [, setRollerCount],
+    sheetCountContext: [, setSheetCount],
+    layerCountContext: [, setLayerCount],
+    priceContext: [, setPrice],
+    defaultValues,
+  } = useContext(TissuePriceCalculatorContext);
+
+  const calculatorSetter = {
+    rollCount: setRollerCount,
+    sheetCount: setSheetCount,
+    layerCount: setLayerCount,
+    price: setPrice,
+  };
 
   const localePrice = totalPrice.toLocaleString("de-DE", {
     minimumFractionDigits: 6,
   });
 
-  const resetCalculatorSetter = () => {
-    if (calculatorSetter.length === 0) return false;
-
-    calculatorSetter.forEach((setterFunction) => {
-      if (setterFunction.length === 0) return false;
-
-      setterFunction(0);
-      return true;
-    });
-    return false;
-  };
-
-  const handleResetCalculatorClick = (event) => {
+  const handleCalculatorReset = (event) => {
     if (event.target.type !== "button") return false;
 
-    resetCalculatorSetter();
+    resetCalculatorState(calculatorSetter, defaultValues);
     resetCalculatorView(event);
     return true;
   };
@@ -38,14 +48,19 @@ export const TissuePriceCalculatorOutput = ({ totalPrice, calculatorSetter }) =>
   }, [localePrice]);
 
   return (
-    <div className={Class("TissuePriceCalculatorOutput", { "TissuePriceCalculatorOutput--Show": totalPrice })}>
+    <div
+      className={Class("TissuePriceCalculatorOutput", {
+        "TissuePriceCalculatorOutput--Show": totalPrice,
+      })}>
       {localePrice}
       <span className={Class("TissuePriceCalculatorOutput__Currency")}>€</span>
-      <span className={Class("TissuePriceCalculatorOutput__Text")}>pro Lage</span>
+      <span className={Class("TissuePriceCalculatorOutput__Text")}>
+        pro Lage
+      </span>
       <button
         aria-label="Clear Button"
         className={Class("TissuePriceCalculatorOutput__ClearButton")}
-        onClick={handleResetCalculatorClick}
+        onClick={handleCalculatorReset}
         type="button"
       />
     </div>
@@ -54,10 +69,8 @@ export const TissuePriceCalculatorOutput = ({ totalPrice, calculatorSetter }) =>
 
 TissuePriceCalculatorOutput.defaultProps = {
   totalPrice: PropTypes.number,
-  calculatorSetter: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.func])),
 };
 
 TissuePriceCalculatorOutput.propTypes = {
   totalPrice: PropTypes.number,
-  calculatorSetter: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.func])),
 };
