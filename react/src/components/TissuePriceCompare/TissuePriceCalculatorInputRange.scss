@@ -7,10 +7,7 @@
 .TissuePriceCalculatorInput__RangeContainer {
   @include flex();
   flex-direction: column;
-}
-
-.TissuePriceCalculatorInput__RangeContainer:nth-child(n+2) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .TissuePriceCalculatorInput__RangeInput {
@@ -18,7 +15,6 @@
 }
 
 .TissuePriceCalculatorInput__ProgressBar {
-  background-color: rgba($c_sunny-bo, 0.2);
   border-radius: 5px;
   height: 8px;
   left: 0;
@@ -30,10 +26,9 @@
 }
 
 .TissuePriceCalculatorInput__ProgressBar--filler {
-  background-color: $c_holy-green;
+  background-color: rgba($c_holy-green, 0.6);
   display: block;
   height: 100%;
-  position: relative;
   width: 0;
 }
 
@@ -51,85 +46,46 @@
   width: 100%;
   z-index: 2;
 
-  &:hover {
-  }
-
   &::-webkit-slider-thumb {
     @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
     background-color: $c_sunny-bo;
     border: 1px solid $c-vanta-black;
     border-radius: 5px;
-    cursor: w-resize;
+    cursor: ew-resize;
     height: 20px;
     transition: background-color 0.25s;
     width: 40px;
     -webkit-appearance: none;
-
-    &:hover {
-    }
   }
 
   &:active::-webkit-slider-thumb {
     @include box-shadow(0, 0, 5, 20, rgba($c_sunny-bo, 0.4));
   }
+}
 
-  .no-touch &:active::-webkit-slider-thumb {
-    box-shadow: none;
+.no-touch .TissuePriceCalculatorInput__RangeSlider {
+  &:hover {
   }
 
-  //&::-moz-range-thumb {
-  //  @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
-  //  background: $c_tomato-red;
-  //  border: 0;
-  //  border-radius: 50%;
-  //  height: 5px;
-  //  cursor: pointer;
-  //  transition: background .15s ease-in-out;
-  //  width: 100%;
-  //
-  //  &:hover {
-  //    background: $c_sunny-bo;
-  //  }
-  //}
-
+  &:active::-webkit-slider-thumb {
+    box-shadow: none;
+  }
 }
 
 .TissuePriceCalculatorInput__RangeOutput {
   @include grid(12);
 }
 
-.TissuePriceCalculatorInput__RangeOutputText {
-}
-
 .TissuePriceCalculatorInput__RangeOutputValue {
   @include grid-span(2);
-}
-
-.TissuePriceCalculatorInput {
-  @include responsive-font-size(20, 35);
-  @include transition(box-shadow 200ms ease-out);
-  @include grid-span(2);
-  border: 0;
-  border-radius: 12px;
-  padding: 10px;
-  position: relative;
-  outline: none;
   text-align: center;
-
-  @include respond-as-of(1) {
-    @include responsive-font-size(30, 35);
-    padding: 15px 10px;
-  }
-
-  @include placeholder {
-    @include responsive-font-size(15, 30);
-    @include transform(translateY, 3px);
-    color: $c_holy-green;
-    line-height: normal !important;
-
-    @include respond-as-of(1) {
-      @include responsive-font-size(20, 30);
-    }
-  }
 }
 
+.TissuePriceCalculatorInput__RangeOutputValue--blink {
+  @include transform(scale, 1.5);
+  text-shadow: 0 0 1px $c_ash-grey;
+}
+
+.TissuePriceCalculatorInput__RangeOutputText {
+  @include grid-span(4);
+}

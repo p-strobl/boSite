@@ -3,8 +3,6 @@
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid-column(2, 8);
   border: 1px solid $c_light-grey;
-  display: flex;
-  flex-direction: column;
   padding: 30px 15px 15px;
 
   @include respond-as-of(2) {
@@ -37,13 +35,10 @@
 }
 
 .TissuePriceCalculator__Input {
-  @include flex();
-  flex-direction: column;
 }
 
 .TissuePriceCalculator__Output {
   margin-top: 5px;
-  width: 100%;
 
   @include respond-as-of(1) {
     padding: 0 20px;

@@ -1,0 +1,10 @@
+@import "~scss/_utility.scss";
+
+.TissuePriceCalculatorInput__Price {
+  background-color: $c_lighter-grey;
+  border: 0;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  padding: 10px 5px;
+  outline: 0;
+}

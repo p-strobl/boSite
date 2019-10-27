@@ -28,25 +28,35 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
     progressBarFiller.style.width = `${getProgress(rangeInput)}%`;
   };
 
-  const setRangeOutputValue = (rangeInput) => {
+  const setRangeOutputValue = (rangeInput, rangeInputOutputContainer) => {
     if (typeof rangeInput === "undefined") return;
-
-    const rangeInputOutputContainer = rangeInput.previousElementSibling.getElementsByTagName("output");
 
     rangeInputOutputContainer.innerHTML = rangeInput.value;
     setInput(parseFloat(rangeInput.value));
+  };
+
+  const blinkRangeOutputValue = (rangeInputOutputValueContainer) => {
+    rangeInputOutputValueContainer.classList.add("TissuePriceCalculatorInput__RangeOutputValue--blink");
+    setTimeout(() => {
+      rangeInputOutputValueContainer.classList.remove("TissuePriceCalculatorInput__RangeOutputValue--blink");
+    }, 50);
   };
 
   const rangeInputSlided = (element) => {
     if (typeof element === "undefined") return;
 
     const rangeInput = element.target;
+    const rangeInputOutputContainer = rangeInput.previousElementSibling.getElementsByTagName("output");
+    const rangeInputOutputValueContainer = rangeInput.parentElement.previousElementSibling
+      .getElementsByTagName("output")
+      .item(0);
     const progressBarFiller = rangeInput.previousElementSibling.querySelector(
       ".TissuePriceCalculatorInput__ProgressBar--filler",
     );
 
     setProgressBar(progressBarFiller, rangeInput);
-    setRangeOutputValue(rangeInput);
+    setRangeOutputValue(rangeInput, rangeInputOutputContainer);
+    blinkRangeOutputValue(rangeInputOutputValueContainer);
   };
 
   return (

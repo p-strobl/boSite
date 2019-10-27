@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import Class from "classnames";
 import PropTypes from "prop-types";
 
 import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
 
-import "./TissuePriceCalculatorInputRange.scss";
+import "./TissuePriceCalculatorInputNumber.scss";
 
 export const TissuePriceCalculatorInputNumber = ({ context, dataDefaultValue, placeholder, value }) => {
   const numbersOnly = (element, inputValue) => {

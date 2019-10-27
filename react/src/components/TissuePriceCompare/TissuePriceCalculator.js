@@ -37,7 +37,7 @@ export const TissuePriceCalculator = () => {
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
-    <form className={Class("TissuePriceCalculator")}>
+    <div className={Class("TissuePriceCalculator")}>
       <div className={Class("TissuePriceCalculator__Input")}>
         <TissuePriceCalculatorInputRange
           context="rollCountContext"
@@ -67,13 +67,13 @@ export const TissuePriceCalculator = () => {
           context="priceContext"
           dataDefaultValue={defaultValues.price}
           defaultValue={price}
-          placeholder="Preis"
-          text="Preis"
+          placeholder="Kaufpreis"
+          text="Kaufpreis"
         />
       </div>
       <div className={Class("TissuePriceCalculator__Output")}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
       </div>
-    </form>
+    </div>
   );
 };
