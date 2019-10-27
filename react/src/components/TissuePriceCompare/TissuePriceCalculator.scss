@@ -35,3 +35,17 @@
 .TissuePriceCalculator--Lowest {
   background-color: $c_light-green;
 }
+
+.TissuePriceCalculator__Input {
+  @include flex();
+  flex-direction: column;
+}
+
+.TissuePriceCalculator__Output {
+  margin-top: 5px;
+  width: 100%;
+
+  @include respond-as-of(1) {
+    padding: 0 20px;
+  }
+}

@@ -3,16 +3,38 @@ import Class from "classnames";
 import PropTypes from "prop-types";
 
 import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
-import { validatePrice } from "./TissuePriceCompareController";
 
 import "./TissuePriceCalculatorInputRange.scss";
 
-export const TissuePriceCalculatorInputNumber = ({
-  context,
-  dataDefaultValue,
-  placeholder,
-  value,
-}) => {
+export const TissuePriceCalculatorInputNumber = ({ context, dataDefaultValue, placeholder, value }) => {
+  const numbersOnly = (element, inputValue) => {
+    const numberRegex = /[^0-9,]/g;
+
+    if (numberRegex.test(inputValue)) {
+      element.target.value = inputValue.replace(numberRegex, "");
+      return false;
+    }
+    return true;
+  };
+
+  const validatePrice = (element) => {
+    const inputValue = element.target.value;
+
+    if (inputValue.length === 0) return false;
+
+    const inputIsValid = numbersOnly(element, inputValue);
+
+    if (inputIsValid) {
+      const digitRegex = /\D/g;
+      const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
+
+      element.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
+
+      return parseFloat(inputValue);
+    }
+    return false;
+  };
+
   const {
     [context]: [input, setInput],
   } = useContext(TissuePriceCalculatorContext);

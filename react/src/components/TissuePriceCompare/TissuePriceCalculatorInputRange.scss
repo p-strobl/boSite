@@ -1,8 +1,7 @@
 @import "~scss/_utility.scss";
 
-.TissuePriceCalculatorInputContainer {
-  @include flex();
-  flex-direction: column;
+.TissuePriceCalculatorInput__Container:nth-child(n+2) {
+  margin-top: 20px;
 }
 
 .TissuePriceCalculatorInput__RangeContainer {
@@ -11,61 +10,98 @@
 }
 
 .TissuePriceCalculatorInput__RangeContainer:nth-child(n+2) {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.TissuePriceCalculatorInput__Range {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 5px;
+.TissuePriceCalculatorInput__RangeInput {
+  position: relative;
+}
+
+.TissuePriceCalculatorInput__ProgressBar {
+  background-color: rgba($c_sunny-bo, 0.2);
   border-radius: 5px;
-  background: $c_tomato-red;
-  outline: none;
-  padding: 0;
+  height: 8px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  z-index: 1;
+  width: 100%;
+}
+
+.TissuePriceCalculatorInput__ProgressBar--filler {
+  background-color: $c_holy-green;
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 0;
+}
+
+.TissuePriceCalculatorInput__RangeSlider {
+  @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 10px;
   margin: 0;
-  // Range Handle
+  outline: none;
+  opacity: 1;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  &:hover {
+  }
+
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
+    @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
+    background-color: $c_sunny-bo;
+    border: 1px solid $c-vanta-black;
+    border-radius: 5px;
+    cursor: w-resize;
     height: 20px;
-    border-radius: 50%;
-    background: $c_tomato-red;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
+    transition: background-color 0.25s;
+    width: 40px;
+    -webkit-appearance: none;
 
     &:hover {
-      background: $c_sunny-bo;
     }
   }
 
   &:active::-webkit-slider-thumb {
-    background: $c_tomato-red;
+    @include box-shadow(0, 0, 5, 20, rgba($c_sunny-bo, 0.4));
   }
 
-  &::-moz-range-thumb {
-    width: 100%;
-    height: 5px;
-    border: 0;
-    border-radius: 50%;
-    background: $c_tomato-red;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-
-    &:hover {
-      background: $c_sunny-bo;
-    }
+  .no-touch &:active::-webkit-slider-thumb {
+    box-shadow: none;
   }
+
+  //&::-moz-range-thumb {
+  //  @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
+  //  background: $c_tomato-red;
+  //  border: 0;
+  //  border-radius: 50%;
+  //  height: 5px;
+  //  cursor: pointer;
+  //  transition: background .15s ease-in-out;
+  //  width: 100%;
+  //
+  //  &:hover {
+  //    background: $c_sunny-bo;
+  //  }
+  //}
 
 }
 
-.TissuePriceCalculatorInput__Output {
+.TissuePriceCalculatorInput__RangeOutput {
   @include grid(12);
 }
 
-.TissuePriceCalculatorInput__OutputText {
+.TissuePriceCalculatorInput__RangeOutputText {
 }
 
-.TissuePriceCalculatorInput__OutputValue {
+.TissuePriceCalculatorInput__RangeOutputValue {
   @include grid-span(2);
 }
 
@@ -97,22 +133,3 @@
   }
 }
 
-.TissuePriceCalculatorInput:nth-child(odd) {
-  margin-left: 10px;
-
-  @include respond-as-of(1) {
-    margin-left: 20px;
-  }
-}
-
-.TissuePriceCalculatorInput:nth-child(even) {
-  margin-right: 10px;
-
-  @include respond-as-of(1) {
-    margin-right: 20px;
-  }
-}
-
-.TissuePriceCalculatorInput:focus {
-  @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
-}

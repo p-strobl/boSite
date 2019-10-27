@@ -8,7 +8,7 @@ export default function TissuePriceCalculatorStore({ children }) {
     rollCount: 12,
     sheetCount: 200,
     layerCount: 3,
-    price: 0.0,
+    price: "",
   };
 
   const [rollCount, setRollCount] = useState(defaultValues.rollCount);
@@ -24,9 +24,7 @@ export default function TissuePriceCalculatorStore({ children }) {
   };
 
   return (
-    <TissuePriceCalculatorContext.Provider value={calculatorStore}>
-      {children}
-    </TissuePriceCalculatorContext.Provider>
+    <TissuePriceCalculatorContext.Provider value={calculatorStore}>{children}</TissuePriceCalculatorContext.Provider>
   );
 }
 

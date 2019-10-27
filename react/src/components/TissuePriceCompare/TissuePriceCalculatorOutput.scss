@@ -1,15 +1,6 @@
 @import "~scss/_utility.scss";
 
-.TissuePriceCalculatorOutputContainer {
-  margin-top: 5px;
-  width: 100%;
-
-  @include respond-as-of(1) {
-    padding: 0 20px;
-  }
-}
-
-.TissuePriceCalculatorOutput {
+.TissuePriceCalculatorOutput__Container {
   @include flex();
   @include responsive-font-size(20, 30);
   @include transition(opacity 400ms linear);
@@ -43,7 +34,7 @@
   @include transform(rotate, 45deg);
 }
 
-.TissuePriceCalculatorOutput--Show,
-.TissuePriceCalculatorOutput--Show .TissuePriceCalculatorOutput__ClearButton {
+.TissuePriceCalculatorOutput__Container--Show,
+.TissuePriceCalculatorOutput__Container--Show .TissuePriceCalculatorOutput__ClearButton {
   opacity: 1;
 }

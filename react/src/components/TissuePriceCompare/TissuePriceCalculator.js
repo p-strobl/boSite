@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import Class from "classnames";
 
 import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
-import { calculatePrice } from "~components/TissuePriceCompare/TissuePriceCompareController";
 import { TissuePriceCalculatorInputRange } from "~components/TissuePriceCompare/TissuePriceCalculatorInputRange";
 import { TissuePriceCalculatorInputNumber } from "~components/TissuePriceCompare/TissuePriceCalculatorInputNumber";
 import { TissuePriceCalculatorOutput } from "~components/TissuePriceCompare/TissuePriceCalculatorOutput";
@@ -20,20 +19,26 @@ export const TissuePriceCalculator = () => {
 
   const [totalPrice, setTotalPrice] = useState(0);
 
+  const calculatePrice = () => {
+    if (rollCount > 0 && sheetCount > 0 && layerCount > 0 && price > 0) {
+      const totalLayerCount = rollCount * sheetCount * layerCount;
+      const singleLayerPrice = price / totalLayerCount;
+
+      return singleLayerPrice.toFixed(6) / 100;
+    }
+
+    return 0;
+  };
+
   useEffect(() => {
-    const calculatedPrice = calculatePrice(
-      rollCount,
-      sheetCount,
-      layerCount,
-      price,
-    );
+    const calculatedPrice = calculatePrice();
 
     setTotalPrice(calculatedPrice);
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
     <form className={Class("TissuePriceCalculator")}>
-      <div className={Class("TissuePriceCalculatorInputContainer")}>
+      <div className={Class("TissuePriceCalculator__Input")}>
         <TissuePriceCalculatorInputRange
           context="rollCountContext"
           dataDefaultValue={defaultValues.rollCount}
@@ -66,7 +71,7 @@ export const TissuePriceCalculator = () => {
           text="Preis"
         />
       </div>
-      <div className={Class("TissuePriceCalculatorOutputContainer")}>
+      <div className={Class("TissuePriceCalculator__Output")}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
       </div>
     </form>
