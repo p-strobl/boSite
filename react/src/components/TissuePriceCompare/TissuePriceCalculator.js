@@ -44,6 +44,7 @@ export const TissuePriceCalculator = () => {
           dataDefaultValue={defaultValues.rollCount}
           defaultValue={rollCount}
           max={30}
+          min={0}
           step={2}
           text="Rollen"
         />
@@ -52,6 +53,7 @@ export const TissuePriceCalculator = () => {
           dataDefaultValue={defaultValues.sheetCount}
           defaultValue={sheetCount}
           max={300}
+          min={0}
           step={10}
           text="Blatt"
         />
@@ -60,6 +62,7 @@ export const TissuePriceCalculator = () => {
           dataDefaultValue={defaultValues.layerCount}
           defaultValue={layerCount}
           max={5}
+          min={0}
           step={1}
           text="Lagen"
         />

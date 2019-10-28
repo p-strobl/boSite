@@ -74,15 +74,16 @@
 
 .TissuePriceCalculatorInput__RangeOutput {
   @include grid(12);
+  align-items: flex-end;
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue {
   @include grid-span(2);
-  text-align: center;
+  @include responsive-font-size(25, 25)
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue--blink {
-  @include transform(scale, 2);
+  @include transform(scale, 1.3);
   text-shadow: 0 0 1px $c_ash-grey;
 }
 

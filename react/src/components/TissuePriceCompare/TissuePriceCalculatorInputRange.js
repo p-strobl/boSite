@@ -5,7 +5,7 @@ import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorCont
 
 import "./TissuePriceCalculatorInputRange.scss";
 
-export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, defaultValue, max, step, text }) => {
+export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, defaultValue, max, min, step, text }) => {
   const {
     [context]: [, setInput],
   } = useContext(TissuePriceCalculatorContext);
@@ -13,13 +13,16 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
   const initialProgress = () => {
     if (defaultValue.length === 0 || max.length === 0) return 0;
 
-    return (100 * defaultValue) / max;
+    return (100 * (defaultValue - min)) / max - min;
   };
 
   const getProgress = (rangeInput) => {
     if (typeof rangeInput === "undefined") return 0;
 
-    return (100 * rangeInput.value) / rangeInput.getAttribute("max");
+    return (
+      (100 * (rangeInput.value - rangeInput.getAttribute("min"))) / rangeInput.getAttribute("max") -
+      rangeInput.getAttribute("min")
+    );
   };
 
   const setProgressBar = (progressBarFiller, rangeInput) => {
@@ -77,7 +80,7 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
           type="range"
           defaultValue={defaultValue}
           data-default={dataDefaultValue}
-          min="0"
+          min={min}
           max={max}
           name={text}
           step={step}
@@ -93,6 +96,7 @@ TissuePriceCalculatorInputRange.defaultProps = {
   defaultValue: PropTypes.number,
   dataDefaultValue: PropTypes.number,
   max: PropTypes.number,
+  min: PropTypes.number,
   step: PropTypes.number,
   text: PropTypes.string,
 };
@@ -102,6 +106,7 @@ TissuePriceCalculatorInputRange.propTypes = {
   defaultValue: PropTypes.number,
   dataDefaultValue: PropTypes.number,
   max: PropTypes.number,
+  min: PropTypes.number,
   step: PropTypes.number,
   text: PropTypes.string,
 };
