@@ -79,7 +79,6 @@
 
 .TissuePriceCalculatorInput__RangeOutputValue {
   @include grid-span(2);
-  @include responsive-font-size(25, 25)
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue--blink {

@@ -13,16 +13,13 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
   const initialProgress = () => {
     if (defaultValue.length === 0 || max.length === 0) return 0;
 
-    return (100 * (defaultValue - min)) / max - min;
+    return (100 * defaultValue) / max;
   };
 
   const getProgress = (rangeInput) => {
     if (typeof rangeInput === "undefined") return 0;
 
-    return (
-      (100 * (rangeInput.value - rangeInput.getAttribute("min"))) / rangeInput.getAttribute("max") -
-      rangeInput.getAttribute("min")
-    );
+    return (100 * rangeInput.value) / rangeInput.getAttribute("max");
   };
 
   const setProgressBar = (progressBarFiller, rangeInput) => {
