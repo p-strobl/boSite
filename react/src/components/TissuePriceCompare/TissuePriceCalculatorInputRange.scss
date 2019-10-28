@@ -59,7 +59,7 @@
   }
 
   &:active::-webkit-slider-thumb {
-    @include box-shadow(0, 0, 5, 20, rgba($c_sunny-bo, 0.4));
+    @include box-shadow(0, 0, 15, 15, rgba($c_sunny-bo, 0.3));
   }
 }
 
@@ -82,7 +82,7 @@
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue--blink {
-  @include transform(scale, 1.5);
+  @include transform(scale, 2);
   text-shadow: 0 0 1px $c_ash-grey;
 }
 

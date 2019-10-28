@@ -38,7 +38,7 @@ export const TissuePriceCalculator = () => {
 
   return (
     <div className={Class("TissuePriceCalculator")}>
-      <div className={Class("TissuePriceCalculator__Input")}>
+      <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Input")}>
         <TissuePriceCalculatorInputRange
           context="rollCountContext"
           dataDefaultValue={defaultValues.rollCount}
@@ -71,7 +71,7 @@ export const TissuePriceCalculator = () => {
           text="Kaufpreis"
         />
       </div>
-      <div className={Class("TissuePriceCalculator__Output")}>
+      <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Output")}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
       </div>
     </div>
