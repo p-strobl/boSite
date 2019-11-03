@@ -17,7 +17,7 @@
 .Header__LinkList--active:after {
   @include responsive-font-size(25, 25);
   bottom: -18px;
-  color: $c_light-grey;
+  color: $c_grey-004;
   content: $i_arrow-up;
   display: block;
   font-family: "LigatureSymbols", sans-serif;

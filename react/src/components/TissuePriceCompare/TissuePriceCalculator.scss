@@ -3,7 +3,7 @@
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid(12);
   @include grid-column(2, 12);
-  border: 1px solid $c_light-grey;
+  border: 1px solid $c_grey-004;
   padding: 30px 0 15px;
 
   @include respond-as-of(2) {
@@ -28,11 +28,11 @@
 }
 
 .TissuePriceCalculator--Pricey {
-  background-color: $c_tomato-red;
+  background-color: rgba($c_tomato-red, 0.8);
 }
 
 .TissuePriceCalculator--Lowest {
-  background-color: $c_light-green;
+  background-color: $c_green-003;
 }
 
 .TissuePriceCalculator__Input {
@@ -40,8 +40,5 @@
 
 .TissuePriceCalculator__Output {
   margin-top: 5px;
-
-  @include respond-as-of(1) {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 }

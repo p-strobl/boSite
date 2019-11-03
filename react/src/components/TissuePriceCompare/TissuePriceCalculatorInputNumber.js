@@ -57,12 +57,14 @@ export const TissuePriceCalculatorInputNumber = ({ context, dataDefaultValue, pl
 };
 
 TissuePriceCalculatorInputNumber.defaultProps = {
+  dataDefaultValue: PropTypes.string,
   context: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.func,
 };
 
 TissuePriceCalculatorInputNumber.propTypes = {
+  dataDefaultValue: PropTypes.string,
   context: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.func,

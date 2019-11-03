@@ -45,7 +45,7 @@ export const TissuePriceCalculator = () => {
           defaultValue={rollCount}
           max={30}
           min={0}
-          step={2}
+          step={1}
           text="Rollen"
         />
         <TissuePriceCalculatorInputRange
@@ -54,7 +54,7 @@ export const TissuePriceCalculator = () => {
           defaultValue={sheetCount}
           max={300}
           min={0}
-          step={10}
+          step={1}
           text="Blatt"
         />
         <TissuePriceCalculatorInputRange

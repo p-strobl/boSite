@@ -15,6 +15,7 @@
 }
 
 .TissuePriceCalculatorInput__ProgressBar {
+  background-color: $c_white-002;
   border-radius: 5px;
   height: 8px;
   left: 0;
@@ -33,7 +34,7 @@
 }
 
 .TissuePriceCalculatorInput__RangeSlider {
-  @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
+  @include box-shadow(0, 0, 5, -3, rgba($c_vanta-black, 1));
   -webkit-appearance: none;
   background-color: transparent;
   border-radius: 5px;
@@ -47,7 +48,7 @@
   z-index: 2;
 
   &::-webkit-slider-thumb {
-    @include box-shadow(0, 0, 7, -2, rgba($c_vanta-black, 1));
+    @include box-shadow(0, 0, 6, -3, rgba($c_vanta-black, 1));
     background-color: $c_sunny-bo;
     border: 1px solid $c-vanta-black;
     border-radius: 5px;
@@ -78,14 +79,22 @@
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue {
-  @include grid-span(2);
+  @include grid-span(3);
+  @include responsive-font-size(20, 20);
+  @include box-shadow(0, 0, 7, -5, rgba($c_vanta-black, 1));
+  background-color: $c_sunny-bo;
+  border-radius: 5px;
+  padding: 2px 10px;
+  text-align: right;
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue--blink {
-  @include transform(scale, 1.3);
-  text-shadow: 0 0 1px $c_ash-grey;
+  @include box-shadow(0, 0, 7, -5, rgba($c_vanta-black, 1));
 }
 
 .TissuePriceCalculatorInput__RangeOutputText {
+  @include flex();
   @include grid-span(4);
+  align-items: center;
+  height: 100%;
 }
