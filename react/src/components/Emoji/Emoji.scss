@@ -20,4 +20,8 @@
   &.Emoji__Audio:after {
     content: $emoji_headphone;
   }
+
+  &.Emoji__MusicNote:after {
+    content: $emoji_music-note;
+  }
 }
