@@ -1,12 +1,12 @@
 import React from "react";
 
-import TissuePriceCalculatorStore from "~context/TissuePriceCalculatorContext";
+import TissuePriceCalculatorContextStore from "~context/TissuePriceCalculatorContext";
 import { TissuePriceCalculator } from "~components/TissuePriceCompare/TissuePriceCalculator";
 
 export const TissuePriceCalculatorProvider = () => {
   return (
-    <TissuePriceCalculatorStore>
+    <TissuePriceCalculatorContextStore>
       <TissuePriceCalculator />
-    </TissuePriceCalculatorStore>
+    </TissuePriceCalculatorContextStore>
   );
 };

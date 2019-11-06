@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const TissuePriceCalculatorContext = createContext(null);
 
-export default function TissuePriceCalculatorStore({ children }) {
+export default function TissuePriceCalculatorContextStore({ children }) {
   const defaultValues = {
     rollCount: 12,
     sheetCount: 200,
@@ -28,12 +28,12 @@ export default function TissuePriceCalculatorStore({ children }) {
   );
 }
 
-TissuePriceCalculatorStore.displayName = "CalculatorStore";
+TissuePriceCalculatorContextStore.displayName = "TissuePriceCalculatorContextStore";
 
-TissuePriceCalculatorStore.defaultProps = {
+TissuePriceCalculatorContextStore.defaultProps = {
   children: PropTypes.element,
 };
 
-TissuePriceCalculatorStore.propTypes = {
+TissuePriceCalculatorContextStore.propTypes = {
   children: PropTypes.element,
 };
