@@ -98,6 +98,15 @@ module.exports = {
           publicPath: "assets/fonts/",
         },
       },
+      {
+        test: /\.(mp3)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/audio/samples/",
+          publicPath: "assets/audio/samples/",
+        },
+      },
     ],
   },
   devServer: {

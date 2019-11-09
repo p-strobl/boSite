@@ -1,16 +1,12 @@
 import React, { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
+import { AudioSampleData } from "./data/AudioSampleData";
+
 export const AudioSampleBoxContext = createContext(null);
 
 export default function AudioSampleBoxContextStore({ children }) {
-  const kitchenSamples = {};
-
-  const audioSampleStore = {
-    kitchenSamples,
-  };
-
-  return <AudioSampleBoxContext.Provider value={audioSampleStore}>{children}</AudioSampleBoxContext.Provider>;
+  return <AudioSampleBoxContext.Provider value={AudioSampleData}>{children}</AudioSampleBoxContext.Provider>;
 }
 
 AudioSampleBoxContextStore.displayName = "AudioSampleBoxContextStore";
