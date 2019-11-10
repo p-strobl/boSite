@@ -12,11 +12,21 @@ export const AudioSampleBoxSelector = ({ category, samples }) => {
   // );
 
   return (
-    <div className="AudioSampleBoxSelector">
-      <div className="AudioSampleBoxSelector__Container">
+    <div className="AudioSampleBoxSelector__Container">
+      <div className="AudioSampleBoxSelector">
         <div>{category}</div>
         <div>Bla</div>
       </div>
     </div>
   );
+};
+
+AudioSampleBoxSelector.defaultProps = {
+  category: PropTypes.string,
+  samples: PropTypes.string,
+};
+
+AudioSampleBoxSelector.propTypes = {
+  category: PropTypes.string,
+  samples: PropTypes.string,
 };

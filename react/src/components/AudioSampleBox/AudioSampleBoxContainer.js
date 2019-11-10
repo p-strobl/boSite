@@ -14,13 +14,13 @@ export const AudioSampleBoxContainer = () => {
 
   const audioSampleData = useContext(AudioSampleBoxContext);
 
-  const audioSampleSelection = Object.entries(audioSampleData).map(([key, value]) => {
+  const audioSampleBoxSelector = Object.values(audioSampleData).map((value) => {
     return <AudioSampleBoxSelector category={value.category} samples={value.samples} key={uuidv4()} />;
   });
 
   return (
     <div className="AudioSampleBox__Container">
-      {audioSampleSelection}
+      {audioSampleBoxSelector}
       <AudioSampleBoxPlayerControl />
     </div>
   );
