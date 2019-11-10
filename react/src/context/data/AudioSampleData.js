@@ -1,30 +1,38 @@
+import { AudioSample } from "~assets/audio/samples/index";
+
 export const AudioSampleData = {
   bathroom: {
-    toilet: {
-      src: "",
-      title: "Toilet",
-    },
-    shower: {
-      src: "",
-      title: "Shower",
-    },
-    toothbrush: {
-      src: "",
-      title: "Toothbrush",
+    category: "Badezimmer",
+    samples: {
+      toilet: {
+        src: "",
+        title: "Toilet",
+      },
+      shower: {
+        src: "",
+        title: "Shower",
+      },
+      toothbrush: {
+        src: "",
+        title: "Toothbrush",
+      },
     },
   },
   kitchen: {
-    blender: {
-      src: "",
-      title: "Blender",
-    },
-    kettle: {
-      src: "",
-      title: "Kettle",
-    },
-    toaster: {
-      src: "",
-      title: "Toaster",
+    category: "Küche",
+    samples: {
+      blender: {
+        src: AudioSample.kitchen.blender,
+        title: "Mixer",
+      },
+      kettle: {
+        src: AudioSample.kitchen.kettle,
+        title: "Kettle",
+      },
+      toaster: {
+        src: AudioSample.kitchen.toaster,
+        title: "Toaster",
+      },
     },
   },
 };

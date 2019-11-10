@@ -1,12 +1,12 @@
 import React from "react";
 
 import AudioSampleBoxContextStore from "~context/AudioSampleContext";
-import { AudioSampleBoxSelection } from "~components/AudioSampleBox/AudioSampleBoxSelection";
+import { AudioSampleBoxContainer } from "~components/AudioSampleBox/AudioSampleBoxContainer";
 
 export const AudioSampleBoxProvider = () => {
   return (
     <AudioSampleBoxContextStore>
-      <AudioSampleBoxSelection />
+      <AudioSampleBoxContainer />
     </AudioSampleBoxContextStore>
   );
 };

@@ -16,7 +16,7 @@ export function AudioSampleBox() {
 
   return (
     <div className="AudioSampleBox">
-      <Headline parentClass="Main" h1={headline} h2={subHeadline} />
+      <Headline parentClass="AudioSampleBox" h1={headline} h2={subHeadline} />
       <AudioSampleBoxProvider />
     </div>
   );
