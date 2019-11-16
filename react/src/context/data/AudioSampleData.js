@@ -35,4 +35,21 @@ export const AudioSampleData = {
       },
     },
   },
+  tools: {
+    category: "Werkzeug",
+    samples: {
+      blender: {
+        src: AudioSample.kitchen.blender,
+        title: "Hammer",
+      },
+      kettle: {
+        src: AudioSample.kitchen.kettle,
+        title: "Säge",
+      },
+      toaster: {
+        src: AudioSample.kitchen.toaster,
+        title: "Nagel",
+      },
+    },
+  },
 };

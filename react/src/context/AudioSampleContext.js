@@ -1,5 +1,4 @@
-import React, { createContext, useState } from "react";
-import PropTypes from "prop-types";
+import React, { createContext } from "react";
 
 import { AudioSampleData } from "./data/AudioSampleData";
 
@@ -10,11 +9,3 @@ export default function AudioSampleBoxContextStore({ children }) {
 }
 
 AudioSampleBoxContextStore.displayName = "AudioSampleBoxContextStore";
-
-AudioSampleBoxContextStore.defaultProps = {
-  children: PropTypes.element,
-};
-
-AudioSampleBoxContextStore.propTypes = {
-  children: PropTypes.element,
-};

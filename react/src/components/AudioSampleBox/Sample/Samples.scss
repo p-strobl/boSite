@@ -1,0 +1,12 @@
+@import "~scss/_utility.scss";
+
+.Samples {
+  @include grid-column(2, 12);
+  @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.Samples:nth-child(n+2) {
+  margin-top: 20px;
+}
