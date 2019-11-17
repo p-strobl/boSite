@@ -24,7 +24,7 @@ export default createContext({
       emoji: "Audio",
       name: "audioSampleBox",
       path: "/audio-sample-box",
-      title: "Audio Sample Box",
+      title: "Audio SampleList Box",
       imageSrc: audioSampleBox,
     },
     // },

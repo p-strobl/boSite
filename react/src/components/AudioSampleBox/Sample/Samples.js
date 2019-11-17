@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { SampleCategory } from "./SampleCategory";
-import { Sample } from "./Sample";
+import { SampleList } from "./SampleList";
 
 import "./Samples.scss";
 
-export const Samples = ({ category, samples }) => {
+export const Samples = ({ category, samples, emoji }) => {
   const noSamples = Object.values(samples).every((sample) => {
     return !sample.src;
   });
@@ -15,8 +15,8 @@ export const Samples = ({ category, samples }) => {
 
   return (
     <div className="Samples">
-      <SampleCategory category={category} />
-      <Sample samples={samples} />
+      <SampleCategory category={category} emoji={emoji} />
+      <SampleList samples={samples} />
     </div>
   );
 };
@@ -24,9 +24,11 @@ export const Samples = ({ category, samples }) => {
 Samples.defaultProps = {
   category: PropTypes.string,
   samples: PropTypes.objectOf(PropTypes.object),
+  emoji: PropTypes.string,
 };
 
 Samples.propTypes = {
   category: PropTypes.string,
   samples: PropTypes.objectOf(PropTypes.object),
+  emoji: PropTypes.string,
 };

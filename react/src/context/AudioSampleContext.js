@@ -5,7 +5,11 @@ import { AudioSampleData } from "./data/AudioSampleData";
 export const AudioSampleBoxContext = createContext(null);
 
 export default function AudioSampleBoxContextStore({ children }) {
-  return <AudioSampleBoxContext.Provider value={AudioSampleData}>{children}</AudioSampleBoxContext.Provider>;
+  return (
+    <AudioSampleBoxContext.Provider value={AudioSampleData}>
+      {children}
+    </AudioSampleBoxContext.Provider>
+  );
 }
 
 AudioSampleBoxContextStore.displayName = "AudioSampleBoxContextStore";

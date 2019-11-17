@@ -10,7 +10,14 @@ export const SamplesList = () => {
   const audioSampleData = useContext(AudioSampleBoxContext);
 
   const sampleList = Object.values(audioSampleData).map((value) => {
-    return <Samples category={value.category} samples={value.samples} key={uuidv4()} />;
+    return (
+      <Samples
+        category={value.category}
+        samples={value.samples}
+        emoji={value.emoji}
+        key={uuidv4()}
+      />
+    );
   });
 
   return <div className="Samples__List">{sampleList}</div>;

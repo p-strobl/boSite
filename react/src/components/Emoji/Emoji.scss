@@ -24,4 +24,16 @@
   &.Emoji__MusicNote:after {
     content: $emoji_music-note;
   }
+
+  &.Emoji__FriedEgg:after {
+    content: $emoji_fried-egg;
+  }
+
+  &.Emoji__HammerWrench:after {
+    content: $emoji_hammer-wrench;
+  }
+
+  &.Emoji__Bathtub:after {
+    content: $emoji_bathtub;
+  }
 }

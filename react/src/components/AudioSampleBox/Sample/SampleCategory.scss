@@ -1,19 +1,35 @@
 @import "~scss/_utility.scss";
 
 .Sample__Category {
+  @include flex();
   @include responsive-font-size(25, 30);
   position: relative;
+  outline: 0;
+}
+
+.no-touch .Sample__Category:hover {
+  cursor: pointer;
 }
 
 .Sample__Category:after {
   @include flex();
-  @include responsive-font-size(20, 25);
+  @include responsive-font-size(30, 30);
   align-items: center;
-  content: $i_arrow-up;
+  content: $i_normal-subgroup;
+  color: $c_sunny-bo;
   height: 100%;
   position: absolute;
   right: 0;
   transform: rotate(0deg);
-  transition: transform 0.24s;
+  transition: transform 0.5s, color 0.2s;
   top: 0;
+}
+
+.Sample__Category.Sample__Category--Expanded:after {
+  color: $c_holy-green;
+  transform: rotate(-90deg);
+}
+
+.SampleCategory__Emoji {
+  margin-left: 5px;
 }

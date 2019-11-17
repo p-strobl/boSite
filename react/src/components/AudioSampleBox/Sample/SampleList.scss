@@ -1,0 +1,14 @@
+@import "~scss/_utility.scss";
+
+.Sample__List {
+  @include box-shadow(0, -3, 2, -2, rgba($c_holy-green, 0.5));
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, opacity 0.6s;
+}
+
+.Sample__List--Expanded {
+  max-height: 500px;
+  opacity: 1;
+}

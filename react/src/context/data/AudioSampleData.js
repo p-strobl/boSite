@@ -3,6 +3,7 @@ import { AudioSample } from "~assets/audio/samples/index";
 export const AudioSampleData = {
   bathroom: {
     category: "Badezimmer",
+    emoji: "bathtub",
     samples: {
       toilet: {
         src: "",
@@ -20,6 +21,7 @@ export const AudioSampleData = {
   },
   kitchen: {
     category: "Küche",
+    emoji: "FriedEgg",
     samples: {
       blender: {
         src: AudioSample.kitchen.blender,
@@ -37,6 +39,7 @@ export const AudioSampleData = {
   },
   tools: {
     category: "Werkzeug",
+    emoji: "HammerWrench",
     samples: {
       blender: {
         src: AudioSample.kitchen.blender,
