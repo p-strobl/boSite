@@ -9,7 +9,9 @@ export const SampleCategory = ({ category, emoji }) => {
     <Emoji classs="SampleCategory__" emojiClass={`Emoji__${emoji}`} label={emoji} />
   );
 
-  const expandSampleList = (element) => {
+  const toggleSampleList = (element) => {
+    if (typeof element === "undefined") return;
+
     const siblingSampleList = element.currentTarget.nextSibling;
     element.currentTarget.classList.toggle("Sample__Category--Expanded");
     siblingSampleList.classList.toggle("Sample__List--Expanded");
@@ -18,8 +20,8 @@ export const SampleCategory = ({ category, emoji }) => {
   return (
     <div
       className="Sample__Category"
-      onClick={expandSampleList}
-      onKeyUp={() => expandSampleList}
+      onClick={toggleSampleList}
+      onKeyUp={() => toggleSampleList}
       role="button"
       tabIndex={0}>
       <div>{category}</div>

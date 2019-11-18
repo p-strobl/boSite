@@ -1,5 +1,10 @@
 @import "~scss/_utility.scss";
 
 .Sample {
+  @include grid(12);
   padding-top: 10px;
+}
+
+.Sample:first-child {
+  border-top: 1px solid $c_grey-004;
 }

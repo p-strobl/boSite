@@ -4,6 +4,7 @@ import Class from "classnames";
 import "~server-assets/images/favicon.png";
 import "~assets/fonts";
 
+import "~src/helper/ExpandPrototype";
 import { determineIfTouchDevice } from "~src/helper/Utilities";
 import { GridLayer } from "~components/GridLayer";
 import { BoundingBar } from "~components/BoundingBar";

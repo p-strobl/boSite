@@ -1,1 +1,34 @@
 @import "~scss/_utility.scss";
+
+.Sample__Player {
+  @include flex();
+  @include grid-column(5, 13);
+}
+
+.Sample__Player--Play-Pause:after {
+  @include ligature-symbols-icon($i_play);
+}
+
+.Sample__Player--Stop:after {
+  @include ligature-symbols-icon($i_stop);
+}
+
+.Sample__Player--Control {
+  border: 1px solid;
+  border-radius: 3px;
+  height: 25px;
+  margin-right: 5px;
+  position: relative;
+  width: 25px;
+}
+
+.Sample__Player--Control:last-child {
+  margin-right: 0;
+}
+
+.Sample__Player--Control:after {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

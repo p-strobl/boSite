@@ -13,21 +13,21 @@
 
 .Sample__Category:after {
   @include flex();
+  @include ligature-symbols-icon($i_down);
   @include responsive-font-size(30, 30);
   align-items: center;
-  content: $i_normal-subgroup;
   color: $c_sunny-bo;
   height: 100%;
   position: absolute;
   right: 0;
   transform: rotate(0deg);
-  transition: transform 0.5s, color 0.2s;
+  transition: transform 0.3s, color 0.2s;
   top: 0;
 }
 
 .Sample__Category.Sample__Category--Expanded:after {
   color: $c_holy-green;
-  transform: rotate(-90deg);
+  transform: rotate(180deg);
 }
 
 .SampleCategory__Emoji {
