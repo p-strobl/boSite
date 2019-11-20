@@ -3,46 +3,58 @@ import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
 import "./SamplePlayer.scss";
+import Class from "classnames";
 
 export const SamplePlayer = ({ audioSource }) => {
   const audioPlayer = new Audio(audioSource);
-  const [audioDuration, setAudioDuration] = useState(null);
-  const [audioCurrentTime, setAudioCurrentTime] = useState("0.00");
 
-  const play = () => {
+  const [hideControls, setHideControls] = useState(true);
+  const [audioDuration, setAudioDuration] = useState("0.0");
+  const [audioCurrentTime, setAudioCurrentTime] = useState("0.0");
+
+  const playPause = () => {
     const playIt = audioPlayer.play();
   };
 
-  const stop = () => {
-    const playIt = audioPlayer.stop();
+  const showAudioPlayer = () => {
+    setHideControls(false);
+    setAudioDuration(audioPlayer.duration.toFixed(1));
   };
 
-  const getDuration = () => {
-    setAudioDuration(audioPlayer.duration.toFixed(2));
+  const setCurrentPlaybackTime = () => {
+    console.log("audioPlayer.currentTime", audioPlayer.currentTime);
+    setAudioCurrentTime(audioPlayer.currentTime.toFixed(1));
   };
 
-  const updateCurrentTime = () => {
-    audioPlayer.addEventListener("timeupdate", () => {
-      setAudioCurrentTime(audioPlayer.currentTime.toFixed(2));
-    });
+  const initCurrentPlaybackTime = () => {
+    audioPlayer.addEventListener("timeupdate", setCurrentPlaybackTime);
   };
+
+  const initAudioPlayer = () => {
+    if (typeof audioPlayer === "undefined") return false;
+
+    audioPlayer.addEventListener("canplaythrough", showAudioPlayer);
+    return true;
+  };
+
+  // audioPlayer.ontimeupdate = () => {
+  //   setCurrentPlaybackTime();
+  // };
+  initCurrentPlaybackTime();
 
   useEffect(() => {
-    audioPlayer.addEventListener("loadeddata", getDuration);
-    updateCurrentTime();
+    initAudioPlayer();
+
     return () => {
-      audioPlayer.removeEventListener("loadeddata", getDuration);
+      audioPlayer.removeEventListener("canplaythrough", showAudioPlayer);
     };
-  }, [getDuration]);
+  }, []);
 
   return (
-    <div className="Sample__Player" key={uuidv4()}>
-      <div
-        className="Sample__Player--Play-Pause Sample__Player--Control"
-        role="button"
-        onClick={play}
-      />
-      <div className="Sample__Player--Stop Sample__Player--Control" role="button" onClick={stop} />
+    <div
+      className={Class("Sample__Player", { "Sample__Player--Loading": hideControls })}
+      key={uuidv4()}>
+      <div className="Sample__PlayerControl" role="button" onClick={playPause} />
       <div className="Sample__Player--CurrentTime">{audioCurrentTime}s</div>
       <span>/</span>
       <div className="Sample__Player--Duration">{audioDuration}s</div>

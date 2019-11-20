@@ -3,17 +3,15 @@
 .Sample__Player {
   @include flex();
   @include grid-column(5, 13);
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
-.Sample__Player--Play-Pause:after {
-  @include ligature-symbols-icon($i_play);
+.Sample__Player--Loading {
+  opacity: 0;
 }
 
-.Sample__Player--Stop:after {
-  @include ligature-symbols-icon($i_stop);
-}
-
-.Sample__Player--Control {
+.Sample__PlayerControl {
   border: 1px solid;
   border-radius: 3px;
   height: 25px;
@@ -22,13 +20,18 @@
   width: 25px;
 }
 
-.Sample__Player--Control:last-child {
+.Sample__PlayerControl:after {
+  @include ligature-symbols-icon($i_play);
+}
+
+.Sample__PlayerControl:last-child {
   margin-right: 0;
 }
 
-.Sample__Player--Control:after {
+.Sample__PlayerControl:after {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 0.5s;
 }
