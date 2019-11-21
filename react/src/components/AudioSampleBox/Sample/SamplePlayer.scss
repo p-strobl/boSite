@@ -1,37 +1,56 @@
 @import "~scss/_utility.scss";
 
 .Sample__Player {
-  @include flex();
-  @include grid-column(5, 13);
+  align-items: center;
+  display: grid;
+  grid-column: 5 / 13;
+  grid-template-columns: auto 50px;
+  grid-gap: 10px;
+  position: relative;
   opacity: 1;
   transition: opacity 0.5s;
 }
 
-.Sample__Player--Loading {
+.SamplePlayer--Loading {
   opacity: 0;
 }
 
-.Sample__PlayerControl {
+.SamplePlayer__Control {
   border: 1px solid;
   border-radius: 3px;
-  height: 25px;
-  margin-right: 5px;
+  height: 50px;
   position: relative;
-  width: 25px;
+  width: 50px;
 }
 
-.Sample__PlayerControl:after {
-  @include ligature-symbols-icon($i_play);
-}
-
-.Sample__PlayerControl:last-child {
-  margin-right: 0;
-}
-
-.Sample__PlayerControl:after {
+.SamplePlayer__Control:after {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.5s;
+}
+
+.SamplePlayer__Control--Play:after {
+  @include ligature-symbols-icon($i_play);
+}
+
+.SamplePlayer__Control--Pause:after {
+  @include ligature-symbols-icon($i_pause);
+}
+
+.ProgressBar {
+  background-color: $c_grey-004;
+  border-radius: 5px;
+  height: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ProgressBar--filler {
+  background-color: rgba($c_holy-green, 0.6);
+  display: block;
+  height: 100%;
+  transform-origin: left;
+  width: 100%;
 }

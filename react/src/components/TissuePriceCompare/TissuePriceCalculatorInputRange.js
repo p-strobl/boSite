@@ -5,7 +5,15 @@ import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorCont
 
 import "./TissuePriceCalculatorInputRange.scss";
 
-export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, defaultValue, max, min, step, text }) => {
+export const TissuePriceCalculatorInputRange = ({
+  context,
+  dataDefaultValue,
+  defaultValue,
+  max,
+  min,
+  step,
+  text,
+}) => {
   const {
     [context]: [, setInput],
   } = useContext(TissuePriceCalculatorContext);
@@ -36,9 +44,13 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
   };
 
   const blinkRangeOutputValue = (rangeInputOutputValueContainer) => {
-    rangeInputOutputValueContainer.classList.add("TissuePriceCalculatorInput__RangeOutputValue--blink");
+    rangeInputOutputValueContainer.classList.add(
+      "TissuePriceCalculatorInput__RangeOutputValue--blink",
+    );
     setTimeout(() => {
-      rangeInputOutputValueContainer.classList.remove("TissuePriceCalculatorInput__RangeOutputValue--blink");
+      rangeInputOutputValueContainer.classList.remove(
+        "TissuePriceCalculatorInput__RangeOutputValue--blink",
+      );
     }, 50);
   };
 
@@ -46,7 +58,9 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
     if (typeof element === "undefined") return;
 
     const rangeInput = element.target;
-    const rangeInputOutputContainer = rangeInput.previousElementSibling.getElementsByTagName("output");
+    const rangeInputOutputContainer = rangeInput.previousElementSibling.getElementsByTagName(
+      "output",
+    );
     const rangeInputOutputValueContainer = rangeInput.parentElement.previousElementSibling
       .getElementsByTagName("output")
       .item(0);
@@ -66,12 +80,12 @@ export const TissuePriceCalculatorInputRange = ({ context, dataDefaultValue, def
         <span className="TissuePriceCalculatorInput__RangeOutputText">{text}</span>
       </div>
       <div className="TissuePriceCalculatorInput__RangeInput">
-        <span className="TissuePriceCalculatorInput__ProgressBar">
-          <span
+        <div className="TissuePriceCalculatorInput__ProgressBar">
+          <div
             className="TissuePriceCalculatorInput__ProgressBar--filler"
             style={{ width: `${initialProgress()}%` }}
           />
-        </span>
+        </div>
         <input
           className="TissuePriceCalculatorInput__RangeSlider"
           type="range"

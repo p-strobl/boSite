@@ -9,25 +9,31 @@ export const SamplePlayer = ({ audioSource }) => {
   const audioPlayer = new Audio(audioSource);
 
   const [hideControls, setHideControls] = useState(true);
-  const [audioDuration, setAudioDuration] = useState("0.0");
-  const [audioCurrentTime, setAudioCurrentTime] = useState("0.0");
-
-  const playPause = () => {
-    const playIt = audioPlayer.play();
-  };
+  const [progressBar, setProgressBar] = useState(0);
+  const [playButtonState, setPlayButtonState] = useState("Play");
 
   const showAudioPlayer = () => {
     setHideControls(false);
-    setAudioDuration(audioPlayer.duration.toFixed(1));
   };
 
-  const setCurrentPlaybackTime = () => {
-    console.log("audioPlayer.currentTime", audioPlayer.currentTime);
-    setAudioCurrentTime(audioPlayer.currentTime.toFixed(1));
+  const togglePlay = () => {
+    if (playButtonState === "Play") {
+      audioPlayer.pause();
+    } else {
+      audioPlayer.play().then(setPlayButtonState("Pause"));
+    }
   };
 
-  const initCurrentPlaybackTime = () => {
-    audioPlayer.addEventListener("timeupdate", setCurrentPlaybackTime);
+  audioPlayer.onended = () => {
+    audioPlayer.currentTime = 0;
+    setPlayButtonState("Play");
+  };
+
+  audioPlayer.ontimeupdate = () => {
+    const { duration, currentTime } = audioPlayer;
+
+    const progress = (currentTime * 100) / duration / 100;
+    setProgressBar(progress.toFixed(2));
   };
 
   const initAudioPlayer = () => {
@@ -36,11 +42,6 @@ export const SamplePlayer = ({ audioSource }) => {
     audioPlayer.addEventListener("canplaythrough", showAudioPlayer);
     return true;
   };
-
-  // audioPlayer.ontimeupdate = () => {
-  //   setCurrentPlaybackTime();
-  // };
-  initCurrentPlaybackTime();
 
   useEffect(() => {
     initAudioPlayer();
@@ -52,12 +53,23 @@ export const SamplePlayer = ({ audioSource }) => {
 
   return (
     <div
-      className={Class("Sample__Player", { "Sample__Player--Loading": hideControls })}
+      className={Class("Sample__Player", { "SamplePlayer--Loading": hideControls })}
       key={uuidv4()}>
-      <div className="Sample__PlayerControl" role="button" onClick={playPause} />
-      <div className="Sample__Player--CurrentTime">{audioCurrentTime}s</div>
-      <span>/</span>
-      <div className="Sample__Player--Duration">{audioDuration}s</div>
+      <div className="ProgressBar">
+        <div
+          className="ProgressBar--filler"
+          style={{ transform: `scaleX(${progressBar})` }}
+          key={uuidv4()}
+        />
+      </div>
+      <div
+        className={Class(`SamplePlayer__Control SamplePlayer__Control--${playButtonState}`)}
+        role="button"
+        onClick={togglePlay}
+        onKeyUp={() => {}}
+        tabIndex={0}
+        aria-label="Play"
+      />
     </div>
   );
 };
