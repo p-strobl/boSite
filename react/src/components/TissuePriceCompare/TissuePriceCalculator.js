@@ -43,7 +43,7 @@ export const TissuePriceCalculator = () => {
           context="rollCountContext"
           dataDefaultValue={defaultValues.rollCount}
           defaultValue={rollCount}
-          max={30}
+          max={20}
           min={0}
           step={1}
           text="Rollen"
@@ -52,7 +52,7 @@ export const TissuePriceCalculator = () => {
           context="sheetCountContext"
           dataDefaultValue={defaultValues.sheetCount}
           defaultValue={sheetCount}
-          max={300}
+          max={200}
           min={0}
           step={1}
           text="Blatt"

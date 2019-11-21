@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
+import Class from "classnames";
 
 import "./SamplePlayer.scss";
-import Class from "classnames";
 
 export const SamplePlayer = ({ audioSource }) => {
   const audioPlayer = new Audio(audioSource);
@@ -17,21 +17,19 @@ export const SamplePlayer = ({ audioSource }) => {
   };
 
   const togglePlay = () => {
-    if (playButtonState === "Play") {
-      audioPlayer.pause();
-    } else {
-      audioPlayer.play().then(setPlayButtonState("Pause"));
-    }
+    audioPlayer.play().then(() => {
+      setPlayButtonState("Pause");
+    });
   };
 
   audioPlayer.onended = () => {
-    audioPlayer.currentTime = 0;
+    setProgressBar(0);
+    // audioPlayer.currentTime = 0;
     setPlayButtonState("Play");
   };
 
   audioPlayer.ontimeupdate = () => {
     const { duration, currentTime } = audioPlayer;
-
     const progress = (currentTime * 100) / duration / 100;
     setProgressBar(progress.toFixed(2));
   };
