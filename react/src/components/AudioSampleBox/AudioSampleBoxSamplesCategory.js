@@ -31,8 +31,8 @@ export const AudioSampleBoxSamplesCategory = ({ category, emoji }) => {
 };
 
 AudioSampleBoxSamplesCategory.defaultProps = {
-  category: PropTypes.string,
-  emoji: PropTypes.string,
+  category: "",
+  emoji: "",
 };
 
 AudioSampleBoxSamplesCategory.propTypes = {

@@ -13,7 +13,7 @@ export const SampleTitle = ({ title }) => {
 };
 
 SampleTitle.defaultProps = {
-  title: PropTypes.string,
+  title: "",
 };
 
 SampleTitle.propTypes = {

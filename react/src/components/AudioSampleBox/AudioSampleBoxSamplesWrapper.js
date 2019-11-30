@@ -22,13 +22,13 @@ export const AudioSampleBoxSamplesWrapper = ({ category, samples, emoji }) => {
 };
 
 AudioSampleBoxSamplesWrapper.defaultProps = {
-  category: PropTypes.string,
-  samples: PropTypes.objectOf(PropTypes.object),
-  emoji: PropTypes.string,
+  category: "",
+  emoji: "",
+  samples: {},
 };
 
 AudioSampleBoxSamplesWrapper.propTypes = {
   category: PropTypes.string,
-  samples: PropTypes.objectOf(PropTypes.object),
   emoji: PropTypes.string,
+  samples: PropTypes.objectOf(PropTypes.object),
 };

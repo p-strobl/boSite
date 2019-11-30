@@ -16,8 +16,8 @@ export const Sample = ({ title, audioSource }) => {
 };
 
 Sample.defaultProps = {
-  audioSource: PropTypes.string,
-  title: PropTypes.string,
+  audioSource: "",
+  title: "",
 };
 
 Sample.propTypes = {

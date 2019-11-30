@@ -15,7 +15,7 @@ export const AudioSampleBoxSamplesCollection = ({ samples }) => {
 };
 
 AudioSampleBoxSamplesCollection.defaultProps = {
-  samples: PropTypes.objectOf(PropTypes.object),
+  samples: {},
 };
 
 AudioSampleBoxSamplesCollection.propTypes = {
