@@ -1,0 +1,19 @@
+@import "~~scss/_utility.scss";
+
+.SamplePlayer__ProgressBar {
+  background-color: $c_grey-004;
+  border-radius: 5px;
+  height: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.SamplePlayer__ProgressBar--filler {
+  background-color: rgba($c_holy-green, 0.6);
+  display: block;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s;
+  width: 100%;
+}

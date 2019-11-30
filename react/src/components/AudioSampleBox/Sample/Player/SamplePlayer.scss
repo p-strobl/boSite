@@ -1,0 +1,16 @@
+@import "~~scss/_utility.scss";
+
+.Sample__Player {
+  align-items: center;
+  display: grid;
+  grid-column: 5 / 13;
+  grid-template-columns: auto 50px;
+  grid-gap: 10px;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.Sample__Player--Loading {
+  opacity: 0;
+}

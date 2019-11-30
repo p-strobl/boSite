@@ -9,7 +9,7 @@ import { AudioSampleBoxProvider } from "./AudioSampleBoxProvider";
 import AudioSampleBoxContextStore from "~context/AudioSampleContext";
 
 export function AudioSampleBox() {
-  useTitle("boSite's Audio SampleList");
+  useTitle("boSite's Audio SampleCollection");
 
   const emojiMusicNote = (
     <Emoji classs="AudioSampleBoxHeadline__" emojiClass="Emoji__MusicNote" label="music note" />

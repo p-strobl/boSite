@@ -1,6 +1,6 @@
-@import "~scss/_utility.scss";
+@import "~~scss/_utility.scss";
 
-.Samples__List {
+.AudioSampleBox__Content {
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid(12);
   @include grid-span(12);

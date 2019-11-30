@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { SampleTitle } from "./SampleTitle";
-import { SamplePlayer } from "./SamplePlayer";
+import { SamplePlayer } from "./Player";
 
 import "./Sample.scss";
 

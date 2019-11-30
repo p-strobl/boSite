@@ -1,17 +1,17 @@
-@import "~scss/_utility.scss";
+@import "~~scss/_utility.scss";
 
-.Sample__Category {
+.Samples__Category {
   @include flex();
   @include responsive-font-size(25, 30);
   position: relative;
   outline: 0;
 }
 
-.no-touch .Sample__Category:hover {
+.no-touch .Samples__Category:hover {
   cursor: pointer;
 }
 
-.Sample__Category:after {
+.Samples__Category:after {
   @include flex();
   @include ligature-symbols-icon($i_down);
   @include responsive-font-size(30, 30);
@@ -25,11 +25,11 @@
   top: 0;
 }
 
-.Sample__Category.Sample__Category--Expanded:after {
+.Samples__Category.Samples__Category--Expanded:after {
   color: $c_holy-green;
   transform: rotate(180deg);
 }
 
-.SampleCategory__Emoji {
+.SamplesCategory__Emoji {
   margin-left: 5px;
 }

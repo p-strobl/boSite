@@ -1,13 +1,13 @@
-@import "~scss/_utility.scss";
+@import "~~scss/_utility.scss";
 
-.Sample__List {
+.Samples__Collection {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.4s, opacity 0.5s;
 }
 
-.Sample__List--Expanded {
+.Samples__Collection--Expanded {
   max-height: 500px;
   opacity: 1;
 }

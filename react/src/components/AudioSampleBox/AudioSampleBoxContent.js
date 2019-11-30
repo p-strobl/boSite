@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import uuidv4 from "uuid/v4";
 
 import { AudioSampleBoxContext } from "~context/AudioSampleContext";
-import { Samples } from "./Samples";
+import { AudioSampleBoxSamplesWrapper } from "./AudioSampleBoxSamplesWrapper";
 
-import "./SamplesList.scss";
+import "./AudioSampleBoxContent.scss";
 
-export const SamplesList = () => {
+export const AudioSampleBoxContent = () => {
   const audioSampleData = useContext(AudioSampleBoxContext);
 
-  const sampleList = Object.values(audioSampleData).map((value) => {
+  const audioSampleContent = Object.values(audioSampleData).map((value) => {
     return (
-      <Samples
+      <AudioSampleBoxSamplesWrapper
         category={value.category}
         samples={value.samples}
         emoji={value.emoji}
@@ -20,5 +20,5 @@ export const SamplesList = () => {
     );
   });
 
-  return <div className="Samples__List">{sampleList}</div>;
+  return <div className="AudioSampleBox__Content">{audioSampleContent}</div>;
 };
