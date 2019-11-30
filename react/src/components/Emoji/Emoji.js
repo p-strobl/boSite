@@ -22,9 +22,9 @@ export function Emoji({ classs, emojiClass, label }) {
 }
 
 Emoji.defaultProps = {
-  classs: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  emojiClass: PropTypes.string,
-  label: PropTypes.string,
+  classs: "",
+  emojiClass: "",
+  label: "",
 };
 
 Emoji.propTypes = {

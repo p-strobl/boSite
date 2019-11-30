@@ -28,9 +28,9 @@ export function Headline({ parentClass, h1, h2 }) {
 }
 
 Headline.defaultProps = {
-  parentClass: PropTypes.string,
-  h1: PropTypes.node,
-  h2: PropTypes.node,
+  parentClass: "",
+  h1: "",
+  h2: "",
 };
 
 Headline.propTypes = {

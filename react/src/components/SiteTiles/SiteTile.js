@@ -12,7 +12,9 @@ import { Emoji } from "~components/Emoji";
 import "./SiteTile.scss";
 
 export function SiteTile({ site }) {
-  const emoji = <Emoji classs="SiteTileText__" emojiClass={`Emoji__${site.emoji}`} label={site.emoji} />;
+  const emoji = (
+    <Emoji classs="SiteTileText__" emojiClass={`Emoji__${site.emoji}`} label={site.emoji} />
+  );
 
   useEffect(() => {
     loadImages();
@@ -38,7 +40,7 @@ export function SiteTile({ site }) {
 }
 
 SiteTile.defaultProps = {
-  site: PropTypes.oneOfType([PropTypes.object]),
+  site: {},
 };
 
 SiteTile.propTypes = {

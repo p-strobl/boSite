@@ -5,7 +5,12 @@ import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorCont
 
 import "./TissuePriceCalculatorInputNumber.scss";
 
-export const TissuePriceCalculatorInputNumber = ({ context, dataDefaultValue, placeholder, value }) => {
+export const TissuePriceCalculatorInputNumber = ({
+  context,
+  dataDefaultValue,
+  placeholder,
+  value,
+}) => {
   const numbersOnly = (element, inputValue) => {
     const numberRegex = /[^0-9,]/g;
 
@@ -57,10 +62,10 @@ export const TissuePriceCalculatorInputNumber = ({ context, dataDefaultValue, pl
 };
 
 TissuePriceCalculatorInputNumber.defaultProps = {
-  dataDefaultValue: PropTypes.string,
-  context: PropTypes.string,
-  placeholder: PropTypes.string,
-  value: PropTypes.func,
+  dataDefaultValue: "",
+  context: "",
+  placeholder: "",
+  value: () => {},
 };
 
 TissuePriceCalculatorInputNumber.propTypes = {

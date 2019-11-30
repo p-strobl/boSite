@@ -103,13 +103,13 @@ export const TissuePriceCalculatorInputRange = ({
 };
 
 TissuePriceCalculatorInputRange.defaultProps = {
-  context: PropTypes.string,
-  defaultValue: PropTypes.number,
-  dataDefaultValue: PropTypes.number,
-  max: PropTypes.number,
-  min: PropTypes.number,
-  step: PropTypes.number,
-  text: PropTypes.string,
+  context: "",
+  defaultValue: 0,
+  dataDefaultValue: 0,
+  max: 0,
+  min: 0,
+  step: 0,
+  text: "",
 };
 
 TissuePriceCalculatorInputRange.propTypes = {

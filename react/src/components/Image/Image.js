@@ -15,11 +15,11 @@ export function Image({ alt, classs, imageSrc, src, title }) {
 }
 
 Image.defaultProps = {
-  alt: PropTypes.string,
-  classs: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  imageSrc: PropTypes.string,
-  src: PropTypes.string,
-  title: PropTypes.string,
+  alt: "",
+  classs: "" || {},
+  imageSrc: "",
+  src: "",
+  title: "",
 };
 
 Image.propTypes = {

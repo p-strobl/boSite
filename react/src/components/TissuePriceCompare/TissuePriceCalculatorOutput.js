@@ -29,7 +29,9 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   });
 
   const determineCheapestPrice = () => {
-    const calculatorOutput = Array.from(document.querySelectorAll(".TissuePriceCalculatorOutput__Container"));
+    const calculatorOutput = Array.from(
+      document.querySelectorAll(".TissuePriceCalculatorOutput__Container"),
+    );
 
     const parsedElement = [];
 
@@ -60,7 +62,10 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
 
     const clearTissueCalculatorClasses = () => {
       tissueCalculator.forEach((outputElement) => {
-        outputElement.classList.remove("TissuePriceCalculator--Lowest", "TissuePriceCalculator--Pricey");
+        outputElement.classList.remove(
+          "TissuePriceCalculator--Lowest",
+          "TissuePriceCalculator--Pricey",
+        );
       });
     };
 
@@ -114,10 +119,13 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   };
 
   const resetCalculatorState = () => {
-    if (typeof calculatorSetter === "undefined" || typeof defaultValues === "undefined") return false;
+    if (typeof calculatorSetter === "undefined" || typeof defaultValues === "undefined")
+      return false;
 
     Object.entries(defaultValues).forEach(([defaultKey, defaultValue]) => {
-      const setter = Object.entries(calculatorSetter).find(([setterKey]) => defaultKey === setterKey);
+      const setter = Object.entries(calculatorSetter).find(
+        ([setterKey]) => defaultKey === setterKey,
+      );
       setter[1](defaultValue);
       return true;
     });
@@ -156,7 +164,7 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
 };
 
 TissuePriceCalculatorOutput.defaultProps = {
-  totalPrice: PropTypes.number,
+  totalPrice: 0,
 };
 
 TissuePriceCalculatorOutput.propTypes = {

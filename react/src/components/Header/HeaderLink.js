@@ -27,9 +27,9 @@ export function HeaderLink({ linkList, routePath, routeTitle }) {
 }
 
 HeaderLink.defaultProps = {
-  linkList: PropTypes.string,
-  routePath: PropTypes.string,
-  routeTitle: PropTypes.string,
+  linkList: "",
+  routePath: "",
+  routeTitle: "",
 };
 
 HeaderLink.propTypes = {
