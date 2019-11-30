@@ -3,6 +3,8 @@
 .SamplePlayer__Control {
   border: 1px solid;
   border-radius: 3px;
+  grid-row: span 2;
+  grid-column-end: -1;
   height: 50px;
   position: relative;
   width: 50px;
@@ -10,6 +12,7 @@
 
 .SamplePlayer__Control:after {
   left: 50%;
+  pointer-events: none;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);

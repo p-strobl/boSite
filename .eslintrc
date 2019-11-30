@@ -63,6 +63,10 @@
       "warn",
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
     ],
+    "no-unused-expressions": [2, { 
+      "allowShortCircuit": true, 
+      "allowTernary": true 
+    }],
     "no-param-reassign": [2, {
       "props": false
     }],

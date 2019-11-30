@@ -4,11 +4,11 @@ import uuidv4 from "uuid/v4";
 
 import "./ProgressBar.scss";
 
-export const ProgressBar = ({ progressBar, isPlaying }) => {
+export const ProgressBar = ({ progressBar, isPlaying, paused }) => {
   const progressBarFillerRef = useRef(null);
 
   const removeStyleProperty = () => {
-    if (!isPlaying && progressBarFillerRef.current !== null) {
+    if (!isPlaying && !paused && progressBarFillerRef.current !== null) {
       progressBarFillerRef.current.style.removeProperty("transform");
     }
   };
@@ -30,9 +30,13 @@ export const ProgressBar = ({ progressBar, isPlaying }) => {
 };
 
 ProgressBar.defaultProps = {
+  isPlaying: false,
+  paused: false,
   progressBar: 0,
 };
 
 ProgressBar.propTypes = {
+  isPlaying: PropTypes.bool,
+  paused: PropTypes.bool,
   progressBar: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

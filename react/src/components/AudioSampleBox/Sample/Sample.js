@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { SampleTitle } from "./SampleTitle";
 import { SamplePlayer } from "./Player";
 
 import "./Sample.scss";
@@ -9,8 +8,7 @@ import "./Sample.scss";
 export const Sample = ({ title, audioSource }) => {
   return (
     <div className="Sample">
-      <SampleTitle title={title} />
-      <SamplePlayer audioSource={audioSource} />
+      <SamplePlayer audioSource={audioSource} title={title} />
     </div>
   );
 };
