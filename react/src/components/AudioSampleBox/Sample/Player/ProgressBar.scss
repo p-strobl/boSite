@@ -1,4 +1,4 @@
-@import "~~scss/_utility.scss";
+@import "~scss/_utility.scss";
 
 .SamplePlayer__ProgressBar {
   @include grid-span(10);
@@ -12,6 +12,7 @@
 
 .SamplePlayer__ProgressBar--filler {
   background-color: rgba($c_holy-green, 0.6);
+  border-radius: 5px;
   display: block;
   height: 100%;
   transform: scaleX(0);

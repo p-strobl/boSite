@@ -1,10 +1,10 @@
-@import "~~scss/_utility.scss";
+@import "~scss/_utility.scss";
 
 .Samples__Collection {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.4s, opacity 0.5s;
+  transition: max-height 0.5s, opacity 0.5s;
 }
 
 .Samples__Collection--Expanded {
