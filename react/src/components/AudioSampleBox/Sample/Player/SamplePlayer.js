@@ -6,6 +6,7 @@ import Class from "classnames";
 import { Title } from "./Title";
 import { ProgressBar } from "./ProgressBar";
 import { Controls } from "./Controls";
+import { TimeDuration } from "./TimeDuration";
 
 import "./SamplePlayer.scss";
 
@@ -13,6 +14,8 @@ export class SamplePlayer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      audioDuration: 0,
+      currentTime: 0,
       isPlaying: false,
       paused: false,
       progressBar: 0,
@@ -22,6 +25,8 @@ export class SamplePlayer extends Component {
   }
 
   componentDidMount() {
+    this.audioPlayer.load();
+
     this.audioPlayer.addEventListener("canplaythrough", this.showAudioPlayer);
     this.audioPlayer.addEventListener("timeupdate", this.updateProgressBar);
     this.audioPlayer.addEventListener("ended", this.audioEnded);
@@ -34,10 +39,12 @@ export class SamplePlayer extends Component {
   }
 
   showAudioPlayer = () => {
-    this.audioPlayer.load();
-
     this.setState(() => {
-      return { showAudioPlayer: true };
+      return {
+        audioDuration: this.audioPlayer.duration.toFixed(1),
+        currentTime: this.audioPlayer.currentTime.toFixed(1),
+        showAudioPlayer: true,
+      };
     });
   };
 
@@ -65,7 +72,11 @@ export class SamplePlayer extends Component {
 
   audioEnded = () => {
     this.setState(() => {
-      return { isPlaying: false, paused: false };
+      return {
+        currentTime: 0,
+        isPlaying: false,
+        paused: false,
+      };
     });
   };
 
@@ -74,12 +85,22 @@ export class SamplePlayer extends Component {
     const progress = (currentTime * 100) / duration / 100;
 
     this.setState(() => {
-      return { progressBar: progress.toFixed(2) };
+      return {
+        currentTime: this.audioPlayer.currentTime.toFixed(1),
+        progressBar: progress.toFixed(2),
+      };
     });
   };
 
   render() {
-    const { showAudioPlayer, progressBar, isPlaying, paused } = this.state;
+    const {
+      currentTime,
+      audioDuration,
+      isPlaying,
+      paused,
+      progressBar,
+      showAudioPlayer,
+    } = this.state;
     const { title } = this.props;
 
     return (
@@ -87,8 +108,9 @@ export class SamplePlayer extends Component {
         className={Class("Sample__Player", { "Sample__Player--Loaded": showAudioPlayer })}
         key={uuidv4()}>
         <Title title={title} />
-        <ProgressBar progressBar={progressBar} isPlaying={isPlaying} paused={paused} />
         <Controls isPlaying={isPlaying} togglePlay={this.togglePlay} />
+        <TimeDuration audioDuration={audioDuration} currentTime={currentTime} />
+        <ProgressBar progressBar={progressBar} isPlaying={isPlaying} paused={paused} />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 @import "~scss/_utility.scss";
 
 .SamplePlayer__ProgressBar {
-  @include grid-span(10);
+  @include grid-span(9);
   background-color: $c_grey-004;
   border-radius: 5px;
   grid-row: 2;

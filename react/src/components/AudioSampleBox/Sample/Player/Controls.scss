@@ -1,10 +1,10 @@
 @import "~scss/_utility.scss";
 
 .SamplePlayer__Control {
-  border: 1px solid;
+  @include box-shadow(0, 0, 3, 0, rgba($c-vanta-black, 0.5));
   border-radius: 3px;
   grid-row: span 2;
-  grid-column-end: -1;
+  grid-column-end: -3;
   height: 50px;
   position: relative;
   width: 50px;
@@ -26,4 +26,13 @@
 
 .SamplePlayer__Control--Pause:after {
   @include ligature-symbols-icon($i_pause);
+}
+
+.SamplePlayer__Control:focus {
+  outline: none;
+}
+
+.no-touch .SamplePlayer__Control:hover {
+  @include box-shadow(0, 0, 3, 0, rgba($c-vanta-black, 0.7));
+  cursor: pointer;
 }
