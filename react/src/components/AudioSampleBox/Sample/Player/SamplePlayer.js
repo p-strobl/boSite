@@ -34,6 +34,8 @@ export class SamplePlayer extends Component {
   }
 
   showAudioPlayer = () => {
+    this.audioPlayer.load();
+
     this.setState(() => {
       return { showAudioPlayer: true };
     });
