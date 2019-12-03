@@ -1,16 +1,30 @@
-@mixin grid($columns: 12) {
+// @mixin grid($columns: 12) {
+//   display: grid;
+//   grid-column-gap: 1vw;
+//   grid-template-columns: repeat($columns, 1fr);
+// }
+
+// @include grid(repeat(12, 1fr), 1vw);
+@mixin grid($columns: "", $colGap: "", $row: "", $rowGap: "") {
   display: grid;
-  grid-column-gap: 1vw;
-  grid-template-columns: repeat($columns, 1fr);
+
+  @if $columns != "" {
+    grid-template-columns: $columns;
+  }
+  @if $colGap != ""  {
+    grid-column-gap: $colGap;
+  }
+
+  @if $row != ""  {
+    grid-template-columns: $row;
+  }
+  @if $rowGap != "" {
+    grid-column-gap: $rowGap;
+  }
 }
 
-@mixin grid-start-end($start, $end) {
-  grid-column-start: $start;
-  grid-column-end: $end;
-}
-
-@mixin grid-span($span) {
-  grid-column: span #{$span};
+@mixin grid-span($direction, $span) {
+  #{"grid-"}#{$direction}: span $span;
 }
 
 @mixin grid-column($start, $end) {

@@ -1,5 +1,5 @@
 @import "~scss/_utility.scss";
 
 .LandingPage__Container {
-  @include grid(12);
+  @include grid(repeat(12, 1fr), 1vw);
 }

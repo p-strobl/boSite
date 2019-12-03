@@ -1,12 +1,20 @@
 @import "~scss/_utility.scss";
 
 .AudioSampleBox__SamplesWrapper {
-  @include grid-column(2, 12);
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
+  @include grid-column(2, 12);
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 20px 20px 10px;
 }
 
 .AudioSampleBox__SamplesWrapper:nth-child(n+2) {
   margin-top: 20px;
+}
+
+.AudioSampleBox__SamplesWrapper:first-child {
+  border-radius: 20px 20px 5px 5px;
+}
+
+.AudioSampleBox__SamplesWrapper:last-child {
+  border-radius: 5px 5px 20px 20px;
 }

@@ -2,7 +2,7 @@
 
 .GridLayer {
   @include module-container();
-  @include grid(12);
+  @include grid(repeat(12, 1fr), 1vw);
   bottom: 0;
   display: none;
   left: 0;

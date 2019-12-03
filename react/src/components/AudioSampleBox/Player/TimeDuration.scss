@@ -1,0 +1,8 @@
+@import "~scss/_utility.scss";
+
+.SamplePlayer__TimeDuration {
+  @include flex();
+  @include grid-span(column, 11);
+  @include responsive-font-size(14, 16);
+  grid-row: 2;
+}

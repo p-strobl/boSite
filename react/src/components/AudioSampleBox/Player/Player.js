@@ -8,14 +8,14 @@ import { ProgressBar } from "./ProgressBar";
 import { Controls } from "./Controls";
 import { TimeDuration } from "./TimeDuration";
 
-import "./SamplePlayer.scss";
+import "./Player.scss";
 
-export class SamplePlayer extends Component {
+export class Player extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      audioDuration: 0,
-      currentTime: 0,
+      audioDuration: "0.0",
+      currentTime: "0.0",
       isPlaying: false,
       paused: false,
       progressBar: 0,
@@ -73,7 +73,7 @@ export class SamplePlayer extends Component {
   audioEnded = () => {
     this.setState(() => {
       return {
-        currentTime: 0,
+        currentTime: "0.0",
         isPlaying: false,
         paused: false,
       };
@@ -108,20 +108,20 @@ export class SamplePlayer extends Component {
         className={Class("Sample__Player", { "Sample__Player--Loaded": showAudioPlayer })}
         key={uuidv4()}>
         <Title title={title} />
-        <Controls isPlaying={isPlaying} togglePlay={this.togglePlay} />
         <TimeDuration audioDuration={audioDuration} currentTime={currentTime} />
+        <Controls isPlaying={isPlaying} togglePlay={this.togglePlay} />
         <ProgressBar progressBar={progressBar} isPlaying={isPlaying} paused={paused} />
       </div>
     );
   }
 }
 
-SamplePlayer.defaultProps = {
+Player.defaultProps = {
   audioSource: "",
   title: "",
 };
 
-SamplePlayer.propTypes = {
+Player.propTypes = {
   audioSource: PropTypes.string,
   title: PropTypes.string,
 };

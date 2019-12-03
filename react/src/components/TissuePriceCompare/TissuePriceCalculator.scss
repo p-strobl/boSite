@@ -1,7 +1,7 @@
 @import "~scss/_utility.scss";
 .TissuePriceCalculator {
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
-  @include grid(12);
+  @include grid(repeat(12, 1fr), 1vw);
   @include grid-column(2, 12);
   border: 1px solid $c_grey-004;
   padding: 30px 0 15px;

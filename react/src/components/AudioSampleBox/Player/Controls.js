@@ -8,7 +8,7 @@ export const Controls = ({ isPlaying, togglePlay }) => {
   return (
     <div
       className={Class(
-        `SamplePlayer__Control  SamplePlayer__Control--${isPlaying ? "Pause" : "Play"}`,
+        `SamplePlayer__Control SamplePlayer__Control--${isPlaying ? "Pause" : "Play"}`,
       )}
       role="button"
       onClick={togglePlay}

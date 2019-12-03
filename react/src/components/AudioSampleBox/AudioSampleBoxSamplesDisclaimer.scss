@@ -1,0 +1,15 @@
+@import "~scss/_utility.scss";
+
+.Samples__Disclaimer {
+  @include responsive-font-size(10, 12);
+  border-top: 1px solid $c_grey-004;
+  margin: 20px 0 10px;
+  text-align: right;
+  
+  .Samples__Disclaimer--Link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: $c_vanta-black;
+  }
+}
+

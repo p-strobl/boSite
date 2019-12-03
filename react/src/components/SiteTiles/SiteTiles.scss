@@ -1,7 +1,7 @@
 @import "~scss/_utility.scss";
 
 .SiteTiles {
-  @include grid(6);
+  @include grid(repeat(6, 1fr), 1vw);
   @include grid-column(2, 12);
   @include module-margin-top();
 }

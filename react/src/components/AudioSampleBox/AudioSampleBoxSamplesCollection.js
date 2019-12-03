@@ -2,16 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
-import { Sample } from "./Sample";
+import { AudioSample } from "./AudioSample";
+import { AudioSampleBoxSamplesDisclaimer } from "./AudioSampleBoxSamplesDisclaimer";
 
 import "./AudioSampleBoxSamplesCollection.scss";
 
 export const AudioSampleBoxSamplesCollection = ({ samples }) => {
-  const audioSamplesCollection = Object.values(samples).map((value) => {
-    return <Sample title={value.title} audioSource={value.src} key={uuidv4()} />;
+  const AudioSamplesCollection = Object.values(samples).map((value) => {
+    return <AudioSample title={value.title} audioSource={value.src} key={uuidv4()} />;
   });
 
-  return <div className="Samples__Collection">{audioSamplesCollection}</div>;
+  if (AudioSamplesCollection) {
+    return (
+      <div className="Samples__Collection">
+        {AudioSamplesCollection}
+        <AudioSampleBoxSamplesDisclaimer />
+      </div>
+    );
+  }
 };
 
 AudioSampleBoxSamplesCollection.defaultProps = {

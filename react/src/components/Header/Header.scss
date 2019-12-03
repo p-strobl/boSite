@@ -7,6 +7,6 @@
 }
 
 .Header__Container {
+  @include grid(repeat(12, 1fr), 1vw);
   @include module-container();
-  @include grid();
 }

@@ -1,11 +1,12 @@
 @import "~scss/_utility.scss";
 
 .SamplePlayer__ProgressBar {
-  @include grid-span(9);
+  @include grid-span(column, 12);
   background-color: $c_grey-004;
   border-radius: 5px;
-  grid-row: 2;
+  grid-row: 3;
   height: 6px;
+  margin-top: 6px;
   overflow: hidden;
   width: 100%;
 }

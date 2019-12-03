@@ -50,7 +50,7 @@
   &::-webkit-slider-thumb {
     @include box-shadow(0, 0, 6, -3, rgba($c_vanta-black, 1));
     background-color: $c_sunny-bo;
-    border: 1px solid $c-vanta-black;
+    border: 1px solid $c_vanta-black;
     border-radius: 5px;
     cursor: ew-resize;
     height: 20px;
@@ -74,12 +74,12 @@
 }
 
 .TissuePriceCalculatorInput__RangeOutput {
-  @include grid(12);
+  @include grid(repeat(12, 1fr), 1vw);
   align-items: flex-end;
 }
 
 .TissuePriceCalculatorInput__RangeOutputValue {
-  @include grid-span(3);
+  @include grid-span(column, 3);
   @include responsive-font-size(20, 20);
   @include box-shadow(0, 0, 7, -5, rgba($c_vanta-black, 1));
   background-color: $c_sunny-bo;
@@ -94,7 +94,7 @@
 
 .TissuePriceCalculatorInput__RangeOutputText {
   @include flex();
-  @include grid-span(4);
+  @include grid-span(column, 4);
   align-items: center;
   height: 100%;
 }

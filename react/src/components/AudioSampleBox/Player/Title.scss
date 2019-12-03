@@ -1,5 +1,6 @@
 @import "~scss/_utility.scss";
 
 .Sample__Title {
-  @include grid-span(4);
+  @include grid-span(column, 11);
+  grid-row: 1;
 }
