@@ -5,6 +5,7 @@ import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorCont
 import { TissuePriceCalculatorInputRange } from "~components/TissuePriceCompare/TissuePriceCalculatorInputRange";
 import { TissuePriceCalculatorInputNumber } from "~components/TissuePriceCompare/TissuePriceCalculatorInputNumber";
 import { TissuePriceCalculatorOutput } from "~components/TissuePriceCompare/TissuePriceCalculatorOutput";
+import { TissuePriceInputWheel } from "~components/TissuePriceCompare/TissuePriceInputWheel";
 
 import "./TissuePriceCalculator.scss";
 
@@ -73,6 +74,7 @@ export const TissuePriceCalculator = () => {
           placeholder="Kaufpreis"
           text="Kaufpreis"
         />
+        <TissuePriceInputWheel range={100} />
       </div>
       <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Output")}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />

@@ -31,3 +31,29 @@
 .TissuePriceCalculator__Item {
   grid-column: 2 / 12;
 }
+
+.bla {
+  scroll-snap-type: y mandatory;
+  height: 100px;
+  overflow-x: scroll;
+  text-align: center;
+}
+
+.bla::-webkit-scrollbar {
+  display: none;
+}
+
+.bla div {
+  scroll-snap-align: center;
+  font-size: 30px;
+  background-color: $c_blue-004;
+  padding: 0 10px;
+}
+
+.bla div:first-child {
+  padding-top: 30px;
+}
+
+.bla div:last-child {
+  padding-bottom: 30px;
+}

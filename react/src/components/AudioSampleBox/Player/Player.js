@@ -94,8 +94,8 @@ export class Player extends Component {
 
   render() {
     const {
-      currentTime,
       audioDuration,
+      currentTime,
       isPlaying,
       paused,
       progressBar,

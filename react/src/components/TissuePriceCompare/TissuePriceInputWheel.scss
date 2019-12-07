@@ -1,0 +1,27 @@
+@import "~scss/_utility.scss";
+
+.TissueInputWheel__Container {
+  scroll-snap-type: y mandatory;
+  height: 100px;
+  overflow-x: scroll;
+  text-align: center;
+}
+
+.TissueInputWheel__Container::-webkit-scrollbar {
+  display: none;
+}
+
+.TissueInputWheel__Number {
+  scroll-snap-align: center;
+  font-size: 30px;
+  background-color: $c_blue-004;
+  padding: 0 10px;
+}
+
+.TissueInputWheel__Number:first-child {
+  padding-top: 30px;
+}
+
+.TissueInputWheel__Number:last-child {
+  padding-bottom: 30px;
+}
