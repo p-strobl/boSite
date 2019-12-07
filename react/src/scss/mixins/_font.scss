@@ -1,5 +1,6 @@
 @mixin responsive-font-size($min, $max) {
   font-size: calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - 300px) / (1440 - 300)));
+  line-height: 1.5;
 }
 
 @mixin ligature-symbols-icon($icon) {

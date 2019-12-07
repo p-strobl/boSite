@@ -20,14 +20,14 @@
   height: 100%;
   position: absolute;
   right: 14px;
-  transform: rotate(0deg);
+  transform: rotateX(0deg);
   transition: transform 0.3s, color 0.2s;
   top: 0;
 }
 
 .Samples__Category.Samples__Category--Expanded:after {
   color: $c_holy-green;
-  transform: rotate(180deg);
+  transform: rotateX(180deg);
 }
 
 .SamplesCategory__Emoji {

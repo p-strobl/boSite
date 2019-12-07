@@ -2,14 +2,37 @@
 
 .Samples__Disclaimer {
   @include responsive-font-size(10, 12);
-  border-top: 1px solid $c_grey-004;
-  margin: 20px 0 10px;
-  text-align: right;
-  
-  .Samples__Disclaimer--Link:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: $c_vanta-black;
-  }
+  border-top: 1px solid $c_grey-002;
+  margin-top: 20px;
+  padding: 10px 0 10px;
 }
 
+.Samples__DisclaimerWrapper {
+  position: relative;
+}
+
+.Samples__DisclaimerLink {
+  position: relative;
+  z-index: 2;
+}
+
+.Samples__Disclaimer--Border {
+  background-color: $c_grey-003;
+  bottom: 3px;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.2s;
+  z-index: 1;
+}
+
+.Samples__Disclaimer:hover .Samples__Disclaimer--Border {
+  transform: scaleX(1);
+}
+
+.no-touch .Samples__Disclaimer--Border {
+  transform: scaleX(0);
+}

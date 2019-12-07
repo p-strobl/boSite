@@ -1,6 +1,7 @@
 @import "~scss/_utility.scss";
 
 .Sample__Title {
+  @include responsive-font-size(20, 20);
   @include grid-span(column, 11);
   grid-row: 1;
 }

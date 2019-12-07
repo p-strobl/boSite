@@ -5,11 +5,12 @@ import "./AudioSampleBoxSamplesDisclaimer.scss";
 export const AudioSampleBoxSamplesDisclaimer = () => {
   const link = (
     <a
-      className="Samples__Disclaimer--Link"
+      className="Samples__DisclaimerWrapper"
       href="https://www.zapsplat.com"
       rel="noopener noreferrer"
       target="_blank">
-      www.zapsplat.com
+      <span className="Samples__DisclaimerLink">www.zapsplat.com</span>
+      <span className="Samples__Disclaimer--Border"></span>
     </a>
   );
   return <div className="Samples__Disclaimer">Sound effects obtained from {link}</div>;

@@ -4,11 +4,11 @@
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid-column(2, 12);
   border-radius: 5px;
-  padding: 20px 20px 10px;
+  padding: 10px 20px;
 }
 
 .AudioSampleBox__SamplesWrapper:nth-child(n+2) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .AudioSampleBox__SamplesWrapper:first-child {
