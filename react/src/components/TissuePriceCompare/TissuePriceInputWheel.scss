@@ -1,5 +1,9 @@
 @import "~scss/_utility.scss";
 
+.TissueInputWheel {
+  @include grid-span(column, 1);
+}
+
 .TissueInputWheel__Container {
   scroll-snap-type: y mandatory;
   height: 100px;
@@ -24,4 +28,25 @@
 
 .TissueInputWheel__Number:last-child {
   padding-bottom: 30px;
+}
+
+.TissueInputWheel__Button {
+  border: 1px solid;
+  font-family: "LigatureSymbols", sans-serif;
+}
+
+.TissueInputWheel__Button:after {
+  @include flex();
+  place-content: center;
+}
+.TissueInputWheel__Button:hover {
+  cursor: pointer;
+}
+
+.TissueInputWheel__Button--Up:after {
+  content: $i_up;
+}
+
+.TissueInputWheel__Button--Down:after {
+  content: $i_down;
 }

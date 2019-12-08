@@ -35,7 +35,12 @@
   background-color: $c_green-003;
 }
 
+.TissuePriceCalculator__Item {
+  @include grid-column(2, 12);
+}
+
 .TissuePriceCalculator__Input {
+  @include grid(repeat(3, 1fr), 1vw);
 }
 
 .TissuePriceCalculator__Output {

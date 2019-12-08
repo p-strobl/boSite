@@ -16,7 +16,7 @@
   }
 
   @if $row != ""  {
-    grid-template-columns: $row;
+    grid-template-rows: $row;
   }
   @if $rowGap != "" {
     grid-column-gap: $rowGap;

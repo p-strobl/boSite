@@ -6,6 +6,7 @@
 
 .TissuePriceCalculatorInput__RangeContainer {
   @include flex();
+  @include grid-span(column, 3);
   flex-direction: column;
   margin-top: 10px;
 }

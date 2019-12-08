@@ -40,33 +40,36 @@ export const TissuePriceCalculator = () => {
   return (
     <div className={Class("TissuePriceCalculator")}>
       <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Input")}>
-        <TissuePriceCalculatorInputRange
-          context="rollCountContext"
-          dataDefaultValue={defaultValues.rollCount}
-          defaultValue={rollCount}
-          max={20}
-          min={0}
-          step={1}
-          text="Rollen"
-        />
-        <TissuePriceCalculatorInputRange
-          context="sheetCountContext"
-          dataDefaultValue={defaultValues.sheetCount}
-          defaultValue={sheetCount}
-          max={200}
-          min={0}
-          step={1}
-          text="Blatt"
-        />
-        <TissuePriceCalculatorInputRange
-          context="layerCountContext"
-          dataDefaultValue={defaultValues.layerCount}
-          defaultValue={layerCount}
-          max={5}
-          min={0}
-          step={1}
-          text="Lagen"
-        />
+        {/*<TissuePriceCalculatorInputRange*/}
+        {/*  context="rollCountContext"*/}
+        {/*  dataDefaultValue={defaultValues.rollCount}*/}
+        {/*  defaultValue={rollCount}*/}
+        {/*  max={20}*/}
+        {/*  min={0}*/}
+        {/*  step={1}*/}
+        {/*  text="Rollen"*/}
+        {/*/>*/}
+        {/*<TissuePriceCalculatorInputRange*/}
+        {/*  context="sheetCountContext"*/}
+        {/*  dataDefaultValue={defaultValues.sheetCount}*/}
+        {/*  defaultValue={sheetCount}*/}
+        {/*  max={200}*/}
+        {/*  min={0}*/}
+        {/*  step={1}*/}
+        {/*  text="Blatt"*/}
+        {/*/>*/}
+        {/*<TissuePriceCalculatorInputRange*/}
+        {/*  context="layerCountContext"*/}
+        {/*  dataDefaultValue={defaultValues.layerCount}*/}
+        {/*  defaultValue={layerCount}*/}
+        {/*  max={5}*/}
+        {/*  min={0}*/}
+        {/*  step={1}*/}
+        {/*  text="Lagen"*/}
+        {/*/>*/}
+        <TissuePriceInputWheel context="rollCountContext" range={20} />
+        <TissuePriceInputWheel context="sheetCountContext" range={200} />
+        <TissuePriceInputWheel context="layerCountContext" range={5} />
         <TissuePriceCalculatorInputNumber
           context="priceContext"
           dataDefaultValue={defaultValues.price}
@@ -74,7 +77,6 @@ export const TissuePriceCalculator = () => {
           placeholder="Kaufpreis"
           text="Kaufpreis"
         />
-        <TissuePriceInputWheel range={100} />
       </div>
       <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Output")}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
