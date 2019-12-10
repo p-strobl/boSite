@@ -21,6 +21,7 @@ export const TissuePriceCalculator = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const calculatePrice = () => {
+    console.log("rollCount", rollCount);
     if (rollCount > 0 && sheetCount > 0 && layerCount > 0 && price > 0) {
       const totalLayerCount = rollCount * sheetCount * layerCount;
       const singleLayerPrice = price / totalLayerCount;

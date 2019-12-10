@@ -5,9 +5,9 @@
 }
 
 .TissueInputWheel__Container {
-  scroll-snap-type: y mandatory;
-  height: 100px;
+  height: 80px;
   overflow-x: scroll;
+  scroll-snap-type: y mandatory;
   text-align: center;
 }
 
@@ -16,18 +16,23 @@
 }
 
 .TissueInputWheel__Number {
-  scroll-snap-align: center;
-  font-size: 30px;
   background-color: $c_blue-004;
+  font-size: 30px;
+  line-height: 1.4;
   padding: 0 10px;
+  scroll-snap-align: center;
 }
 
 .TissueInputWheel__Number:first-child {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .TissueInputWheel__Number:last-child {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.TissueInputWheel__Number:nth-child(n+2) {
+  border-top: 1px dashed $c_grey-001;
 }
 
 .TissueInputWheel__Button {

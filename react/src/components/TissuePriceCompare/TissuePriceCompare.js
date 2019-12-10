@@ -26,33 +26,6 @@ export const TissuePriceCompare = () => {
         <TissuePriceCalculatorProvider />
         <TissuePriceCalculatorProvider />
       </div>
-      {/* <div className="bla"> */}
-      {/* <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-      </div> */}
     </div>
   );
 };
