@@ -3,16 +3,15 @@ import Class from "classnames";
 
 import "~server-assets/images/favicon.png";
 import "~assets/fonts";
+import "./App.scss";
 
-import "~src/helper/ExpandPrototype";
+import "~src/helper/ExpandAudioPrototype";
 import { determineIfTouchDevice } from "~src/helper/Utilities";
 import { GridLayer } from "~components/GridLayer";
 import { BoundingBar } from "~components/BoundingBar";
 import { Header } from "~components/Header";
 import { Footer } from "~components/Footer";
 import { Main } from "~components/Main";
-
-import "./App.scss";
 
 export function App() {
   const [ifIsTouchDevice, setIfIsTouchDevice] = useState(true);
