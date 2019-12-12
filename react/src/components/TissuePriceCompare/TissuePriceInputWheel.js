@@ -11,12 +11,27 @@ export const TissuePriceInputWheel = ({ context, range }) => {
     [context]: [input, setInput],
   } = useContext(TissuePriceCalculatorContext);
 
+  const clickedWheelElement = (event) => {
+    console.log("", event.target);
+    event.target.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const clickedUpArrow = () => {};
+
+  const clickedDownArrow = () => {};
+
   const createWheelRangeElements = () => {
     const wheelRange = [];
 
     for (let i = 0; i < range + 1; i += 1) {
       wheelRange.push(
-        <div className="TissueInputWheel__Number" key={uuidv4()}>
+        <div
+          className="TissueInputWheel__Number"
+          key={uuidv4()}
+          onClick={clickedWheelElement}
+          onKeyUp={() => {}}
+          role="button"
+          tabIndex={0}>
           {i}
         </div>,
       );
@@ -25,23 +40,18 @@ export const TissuePriceInputWheel = ({ context, range }) => {
     return wheelRange;
   };
 
-  const oberserveWheel = (wheel) => {
+  const observeWheel = (wheel) => {
     const config = {
       root: wheel,
       threshold: [0.99],
-      // trackVisibility: true,
-      // delay: 100,
     };
 
     const wheelNumbers = wheel.querySelectorAll(".TissueInputWheel__Number");
 
     const observer = new IntersectionObserver((entry) => {
-      if (entry[0].intersectionRatio > 0) {
-        console.log("", context, input);
-        console.log("entry:", entry[0].target.textContent);
-        // setInput(entry[0].target.textContent);
-      }
-      // console.log("observer:", observer);
+      if (entry[0].intersectionRatio <= 0) return;
+
+      console.log("entry:", entry[0].target.textContent);
     }, config);
 
     wheelNumbers.forEach((image) => {
@@ -53,15 +63,27 @@ export const TissuePriceInputWheel = ({ context, range }) => {
     const wheels = document.querySelectorAll(".TissueInputWheel");
 
     wheels.forEach((wheel) => {
-      oberserveWheel(wheel);
+      observeWheel(wheel);
     });
   }, []);
 
   return (
     <div className={Class("TissueInputWheel")} key={uuidv4()}>
-      <div className="TissueInputWheel__Button TissueInputWheel__Button--Up" />
+      <div
+        className="TissueInputWheel__Button TissueInputWheel__Button--Up"
+        onClick={clickedUpArrow}
+        onKeyUp={() => {}}
+        role="button"
+        tabIndex={0}
+      />
       <div className="TissueInputWheel__Container">{createWheelRangeElements() || ""}</div>
-      <div className="TissueInputWheel__Button TissueInputWheel__Button--Down" />
+      <div
+        className="TissueInputWheel__Button TissueInputWheel__Button--Down"
+        onClick={clickedDownArrow}
+        onKeyUp={() => {}}
+        role="button"
+        tabIndex={0}
+      />
     </div>
   );
 };

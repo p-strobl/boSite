@@ -9,6 +9,7 @@
   overflow-x: scroll;
   scroll-snap-type: y mandatory;
   text-align: center;
+  width: 100%;
 }
 
 .TissueInputWheel__Container::-webkit-scrollbar {
@@ -33,6 +34,10 @@
 
 .TissueInputWheel__Number:nth-child(n+2) {
   border-top: 1px dashed $c_grey-001;
+}
+
+.TissueInputWheel__Number:hover {
+  cursor: pointer;
 }
 
 .TissueInputWheel__Button {
