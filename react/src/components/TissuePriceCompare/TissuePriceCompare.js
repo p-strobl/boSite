@@ -19,31 +19,31 @@ export const TissuePriceCompare = () => {
     <h2 className={Class("TissuePriceCompare__SubHeadline")}>Vergleichen Sie die {emoji} Preise</h2>
   );
 
-  const initIntersectionObserver = () => {
-    const inputWheels = document.querySelectorAll(".TissueInputWheel");
-
-    inputWheels.forEach((wheel) => {
-      const config = {
-        root: wheel,
-        threshold: [0.99],
-      };
-
-      const observer = new IntersectionObserver((entry) => {
-        if (entry[0].intersectionRatio <= 0) return;
-
-        console.log("entry:", entry[0].target.textContent);
-      }, config);
-
-      const wheelNumbers = wheel.querySelectorAll(".TissueInputWheel__Number");
-
-      wheelNumbers.forEach((image) => {
-        observer.observe(image);
-      });
-    });
-  };
+  // const initIntersectionObserver = () => {
+  //   const inputWheels = document.querySelectorAll(".TissueInputWheel");
+  //
+  //   inputWheels.forEach((wheel) => {
+  //     const config = {
+  //       root: wheel,
+  //       threshold: [0.99],
+  //     };
+  //
+  //     const observer = new IntersectionObserver((entry) => {
+  //       if (entry[0].intersectionRatio <= 0) return;
+  //
+  //       console.log("entry:", entry[0].target.textContent);
+  //     }, config);
+  //
+  //     const wheelNumbers = wheel.querySelectorAll(".TissueInputWheel__Number");
+  //
+  //     wheelNumbers.forEach((numberWheel) => {
+  //       observer.observe(numberWheel);
+  //     });
+  //   });
+  // };
 
   useEffect(() => {
-    initIntersectionObserver();
+    // initIntersectionObserver();
   }, []);
 
   return (

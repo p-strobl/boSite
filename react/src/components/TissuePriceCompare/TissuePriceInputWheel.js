@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
@@ -11,9 +11,10 @@ export const TissuePriceInputWheel = ({ context, range }) => {
     [context]: [input, setInput],
   } = useContext(TissuePriceCalculatorContext);
 
+  const componentSelfRef = React.createRef();
+
   const clickedWheelElement = (event) => {
-    console.log("", event.target);
-    event.target.scrollIntoView({ behavior: "smooth" });
+    event.target.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
   const clickedUpArrow = (event) => {
@@ -24,7 +25,28 @@ export const TissuePriceInputWheel = ({ context, range }) => {
     console.log("Down", event.target);
   };
 
-  const createWheelElements = () => {
+  const initIntersectionObserver = () => {
+    const config = {
+      root: componentSelfRef.current,
+      threshold: [0.99],
+    };
+
+    const observer = new IntersectionObserver((entry) => {
+      if (entry.isIntersecting && entry[0].intersectionRatio <= 0) return;
+
+      console.log("entry:", entry[0].target.textContent);
+      entry[0].target.classList.add("bla");
+    }, config);
+
+    const wheelNumbers = componentSelfRef.current.querySelectorAll(".TissueInputWheel__Number");
+
+    wheelNumbers.forEach((numberWheel) => {
+      observer.observe(numberWheel);
+    });
+    console.log("observer", observer);
+  };
+
+  const WheelElements = () => {
     const wheelRange = [];
 
     for (let i = 0; i < range + 1; i += 1) {
@@ -41,10 +63,10 @@ export const TissuePriceInputWheel = ({ context, range }) => {
       );
     }
 
-    return wheelRange;
+    return <div className="TissueInputWheel__Container">{wheelRange || ""}</div>;
   };
 
-  const CreateUpDownButton = ({ direction }) => {
+  const ClickUpDownButton = ({ direction }) => {
     return (
       <button
         className={`TissueInputWheel__Button TissueInputWheel__Button--${direction}`}
@@ -57,11 +79,15 @@ export const TissuePriceInputWheel = ({ context, range }) => {
     );
   };
 
+  useEffect(() => {
+    initIntersectionObserver();
+  }, []);
+
   return (
-    <div className={Class("TissueInputWheel")} key={uuidv4()}>
-      <CreateUpDownButton direction="Up" />
-      <div className="TissueInputWheel__Container">{createWheelElements(range) || ""}</div>
-      <CreateUpDownButton direction="Down" />
+    <div className={Class("TissueInputWheel")} key={uuidv4()} ref={componentSelfRef}>
+      <ClickUpDownButton direction="Up" />
+      <WheelElements />
+      <ClickUpDownButton direction="Down" />
     </div>
   );
 };

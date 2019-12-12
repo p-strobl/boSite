@@ -10,6 +10,7 @@
   scroll-snap-type: y mandatory;
   text-align: center;
   width: 100%;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
