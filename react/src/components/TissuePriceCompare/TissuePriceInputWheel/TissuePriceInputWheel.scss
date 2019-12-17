@@ -18,10 +18,13 @@
 }
 
 .TissueInputWheel__Number {
-  background-color: $c_blue-004;
+  //background-color: $c_blue-004;
   font-size: 30px;
   line-height: 1.4;
+  outline: 0;
+  opacity: 0.5;
   padding: 0 10px;
+  transition: opacity 0.24s;
   scroll-snap-align: center;
 
   &:first-child {
@@ -32,13 +35,15 @@
     padding-bottom: 20px;
   }
 
-  &:nth-child(n+2) {
-    border-top: 1px dashed $c_grey-001;
-  }
-
   &:hover {
     cursor: pointer;
   }
+}
+
+.TissueInputWheel__Number--Active {
+  //border-bottom: 1px dashed $c_vanta-black;
+  //border-top: 1px dashed $c_vanta-black;
+  opacity: 1;
 }
 
 .TissueInputWheel__Button {

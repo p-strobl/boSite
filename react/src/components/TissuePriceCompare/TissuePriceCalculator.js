@@ -33,6 +33,7 @@ export const TissuePriceCalculator = () => {
 
   useEffect(() => {
     const calculatedPrice = calculatePrice();
+    console.log("rollCount", rollCount);
 
     setTotalPrice(calculatedPrice);
   }, [rollCount, sheetCount, layerCount, price]);
