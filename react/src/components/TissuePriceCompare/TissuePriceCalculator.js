@@ -31,9 +31,12 @@ export const TissuePriceCalculator = () => {
     return 0;
   };
 
+  const getWheelInputNumber = (event) => {
+    console.log("event", event);
+  };
+
   useEffect(() => {
     const calculatedPrice = calculatePrice();
-    console.log("rollCount", rollCount);
 
     setTotalPrice(calculatedPrice);
   }, [rollCount, sheetCount, layerCount, price]);
@@ -68,7 +71,11 @@ export const TissuePriceCalculator = () => {
         {/*  step={1}*/}
         {/*  text="Lagen"*/}
         {/*/>*/}
-        <TissuePriceInputWheel context="rollCountContext" range={20} />
+        <TissuePriceInputWheel
+          context="rollCountContext"
+          range={20}
+          onWheelChange={getWheelInputNumber}
+        />
         <TissuePriceInputWheel context="sheetCountContext" range={200} />
         <TissuePriceInputWheel context="layerCountContext" range={5} />
         <TissuePriceCalculatorInputNumber
