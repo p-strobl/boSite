@@ -74,10 +74,18 @@ export const TissuePriceCalculator = () => {
         <TissuePriceInputWheel
           context="rollCountContext"
           range={20}
-          onWheelChange={getWheelInputNumber}
+          getWheelInput={getWheelInputNumber}
         />
-        <TissuePriceInputWheel context="sheetCountContext" range={200} />
-        <TissuePriceInputWheel context="layerCountContext" range={5} />
+        <TissuePriceInputWheel
+          context="sheetCountContext"
+          range={200}
+          getWheelInput={getWheelInputNumber}
+        />
+        <TissuePriceInputWheel
+          context="layerCountContext"
+          range={5}
+          getWheelInput={getWheelInputNumber}
+        />
         <TissuePriceCalculatorInputNumber
           context="priceContext"
           dataDefaultValue={defaultValues.price}

@@ -13,14 +13,14 @@ export class TissuePriceInputWheel extends Component {
     super(props);
     this.inputWheelRef = React.createRef();
 
-    this.observer = new IntersectionObserver(this.observeWheel, {
+    this.observer = new IntersectionObserver(this.observerIsIntersecting, {
       root: this.inputWheelRef.current,
       threshold: [0.99],
     });
   }
 
   componentDidMount() {
-    this.wheelNumbers = this.inputWheelRef.current.querySelectorAll(".TissueInputWheel__Number");
+    this.wheel = this.inputWheelRef.current.querySelectorAll(".TissueInputWheel__Number");
     this.initIntersectionObserver();
   }
 
@@ -29,34 +29,33 @@ export class TissuePriceInputWheel extends Component {
   }
 
   initIntersectionObserver = () => {
-    this.wheelNumbers.forEach((numberWheel) => {
-      this.observer.observe(numberWheel);
+    this.wheel.forEach((element) => {
+      this.observer.observe(element);
     });
   };
 
-  observeWheel = (entry) => {
+  observerIsIntersecting = (entry) => {
     if (entry.isIntersecting && entry[0].intersectionRatio <= 0) return;
 
     this.handleActiveWheelElement(entry);
   };
 
   handleActiveWheelElement = (entry) => {
-    const wheelNumbers = this.inputWheelRef.current.querySelectorAll(".TissueInputWheel__Number");
-
-    this.clearInputWheelClass(wheelNumbers);
-    console.log("entry:", parseInt(entry[0].target.textContent, 10));
+    this.clearInputWheelClass(this.wheel);
+    // console.log("entry:", parseInt(entry[0].target.textContent, 10));
     entry[0].target.classList.add("TissueInputWheel__Number--Active");
+    this.props.getWheelInput(parseInt(entry[0].target.textContent, 10));
   };
 
   clearInputWheelClass = () => {
-    this.wheelNumbers.forEach((numberWheel) => {
-      numberWheel.classList.remove("TissueInputWheel__Number--Active");
+    this.wheel.forEach((element) => {
+      element.classList.remove("TissueInputWheel__Number--Active");
     });
   };
 
   clearInputWheelObserver = () => {
-    this.wheelNumbers.forEach((numberWheel) => {
-      this.observer.unobserve(numberWheel);
+    this.wheel.forEach((element) => {
+      this.observer.unobserve(element);
     });
   };
 
