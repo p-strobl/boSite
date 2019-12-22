@@ -39,7 +39,7 @@ export const TissuePriceCalculator = () => {
     const calculatedPrice = calculatePrice();
 
     setTotalPrice(calculatedPrice);
-  }, [rollCount, sheetCount, layerCount, price]);
+  }, []);
 
   return (
     <div className={Class("TissuePriceCalculator")}>

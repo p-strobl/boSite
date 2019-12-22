@@ -3,13 +3,15 @@ import Class from "classnames";
 import { useTitle } from "hookrouter";
 
 import { Headline } from "~components/Headline";
-import { TissuePriceCalculatorProvider } from "./TissuePriceCalculatorProvider";
+import TissuePriceCalculatorContextStore from "~context/TissuePriceCalculatorContext";
+
 import { Emoji } from "~components/Emoji";
 
 import "./TissuePriceCompare.scss";
+import { TissuePriceCalculator } from "~components/TissuePriceCompare/TissuePriceCalculator";
 
 export const TissuePriceCompare = () => {
-  useTitle("boSite's Tissue Counter");
+  useTitle("boSite's Tissue Calculator");
 
   const emoji = (
     <Emoji classs="TissuePriceCompareHeadline__" emojiClass="Emoji__Tissue" label="tissue" />
@@ -19,39 +21,16 @@ export const TissuePriceCompare = () => {
     <h2 className={Class("TissuePriceCompare__SubHeadline")}>Vergleichen Sie die {emoji} Preise</h2>
   );
 
-  // const initIntersectionObserver = () => {
-  //   const inputWheels = document.querySelectorAll(".TissueInputWheel");
-  //
-  //   inputWheels.forEach((wheel) => {
-  //     const config = {
-  //       root: wheel,
-  //       threshold: [0.99],
-  //     };
-  //
-  //     const observer = new IntersectionObserver((entry) => {
-  //       if (entry[0].intersectionRatio <= 0) return;
-  //
-  //       console.log("entry:", entry[0].target.textContent);
-  //     }, config);
-  //
-  //     const wheelNumbers = wheel.querySelectorAll(".TissueInputWheel__Number");
-  //
-  //     wheelNumbers.forEach((numberWheel) => {
-  //       observer.observe(numberWheel);
-  //     });
-  //   });
-  // };
-
-  useEffect(() => {
-    // initIntersectionObserver();
-  }, []);
-
   return (
     <div className={Class("TissuePriceCompare")}>
       <Headline parentClass="TissuePriceCompare" h1={headline} h2={subHeadline} />
       <div className={Class("TissuePriceCompare__CalculatorContainer")}>
-        <TissuePriceCalculatorProvider />
-        <TissuePriceCalculatorProvider />
+        <TissuePriceCalculatorContextStore>
+          <TissuePriceCalculator />
+        </TissuePriceCalculatorContextStore>
+        <TissuePriceCalculatorContextStore>
+          <TissuePriceCalculator />
+        </TissuePriceCalculatorContextStore>
       </div>
     </div>
   );
