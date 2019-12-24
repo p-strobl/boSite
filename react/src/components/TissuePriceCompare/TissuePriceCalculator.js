@@ -21,70 +21,43 @@ export const TissuePriceCalculator = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const calculatePrice = () => {
-    if (rollCount > 0 && sheetCount > 0 && layerCount > 0 && price > 0) {
-      const totalLayerCount = rollCount * sheetCount * layerCount;
-      const singleLayerPrice = price / totalLayerCount;
+    if (rollCount === 0 || sheetCount === 0 || layerCount === 0 || price === 0) return 0;
 
-      return singleLayerPrice.toFixed(6) / 100;
-    }
+    const totalLayerCount = rollCount * sheetCount * layerCount;
+    const singleLayerPrice = price / totalLayerCount;
 
-    return 0;
+    return singleLayerPrice.toFixed(6) / 100;
   };
 
-  const getWheelInputNumber = (event) => {
-    console.log("event", event);
+  const getWheelInput = (input) => {
+    console.log("getWheelInput", input);
   };
 
-  useEffect(() => {
-    const calculatedPrice = calculatePrice();
-
-    setTotalPrice(calculatedPrice);
-  }, []);
+  const getNumberInput = (input) => {
+    console.log("priceContext", price);
+    console.log("getNumberInput", input);
+  };
 
   return (
     <div className={Class("TissuePriceCalculator")}>
       <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Input")}>
-        {/*<TissuePriceCalculatorInputRange*/}
-        {/*  context="rollCountContext"*/}
-        {/*  dataDefaultValue={defaultValues.rollCount}*/}
-        {/*  defaultValue={rollCount}*/}
-        {/*  max={20}*/}
-        {/*  min={0}*/}
-        {/*  step={1}*/}
-        {/*  text="Rollen"*/}
-        {/*/>*/}
-        {/*<TissuePriceCalculatorInputRange*/}
-        {/*  context="sheetCountContext"*/}
-        {/*  dataDefaultValue={defaultValues.sheetCount}*/}
-        {/*  defaultValue={sheetCount}*/}
-        {/*  max={200}*/}
-        {/*  min={0}*/}
-        {/*  step={1}*/}
-        {/*  text="Blatt"*/}
-        {/*/>*/}
-        {/*<TissuePriceCalculatorInputRange*/}
-        {/*  context="layerCountContext"*/}
-        {/*  dataDefaultValue={defaultValues.layerCount}*/}
-        {/*  defaultValue={layerCount}*/}
-        {/*  max={5}*/}
-        {/*  min={0}*/}
-        {/*  step={1}*/}
-        {/*  text="Lagen"*/}
-        {/*/>*/}
         <TissuePriceInputWheel
           context="rollCountContext"
+          defaultValue={defaultValues.rollCount}
           range={20}
-          getWheelInput={getWheelInputNumber}
+          getWheelInput={getWheelInput}
         />
         <TissuePriceInputWheel
           context="sheetCountContext"
+          defaultValue={defaultValues.sheetCount}
           range={200}
-          getWheelInput={getWheelInputNumber}
+          getWheelInput={getWheelInput}
         />
         <TissuePriceInputWheel
           context="layerCountContext"
+          defaultValue={defaultValues.layerCount}
           range={5}
-          getWheelInput={getWheelInputNumber}
+          getWheelInput={getWheelInput}
         />
         <TissuePriceCalculatorInputNumber
           context="priceContext"
@@ -92,6 +65,7 @@ export const TissuePriceCalculator = () => {
           defaultValue={price}
           placeholder="Kaufpreis"
           text="Kaufpreis"
+          getNumberInput={getNumberInput}
         />
       </div>
       <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Output")}>
