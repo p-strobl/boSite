@@ -5,8 +5,8 @@ export const TissuePriceCalculatorContext = createContext(null);
 
 export default function TissuePriceCalculatorContextStore({ children }) {
   const defaultValues = {
-    rollCount: 12,
-    sheetCount: 200,
+    rollCount: 10,
+    sheetCount: 180,
     layerCount: 3,
     price: "",
   };
@@ -24,7 +24,9 @@ export default function TissuePriceCalculatorContextStore({ children }) {
   };
 
   return (
-    <TissuePriceCalculatorContext.Provider value={calculatorStore}>{children}</TissuePriceCalculatorContext.Provider>
+    <TissuePriceCalculatorContext.Provider value={calculatorStore}>
+      {children}
+    </TissuePriceCalculatorContext.Provider>
   );
 }
 

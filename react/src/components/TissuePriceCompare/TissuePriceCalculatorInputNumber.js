@@ -10,6 +10,7 @@ export const TissuePriceCalculatorInputNumber = ({
   dataDefaultValue,
   placeholder,
   value,
+  getNumberInput,
 }) => {
   const numbersOnly = (element, inputValue) => {
     const numberRegex = /[^0-9,]/g;
@@ -21,18 +22,18 @@ export const TissuePriceCalculatorInputNumber = ({
     return true;
   };
 
-  const validatePrice = (element) => {
-    const inputValue = element.target.value;
+  const validatePrice = (input) => {
+    const inputValue = input.target.value;
 
     if (inputValue.length === 0) return false;
 
-    const inputIsValid = numbersOnly(element, inputValue);
+    const inputIsValid = numbersOnly(input, inputValue);
 
     if (inputIsValid) {
       const digitRegex = /\D/g;
       const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
 
-      element.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
+      input.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
 
       return parseFloat(inputValue);
     }
@@ -43,8 +44,8 @@ export const TissuePriceCalculatorInputNumber = ({
     [context]: [input, setInput],
   } = useContext(TissuePriceCalculatorContext);
 
-  const validateInputPrice = (clickedElement) => {
-    setInput(validatePrice(clickedElement));
+  const validateInput = (clickedElement) => {
+    getNumberInput(validatePrice(clickedElement));
   };
 
   return (
@@ -55,7 +56,7 @@ export const TissuePriceCalculatorInputNumber = ({
         defaultValue={value}
         placeholder={placeholder}
         type="tel"
-        onKeyUp={validateInputPrice}
+        onKeyUp={validateInput}
       />
     </div>
   );
@@ -66,6 +67,7 @@ TissuePriceCalculatorInputNumber.defaultProps = {
   context: "",
   placeholder: "",
   value: () => {},
+  getNumberInput: () => {},
 };
 
 TissuePriceCalculatorInputNumber.propTypes = {
@@ -73,4 +75,5 @@ TissuePriceCalculatorInputNumber.propTypes = {
   context: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.func,
+  getNumberInput: PropTypes.func,
 };

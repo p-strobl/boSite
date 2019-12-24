@@ -7,23 +7,27 @@ export const WheelElements = ({ range }) => {
     event.target.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
-  const wheelRange = [];
+  const createWheelElements = () => {
+    const wheelRange = [];
 
-  for (let i = 0; i < range + 1; i += 1) {
-    wheelRange.push(
-      <div
-        className="TissueInputWheel__Number"
-        key={uuidv4()}
-        onClick={clickedWheelElement}
-        onKeyUp={() => {}}
-        role="button"
-        tabIndex={0}>
-        {i}
-      </div>,
-    );
-  }
+    for (let i = 0; i < range + 1; i += 1) {
+      wheelRange.push(
+        <div
+          className="TissueInputWheel__Number"
+          key={uuidv4()}
+          onClick={clickedWheelElement}
+          onKeyUp={() => {}}
+          role="button"
+          tabIndex={0}>
+          {i}
+        </div>,
+      );
+    }
 
-  return <div className="TissueInputWheel__Container">{wheelRange || ""}</div>;
+    return wheelRange;
+  };
+
+  return <div className="TissueInputWheel__Container">{createWheelElements() || ""}</div>;
 };
 
 WheelElements.defaultProps = {
