@@ -11,33 +11,37 @@ export class WheelInput extends Component {
   constructor(props) {
     super(props);
 
+    this.defaultValue = props.defaultValue;
+    this.getWheelInput = props.getWheelInput;
     this.inputWheelRef = React.createRef();
+    this.range = props.range;
+    this.observer = null;
+    this.setter = props.setter;
     this.wheel = null;
-    this.observer = new IntersectionObserver(this.observerIsIntersecting, {
-      root: this.inputWheelRef.current,
-      threshold: [0.75],
-    });
   }
 
   componentDidMount() {
-    const { defaultValue } = this.props;
-
     this.wheel = this.inputWheelRef.current.querySelectorAll(".Wheel__Number");
     this.initIntersectionObserver();
-    this.focusDefaultValue(defaultValue);
+    this.focusDefaultValue();
   }
 
   componentWillUnmount() {
     this.clearInputWheelObserver();
   }
 
-  focusDefaultValue = (defaultValue) => {
-    if (typeof defaultValue === "undefined") return;
+  focusDefaultValue = () => {
+    if (typeof this.defaultValue === "undefined") return;
 
-    this.wheel[defaultValue].focus();
+    this.wheel[this.defaultValue].focus();
   };
 
   initIntersectionObserver = () => {
+    this.observer = new IntersectionObserver(this.observerIsIntersecting, {
+      root: this.inputWheelRef.current,
+      threshold: [0.9],
+    });
+
     this.wheel.forEach((element) => {
       this.observer.observe(element);
     });
@@ -45,12 +49,11 @@ export class WheelInput extends Component {
 
   observerIsIntersecting = (entries) => {
     if (typeof entries === "undefined") return;
-    const { getWheelInput, setter } = this.props;
 
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         this.handleActiveWheelElement(entry.target);
-        getWheelInput(parseInt(entry.target.textContent, 10), setter);
+        this.getWheelInput(parseInt(entry.target.textContent, 10), this.setter);
       }
     });
   };
@@ -73,12 +76,10 @@ export class WheelInput extends Component {
   };
 
   render() {
-    const { defaultValue, range } = this.props;
-
     return (
       <div className={Class("WheelContainer")} key={uuidv4()} ref={this.inputWheelRef}>
         <ArrowButton direction="Prev" wheel={this.inputWheelRef} />
-        <WheelElements defaultValue={defaultValue} range={range} />
+        <WheelElements defaultValue={this.defaultValue} range={this.range} />
         <ArrowButton direction="Next" wheel={this.inputWheelRef} />
       </div>
     );

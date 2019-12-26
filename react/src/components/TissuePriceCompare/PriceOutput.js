@@ -6,29 +6,27 @@ import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorCont
 
 import "./PriceOutput.scss";
 
-export const PriceOutput = ({ totalPrice }) => {
-  if (typeof totalPrice === "undefined") return false;
+export const PriceOutput = ({ localPrice }) => {
+  if (typeof localPrice === "undefined" || localPrice === 0) return false;
 
-  const {
-    rollCountContext: [, setRollerCount],
-    sheetCountContext: [, setSheetCount],
-    layerCountContext: [, setLayerCount],
-    priceContext: [, setPrice],
-    defaultValues,
-  } = useContext(TissuePriceCalculatorContext);
+  console.log("localPrice", localPrice);
 
-  const calculatorSetter = {
-    rollCount: setRollerCount,
-    sheetCount: setSheetCount,
-    layerCount: setLayerCount,
-    price: setPrice,
-  };
+  // const {
+  //   rollCountContext: [, setRollerCount],
+  //   sheetCountContext: [, setSheetCount],
+  //   layerCountContext: [, setLayerCount],
+  //   priceContext: [, setPrice],
+  //   defaultValues,
+  // } = useContext(TissuePriceCalculatorContext);
+  //
+  // const calculatorSetter = {
+  //   rollCount: setRollerCount,
+  //   sheetCount: setSheetCount,
+  //   layerCount: setLayerCount,
+  //   price: setPrice,
+  // };
 
-  const localePrice = totalPrice.toLocaleString("de-DE", {
-    minimumFractionDigits: 6,
-  });
-
-  const determineCheapestPrice = () => {
+  function determineCheapestPrice() {
     const calculatorOutput = Array.from(document.querySelectorAll(".PriceOutput__Container"));
 
     const parsedElement = [];
@@ -53,9 +51,9 @@ export const PriceOutput = ({ totalPrice }) => {
     return parsedElement.filter((element) => {
       return element[1] === cheapestElement[1];
     });
-  };
+  }
 
-  const setClassOnOutputElements = (cheapestElements) => {
+  function setClassOnOutputElements(cheapestElements) {
     const tissueCalculator = Array.from(document.querySelectorAll(".Calculator"));
 
     const clearTissueCalculatorClasses = () => {
@@ -85,9 +83,9 @@ export const PriceOutput = ({ totalPrice }) => {
     clearTissueCalculatorClasses();
     addClassToCheapestElement();
     addClassToPriceyElement();
-  };
+  }
 
-  const resetCalculatorView = (event) => {
+  function resetCalculatorView(event) {
     if (event.target.type !== "button") return;
 
     const outputContainer = event.target.closest(".PriceOutput__Output");
@@ -111,9 +109,9 @@ export const PriceOutput = ({ totalPrice }) => {
 
     resetInputTypeRange();
     resetInputTypeTel();
-  };
+  }
 
-  const resetCalculatorState = () => {
+  function resetCalculatorState() {
     if (typeof calculatorSetter === "undefined" || typeof defaultValues === "undefined")
       return false;
 
@@ -125,15 +123,15 @@ export const PriceOutput = ({ totalPrice }) => {
       return true;
     });
     return false;
-  };
+  }
 
-  const handleCalculatorReset = (event) => {
+  function handleCalculatorReset(event) {
     if (event.target.type !== "button") return false;
 
-    resetCalculatorState();
+    // resetCalculatorState();
     resetCalculatorView(event);
     return true;
-  };
+  }
 
   useEffect(() => {
     const filledOutputElements = determineCheapestPrice();

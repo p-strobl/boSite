@@ -8,6 +8,8 @@ import { WheelInput } from "~components/TissuePriceCompare/WheelInput";
 import "./Calculator.scss";
 
 export const Calculator = () => {
+  const [localPrice, setLocalPrice] = useState(0);
+
   const defaultValues = {
     rollCount: 10,
     sheetCount: 180,
@@ -37,12 +39,24 @@ export const Calculator = () => {
     return singleLayerPrice.toFixed(6) / 100;
   };
 
+  const toLocalPrice = (value) => {
+    if (value === 0) return;
+
+    setLocalPrice(
+      value.toLocaleString("de-DE", {
+        minimumFractionDigits: 6,
+      }),
+    );
+  };
+
   const handleInput = (input, setter) => {
     if (input === 0 || setter.length === 0) return;
 
     inputValues[setter] = input;
-    console.log("calculatePrice", calculatePrice());
+    inputValues.localPrice = toLocalPrice(calculatePrice());
   };
+
+  useEffect(() => {}, [localPrice]);
 
   return (
     <div className={Class("Calculator")}>
@@ -74,9 +88,9 @@ export const Calculator = () => {
           getNumberInput={handleInput}
         />
       </div>
-      {/*<div className={Class("Calculator__Item Calculator__Output")}>*/}
-      {/*  <PriceOutput totalPrice={totalPrice} value={price} />*/}
-      {/*</div>*/}
+      <div className={Class("Calculator__Item Calculator__Output")}>
+        <PriceOutput localPrice={inputValues.localPrice} value={inputValues.price} />
+      </div>
     </div>
   );
 };

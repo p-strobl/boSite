@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/server" libraries="{boSite/server/node_modules}" />
-    <file url="PROJECT" libraries="{@types/express, @types/react, boSite/server/node_modules}" />
+    <file url="PROJECT" libraries="{@types/express, @types/hookrouter, @types/prop-types, @types/react, boSite/server/node_modules}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
   </component>
 </project>
