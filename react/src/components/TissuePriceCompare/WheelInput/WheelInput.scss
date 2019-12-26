@@ -1,10 +1,10 @@
 @import "~scss/_utility.scss";
 
-.TissueInputWheel {
+.WheelContainer {
   @include grid-span(column, 1);
 }
 
-.TissueInputWheel__Container {
+.Wheel {
   height: 80px;
   overflow-x: scroll;
   scroll-snap-type: y mandatory;
@@ -17,7 +17,7 @@
   }
 }
 
-.TissueInputWheel__Number {
+.Wheel__Number {
   //background-color: $c_blue-004;
   font-size: 30px;
   line-height: 1.4;
@@ -40,13 +40,13 @@
   }
 }
 
-.TissueInputWheel__Number--Active {
+.Wheel__Number--Active {
   //border-bottom: 1px dashed $c_vanta-black;
   //border-top: 1px dashed $c_vanta-black;
   opacity: 1;
 }
 
-.TissueInputWheel__Button {
+.Wheel__Button {
   border: 1px solid;
   font-family: "LigatureSymbols", sans-serif;
   width: 100%;
@@ -61,10 +61,10 @@
   }
 }
 
-.TissueInputWheel__Button--Up:after {
+.Wheel__Button--Prev:after {
   content: $i_up;
 }
 
-.TissueInputWheel__Button--Down:after {
+.Wheel__Button--Next:after {
   content: $i_down;
 }

@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
 
-import "./TissuePriceCalculatorOutput.scss";
+import "./PriceOutput.scss";
 
-export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
+export const PriceOutput = ({ totalPrice }) => {
   if (typeof totalPrice === "undefined") return false;
 
   const {
@@ -29,9 +29,7 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   });
 
   const determineCheapestPrice = () => {
-    const calculatorOutput = Array.from(
-      document.querySelectorAll(".TissuePriceCalculatorOutput__Container"),
-    );
+    const calculatorOutput = Array.from(document.querySelectorAll(".PriceOutput__Container"));
 
     const parsedElement = [];
 
@@ -58,14 +56,11 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   };
 
   const setClassOnOutputElements = (cheapestElements) => {
-    const tissueCalculator = Array.from(document.querySelectorAll(".TissuePriceCalculator"));
+    const tissueCalculator = Array.from(document.querySelectorAll(".Calculator"));
 
     const clearTissueCalculatorClasses = () => {
       tissueCalculator.forEach((outputElement) => {
-        outputElement.classList.remove(
-          "TissuePriceCalculator--Lowest",
-          "TissuePriceCalculator--Pricey",
-        );
+        outputElement.classList.remove("Calculator--Lowest", "Calculator--Pricey");
       });
     };
 
@@ -74,17 +69,17 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
         const parsedPrice = parseFloat(price);
 
         if (parsedPrice === 0) return;
-        element.closest(".TissuePriceCalculator").classList.add("TissuePriceCalculator--Lowest");
+        element.closest(".Calculator").classList.add("Calculator--Lowest");
       });
     };
 
     const addClassToPriceyElement = () => {
       const notCheapestElement = tissueCalculator.filter((element) => {
-        return !element.classList.contains("TissuePriceCalculator--Lowest");
+        return !element.classList.contains("Calculator--Lowest");
       });
 
       if (notCheapestElement.length !== 1) return;
-      notCheapestElement[0].classList.add("TissuePriceCalculator--Pricey");
+      notCheapestElement[0].classList.add("Calculator--Pricey");
     };
 
     clearTissueCalculatorClasses();
@@ -95,7 +90,7 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   const resetCalculatorView = (event) => {
     if (event.target.type !== "button") return;
 
-    const outputContainer = event.target.closest(".TissuePriceCalculator__Output");
+    const outputContainer = event.target.closest(".PriceOutput__Output");
     const inputContainer = outputContainer.previousSibling;
 
     const resetInputTypeRange = () => {
@@ -147,15 +142,15 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
 
   return (
     <div
-      className={Class("TissuePriceCalculatorOutput__Container", {
-        "TissuePriceCalculatorOutput__Container--Show": totalPrice,
+      className={Class("PriceOutput__Container", {
+        "PriceOutput__Container--Show": totalPrice,
       })}>
       {localePrice}
-      <span className={Class("TissuePriceCalculatorOutput__Currency")}>€</span>
-      <span className={Class("TissuePriceCalculatorOutput__Text")}>pro Lage</span>
+      <span className={Class("PriceOutput__Currency")}>€</span>
+      <span className={Class("PriceOutput__Text")}>pro Lage</span>
       <button
         aria-label="Clear Button"
-        className={Class("TissuePriceCalculatorOutput__ClearButton")}
+        className={Class("PriceOutput__ClearButton")}
         onClick={handleCalculatorReset}
         type="button"
       />
@@ -163,10 +158,10 @@ export const TissuePriceCalculatorOutput = ({ totalPrice }) => {
   );
 };
 
-TissuePriceCalculatorOutput.defaultProps = {
+PriceOutput.defaultProps = {
   totalPrice: 0,
 };
 
-TissuePriceCalculatorOutput.propTypes = {
+PriceOutput.propTypes = {
   totalPrice: PropTypes.number,
 };

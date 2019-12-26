@@ -1,6 +1,6 @@
 @import "~scss/_utility.scss";
 
-.TissuePriceCalculatorOutput__Container {
+.PriceOutput__Container {
   @include flex();
   @include responsive-font-size(20, 30);
   @include transition(opacity 400ms linear);
@@ -8,16 +8,16 @@
   opacity: 0.1;
 }
 
-.TissuePriceCalculatorOutput__Currency {
+.PriceOutput__Currency {
   @include responsive-font-size(15, 30);
 }
 
-.TissuePriceCalculatorOutput__Text {
+.PriceOutput__Text {
   @include responsive-font-size(10, 15);
   margin-left: 5px;
 }
 
-.TissuePriceCalculatorOutput__ClearButton {
+.PriceOutput__ClearButton {
   @include flex();
   @include responsive-font-size(25, 25);
   @include transition(opacity 400ms linear);
@@ -25,17 +25,17 @@
   margin-left: auto;
 }
 
-.no-touch .TissuePriceCalculatorOutput__ClearButton:hover {
+.no-touch .PriceOutput__ClearButton:hover {
   color: $c_holy-green;
 }
 
-.TissuePriceCalculatorOutput__ClearButton:after {
+.PriceOutput__ClearButton:after {
   @include ligature-symbols-icon($i_plus);
   @include transform(rotate, 45deg);
 }
 
-.TissuePriceCalculatorOutput__Container--Show,
-.TissuePriceCalculatorOutput__Container--Show .TissuePriceCalculatorOutput__ClearButton {
+.PriceOutput--Show,
+.PriceOutput--Show .PriceOutput__ClearButton {
   color: $c_grey-003;
   opacity: 1;
 }

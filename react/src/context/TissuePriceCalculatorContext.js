@@ -15,6 +15,7 @@ export default function TissuePriceCalculatorContextStore({ children }) {
   const [sheetCount, setSheetCount] = useState(defaultValues.sheetCount);
   const [layerCount, setLayerCount] = useState(defaultValues.layerCount);
   const [price, setPrice] = useState(defaultValues.price);
+
   const calculatorStore = {
     rollCountContext: [rollCount, setRollCount],
     sheetCountContext: [sheetCount, setSheetCount],

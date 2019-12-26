@@ -1,10 +1,16 @@
 @import "~scss/_utility.scss";
 
-.TissuePriceCalculatorInput__Price {
+.PriceContainer {
+  grid-column: span 3;
+  grid-row: 2;
+}
+
+.Price__Input {
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid;
   font-size: 20px;
   padding: 10px 20px;
   outline: 0;
+  width: 100%;
 }

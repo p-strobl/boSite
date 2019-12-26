@@ -1,5 +1,5 @@
 @import "~scss/_utility.scss";
-.TissuePriceCalculator {
+.Calculator {
   @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid(repeat(12, 1fr), 1vw);
   @include grid-column(2, 12);
@@ -17,33 +17,33 @@
   }
 }
 
-.TissuePriceCalculator:nth-child(1) {
+.Calculator:nth-child(1) {
   border-bottom: 0;
   border-radius: 20px 20px 0 0;
 }
 
-.TissuePriceCalculator:nth-child(2) {
+.Calculator:nth-child(2) {
   border-radius: 0 0 20px 20px;
   border-top: 0;
 }
 
-.TissuePriceCalculator--Pricey {
+.Calculator--Pricey {
   background-color: rgba($c_tomato-red, 0.8);
 }
 
-.TissuePriceCalculator--Lowest {
+.Calculator--Lowest {
   background-color: $c_green-003;
 }
 
-.TissuePriceCalculator__Item {
+.Calculator__Input {
+  @include grid(repeat(3, 1fr), 1vw, repeat(2, 1fr));
+}
+
+.Calculator__Item {
   @include grid-column(2, 12);
 }
 
-.TissuePriceCalculator__Input {
-  @include grid(repeat(3, 1fr), 1vw);
-}
-
-.TissuePriceCalculator__Output {
+.Calculator__Output {
   margin-top: 5px;
   padding: 0 20px;
 }

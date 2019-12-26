@@ -3,30 +3,39 @@ import Class from "classnames";
 import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
-import "./TissuePriceInputWheel.scss";
-import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
+import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
-export class TissuePriceInputWheel extends Component {
+export class WheelInput extends Component {
   constructor(props) {
     super(props);
-    this.inputWheelRef = React.createRef();
 
+    this.inputWheelRef = React.createRef();
+    this.wheel = null;
     this.observer = new IntersectionObserver(this.observerIsIntersecting, {
       root: this.inputWheelRef.current,
-      threshold: [0.99],
+      threshold: [0.75],
     });
   }
 
   componentDidMount() {
-    this.wheel = this.inputWheelRef.current.querySelectorAll(".TissueInputWheel__Number");
+    const { defaultValue } = this.props;
+
+    this.wheel = this.inputWheelRef.current.querySelectorAll(".Wheel__Number");
     this.initIntersectionObserver();
+    this.focusDefaultValue(defaultValue);
   }
 
   componentWillUnmount() {
     this.clearInputWheelObserver();
   }
+
+  focusDefaultValue = (defaultValue) => {
+    if (typeof defaultValue === "undefined") return;
+
+    this.wheel[defaultValue].focus();
+  };
 
   initIntersectionObserver = () => {
     this.wheel.forEach((element) => {
@@ -34,23 +43,26 @@ export class TissuePriceInputWheel extends Component {
     });
   };
 
-  observerIsIntersecting = (entry) => {
-    if (entry.isIntersecting && entry[0].intersectionRatio <= 0) return;
+  observerIsIntersecting = (entries) => {
+    if (typeof entries === "undefined") return;
+    const { getWheelInput, setter } = this.props;
 
-    this.handleActiveWheelElement(entry);
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        this.handleActiveWheelElement(entry.target);
+        getWheelInput(parseInt(entry.target.textContent, 10), setter);
+      }
+    });
   };
 
   handleActiveWheelElement = (entry) => {
     this.clearInputWheelClass(this.wheel);
-    const { getWheelInput } = this.props;
-    // console.log("entry:", parseInt(entry[0].target.textContent, 10));
-    entry[0].target.classList.add("TissueInputWheel__Number--Active");
-    getWheelInput(parseInt(entry[0].target.textContent, 10));
+    entry.classList.add("Wheel__Number--Active");
   };
 
   clearInputWheelClass = () => {
     this.wheel.forEach((element) => {
-      element.classList.remove("TissueInputWheel__Number--Active");
+      element.classList.remove("Wheel__Number--Active");
     });
   };
 
@@ -64,23 +76,25 @@ export class TissuePriceInputWheel extends Component {
     const { defaultValue, range } = this.props;
 
     return (
-      <div className={Class("TissueInputWheel")} key={uuidv4()} ref={this.inputWheelRef}>
-        <ArrowButton direction="Up" />
+      <div className={Class("WheelContainer")} key={uuidv4()} ref={this.inputWheelRef}>
+        <ArrowButton direction="Prev" wheel={this.inputWheelRef} />
         <WheelElements defaultValue={defaultValue} range={range} />
-        <ArrowButton direction="Down" />
+        <ArrowButton direction="Next" wheel={this.inputWheelRef} />
       </div>
     );
   }
 }
 
-TissuePriceInputWheel.defaultProps = {
+WheelInput.defaultProps = {
   defaultValue: 0,
   getWheelInput: () => {},
+  setter: "",
   range: 0,
 };
 
-TissuePriceInputWheel.propTypes = {
+WheelInput.propTypes = {
   defaultValue: PropTypes.number,
   getWheelInput: PropTypes.func,
+  setter: PropTypes.string,
   range: PropTypes.number,
 };

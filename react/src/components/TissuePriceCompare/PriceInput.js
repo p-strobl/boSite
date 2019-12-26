@@ -1,17 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
+import "./PriceInput.scss";
 
-import "./TissuePriceCalculatorInputNumber.scss";
-
-export const TissuePriceCalculatorInputNumber = ({
-  context,
-  dataDefaultValue,
-  placeholder,
-  value,
-  getNumberInput,
-}) => {
+export const PriceInput = ({ dataDefaultValue, getNumberInput, placeholder, setter, value }) => {
   const numbersOnly = (element, inputValue) => {
     const numberRegex = /[^0-9,]/g;
 
@@ -40,18 +32,16 @@ export const TissuePriceCalculatorInputNumber = ({
     return false;
   };
 
-  const {
-    [context]: [input, setInput],
-  } = useContext(TissuePriceCalculatorContext);
-
   const validateInput = (clickedElement) => {
-    getNumberInput(validatePrice(clickedElement));
+    if (typeof clickedElement === "undefined") return;
+
+    getNumberInput(validatePrice(clickedElement), setter);
   };
 
   return (
-    <div className="TissuePriceCalculatorInput__RangeContainer">
+    <div className="PriceContainer">
       <input
-        className="TissuePriceCalculatorInput__Price"
+        className="Price__Input"
         data-default={dataDefaultValue}
         defaultValue={value}
         placeholder={placeholder}
@@ -62,18 +52,18 @@ export const TissuePriceCalculatorInputNumber = ({
   );
 };
 
-TissuePriceCalculatorInputNumber.defaultProps = {
+PriceInput.defaultProps = {
   dataDefaultValue: "",
-  context: "",
   placeholder: "",
+  setter: "",
   value: () => {},
   getNumberInput: () => {},
 };
 
-TissuePriceCalculatorInputNumber.propTypes = {
+PriceInput.propTypes = {
   dataDefaultValue: PropTypes.string,
-  context: PropTypes.string,
   placeholder: PropTypes.string,
+  setter: PropTypes.string,
   value: PropTypes.func,
   getNumberInput: PropTypes.func,
 };

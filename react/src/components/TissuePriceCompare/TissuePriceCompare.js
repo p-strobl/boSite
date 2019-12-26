@@ -8,7 +8,7 @@ import TissuePriceCalculatorContextStore from "~context/TissuePriceCalculatorCon
 import { Emoji } from "~components/Emoji";
 
 import "./TissuePriceCompare.scss";
-import { TissuePriceCalculator } from "~components/TissuePriceCompare/TissuePriceCalculator";
+import { Calculator } from "~components/TissuePriceCompare/Calculator";
 
 export const TissuePriceCompare = () => {
   useTitle("boSite's Tissue Calculator");
@@ -25,12 +25,8 @@ export const TissuePriceCompare = () => {
     <div className={Class("TissuePriceCompare")}>
       <Headline parentClass="TissuePriceCompare" h1={headline} h2={subHeadline} />
       <div className={Class("TissuePriceCompare__CalculatorContainer")}>
-        <TissuePriceCalculatorContextStore>
-          <TissuePriceCalculator />
-        </TissuePriceCalculatorContextStore>
-        <TissuePriceCalculatorContextStore>
-          <TissuePriceCalculator />
-        </TissuePriceCalculatorContextStore>
+        <Calculator />
+        <Calculator />
       </div>
     </div>
   );

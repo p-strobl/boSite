@@ -13,7 +13,7 @@ export const WheelElements = ({ range }) => {
     for (let i = 0; i < range + 1; i += 1) {
       wheelRange.push(
         <div
-          className="TissueInputWheel__Number"
+          className="Wheel__Number"
           key={uuidv4()}
           onClick={clickedWheelElement}
           onKeyUp={() => {}}
@@ -27,7 +27,7 @@ export const WheelElements = ({ range }) => {
     return wheelRange;
   };
 
-  return <div className="TissueInputWheel__Container">{createWheelElements() || ""}</div>;
+  return <div className="Wheel">{createWheelElements() || ""}</div>;
 };
 
 WheelElements.defaultProps = {
