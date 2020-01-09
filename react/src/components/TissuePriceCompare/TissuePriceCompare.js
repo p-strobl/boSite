@@ -25,8 +25,12 @@ export const TissuePriceCompare = () => {
     <div className={Class("TissuePriceCompare")}>
       <Headline parentClass="TissuePriceCompare" h1={headline} h2={subHeadline} />
       <div className={Class("TissuePriceCompare__CalculatorContainer")}>
-        <Calculator />
-        <Calculator />
+        <TissuePriceCalculatorContextStore>
+          <Calculator />
+        </TissuePriceCalculatorContextStore>
+        <TissuePriceCalculatorContextStore>
+          <Calculator />
+        </TissuePriceCalculatorContextStore>
       </div>
     </div>
   );

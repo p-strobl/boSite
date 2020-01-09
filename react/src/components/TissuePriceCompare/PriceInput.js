@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 
 import "./PriceInput.scss";
+import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
 
-export const PriceInput = ({ dataDefaultValue, getNumberInput, placeholder, setter, value }) => {
+export const PriceInput = ({ context, dataDefaultValue, placeholder, value }) => {
+  const {
+    [context]: [, setInput],
+  } = useContext(TissuePriceCalculatorContext);
+
   const numbersOnly = (element, inputValue) => {
     const numberRegex = /[^0-9,]/g;
 
@@ -14,18 +19,20 @@ export const PriceInput = ({ dataDefaultValue, getNumberInput, placeholder, sett
     return true;
   };
 
-  const validatePrice = (input) => {
-    const inputValue = input.target.value;
+  const validatePrice = (clickedElement) => {
+    const inputValue = clickedElement.target.value;
 
     if (inputValue.length === 0) return false;
 
-    const inputIsValid = numbersOnly(input, inputValue);
+    const inputIsValid = numbersOnly(clickedElement, inputValue);
 
     if (inputIsValid) {
       const digitRegex = /\D/g;
       const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
 
-      input.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
+      clickedElement.target.value = inputValue
+        .replace(digitRegex, "")
+        .replace(decimalCommaRegex, ",");
 
       return parseFloat(inputValue);
     }
@@ -35,7 +42,7 @@ export const PriceInput = ({ dataDefaultValue, getNumberInput, placeholder, sett
   const validateInput = (clickedElement) => {
     if (typeof clickedElement === "undefined") return;
 
-    getNumberInput(validatePrice(clickedElement), setter);
+    setInput(validatePrice(clickedElement));
   };
 
   return (
@@ -53,17 +60,15 @@ export const PriceInput = ({ dataDefaultValue, getNumberInput, placeholder, sett
 };
 
 PriceInput.defaultProps = {
+  context: "",
   dataDefaultValue: "",
   placeholder: "",
-  setter: "",
   value: () => {},
-  getNumberInput: () => {},
 };
 
 PriceInput.propTypes = {
+  context: PropTypes.string,
   dataDefaultValue: PropTypes.string,
   placeholder: PropTypes.string,
-  setter: PropTypes.string,
   value: PropTypes.func,
-  getNumberInput: PropTypes.func,
 };

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import Class from "classnames";
 
+import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
 import { PriceInput } from "~components/TissuePriceCompare/PriceInput";
 import { PriceOutput } from "~components/TissuePriceCompare/PriceOutput";
 import { WheelInput } from "~components/TissuePriceCompare/WheelInput";
@@ -9,32 +10,24 @@ import "./Calculator.scss";
 
 export const Calculator = () => {
   const [localPrice, setLocalPrice] = useState(0);
+  const inputWheelRef = useRef(null);
+  let wheel = null;
+  let observer = null;
+  const {
+    rollCountContext: [rollCount, setRollCount],
+    sheetCountContext: [sheetCount],
+    layerCountContext: [layerCount],
+    priceContext: [price],
+    defaultValues,
+  } = useContext(TissuePriceCalculatorContext);
 
-  const defaultValues = {
-    rollCount: 10,
-    sheetCount: 180,
-    layerCount: 3,
-    price: "",
-  };
-
-  const inputValues = {
-    rollCount: 0,
-    sheetCount: 0,
-    layerCount: 0,
-    price: 0,
-  };
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const calculatePrice = () => {
-    if (
-      inputValues.rollCount === 0 ||
-      inputValues.sheetCount === 0 ||
-      inputValues.layerCount === 0 ||
-      inputValues.price === 0
-    )
-      return 0;
+    if (rollCount === 0 || sheetCount === 0 || layerCount === 0 || price === 0) return 0;
 
-    const totalLayerCount = inputValues.rollCount * inputValues.sheetCount * inputValues.layerCount;
-    const singleLayerPrice = inputValues.price / totalLayerCount;
+    const totalLayerCount = rollCount * sheetCount * layerCount;
+    const singleLayerPrice = price / totalLayerCount;
 
     return singleLayerPrice.toFixed(6) / 100;
   };
@@ -49,47 +42,90 @@ export const Calculator = () => {
     );
   };
 
-  const handleInput = (input, setter) => {
-    if (input === 0 || setter.length === 0) return;
-
-    inputValues[setter] = input;
-    inputValues.localPrice = toLocalPrice(calculatePrice());
+  const handleInput = (input) => {
+    if (input === 0) return;
+    console.log("toLocalPrice(calculatePrice())", toLocalPrice(calculatePrice()));
+    // setTotalPrice(toLocalPrice(calculatePrice()));
   };
 
-  useEffect(() => {}, [localPrice]);
+  function clearInputWheelClass(entryWheel) {
+    const elementWheel = entryWheel.querySelectorAll(".Wheel__Number");
+    elementWheel.forEach((element) => {
+      element.classList.remove("Wheel__Number--Active");
+    });
+  }
+
+  function handleActiveWheelElement(entry) {
+    const entryParent = entry.parentNode;
+
+    clearInputWheelClass(entryParent);
+    entry.classList.add("Wheel__Number--Active");
+  }
+
+  function observerIsIntersecting(entries) {
+    if (typeof entries === "undefined") return;
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const entryContext = entry.target.closest(".WheelContainer").dataset.context;
+
+        handleActiveWheelElement(entry.target);
+        console.log("entry.target", entry.target.closest(".WheelContainer").dataset.context);
+        // this.getWheelInput(parseInt(entry.target.textContent, 10), this.setter);
+      }
+    });
+  }
+
+  function initIntersectionObserver() {
+    observer = new IntersectionObserver(observerIsIntersecting, {
+      root: inputWheelRef.current,
+      threshold: [0.9],
+    });
+
+    wheel.forEach((element) => {
+      observer.observe(element);
+    });
+  }
+
+  function clearInputWheelObserver() {
+    wheel.forEach((element) => {
+      observer.unobserve(element);
+    });
+  }
+
+  useEffect(() => {
+    wheel = inputWheelRef.current.querySelectorAll(".Wheel__Number");
+    // const localePrice = calculatePrice();
+    //
+    // if (localePrice === 0) return;
+    // setTotalPrice(localePrice);
+    initIntersectionObserver();
+
+    return () => {
+      clearInputWheelObserver();
+    };
+  }, [rollCount, sheetCount, layerCount, price]);
 
   return (
-    <div className={Class("Calculator")}>
+    <div className={Class("Calculator")} ref={inputWheelRef}>
       <div className={Class("Calculator__Item Calculator__Input")}>
+        <WheelInput context="setRollCount" defaultValue={defaultValues.rollCount} range={20} />
         <WheelInput
-          setter="rollCount"
-          defaultValue={defaultValues.rollCount}
-          range={20}
-          getWheelInput={handleInput}
-        />
-        <WheelInput
-          setter="sheetCount"
+          context="sheetCountContext"
           defaultValue={defaultValues.sheetCount}
           range={200}
-          getWheelInput={handleInput}
         />
-        <WheelInput
-          setter="layerCount"
-          defaultValue={defaultValues.layerCount}
-          range={5}
-          getWheelInput={handleInput}
-        />
+        <WheelInput context="layerCountContext" defaultValue={defaultValues.layerCount} range={5} />
         <PriceInput
-          setter="price"
+          context="priceContext"
           dataDefaultValue={defaultValues.price}
-          defaultValue={inputValues.price}
+          defaultValue={price}
           placeholder="Kaufpreis"
           text="Kaufpreis"
           getNumberInput={handleInput}
         />
       </div>
       <div className={Class("Calculator__Item Calculator__Output")}>
-        <PriceOutput localPrice={inputValues.localPrice} value={inputValues.price} />
+        <PriceOutput localPrice={totalPrice} value={price} />
       </div>
     </div>
   );

@@ -1,10 +1,4 @@
-// @mixin grid($columns: 12) {
-//   display: grid;
-//   grid-column-gap: 1vw;
-//   grid-template-columns: repeat($columns, 1fr);
-// }
-
-// @include grid(repeat(12, 1fr), 1vw);
+// @include grid(repeat(12, 1fr), 1vw, repeat(2, 1fr), 1vw);
 @mixin grid($columns: "", $colGap: "", $row: "", $rowGap: "") {
   display: grid;
 
@@ -23,10 +17,12 @@
   }
 }
 
+// @include grid-span(column, 12);
 @mixin grid-span($direction, $span) {
   #{"grid-"}#{$direction}: span $span;
 }
 
+// @include grid-column(3, 11);
 @mixin grid-column($start, $end) {
   grid-column: #{$start} / #{$end};
 }

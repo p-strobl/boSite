@@ -11,6 +11,7 @@
 
   @include respond-as-of(1) {
     @include grid-column(3, 11);
+    grid-column: 3 / 11;
     border-radius: 20px;
     padding: 60px 0;
   }
