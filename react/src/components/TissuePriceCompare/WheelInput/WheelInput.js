@@ -7,15 +7,15 @@ import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
-export const WheelInput = ({ context, defaultValue, range }) => {
+export const WheelInput = ({ context, value, range }) => {
   const inputWheelRef = useRef(null);
   let wheel = null;
   let observer = null;
 
   function focusDefaultValue() {
-    if (typeof defaultValue === "undefined") return;
+    if (typeof value === "undefined") return;
 
-    wheel[defaultValue].focus();
+    wheel[value].focus();
   }
 
   function clearInputWheelClass(entryWheel) {
@@ -79,7 +79,7 @@ export const WheelInput = ({ context, defaultValue, range }) => {
       ref={inputWheelRef}
       data-context={context}>
       <ArrowButton direction="Prev" wheel={inputWheelRef} />
-      <WheelElements defaultValue={defaultValue} range={range} />
+      <WheelElements value={value} range={range} />
       <ArrowButton direction="Next" wheel={inputWheelRef} />
     </div>
   );
@@ -87,12 +87,12 @@ export const WheelInput = ({ context, defaultValue, range }) => {
 
 WheelInput.defaultProps = {
   context: "",
-  defaultValue: 0,
+  value: 0,
   range: 0,
 };
 
 WheelInput.propTypes = {
   context: PropTypes.string,
-  defaultValue: PropTypes.number,
+  value: PropTypes.number,
   range: PropTypes.number,
 };

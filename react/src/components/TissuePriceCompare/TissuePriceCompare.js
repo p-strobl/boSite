@@ -15,15 +15,37 @@ export const TissuePriceCompare = () => {
 
   const [globalCalculatorState, setGlobalCalculatorState] = useState([
     {
-      roll: 10,
-      sheets: 120,
-      layer: 3,
+      wheel: {
+        roll: {
+          value: 10,
+          range: 20,
+        },
+        sheets: {
+          value: 120,
+          range: 200,
+        },
+        layer: {
+          value: 3,
+          range: 5,
+        },
+      },
       price: 0,
     },
     {
-      roll: 10,
-      sheets: 120,
-      layer: 3,
+      wheel: {
+        roll: {
+          value: 10,
+          range: 20,
+        },
+        sheets: {
+          value: 120,
+          range: 200,
+        },
+        layer: {
+          value: 3,
+          range: 5,
+        },
+      },
       price: 0,
     },
   ]);
@@ -45,8 +67,8 @@ export const TissuePriceCompare = () => {
       return (
         <Calculator
           key={uuidv4()}
-          singleCalculatorState={state}
-          singleCalculatorIndex={index}
+          ownCalculatorState={state.wheel}
+          ownCalculatorIndex={index}
           setGlobalCalculatorState={setGlobalState}
         />
       );

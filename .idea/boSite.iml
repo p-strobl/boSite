@@ -8,5 +8,6 @@
     <orderEntry type="library" name="@types/react" level="application" />
     <orderEntry type="library" name="@types/hookrouter" level="application" />
     <orderEntry type="library" name="@types/prop-types" level="application" />
+    <orderEntry type="library" name="@types/react-is" level="application" />
   </component>
 </module>

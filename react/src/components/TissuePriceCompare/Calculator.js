@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import Class from "classnames";
+import uuidv4 from "uuid/v4";
 
 import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
 import { PriceInput } from "~components/TissuePriceCompare/PriceInput";
@@ -9,11 +10,11 @@ import { WheelInput } from "~components/TissuePriceCompare/WheelInput";
 import "./Calculator.scss";
 
 export const Calculator = ({
-  singleCalculatorState,
-  singleCalculatorIndex,
+  ownCalculatorState,
+  ownCalculatorIndex,
   setGlobalCalculatorState,
 }) => {
-  const [calculatorState, setCalculatorState] = useState(singleCalculatorState);
+  const [calculatorState, setCalculatorState] = useState(ownCalculatorState);
 
   const calculatePrice = () => {
     if (rollCount === 0 || sheetCount === 0 || layerCount === 0 || price === 0) return 0;
@@ -34,80 +35,41 @@ export const Calculator = ({
     );
   };
 
-  // const handleInput = (input) => {
-  //   if (input === 0) return;
-  //   console.log("toLocalPrice(calculatePrice())", toLocalPrice(calculatePrice()));
-  //   // setTotalPrice(toLocalPrice(calculatePrice()));
-  // };
-  //
-  // function clearInputWheelClass(entryWheel) {
-  //   const elementWheel = entryWheel.querySelectorAll(".Wheel__Number");
-  //   elementWheel.forEach((element) => {
-  //     element.classList.remove("Wheel__Number--Active");
-  //   });
-  // }
-  //
-  // function handleActiveWheelElement(entry) {
-  //   const entryParent = entry.parentNode;
-  //
-  //   clearInputWheelClass(entryParent);
-  //   entry.classList.add("Wheel__Number--Active");
-  // }
-  //
-  // function observerIsIntersecting(entries) {
-  //   if (typeof entries === "undefined") return;
-  //   entries.forEach((entry) => {
-  //     if (entry.isIntersecting) {
-  //       const entryContext = entry.target.closest(".WheelContainer").dataset.context;
-  //
-  //       handleActiveWheelElement(entry.target);
-  //       console.log("entry.target", entry.target.closest(".WheelContainer").dataset.context);
-  //       // this.getWheelInput(parseInt(entry.target.textContent, 10), this.setter);
-  //     }
-  //   });
-  // }
-  //
-  // function initIntersectionObserver() {
-  //   observer = new IntersectionObserver(observerIsIntersecting, {
-  //     root: inputWheelRef.current,
-  //     threshold: [0.9],
-  //   });
-  //
-  //   wheel.forEach((element) => {
-  //     observer.observe(element);
-  //   });
-  // }
-  //
-  // function clearInputWheelObserver() {
-  //   wheel.forEach((element) => {
-  //     observer.unobserve(element);
-  //   });
-  // }
+  function handleWheelInput(input) {
+    console.log("input", input);
+  }
+
+  function createInputWheels() {
+    return Object.values(ownCalculatorState).map((calculator) => {
+      return (
+        <WheelInput
+          value={calculator.value}
+          range={calculator.range}
+          key={uuidv4()}
+          handleWheelInput={handleWheelInput}
+        />
+      );
+    });
+  }
 
   useEffect(() => {}, []);
 
   return (
     <div className={Class("Calculator")}>
-      {/*<div className={Class("Calculator__Item Calculator__Input")}>*/}
-      {/*  <WheelInput context="setRollCount" defaultValue={defaultValues.rollCount} range={20} />*/}
-      {/*  <WheelInput*/}
-      {/*    context="sheetCountContext"*/}
-      {/*    defaultValue={defaultValues.sheetCount}*/}
-      {/*    range={200}*/}
-      {/*  />*/}
-      {/*  <WheelInput context="layerCountContext" defaultValue={defaultValues.layerCount} range={5} />*/}
-      {/*  <PriceInput*/}
-      {/*    context="priceContext"*/}
-      {/*    dataDefaultValue={defaultValues.price}*/}
-      {/*    defaultValue={price}*/}
-      {/*    placeholder="Kaufpreis"*/}
-      {/*    text="Kaufpreis"*/}
-      {/*    getNumberInput={handleInput}*/}
-      {/*  />*/}
-      {/*</div>*/}
-      {/*<div className={Class("Calculator__Item Calculator__Output")}>*/}
-      {/*  <PriceOutput localPrice={totalPrice} value={price} />*/}
-      {/*</div>*/}
+      <div className={Class("Calculator__Item Calculator__Input")}>
+        {ownCalculatorState && createInputWheels()}
+        {/*<PriceInput*/}
+        {/*  context="priceContext"*/}
+        {/*  dataDefaultValue={defaultValues.price}*/}
+        {/*  defaultValue={price}*/}
+        {/*  placeholder="Kaufpreis"*/}
+        {/*  text="Kaufpreis"*/}
+        {/*  getNumberInput={handleInput}*/}
+        {/*/>*/}
+      </div>
+      <div className={Class("Calculator__Item Calculator__Output")}>
+        {/*<PriceOutput localPrice={totalPrice} value={price} />*/}
+      </div>
     </div>
   );
 };
