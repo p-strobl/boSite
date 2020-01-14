@@ -40,19 +40,16 @@ export const Calculator = ({
   }
 
   function createInputWheels() {
-    return Object.values(ownCalculatorState).map((calculator) => {
+    return Object.entries(calculatorState).map(([context, calculator]) => {
       return (
         <WheelInput
-          value={calculator.value}
-          range={calculator.range}
+          ownState={{ [context]: calculator }}
           key={uuidv4()}
           handleWheelInput={handleWheelInput}
         />
       );
     });
   }
-
-  useEffect(() => {}, []);
 
   return (
     <div className={Class("Calculator")}>

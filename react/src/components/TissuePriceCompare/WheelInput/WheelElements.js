@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
-export const WheelElements = ({ value, range }) => {
+export const WheelElements = ({ range }) => {
   const clickedWheelElement = (event) => {
     event.target.scrollIntoView({ behavior: "smooth", block: "end" });
   };
@@ -27,19 +27,13 @@ export const WheelElements = ({ value, range }) => {
     return wheelRange;
   };
 
-  return (
-    <div className="Wheel" value={value}>
-      {createWheelElements() || ""}
-    </div>
-  );
+  return <div className="Wheel">{createWheelElements() || ""}</div>;
 };
 
 WheelElements.defaultProps = {
   range: 0,
-  value: 0,
 };
 
 WheelElements.propTypes = {
   range: PropTypes.number,
-  value: PropTypes.number,
 };
