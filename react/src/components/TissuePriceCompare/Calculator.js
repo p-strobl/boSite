@@ -35,7 +35,7 @@ export const Calculator = ({
     );
   };
 
-  function handleWheelInput(input) {
+  function calculatorHandleWheelInput(input) {
     console.log("input", input);
   }
 
@@ -45,7 +45,7 @@ export const Calculator = ({
         <WheelInput
           ownState={{ [context]: calculator }}
           key={uuidv4()}
-          handleWheelInput={handleWheelInput}
+          calculatorHandleWheelInput={calculatorHandleWheelInput}
         />
       );
     });

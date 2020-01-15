@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
@@ -7,41 +7,53 @@ import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
-export const WheelInput = ({ context, value, range }) => {
+export const WheelInput = ({ ownState, calculatorHandleWheelInput }) => {
+  const [wheelValue, setWheelValue] = useState(Object.values(ownState)[0].value);
+  const wheelContext = Object.keys(ownState)[0];
+  const wheelRange = Object.values(ownState)[0].range;
   const inputWheelRef = useRef(null);
   let wheel = null;
   let observer = null;
 
   function focusDefaultValue() {
-    if (typeof value === "undefined") return;
+    if (typeof wheelValue === "undefined") return;
 
-    wheel[value].focus();
+    wheel[wheelValue].focus();
   }
 
-  function clearInputWheelClass(entryWheel) {
-    const elementWheel = entryWheel.querySelectorAll(".Wheel__Number");
-    elementWheel.forEach((element) => {
+  function removeActiveClassFromAllWheels(entry) {
+    if (typeof entry === "undefined") return;
+
+    const wheelElements = entry.parentNode.querySelectorAll(".Wheel__Number");
+    wheelElements.forEach((element) => {
       element.classList.remove("Wheel__Number--Active");
     });
   }
 
-  function handleActiveWheelElement(entry) {
-    const entryParent = entry.parentNode;
+  function addActiveClassToWheel(entry) {
+    if (typeof entry === "undefined") return;
 
-    clearInputWheelClass(entryParent);
     entry.classList.add("Wheel__Number--Active");
+  }
+
+  function handleWheelIntersection(entry) {
+    if (typeof entry === "undefined") return;
+
+    removeActiveClassFromAllWheels(entry);
+    console.log("wheelContext", wheelContext);
+    setWheelValue(parseInt(entry.textContent, 10));
+    calculatorHandleWheelInput(wheelValue);
+
+    addActiveClassToWheel(entry);
   }
 
   function observerIsIntersecting(entries) {
     if (typeof entries === "undefined") return;
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const entryContext = entry.target.closest(".WheelContainer").dataset.context;
 
-        handleActiveWheelElement(entry.target);
-        // console.log("entry.target", entry.target.closest(".WheelContainer").dataset.context);
-        // this.getWheelInput(parseInt(entry.target.textContent, 10), this.setter);
-      }
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      handleWheelIntersection(entry.target);
     });
   }
 
@@ -52,12 +64,16 @@ export const WheelInput = ({ context, value, range }) => {
     });
 
     wheel.forEach((element) => {
+      if (typeof element === "undefined") return;
+
       observer.observe(element);
     });
   }
 
   function clearInputWheelObserver() {
     wheel.forEach((element) => {
+      if (typeof element === "undefined") return;
+
       observer.unobserve(element);
     });
   }
@@ -65,34 +81,29 @@ export const WheelInput = ({ context, value, range }) => {
   useEffect(() => {
     wheel = inputWheelRef.current.querySelectorAll(".Wheel__Number");
 
+    initIntersectionObserver();
     focusDefaultValue();
 
     return () => {
       clearInputWheelObserver();
     };
-  }, []);
+  }, [wheelValue]);
 
   return (
-    <div
-      className={Class("WheelContainer")}
-      key={uuidv4()}
-      ref={inputWheelRef}
-      data-context={context}>
+    <div className={Class("WheelContainer")} key={uuidv4()} ref={inputWheelRef}>
       <ArrowButton direction="Prev" wheel={inputWheelRef} />
-      <WheelElements value={value} range={range} />
+      <WheelElements range={wheelRange} />
       <ArrowButton direction="Next" wheel={inputWheelRef} />
     </div>
   );
 };
 
 WheelInput.defaultProps = {
-  context: "",
-  value: 0,
-  range: 0,
+  ownState: {},
+  calculatorHandleWheelInput: () => {},
 };
 
 WheelInput.propTypes = {
-  context: PropTypes.string,
-  value: PropTypes.number,
-  range: PropTypes.number,
+  ownState: PropTypes.PropTypes.objectOf(PropTypes.object),
+  calculatorHandleWheelInput: PropTypes.func,
 };
