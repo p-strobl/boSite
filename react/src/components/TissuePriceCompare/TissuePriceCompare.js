@@ -13,7 +13,7 @@ import "./TissuePriceCompare.scss";
 export const TissuePriceCompare = () => {
   useTitle("boSite's Tissue Calculator");
 
-  const [globalCalculatorState, setGlobalCalculatorState] = useState([
+  const [priceCompareState, setPriceCompareState] = useState([
     {
       wheel: {
         roll: {
@@ -29,7 +29,7 @@ export const TissuePriceCompare = () => {
           range: 5,
         },
       },
-      price: 0,
+      // price: 0,
     },
     {
       wheel: {
@@ -46,9 +46,11 @@ export const TissuePriceCompare = () => {
           range: 5,
         },
       },
-      price: 0,
+      // price: 0,
     },
   ]);
+
+  console.log("priceCompareState", priceCompareState);
 
   const emoji = (
     <Emoji classs="TissuePriceCompareHeadline__" emojiClass="Emoji__Tissue" label="tissue" />
@@ -63,13 +65,15 @@ export const TissuePriceCompare = () => {
   };
 
   const createCalculator = () => {
-    return globalCalculatorState.map((state, index) => {
+    // console.log("priceCompareState", priceCompareState);
+    return priceCompareState.map((calculator, index) => {
+      console.log("calculator.wheel", calculator.wheel);
       return (
         <Calculator
           key={uuidv4()}
-          ownCalculatorState={state.wheel}
-          ownCalculatorIndex={index}
-          setGlobalCalculatorState={setGlobalState}
+          globalCalculatorState={calculator.wheel}
+          calculatorIndex={index}
+          setGlobalCalculatorState={setPriceCompareState}
         />
       );
     });
@@ -78,9 +82,7 @@ export const TissuePriceCompare = () => {
   return (
     <div className={Class("TissuePriceCompare")}>
       <Headline parentClass="TissuePriceCompare" h1={headline} h2={subHeadline} />
-      <div className={Class("TissuePriceCompare__CalculatorContainer")}>
-        {globalCalculatorState && createCalculator()}
-      </div>
+      <div className={Class("TissuePriceCompare__CalculatorContainer")}>{createCalculator()}</div>
     </div>
   );
 };

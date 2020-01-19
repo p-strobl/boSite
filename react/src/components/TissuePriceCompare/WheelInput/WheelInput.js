@@ -7,7 +7,8 @@ import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
-export const WheelInput = ({ ownState, calculatorHandleWheelInput }) => {
+export const WheelInput = ({ ownState, handleCalculatorWheelOutput }) => {
+  // console.log("ownState", Object.values(ownState)[0].value);
   const [wheelValue, setWheelValue] = useState(Object.values(ownState)[0].value);
   const wheelContext = Object.keys(ownState)[0];
   const wheelRange = Object.values(ownState)[0].range;
@@ -40,9 +41,9 @@ export const WheelInput = ({ ownState, calculatorHandleWheelInput }) => {
     if (typeof entry === "undefined") return;
 
     removeActiveClassFromAllWheels(entry);
-    console.log("wheelContext", wheelContext);
+
     setWheelValue(parseInt(entry.textContent, 10));
-    calculatorHandleWheelInput(wheelValue);
+    handleCalculatorWheelOutput({ wheelValue, wheelContext });
 
     addActiveClassToWheel(entry);
   }
@@ -100,10 +101,10 @@ export const WheelInput = ({ ownState, calculatorHandleWheelInput }) => {
 
 WheelInput.defaultProps = {
   ownState: {},
-  calculatorHandleWheelInput: () => {},
+  handleCalculatorWheelOutput: () => {},
 };
 
 WheelInput.propTypes = {
   ownState: PropTypes.PropTypes.objectOf(PropTypes.object),
-  calculatorHandleWheelInput: PropTypes.func,
+  handleCalculatorWheelOutput: PropTypes.func,
 };
