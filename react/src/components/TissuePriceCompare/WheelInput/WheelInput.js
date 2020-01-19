@@ -8,7 +8,7 @@ import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
 export const WheelInput = ({ ownState, handleCalculatorWheelOutput }) => {
-  // console.log("ownState", Object.values(ownState)[0].value);
+  console.log("ownState", ownState);
   const [wheelValue, setWheelValue] = useState(Object.values(ownState)[0].value);
   const wheelContext = Object.keys(ownState)[0];
   const wheelRange = Object.values(ownState)[0].range;
@@ -93,7 +93,7 @@ export const WheelInput = ({ ownState, handleCalculatorWheelOutput }) => {
   return (
     <div className={Class("WheelContainer")} key={uuidv4()} ref={inputWheelRef}>
       <ArrowButton direction="Prev" wheel={inputWheelRef} />
-      <WheelElements range={wheelRange} />
+      <WheelElements wheelContext={wheelContext} range={wheelRange} />
       <ArrowButton direction="Next" wheel={inputWheelRef} />
     </div>
   );

@@ -39,6 +39,8 @@ export const Calculator = ({
   function handleCalculatorWheelOutput(wheelOutput) {
     console.log("wheelOutput", wheelOutput);
     console.log("calculatorState", calculatorState);
+    const wheelStates = document.querySelectorAll(".Wheel__Number--Active");
+    console.log("wh", wheelStates);
     // console.log("wheelOutput", calculatorState);
     // console.log("calculatorState", [wheelOutput.wheelContext][0]);
     // setCalculatorState({
