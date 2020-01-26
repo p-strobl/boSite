@@ -14,7 +14,6 @@ export const Calculator = ({
   ownCalculatorIndex,
   setGlobalCalculatorState,
 }) => {
-  console.log("globalCalculatorState", globalCalculatorState);
   const [calculatorState, setCalculatorState] = useState(globalCalculatorState);
 
   const calculatePrice = () => {
@@ -36,29 +35,29 @@ export const Calculator = ({
     );
   };
 
-  function handleCalculatorWheelOutput(wheelOutput) {
-    console.log("wheelOutput", wheelOutput);
+  function handleCalculatorWheelOutput({ wheelValue, wheelContext }) {
+    // console.log("wheelOutput", wheelOutput);
     console.log("calculatorState", calculatorState);
-    const wheelStates = document.querySelectorAll(".Wheel__Number--Active");
-    console.log("wh", wheelStates);
-    // console.log("wheelOutput", calculatorState);
-    // console.log("calculatorState", [wheelOutput.wheelContext][0]);
-    // setCalculatorState({
-    //   ...calculatorState,
-    //   [calculatorState[wheelOutput.wheelContext]]: wheelOutput.wheelValue,
-    // });
-    // console.log("calculatorState", calculatorState);
+    // console.log("context", [calculatorState[wheelOutput.wheelContext].value]);
+    // const calc = document.querySelector(".Calculator__Input");
+    // const wheel = calc.querySelectorAll(".Wheel__Number--Active");
+    // console.log("wh", wheel);
+    console.log("wheelValue", wheelValue);
+    console.log("wheelContext", wheelContext);
+
+    const newState = {...calculatorState, { wheelContext: wheelValue }};
+    console.log("newState", newState);
+    // setCalculatorState(newWheelState);
+    console.log("calculatorState", calculatorState);
   }
 
   function createInputWheels() {
     // console.log("calculatorState", calculatorState);
     return Object.entries(calculatorState).map(([context, calculator]) => {
-      // console.log("calculator", calculator);
+      console.log("calculator", calculator);
+      console.log("context", context);
       return (
-        <WheelInput
-          ownState={{ [context]: calculator }}
-          key={uuidv4()}
-          handleCalculatorWheelOutput={handleCalculatorWheelOutput}
+        <WheelInput ownState={{ [context]: calculator }} key={uuidv4()} handleCalculatorWheelOutput={handleCalculatorWheelOutput}
         />
       );
     });
@@ -69,7 +68,8 @@ export const Calculator = ({
   return (
     <div className={Class("Calculator")}>
       <div className={Class("Calculator__Item Calculator__Input")}>
-        {calculatorState && createInputWheels()}
+        {calculatorState && 
+        createInputWheels()}
         {/*<PriceInput*/}
         {/*  context="priceContext"*/}
         {/*  dataDefaultValue={defaultValues.price}*/}

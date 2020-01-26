@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\pstrh\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\pstrh\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="D:\Code-Projects\Privat\boSite" t="IncludeFlat">
+      <e p="node_modules\@babel\plugin-proposal-class-properties" t="IncludeRecursive" />
+      <e p="node_modules\@types" t="IncludeRecursive" />
+      <e p="node_modules\babel-eslint" t="IncludeRecursive" />
+      <e p="node_modules\eslint" t="IncludeRecursive" />
+      <e p="node_modules\eslint-config-airbnb" t="IncludeRecursive" />
+      <e p="node_modules\eslint-config-prettier" t="IncludeRecursive" />
+      <e p="node_modules\eslint-config-prettier-react" t="IncludeRecursive" />
+      <e p="node_modules\eslint-import-resolver-alias" t="IncludeRecursive" />
+      <e p="node_modules\eslint-import-resolver-webpack" t="IncludeRecursive" />
+      <e p="node_modules\eslint-plugin-html" t="IncludeRecursive" />
+      <e p="node_modules\eslint-plugin-import" t="IncludeRecursive" />
+      <e p="node_modules\eslint-plugin-jsx-a11y" t="IncludeRecursive" />
+      <e p="node_modules\eslint-plugin-prettier" t="IncludeRecursive" />
+      <e p="node_modules\eslint-plugin-react" t="IncludeRecursive" />
+      <e p="node_modules\eslint-plugin-react-hooks" t="IncludeRecursive" />
+      <e p="node_modules\prettier-eslint" t="IncludeRecursive" />
+      <e p="node_modules\prettier-eslint-cli" t="IncludeRecursive" />
+      <e p="node_modules\prettier-stylelint" t="IncludeRecursive" />
+      <e p="react\node_modules\@babel\core" t="IncludeRecursive" />
+      <e p="react\node_modules\@babel\parser" t="IncludeRecursive" />
+      <e p="react\node_modules\@babel\preset-env" t="IncludeRecursive" />
+      <e p="react\node_modules\@babel\preset-react" t="IncludeRecursive" />
+      <e p="react\node_modules\@babel\types" t="IncludeRecursive" />
+      <e p="react\node_modules\@jest\console" t="IncludeRecursive" />
+      <e p="react\node_modules\@jest\fake-timers" t="IncludeRecursive" />
+      <e p="react\node_modules\@jest\source-map" t="IncludeRecursive" />
+      <e p="react\node_modules\@jest\test-result" t="IncludeRecursive" />
+      <e p="react\node_modules\@jest\types" t="IncludeRecursive" />
+      <e p="react\node_modules\@types" t="IncludeRecursive">
+        <e p="anymatch" t="IncludeRecursive" />
+        <e p="babel__generator" t="IncludeRecursive" />
+        <e p="babel__template" t="IncludeRecursive" />
+        <e p="babel__traverse" t="IncludeRecursive" />
+        <e p="events" t="IncludeRecursive" />
+        <e p="istanbul-lib-coverage" t="IncludeRecursive" />
+        <e p="istanbul-lib-report" t="IncludeRecursive" />
+        <e p="minimatch" t="IncludeRecursive" />
+        <e p="node" t="IncludeRecursive" />
+        <e p="source-list-map" t="IncludeRecursive" />
+        <e p="tapable" t="IncludeRecursive" />
+        <e p="uglify-js" t="IncludeRecursive" />
+        <e p="webpack-sources" t="IncludeRecursive" />
+        <e p="yargs-parser" t="IncludeRecursive" />
+      </e>
+      <e p="react\node_modules\autoprefixer" t="IncludeRecursive" />
+      <e p="react\node_modules\axios" t="IncludeRecursive" />
+      <e p="react\node_modules\babel-jest" t="IncludeRecursive" />
+      <e p="react\node_modules\babel-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\chalk" t="IncludeRecursive" />
+      <e p="react\node_modules\classnames" t="IncludeRecursive" />
+      <e p="react\node_modules\clean-webpack-plugin" t="IncludeRecursive" />
+      <e p="react\node_modules\css-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\dotenv-expand" t="IncludeRecursive" />
+      <e p="react\node_modules\file-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\hookrouter" t="IncludeRecursive" />
+      <e p="react\node_modules\html-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\html-webpack-plugin" t="IncludeRecursive" />
+      <e p="react\node_modules\jest" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-haste-map" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-message-util" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-mock" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-resolve" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-serializer" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-util" t="IncludeRecursive" />
+      <e p="react\node_modules\jest-worker" t="IncludeRecursive" />
+      <e p="react\node_modules\mini-css-extract-plugin" t="IncludeRecursive" />
+      <e p="react\node_modules\node-sass" t="IncludeRecursive" />
+      <e p="react\node_modules\path" t="IncludeRecursive" />
+      <e p="react\node_modules\postcss-cli" t="IncludeRecursive" />
+      <e p="react\node_modules\pretty-quick" t="IncludeRecursive" />
+      <e p="react\node_modules\prop-types" t="IncludeRecursive" />
+      <e p="react\node_modules\react" t="IncludeRecursive" />
+      <e p="react\node_modules\react-dom" t="IncludeRecursive" />
+      <e p="react\node_modules\react-scripts" t="IncludeRecursive" />
+      <e p="react\node_modules\realpath-native" t="IncludeRecursive" />
+      <e p="react\node_modules\sass-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\source-map" t="IncludeRecursive" />
+      <e p="react\node_modules\ttf-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\url-loader" t="IncludeRecursive" />
+      <e p="react\node_modules\uuid" t="IncludeRecursive" />
+      <e p="react\node_modules\webpack" t="IncludeRecursive" />
+      <e p="react\node_modules\webpack-cli" t="IncludeRecursive" />
+      <e p="react\node_modules\webpack-dev-server" t="IncludeRecursive" />
+      <e p="react\node_modules\worker-farm" t="IncludeRecursive" />
+      <e p="server\node_modules\body-parser" t="IncludeRecursive" />
+      <e p="server\node_modules\cors" t="IncludeRecursive" />
+      <e p="server\node_modules\dotenv" t="IncludeRecursive" />
+      <e p="server\node_modules\express" t="IncludeRecursive" />
+      <e p="server\node_modules\mongoose" t="IncludeRecursive" />
+      <e p="server\node_modules\morgan" t="IncludeRecursive" />
+      <e p="server\node_modules\multer" t="IncludeRecursive" />
+      <e p="server\node_modules\nodemon" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
