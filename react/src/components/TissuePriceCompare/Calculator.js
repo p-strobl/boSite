@@ -45,8 +45,8 @@ export const Calculator = ({
     console.log("wheelValue", wheelValue);
     console.log("wheelContext", wheelContext);
 
-    const newState = {...calculatorState, { wheelContext: wheelValue }};
-    console.log("newState", newState);
+    // const newState = {...calculatorState, { wheelContext: wheelValue }};
+    // console.log("newState", newState);
     // setCalculatorState(newWheelState);
     console.log("calculatorState", calculatorState);
   }
@@ -57,11 +57,15 @@ export const Calculator = ({
       console.log("calculator", calculator);
       console.log("context", context);
       return (
-        <WheelInput ownState={{ [context]: calculator }} key={uuidv4()} handleCalculatorWheelOutput={handleCalculatorWheelOutput} />
+        <WheelInput
+          ownState={{ [context]: calculator }}
+          key={uuidv4()}
+          handleCalculatorWheelOutput={handleCalculatorWheelOutput}
+        />
       );
     });
   }
-  
+
   useEffect(() => {}, [calculatorState]);
 
   return (
