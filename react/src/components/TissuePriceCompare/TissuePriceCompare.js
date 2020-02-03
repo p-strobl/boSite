@@ -28,8 +28,10 @@ export const TissuePriceCompare = () => {
           value: 3,
           range: 5,
         },
+        price: {
+          value: 0,
+        },
       },
-      // price: 0,
     },
     {
       wheel: {
@@ -45,8 +47,10 @@ export const TissuePriceCompare = () => {
           value: 3,
           range: 5,
         },
+        price: {
+          value: 0,
+        },
       },
-      // price: 0,
     },
   ]);
 

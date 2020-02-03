@@ -57,19 +57,17 @@ export const Calculator = ({
       console.log("calculator", calculator);
       console.log("context", context);
       return (
-        <WheelInput ownState={{ [context]: calculator }} key={uuidv4()} handleCalculatorWheelOutput={handleCalculatorWheelOutput}
-        />
+        <WheelInput ownState={{ [context]: calculator }} key={uuidv4()} handleCalculatorWheelOutput={handleCalculatorWheelOutput} />
       );
     });
   }
-
+  
   useEffect(() => {}, [calculatorState]);
 
   return (
     <div className={Class("Calculator")}>
       <div className={Class("Calculator__Item Calculator__Input")}>
-        {calculatorState && 
-        createInputWheels()}
+        {calculatorState && createInputWheels()}
         {/*<PriceInput*/}
         {/*  context="priceContext"*/}
         {/*  dataDefaultValue={defaultValues.price}*/}
