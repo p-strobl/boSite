@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import Class from "classnames";
 import uuidv4 from "uuid/v4";
 
@@ -11,67 +12,26 @@ import "./Calculator.scss";
 
 export const Calculator = ({
   globalCalculatorState,
-  ownCalculatorIndex,
+  calculatorIndex,
   setGlobalCalculatorState,
 }) => {
-  const [calculatorState, setCalculatorState] = useState(globalCalculatorState);
-
-  const calculatePrice = () => {
-    if (rollCount === 0 || sheetCount === 0 || layerCount === 0 || price === 0) return 0;
-
-    const totalLayerCount = rollCount * sheetCount * layerCount;
-    const singleLayerPrice = price / totalLayerCount;
-
-    return singleLayerPrice.toFixed(6) / 100;
-  };
-
-  const toLocalPrice = (value) => {
-    if (value === 0) return;
-
-    setLocalPrice(
-      value.toLocaleString("de-DE", {
-        minimumFractionDigits: 6,
-      }),
-    );
-  };
-
-  function handleCalculatorWheelOutput({ wheelValue, wheelContext }) {
-    // console.log("wheelOutput", wheelOutput);
-    console.log("calculatorState", calculatorState);
-    // console.log("context", [calculatorState[wheelOutput.wheelContext].value]);
-    // const calc = document.querySelector(".Calculator__Input");
-    // const wheel = calc.querySelectorAll(".Wheel__Number--Active");
-    // console.log("wh", wheel);
-    console.log("wheelValue", wheelValue);
-    console.log("wheelContext", wheelContext);
-
-    // const newState = {...calculatorState, { wheelContext: wheelValue }};
-    // console.log("newState", newState);
-    // setCalculatorState(newWheelState);
-    console.log("calculatorState", calculatorState);
-  }
-
   function createInputWheels() {
-    // console.log("calculatorState", calculatorState);
-    return Object.entries(calculatorState).map(([context, calculator]) => {
-      console.log("calculator", calculator);
-      console.log("context", context);
+    return Object.entries(globalCalculatorState).map(([context, calculator]) => {
       return (
         <WheelInput
           ownState={{ [context]: calculator }}
+          ownCalculatorIndex={calculatorIndex}
           key={uuidv4()}
-          handleCalculatorWheelOutput={handleCalculatorWheelOutput}
+          setGlobalCalculatorState={setGlobalCalculatorState}
         />
       );
     });
   }
 
-  useEffect(() => {}, [calculatorState]);
-
   return (
     <div className={Class("Calculator")}>
       <div className={Class("Calculator__Item Calculator__Input")}>
-        {calculatorState && createInputWheels()}
+        {globalCalculatorState && createInputWheels()}
         {/*<PriceInput*/}
         {/*  context="priceContext"*/}
         {/*  dataDefaultValue={defaultValues.price}*/}
@@ -86,4 +46,16 @@ export const Calculator = ({
       </div>
     </div>
   );
+};
+
+Calculator.defaultProps = {
+  globalCalculatorState: {},
+  calculatorIndex: 0,
+  setGlobalCalculatorState: () => {},
+};
+
+Calculator.propTypes = {
+  globalCalculatorState: PropTypes.PropTypes.objectOf(PropTypes.object),
+  calculatorIndex: PropTypes.number,
+  setGlobalCalculatorState: PropTypes.func,
 };

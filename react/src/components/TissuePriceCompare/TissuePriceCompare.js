@@ -54,8 +54,6 @@ export const TissuePriceCompare = () => {
     },
   ]);
 
-  console.log("priceCompareState", priceCompareState);
-
   const emoji = (
     <Emoji classs="TissuePriceCompareHeadline__" emojiClass="Emoji__Tissue" label="tissue" />
   );
@@ -64,20 +62,38 @@ export const TissuePriceCompare = () => {
     <h2 className={Class("TissuePriceCompare__SubHeadline")}>Vergleichen Sie die {emoji} Preise</h2>
   );
 
-  const setGlobalState = (value) => {
-    console.log("CalculatorState", value);
+  // const calculatePrice = () => {
+  //   if (rollCount === 0 || sheetCount === 0 || layerCount === 0 || price === 0) return 0;
+  //
+  //   const totalLayerCount = rollCount * sheetCount * layerCount;
+  //   const singleLayerPrice = price / totalLayerCount;
+  //
+  //   return singleLayerPrice.toFixed(6) / 100;
+  // };
+  //
+  // const toLocalPrice = (value) => {
+  //   if (value === 0) return;
+  //
+  //   setLocalPrice(
+  //     value.toLocaleString("de-DE", {
+  //       minimumFractionDigits: 6,
+  //     }),
+  //   );
+  // };
+
+  const setGlobalState = (wheelValue) => {
+    console.log("wheelValue", wheelValue);
+    console.log("priceCompareState", priceCompareState);
   };
 
   const createCalculator = () => {
-    // console.log("priceCompareState", priceCompareState);
     return priceCompareState.map((calculator, index) => {
-      console.log("calculator.wheel", calculator.wheel);
       return (
         <Calculator
           key={uuidv4()}
           globalCalculatorState={calculator.wheel}
           calculatorIndex={index}
-          setGlobalCalculatorState={setPriceCompareState}
+          setGlobalCalculatorState={setGlobalState}
         />
       );
     });

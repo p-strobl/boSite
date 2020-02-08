@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import Class from "classnames";
 import PropTypes from "prop-types";
+import Class from "classnames";
 import uuidv4 from "uuid/v4";
 
 import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
-export const WheelInput = ({ ownState, handleCalculatorWheelOutput }) => {
+export const WheelInput = ({ ownState, ownCalculatorIndex, setGlobalCalculatorState }) => {
   const [wheelValue, setWheelValue] = useState(Object.values(ownState)[0].value);
   const wheelContext = Object.keys(ownState)[0];
   const wheelRange = Object.values(ownState)[0].range;
@@ -42,7 +42,7 @@ export const WheelInput = ({ ownState, handleCalculatorWheelOutput }) => {
     removeActiveClassFromAllWheels(entry);
 
     setWheelValue(parseInt(entry.textContent, 10));
-    handleCalculatorWheelOutput({ wheelValue, wheelContext });
+    setGlobalCalculatorState({ wheelValue, wheelContext, ownCalculatorIndex });
 
     addActiveClassToWheel(entry);
   }
@@ -100,10 +100,12 @@ export const WheelInput = ({ ownState, handleCalculatorWheelOutput }) => {
 
 WheelInput.defaultProps = {
   ownState: {},
-  handleCalculatorWheelOutput: () => {},
+  ownCalculatorIndex: 0,
+  setGlobalCalculatorState: () => {},
 };
 
 WheelInput.propTypes = {
   ownState: PropTypes.PropTypes.objectOf(PropTypes.object),
-  handleCalculatorWheelOutput: PropTypes.func,
+  ownCalculatorIndex: PropTypes.number,
+  setGlobalCalculatorState: PropTypes.func,
 };
