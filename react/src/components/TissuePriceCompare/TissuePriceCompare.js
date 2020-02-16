@@ -82,12 +82,30 @@ export const TissuePriceCompare = () => {
   // };
 
   const setGlobalState = (wheelValue) => {
-    console.log("wheelValue", wheelValue);
-    console.log("priceCompareState", priceCompareState);
+    setPriceCompareState((previousState) => {
+      return {
+        ...previousState,
+        [previousState[wheelValue.ownCalculatorIndex]]: {
+          ...previousState.wheel,
+          wheel: {
+            ...previousState[wheelValue.wheelContext],
+            [wheelValue.wheelContext]: {
+              ...previousState[wheelValue.wheelContext.value],
+              [wheelValue.wheelContext.value]: wheelValue.value,
+            },
+          },
+        },
+      };
+    });
   };
+  console.log("priceCompareState", priceCompareState);
 
   const createCalculator = () => {
+    console.log("priceCompareState", priceCompareState);
+
     return priceCompareState.map((calculator, index) => {
+      console.log("calculator", calculator);
+      console.log("index", index);
       return (
         <Calculator
           key={uuidv4()}
