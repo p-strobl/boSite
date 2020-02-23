@@ -7,7 +7,7 @@ import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
 import { WheelElements } from "./WheelElements";
 
-export const WheelInput = ({ ownState, ownCalculatorIndex, setGlobalCalculatorState }) => {
+export const WheelInput = ({ ownState, calculatorIndex, setGlobalCalculatorState }) => {
   const [wheelValue, setWheelValue] = useState(Object.values(ownState)[0].value);
   const wheelContext = Object.keys(ownState)[0];
   const wheelRange = Object.values(ownState)[0].range;
@@ -42,7 +42,7 @@ export const WheelInput = ({ ownState, ownCalculatorIndex, setGlobalCalculatorSt
     removeActiveClassFromAllWheels(entry);
 
     setWheelValue(parseInt(entry.textContent, 10));
-    setGlobalCalculatorState({ wheelValue, wheelContext, ownCalculatorIndex });
+    setGlobalCalculatorState({ wheelValue, wheelContext, calculatorIndex });
 
     addActiveClassToWheel(entry);
   }
@@ -100,12 +100,12 @@ export const WheelInput = ({ ownState, ownCalculatorIndex, setGlobalCalculatorSt
 
 WheelInput.defaultProps = {
   ownState: {},
-  ownCalculatorIndex: 0,
+  calculatorIndex: 0,
   setGlobalCalculatorState: () => {},
 };
 
 WheelInput.propTypes = {
   ownState: PropTypes.PropTypes.objectOf(PropTypes.object),
-  ownCalculatorIndex: PropTypes.number,
+  calculatorIndex: PropTypes.number,
   setGlobalCalculatorState: PropTypes.func,
 };

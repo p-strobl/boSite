@@ -20,7 +20,7 @@ export const Calculator = ({
       return (
         <WheelInput
           ownState={{ [context]: calculator }}
-          ownCalculatorIndex={calculatorIndex}
+          calculatorIndex={calculatorIndex}
           key={uuidv4()}
           setGlobalCalculatorState={setGlobalCalculatorState}
         />

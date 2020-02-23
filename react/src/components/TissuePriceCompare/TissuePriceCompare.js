@@ -44,7 +44,7 @@ export const TissuePriceCompare = () => {
           range: 200,
         },
         layer: {
-          value: 3,
+          value: 1,
           range: 5,
         },
         price: {
@@ -81,31 +81,74 @@ export const TissuePriceCompare = () => {
   //   );
   // };
 
+  // const [reservation, setReservation] = useState({
+  //   roomId: "",
+  //   customer: {
+  //     email: null,
+  //     first_name: null,
+  //     last_name: null,
+  //     telephone: null,
+  //   },
+  // });
+  //
+  // const guest = {
+  //   email: "john@gmail.com",
+  //   first_name: "John",
+  //   last_name: "Don",
+  //   telephone: "020-8694-5463",
+  // };
+  //
+  // setReservation((preReservation) => {
+  //   return {
+  //     ...preReservation,
+  //     customer: {
+  //       ...preReservation.customer,
+  //       first_name: guest.first_name,
+  //       last_name: guest.last_name,
+  //       email: guest.email,
+  //       telephone: guest.telephone,
+  //     },
+  //   };
+  // });
+  //
+  // console.log("reservation", reservation);
+
   const setGlobalState = (wheelValue) => {
     setPriceCompareState((previousState) => {
-      return {
+      const bla = {
         ...previousState,
-        [previousState[wheelValue.ownCalculatorIndex]]: {
-          ...previousState.wheel,
+        [wheelValue.calculatorIndex]: {
+          ...previousState[wheelValue.calculatorIndex],
           wheel: {
-            ...previousState[wheelValue.wheelContext],
+            ...previousState[wheelValue.calculatorIndex].wheel,
             [wheelValue.wheelContext]: {
-              ...previousState[wheelValue.wheelContext.value],
-              [wheelValue.wheelContext.value]: wheelValue.value,
+              ...previousState[wheelValue.wheelContext],
+              [wheelValue.wheelContext.value]: {
+                ...previousState[wheelValue.wheelContext.value],
+                [wheelValue.wheelContext.value]: wheelValue.wheelContext.value,
+              },
             },
           },
         },
       };
+      console.log("", Object.keys(bla).map((i) => bla[i]));
+      // return Object.keys(bla).map((i) => bla[i]);
     });
   };
-  console.log("priceCompareState", priceCompareState);
+
+  // [wheelValue.wheelContext]: {
+  // ...previousState[wheelValue.wheelContext],
+  //       [wheelValue.wheelContext]: {
+  //   ...previousState[wheelValue.wheelContext].value,
+  //         [wheelValue.wheelContext.value]: wheelValue.value,
+  //   },
+  // },
 
   const createCalculator = () => {
     console.log("priceCompareState", priceCompareState);
-
     return priceCompareState.map((calculator, index) => {
-      console.log("calculator", calculator);
-      console.log("index", index);
+      // console.log("calculator", calculator);
+      // console.log("index", index);
       return (
         <Calculator
           key={uuidv4()}
