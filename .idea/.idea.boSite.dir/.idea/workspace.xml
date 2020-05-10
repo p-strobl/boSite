@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee64171e-f39f-4312-8a17-4c4e7700f3af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/ArrowButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelElements.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelElements.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput.scss" />
+        <option value="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelElements.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.js" />
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Code-Projects\Privat\boSite\.idea\.idea.boSite.dir\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="boSite" pattern="file[riderModule]:react//*" />
+  </component>
+  <component name="ProjectId" id="1bNMfjJMRSwFG8ElXdGwGwjBdGY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Code-Projects\Privat\boSite\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee64171e-f39f-4312-8a17-4c4e7700f3af" name="Default Changelist" comment="" />
+      <created>1588468203593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588468203593</updated>
+      <workItem from="1588468208023" duration="848000" />
+      <workItem from="1588518413904" duration="2152000" />
+      <workItem from="1588522484957" duration="4000" />
+      <workItem from="1588522645304" duration="446000" />
+      <workItem from="1588548596876" duration="378000" />
+      <workItem from="1588553679906" duration="1465000" />
+      <workItem from="1588555714391" duration="392000" />
+      <workItem from="1588689696081" duration="3068000" />
+      <workItem from="1589031226024" duration="1985000" />
+      <workItem from="1589068553718" duration="4815000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="865" y="469" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1588555824749">
+      <screen x="0" y="0" width="3440" height="1379" />
+    </state>
+    <state x="865" y="469" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588555824749" />
+    <state x="836" y="472" width="662" height="667" key="EditFileWatcherDialog" timestamp="1588556053742">
+      <screen x="0" y="0" width="3440" height="1379" />
+    </state>
+    <state x="836" y="472" width="662" height="667" key="EditFileWatcherDialog/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556053742" />
+    <state x="636" y="332" key="SettingsEditor" timestamp="1588556081003">
+      <screen x="0" y="0" width="3440" height="1379" />
+    </state>
+    <state x="636" y="332" key="SettingsEditor/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556081003" />
+    <state x="759" y="352" key="scopes" timestamp="1588556046118">
+      <screen x="0" y="0" width="3440" height="1379" />
+    </state>
+    <state x="759" y="352" key="scopes/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556046118" />
+  </component>
+</project>
