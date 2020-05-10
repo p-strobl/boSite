@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee64171e-f39f-4312-8a17-4c4e7700f3af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/ArrowButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelElements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Footer/Footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +23,7 @@
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelElements.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.js" />
+        <option value="$PROJECT_DIR$/react/src/components/Footer/Footer.js" />
       </list>
     </option>
   </component>
@@ -95,6 +88,7 @@
       <workItem from="1588689696081" duration="3068000" />
       <workItem from="1589031226024" duration="1985000" />
       <workItem from="1589068553718" duration="4815000" />
+      <workItem from="1589073729308" duration="131000" />
     </task>
     <servers />
   </component>
