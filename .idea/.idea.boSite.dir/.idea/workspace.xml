@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ec2cc0f-ffdc-4949-89bf-39179224ab5e" name="Default Changelist" comment="" />
+    <list default="true" id="7ec2cc0f-ffdc-4949-89bf-39179224ab5e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +30,9 @@
         <option value="$PROJECT_DIR$/react/src/components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.scss" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.scss" />
-        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.scss" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
       </list>
     </option>
   </component>
@@ -68,7 +72,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Code-Projects\Privat\boSite\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -84,7 +88,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ee64171e-f39f-4312-8a17-4c4e7700f3af" name="Default Changelist" comment="" />
+      <changelist id="7ec2cc0f-ffdc-4949-89bf-39179224ab5e" name="Default Changelist" comment="" />
       <created>1588468203593</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -102,6 +106,7 @@
       <workItem from="1589073729308" duration="784000" />
       <workItem from="1589201675348" duration="600000" />
       <workItem from="1590016436639" duration="1000" />
+      <workItem from="1591050363764" duration="1552000" />
     </task>
     <servers />
   </component>
@@ -132,9 +137,10 @@
       <screen x="0" y="0" width="3440" height="1379" />
     </state>
     <state x="836" y="472" width="662" height="667" key="EditFileWatcherDialog/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556053742" />
-    <state x="636" y="332" key="SettingsEditor" timestamp="1588556081003">
+    <state x="636" y="332" key="SettingsEditor" timestamp="1591051128874">
       <screen x="0" y="0" width="3440" height="1379" />
     </state>
+    <state x="636" y="332" key="SettingsEditor/0.0.3440.1379/3440.202.1920.1050@0.0.3440.1379" timestamp="1591051128874" />
     <state x="636" y="332" key="SettingsEditor/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556081003" />
     <state x="759" y="352" key="scopes" timestamp="1588556046118">
       <screen x="0" y="0" width="3440" height="1379" />
