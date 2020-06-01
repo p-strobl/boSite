@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,7 @@
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.scss" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.scss" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
       </list>
     </option>
@@ -106,7 +108,7 @@
       <workItem from="1589073729308" duration="784000" />
       <workItem from="1589201675348" duration="600000" />
       <workItem from="1590016436639" duration="1000" />
-      <workItem from="1591050363764" duration="1552000" />
+      <workItem from="1591050363764" duration="4754000" />
     </task>
     <servers />
   </component>
@@ -142,6 +144,10 @@
     </state>
     <state x="636" y="332" key="SettingsEditor/0.0.3440.1379/3440.202.1920.1050@0.0.3440.1379" timestamp="1591051128874" />
     <state x="636" y="332" key="SettingsEditor/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556081003" />
+    <state x="1060" y="138" width="1708" height="1057" key="find.popup" timestamp="1591055049423">
+      <screen x="0" y="0" width="3440" height="1379" />
+    </state>
+    <state x="1060" y="138" width="1708" height="1057" key="find.popup/0.0.3440.1379/3440.202.1920.1050@0.0.3440.1379" timestamp="1591055049423" />
     <state x="759" y="352" key="scopes" timestamp="1588556046118">
       <screen x="0" y="0" width="3440" height="1379" />
     </state>
