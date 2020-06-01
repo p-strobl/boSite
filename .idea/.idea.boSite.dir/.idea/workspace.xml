@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee64171e-f39f-4312-8a17-4c4e7700f3af" name="Default Changelist" comment="">
+    <list default="true" id="7ec2cc0f-ffdc-4949-89bf-39179224ab5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +26,13 @@
         <option value="$PROJECT_DIR$/react/src/scss/variable/_font-icons.scss" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputRange.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelElements.js" />
-        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/WheelInput/WheelInput.js" />
         <option value="$PROJECT_DIR$/react/src/components/Footer/Footer.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" />
       </list>
     </option>
   </component>
@@ -33,6 +42,12 @@
         <option value="D:\Code-Projects\Privat\boSite\.idea\.idea.boSite.dir\.idea" />
       </set>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="NamedScopeManager">
     <scope name="boSite" pattern="file[riderModule]:react//*" />
