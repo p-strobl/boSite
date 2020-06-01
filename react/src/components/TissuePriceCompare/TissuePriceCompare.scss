@@ -9,16 +9,16 @@
 }
 
 .TissuePriceCompare__CalculatorContainer {
-  @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
   @include grid(repeat(12, 1fr), 1vw);
   @include grid-span(column, 12);
   @include module-margin-top();
-  background-color: $c_grey-001;
-  padding: 30px 0;
+  padding: 30px 10px;
   position: relative;
 
   @include respond-as-of(1) {
+    @include box-shadow(0, 0, 10, -5, rgba($c_vanta-black, 1));
     @include grid-column(2, 12);
+    background-color: $c_grey-001;
     border-radius: 20px;
     padding: 60px 0;
   }
@@ -29,5 +29,9 @@
 }
 
 .TissuePriceCalculator__Item {
-  grid-column: 2 / 12;
+  grid-column: 1 / 13;
+
+  @include respond-as-of(1) {
+    grid-column: 2 / 12;
+  }
 }

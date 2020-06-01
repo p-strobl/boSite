@@ -70,7 +70,7 @@ export const TissuePriceCalculator = () => {
           context="priceContext"
           dataDefaultValue={defaultValues.price}
           defaultValue={price}
-          placeholder="Kaufpreis"
+          placeholder="0,00€ Kaufpreis"
           text="Kaufpreis"
         />
       </div>

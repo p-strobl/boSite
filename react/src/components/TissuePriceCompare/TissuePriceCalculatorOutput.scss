@@ -10,6 +10,7 @@
 
 .TissuePriceCalculatorOutput__Currency {
   @include responsive-font-size(15, 30);
+  margin-left: 2px;
 }
 
 .TissuePriceCalculatorOutput__Text {

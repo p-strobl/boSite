@@ -18,6 +18,7 @@ export const TissuePriceCalculatorInputNumber = ({
       element.target.value = inputValue.replace(numberRegex, "");
       return false;
     }
+    
     return true;
   };
 
@@ -27,15 +28,16 @@ export const TissuePriceCalculatorInputNumber = ({
     if (inputValue.length === 0) return false;
 
     const inputIsValid = numbersOnly(element, inputValue);
-
+    
     if (inputIsValid) {
       const digitRegex = /\D/g;
       const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
 
       element.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
-
+      
       return parseFloat(inputValue);
     }
+
     return false;
   };
 
