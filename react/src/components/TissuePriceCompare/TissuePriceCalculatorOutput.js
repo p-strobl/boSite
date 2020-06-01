@@ -168,5 +168,5 @@ TissuePriceCalculatorOutput.defaultProps = {
 };
 
 TissuePriceCalculatorOutput.propTypes = {
-  totalPrice: PropTypes.number,
+  totalPrice: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

@@ -18,23 +18,25 @@ export const TissuePriceCalculatorInputNumber = ({
       element.target.value = inputValue.replace(numberRegex, "");
       return false;
     }
-    
+
     return true;
   };
 
   const validatePrice = (element) => {
-    const inputValue = element.target.value;
+    let inputValue = element.target.value;
 
     if (inputValue.length === 0) return false;
 
     const inputIsValid = numbersOnly(element, inputValue);
-    
+
     if (inputIsValid) {
       const digitRegex = /\D/g;
       const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
 
-      element.target.value = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
-      
+      inputValue = inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ",");
+      element.target.value = inputValue;
+      inputValue = inputValue.replace(",", ".");
+
       return parseFloat(inputValue);
     }
 
