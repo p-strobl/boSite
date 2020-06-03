@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ec2cc0f-ffdc-4949-89bf-39179224ab5e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/context/RouteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/context/RouteContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +18,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/react/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/package.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -35,6 +39,12 @@
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorInputNumber.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculatorOutput.js" />
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
+        <option value="$PROJECT_DIR$/server/package.json" />
+        <option value="$PROJECT_DIR$/server/api/controller/landing/landing_GET.js" />
+        <option value="$PROJECT_DIR$/server/App.js" />
+        <option value="$PROJECT_DIR$/react/src/routes/routes.js" />
+        <option value="$PROJECT_DIR$/react/src/context/RouteContext.js" />
+        <option value="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" />
       </list>
     </option>
   </component>
@@ -63,6 +73,7 @@
   <component name="PropertiesComponent">
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -109,6 +120,7 @@
       <workItem from="1589201675348" duration="600000" />
       <workItem from="1590016436639" duration="1000" />
       <workItem from="1591050363764" duration="4754000" />
+      <workItem from="1591139334866" duration="5073000" />
     </task>
     <servers />
   </component>
