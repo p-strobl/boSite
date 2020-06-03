@@ -1,4 +1,4 @@
-import uuidv4 from "uuid/v4";
+import uuid from "uuid/v4";
 import React, { useEffect, useState } from "react";
 import { useTitle } from "hookrouter";
 import axios from "axios";
@@ -15,32 +15,32 @@ export const RecipesPage = () => {
 
   useTitle("boSite's Recipes");
 
-  // useEffect(() => {
-  //   axios
-  //     .get(url)
-  //     .then((result) => {
-  //       setData(result.data.collection);
-  //       setLoading(false);
-  //     })
-  //     .catch((fetchedError) => {
-  //       setError({
-  //         message: fetchedError,
-  //         state: true,
-  //       });
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((result) => {
+        setData(result.data.collection);
+        setLoading(false);
+      })
+      .catch((fetchedError) => {
+        setError({
+          message: fetchedError,
+          state: true,
+        });
+      });
+  }, []);
 
   return (
     <>
       <h1>Recipes Site</h1>
-      {/*{data.map((item) => {*/}
-      {/*  return (*/}
-      {/*    <div key={uuidv4()}>*/}
-      {/*      <h1 key={uuidv4()}>{item.title}</h1>*/}
-      {/*      <p key={uuidv4()}>{item.infos.info}</p>*/}
-      {/*    </div>*/}
-      {/*  );*/}
-      {/*})}*/}
+      {data.map((item) => {
+        return (
+          <div key={uuid()}>
+            <h1 key={uuid()}>{item.title}</h1>
+            <p key={uuid()}>{item.infos.info}</p>
+          </div>
+        );
+      })}
     </>
   );
 };

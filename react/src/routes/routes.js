@@ -20,14 +20,14 @@ export function Routes() {
   const audioSampleBox = () => {
     return <AudioSampleBox />;
   };
-  // const recipesPage = () => {
-  //   return <RecipesPage />;
-  // };
+  const recipesPage = () => {
+    return <RecipesPage />;
+  };
   const routes = {
     [routerContext.routes.home.path]: landingPage,
     [routerContext.routes.tissueCounter.path]: tissueCounterPage,
     [routerContext.routes.audioSampleBox.path]: audioSampleBox,
-    // [routerContext.routes.recipes.path]: recipesPage,
+    [routerContext.routes.recipes.path]: recipesPage,
   };
   const usedRoutes = useRoutes(routes);
 

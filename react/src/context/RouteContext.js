@@ -27,10 +27,12 @@ export default createContext({
       title: "Audio Sample Box",
       imageSrc: audioSampleBox,
     },
-    // },
-    // recipes: {
-    //   path: "/recipes",
-    //   title: "Recipes",
-    // },
-  },
+    recipes: {
+      emoji: "Recipes",
+      name: "recipes",
+      path: "/recipes",
+      title: "Rezepte",
+      imageSrc: recipes,
+    },
+  }
 });
