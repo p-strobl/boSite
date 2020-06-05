@@ -19,6 +19,7 @@
       <e p="node_modules\eslint-plugin-prettier" t="IncludeRecursive" />
       <e p="node_modules\eslint-plugin-react" t="IncludeRecursive" />
       <e p="node_modules\eslint-plugin-react-hooks" t="IncludeRecursive" />
+      <e p="node_modules\npm-run-all" t="IncludeRecursive" />
       <e p="node_modules\prettier-eslint" t="IncludeRecursive" />
       <e p="node_modules\prettier-eslint-cli" t="IncludeRecursive" />
       <e p="node_modules\prettier-stylelint" t="IncludeRecursive" />

@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ec2cc0f-ffdc-4949-89bf-39179224ab5e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.boSite.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Emoji/Emoji.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/context/RouteContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/context/RouteContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/scss/variable/_emojis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/scss/variable/_emojis.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/controller/landing/landing_GET.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/controller/landing/landing_GET.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/routes/index.js" afterDir="false" />
@@ -39,12 +51,20 @@
         <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCalculator.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/react/src/routes/routes.js" />
-        <option value="$PROJECT_DIR$/react/src/context/RouteContext.js" />
-        <option value="$PROJECT_DIR$/server/api/controller/landing/landing_GET.js" />
         <option value="$PROJECT_DIR$/server/api/routes/recipes/index.js" />
+        <option value="$PROJECT_DIR$/server/App.js" />
+        <option value="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.js" />
+        <option value="$PROJECT_DIR$/react/src/components/SiteTiles/SiteTile.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/Header/HeaderLink.js" />
+        <option value="$PROJECT_DIR$/react/src/context/RouteContext.js" />
+        <option value="$PROJECT_DIR$/react/src/components/TissuePriceCompare/TissuePriceCompare.js" />
+        <option value="$PROJECT_DIR$/react/src/scss/variable/_emojis.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/Emoji/Emoji.scss" />
+        <option value="$PROJECT_DIR$/react/src/components/Header/HeaderLink.scss" />
+        <option value="$PROJECT_DIR$/server/api/controller/landing/landing_GET.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/react/src/components/RecipesPage/RecipesPage.js" />
         <option value="$PROJECT_DIR$/server/api/routes/index.js" />
-        <option value="$PROJECT_DIR$/server/App.js" />
       </list>
     </option>
   </component>
@@ -121,7 +141,8 @@
       <workItem from="1590016436639" duration="1000" />
       <workItem from="1591050363764" duration="4754000" />
       <workItem from="1591139334866" duration="5873000" />
-      <workItem from="1591309858002" duration="5179000" />
+      <workItem from="1591309858002" duration="7214000" />
+      <workItem from="1591387641049" duration="4417000" />
     </task>
     <servers />
   </component>
@@ -165,5 +186,9 @@
       <screen x="0" y="0" width="3440" height="1379" />
     </state>
     <state x="759" y="352" key="scopes/0.0.3440.1379/3440.202.1920.1080@0.0.3440.1379" timestamp="1588556046118" />
+    <state x="1383" y="309" width="672" height="678" key="search.everywhere.popup" timestamp="1591317696220">
+      <screen x="0" y="0" width="3440" height="1379" />
+    </state>
+    <state x="1383" y="309" width="672" height="678" key="search.everywhere.popup/0.0.3440.1379/3440.202.1920.1050@0.0.3440.1379" timestamp="1591317696220" />
   </component>
 </project>
