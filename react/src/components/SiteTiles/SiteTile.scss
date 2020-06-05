@@ -16,12 +16,24 @@
   }
 }
 
+.SiteTile:nth-child(n+3) {
+  @include respond-as-of(1) {
+    margin-top: 20px;
+  }
+}
+
 .SiteTile__Anchor {
   width: 100%;
 }
 
+.SiteTile__ImageWrapper {
+  @include flex();
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 .no-touch .SiteTile__Anchor:hover .SiteTile__Image {
-  @include transform(scale, 1.03);
+  @include transform(scale, 1.1);
 }
 
 .SiteTile__Image {
@@ -29,6 +41,7 @@
   height: 200px;
   min-width: 100%;
   object-fit: cover;
+  transition: transform 0.25s;
   width: 100%;
 
   @include respond-as-of(2) {
@@ -39,6 +52,7 @@
 .SiteTileText__Container {
   @include flex();
   align-items: center;
+  margin-top: 5px;
 }
 
 .SiteTileText__Emoji {

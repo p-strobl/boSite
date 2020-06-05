@@ -17,7 +17,7 @@ export default createContext({
       emoji: "Tissue",
       name: "tissueCounter",
       path: "/tissue-counter",
-      title: "Tissue Price Compare",
+      title: "Papier Kosten Vergleich",
       imageSrc: tissueCounter,
     },
     audioSampleBox: {

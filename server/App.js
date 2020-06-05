@@ -14,7 +14,7 @@ const app = express();
 app.use(morgan("dev"));
 
 // Static route
-app.use(express.static(path.join(__dirname, "/client/dist")));
+// app.use(express.static(path.join(__dirname, "/client/dist")));
 // app.use("/uploads", express.static("uploads"));
 
 // Handle cors errors

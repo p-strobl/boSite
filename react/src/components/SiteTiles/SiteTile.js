@@ -23,13 +23,15 @@ export function SiteTile({ site }) {
   return (
     <div className={Class("SiteTile")}>
       <A className={Class("SiteTile__Anchor")} href={site.path}>
-        <Image
-          alt="Page Icon"
-          classs="SiteTile__Image"
-          imageSrc={site.imageSrc}
-          src={Base64.dataImageSvgXml}
-          title={site.title}
-        />
+        <div className="SiteTile__ImageWrapper">
+          <Image
+            alt="Page Icon"
+            classs="SiteTile__Image"
+            imageSrc={site.imageSrc}
+            src={Base64.dataImageSvgXml}
+            title={site.title}
+          />
+        </div>
         <div className="SiteTileText__Container">
           {emoji}
           <h4 className={Class("SiteTile__Text")}>{site.title}</h4>

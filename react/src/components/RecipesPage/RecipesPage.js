@@ -11,9 +11,9 @@ export const RecipesPage = () => {
     state: false,
   });
 
-  const url = "http://localhost:5000/recipes";
+  const url = "http://localhost:5000/api/recipes";
 
-  useTitle("boSite's Recipes");
+  useTitle("boSite's Rezepte");
 
   useEffect(() => {
     axios
