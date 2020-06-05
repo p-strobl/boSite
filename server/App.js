@@ -15,7 +15,7 @@ app.use(morgan("dev"));
 
 // Static route
 app.use(express.static(path.join(__dirname, "/client/dist")));
-app.use("/uploads", express.static("uploads"));
+// app.use("/uploads", express.static("uploads"));
 
 // Handle cors errors
 app.use(cors());
@@ -34,13 +34,8 @@ mongoose
     console.log("Connection to MongoDB failed", err);
   });
 
-// Serve client folder
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/dist/index.html"));
-});
-
 // Handle routes
-app.use("/", routes);
+app.use(routes);
 
 // Handle Errors
 app.use((req, res, next) => {
