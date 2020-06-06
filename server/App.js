@@ -10,11 +10,21 @@ const routes = require("./api/routes");
 
 const app = express();
 
+// Connect to MongoDB
+mongoose
+    .connect(process.env.DB, { dbName: "mongodb", useNewUrlParser: true })
+    .then(() => {
+      console.log("Connection to MongoDB successful");
+    })
+    .catch((err) => {
+      console.log("Connection to MongoDB failed", err);
+    });
+
 // Route logging
 app.use(morgan("dev"));
 
 // Static route
-// app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(__dirname, "/client/dist")));
 // app.use("/uploads", express.static("uploads"));
 
 // Handle cors errors
@@ -24,18 +34,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Connect to MongoDB
-mongoose
-  .connect(process.env.DB, { dbName: "mongodb", useNewUrlParser: true })
-  .then(() => {
-    console.log("Connection to MongoDB successful");
-  })
-  .catch((err) => {
-    console.log("Connection to MongoDB failed", err);
-  });
-
 // Handle routes
 app.use(routes);
+
+app.get('*', function(req, res) {
+  res.sendFile('index.html', {root: path.join(__dirname, '/client/dist/')});
+});
 
 // Handle Errors
 app.use((req, res, next) => {
