@@ -1,7 +1,7 @@
 import uuid from "uuid/v4";
 import React, { useEffect, useState } from "react";
-import { useTitle } from "hookrouter";
 import axios from "axios";
+import { useTitle } from "hookrouter";
 
 export const RecipesPage = () => {
   const [data, setData] = useState([]);

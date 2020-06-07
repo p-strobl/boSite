@@ -1,7 +1,8 @@
 const Recipe = require("../../models/recipe");
 
 module.exports = (request, response) => {
-  Recipe.find()
+  Recipe
+    .find()
     .select("_id name title ingredients infos preparation")
     .exec()
     .then((result) => {
@@ -18,7 +19,7 @@ module.exports = (request, response) => {
             preparation: item.preparation,
             request: {
               type: "GET",
-              url: `http://localhost:5000/recipes/${item.id}`,
+              url: `http://localhost:5000/api/recipes/${item.id}`,
             },
           };
         }),
