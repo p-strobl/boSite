@@ -10,20 +10,6 @@ const routes = require("./api/routes");
 
 const app = express();
 
-// Route logging
-app.use(morgan("dev"));
-
-// Static route
-app.use(express.static(path.join(__dirname, "/client/dist")));
-// app.use("/uploads", express.static("uploads"));
-
-// Handle cors errors
-app.use(cors());
-
-// Pars body
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
 // Connect to MongoDB
 mongoose
   .connect(process.env.DB, { dbName: "mongodb", useNewUrlParser: true })
@@ -34,8 +20,26 @@ mongoose
     console.log("Connection to MongoDB failed", err);
   });
 
+// Route logging
+app.use(morgan("dev"));
+
+// Static route
+app.use(express.static(path.join(__dirname, "/client/dist")));
+
+// Handle cors errors
+app.use(cors());
+
+// Pars body
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // Handle routes
 app.use(routes);
+// app.use("/uploads", express.static("uploads"));
+
+app.get('*', function(req, res) {
+  res.sendFile('index.html', {root: path.join(__dirname, '/client/dist/')});
+});
 
 // Handle Errors
 app.use((req, res, next) => {

@@ -19,7 +19,7 @@ export function HeaderLink({ linkList, routePath, routeTitle }) {
       <A
         className={Class(`Header__Link Header__Link--${capitalizeFirstLetter(linkList)}`)}
         href={routePath}
-        title={`Back to ${routeTitle}`}
+        title={routeTitle}
         key={uuidv4()}
       />
     </div>

@@ -9,12 +9,12 @@ import { Emoji } from "~components/Emoji";
 import "./TissuePriceCompare.scss";
 
 export const TissuePriceCompare = () => {
-  useTitle("boSite's Tissue Counter");
+  useTitle("boSite's Papier Kosten Vergleich");
 
   const emoji = (
     <Emoji classs="TissuePriceCompareHeadline__" emojiClass="Emoji__Tissue" label="tissue" />
   );
-  const headline = <h1 className={Class("TissuePriceCompare__Headline")}>Tissue Price Compare</h1>;
+  const headline = <h1 className={Class("TissuePriceCompare__Headline")}>Papier Kosten Vergleich</h1>;
   const subHeadline = (
     <h2 className={Class("TissuePriceCompare__SubHeadline")}>Vergleichen Sie die {emoji} Preise</h2>
   );

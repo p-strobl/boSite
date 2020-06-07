@@ -1,7 +1,7 @@
 import uuid from "uuid/v4";
 import React, { useEffect, useState } from "react";
-import { useTitle } from "hookrouter";
 import axios from "axios";
+import { useTitle } from "hookrouter";
 
 export const RecipesPage = () => {
   const [data, setData] = useState([]);
@@ -11,9 +11,9 @@ export const RecipesPage = () => {
     state: false,
   });
 
-  const url = "http://localhost:5000/recipes";
+  const url = "http://localhost:5000/api/recipes";
 
-  useTitle("boSite's Recipes");
+  useTitle("boSite's Rezepte");
 
   useEffect(() => {
     axios

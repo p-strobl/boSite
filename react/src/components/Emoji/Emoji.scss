@@ -21,6 +21,10 @@
     content: $emoji_headphone;
   }
 
+  &.Emoji__Recipes:after {
+    content: $emoji_recipes;
+  }
+
   &.Emoji__MusicNote:after {
     content: $emoji_music-note;
   }
