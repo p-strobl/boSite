@@ -11,13 +11,13 @@ export const RecipesPage = () => {
     state: false,
   });
 
-  const url = "http://localhost:5000/api/recipes";
+  const recipesApiRoute = "/api/recipes";
 
   useTitle("boSite's Rezepte");
 
   useEffect(() => {
     axios
-      .get(url)
+      .get(recipesApiRoute)
       .then((result) => {
         setData(result.data.collection);
         setLoading(false);
