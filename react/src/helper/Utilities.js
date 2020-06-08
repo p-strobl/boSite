@@ -15,7 +15,7 @@ export const splitOnCamelCase = (string) => {
 };
 
 export const determineIfTouchDevice = () => {
-  return !(
+  return (
     "ontouchstart" in window ||
     navigator.MaxTouchPoints > 0 ||
     navigator.msMaxTouchPoints > 0
