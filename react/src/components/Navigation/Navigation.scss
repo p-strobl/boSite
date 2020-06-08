@@ -1,6 +1,6 @@
 @import "~scss/_utility.scss";
 
-.Header__Navigation {
+.Navigation {
   @include grid(repeat(4, 1fr), 5px, auto, 5px);
   @include grid-column(2, 12);
   margin-bottom: 5px;

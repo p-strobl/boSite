@@ -1,16 +1,16 @@
 @import "~scss/_utility.scss";
 
-.Header__LinkList {
+.Navigation__LinkList {
   @include flex();
   background-color: transparent;
   border-radius: 3px;
   justify-content: center;
 }
 
-.no-touch .Header__LinkList:hover .Header__Link {
+.no-touch .Navigation__LinkList:hover .Navigation__Link {
   @include transform(scale, 1.1);
 }
 
-.Header__LinkList--active {
+.Navigation__LinkList--active {
   background-color: rgba($c_sunny-bo, 0.4);
 }

@@ -1,17 +1,17 @@
 @import "~scss/_utility.scss";
 
-.Header__Link {
+.Navigation__Link {
   border-radius: inherit;
   font-family: "LigatureSymbols", sans-serif;
   text-align: center;
   width: 100%;
 }
 
-.no-touch .Header__Link:hover {
+.no-touch .Navigation__Link:hover {
   color: $c_sunny-bo;
 }
 
-.Header__Link:before {
+.Navigation__Link:before {
   @include responsive-font-size(25, 25);
   @include box-shadow(0, 0, 8, -5, rgba($c_vanta-black, 0.8));
   border-radius: inherit;
@@ -23,18 +23,18 @@
   }
 }
 
-.Header__Link--Home:before {
+.Navigation__Link--Home:before {
   content: $emoji_toolbox;
 }
 
-.Header__Link--AudioSampleBox:before {
+.Navigation__Link--AudioSampleBox:before {
   content: $emoji_headphone;
 }
 
-.Header__Link--TissueCounter:before {
+.Navigation__Link--TissueCounter:before {
   content: $emoji_tissue;
 }
 
-.Header__Link--Recipes:before {
+.Navigation__Link--Recipes:before {
   content: $emoji_recipes;
 }

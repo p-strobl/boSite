@@ -1,18 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import Class from "classnames";
 
-import "./HeaderNavigation.scss";
+import "./Navigation.scss";
 
 import { determineIfTouchDevice } from "~src/helper/Utilities";
-import { HeaderLinkList } from "./HeaderLinkList";
+import { NavigationLinkList } from "./NavigationLinkList";
 
-export function HeaderNavigation() {
+export function Navigation() {
 
-  const headerNavigationRef = useRef(null);
+  const navigationRef = useRef(null);
   let header = null;
   let headerNavigation = null;
   let observer = null;
-  let sheet = document.styleSheets[0];
 
   function handleIntersection(entry) {
     if (typeof entry === "undefined") return;
@@ -51,7 +50,7 @@ export function HeaderNavigation() {
 
   useEffect(() => {
     if (determineIfTouchDevice()) {
-      headerNavigation = headerNavigationRef.current;
+      headerNavigation = navigationRef.current;
       header = headerNavigation.closest(".Header");
       
       initIntersectionObserver();
@@ -63,8 +62,8 @@ export function HeaderNavigation() {
   }, []);
   
   return (
-    <nav className={Class("Header__Navigation")} ref={headerNavigationRef}>
-      <HeaderLinkList />
+    <nav className={Class("Navigation")} ref={navigationRef}>
+      <NavigationLinkList />
     </nav>
   );
 }

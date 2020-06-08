@@ -1,21 +1,21 @@
-import uuidv4 from "uuid/v4";
+import uuid from "uuid/v4";
 import React, { useContext } from "react";
 import { usePath } from "hookrouter";
 
 import RouterContext from "~context/RouteContext";
 
-import { HeaderLink } from "./HeaderLink";
+import { NavigationLink } from "./NavigationLink";
 
-import "./HeaderLinkList.scss";
+import "./NavigationLinkList.scss";
 
-export function HeaderLinkList() {
+export function NavigationLinkList() {
   const routerContext = useContext(RouterContext);
   const currentPath = usePath();
-  const headerLinks = Object.entries(routerContext.routes).map(
+  const navigationLinks = Object.entries(routerContext.routes).map(
     ([routeObjectKey, routeObjectValue]) => {
       return (
-        <HeaderLink
-          key={uuidv4()}
+        <NavigationLink
+          key={uuid()}
           linkList={routeObjectKey}
           currentPath={currentPath}
           routePath={routeObjectValue.path}
@@ -25,5 +25,5 @@ export function HeaderLinkList() {
     },
   );
 
-  return <>{headerLinks}</>;
+  return <>{navigationLinks}</>;
 }

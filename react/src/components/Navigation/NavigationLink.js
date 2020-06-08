@@ -6,18 +6,18 @@ import { A, usePath } from "hookrouter";
 
 import { capitalizeFirstLetter } from "~src/helper/Utilities";
 
-import "./HeaderLink.scss";
+import "./NavigationLink.scss";
 
-export function HeaderLink({ linkList, routePath, routeTitle }) {
+export function NavigationLink({ linkList, routePath, routeTitle }) {
   const currentPath = usePath();
   return (
     <div
-      className={Class(`Header__LinkList Header__LinkList--${capitalizeFirstLetter(linkList)}`, {
-        "Header__LinkList--active": currentPath === routePath,
+      className={Class(`Navigation__LinkList Navigation__LinkList--${capitalizeFirstLetter(linkList)}`, {
+        "Navigation__LinkList--active": currentPath === routePath,
       })}
       key={uuidv4()}>
       <A
-        className={Class(`Header__Link Header__Link--${capitalizeFirstLetter(linkList)}`)}
+        className={Class(`Navigation__Link Navigation__Link--${capitalizeFirstLetter(linkList)}`)}
         href={routePath}
         title={routeTitle}
         key={uuidv4()}
@@ -26,13 +26,13 @@ export function HeaderLink({ linkList, routePath, routeTitle }) {
   );
 }
 
-HeaderLink.defaultProps = {
+NavigationLink.defaultProps = {
   linkList: "",
   routePath: "",
   routeTitle: "",
 };
 
-HeaderLink.propTypes = {
+NavigationLink.propTypes = {
   linkList: PropTypes.string,
   routePath: PropTypes.string,
   routeTitle: PropTypes.string,
