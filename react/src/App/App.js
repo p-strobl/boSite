@@ -9,8 +9,10 @@ import { determineIfTouchDevice } from "~src/helper/Utilities";
 import { GridLayer } from "~components/GridLayer";
 import { BoundingBar } from "~components/BoundingBar";
 import { Header } from "~components/Header";
-import { Footer } from "~components/Footer";
 import { Main } from "~components/Main";
+import { Footer } from "~components/Footer";
+import { MobileNavigation } from "~components/MobileNavigation";
+
 
 import "./App.scss";
 
@@ -29,6 +31,7 @@ export function App() {
       <Main />
       <BoundingBar />
       <Footer />
+      <MobileNavigation />
     </div>
   );
 }

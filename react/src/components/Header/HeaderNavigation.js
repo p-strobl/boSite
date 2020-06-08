@@ -35,7 +35,7 @@ export function HeaderNavigation() {
 
   function initIntersectionObserver() {
     observer = new IntersectionObserver(observerIsIntersecting, {
-      threshold: [1],
+      threshold: [0],
     });
     
     observer.observe(headerNavigation);
