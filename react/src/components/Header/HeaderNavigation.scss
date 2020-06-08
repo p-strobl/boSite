@@ -1,15 +1,17 @@
 @import "~scss/_utility.scss";
 
 .Header__Navigation {
-  @include flex();
-  @include grid-column(5, 12);
-  align-items: center;
-
+  @include grid(repeat(4, 1fr), 5px, auto, 5px);
+  @include grid-column(2, 12);
+  margin-bottom: 5px;
   position: relative;
-  justify-content: flex-end;
 
   @include respond-as-of(1) {
+    @include flex();
     @include grid-column(4, 13);
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     padding-left: 20px;
   }
 }

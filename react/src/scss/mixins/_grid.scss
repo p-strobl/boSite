@@ -4,7 +4,7 @@
 //   grid-template-columns: repeat($columns, 1fr);
 // }
 
-// @include grid(repeat(12, 1fr), 1vw);
+// @include grid(repeat(4, 1fr), 5px, auto, 5px);
 @mixin grid($columns: "", $colGap: "", $row: "", $rowGap: "") {
   display: grid;
 
@@ -16,10 +16,10 @@
   }
 
   @if $row != ""  {
-    grid-template-columns: $row;
+    grid-template-rows: $row;
   }
   @if $rowGap != "" {
-    grid-column-gap: $rowGap;
+    grid-row-gap: $rowGap;
   }
 }
 

@@ -1,6 +1,7 @@
 @import "~scss/_utility.scss";
 
 .Header__Link {
+  border-radius: inherit;
   font-family: "LigatureSymbols", sans-serif;
   text-align: center;
   width: 100%;
@@ -13,7 +14,7 @@
 .Header__Link:before {
   @include responsive-font-size(25, 25);
   @include box-shadow(0, 0, 8, -5, rgba($c_vanta-black, 0.8));
-  border-radius: 5px;
+  border-radius: inherit;
   display: block;
   padding: 10px;
 

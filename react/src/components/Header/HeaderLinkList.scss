@@ -3,23 +3,14 @@
 .Header__LinkList {
   @include flex();
   background-color: transparent;
+  border-radius: 3px;
   justify-content: center;
-}
-
-.Header__LinkList:nth-child(n+2) {
-  margin-left: 1px;
 }
 
 .no-touch .Header__LinkList:hover .Header__Link {
   @include transform(scale, 1.1);
 }
 
-.Header__LinkList--active:after {
-  @include responsive-font-size(25, 25);
-  bottom: -18px;
-  color: $c_grey-004;
-  content: $i_arrow-up;
-  display: block;
-  font-family: "LigatureSymbols", sans-serif;
-  position: absolute;
+.Header__LinkList--active {
+  background-color: rgba($c_sunny-bo, 0.4);
 }
