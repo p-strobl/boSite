@@ -7,7 +7,6 @@ import { determineIfTouchDevice } from "~src/helper/Utilities";
 import { NavigationLinkList } from "./NavigationLinkList";
 
 export function Navigation() {
-
   const navigationRef = useRef(null);
   let header = null;
   let headerNavigation = null;
@@ -56,9 +55,6 @@ export function Navigation() {
       mobileNavigation = app.querySelector(".MobileNavigation");
       mobileNavigationButton = app.querySelector(".MobileNavigation__ToggleButton");
       navigationLinkList = app.querySelector(".MobileNavigation__LinkList");
-      
-      console.log('mobileNavigationButton', mobileNavigationButton);
-      console.log('navigationLinkList', navigationLinkList);
       
       initIntersectionObserver();
   
