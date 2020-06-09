@@ -13,7 +13,7 @@ export function NavigationLink({ linkList, routePath, routeTitle }) {
   return (
     <div
       className={Class(`Navigation__LinkList Navigation__LinkList--${capitalizeFirstLetter(linkList)}`, {
-        "Navigation__LinkList--active": currentPath === routePath,
+        "Navigation__LinkList--Active": currentPath === routePath,
       })}
       key={uuidv4()}>
       <A

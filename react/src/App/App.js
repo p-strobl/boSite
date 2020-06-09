@@ -31,7 +31,7 @@ export function App() {
       <Main />
       <BoundingBar />
       <Footer />
-      <MobileNavigation />
+      {determineIfTouchDevice() && <MobileNavigation />}
     </div>
   );
 }

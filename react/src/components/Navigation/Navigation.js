@@ -12,22 +12,22 @@ export function Navigation() {
   let header = null;
   let headerNavigation = null;
   let observer = null;
-
-  function handleIntersection(entry) {
-    if (typeof entry === "undefined") return;
-    
-    console.log('entry', entry);
-  }
-
+  let app = null;
+  let mobileNavigation = null;
+  let mobileNavigationButton = null;
+  let navigationLinkList = null;
+  
   function observerIsIntersecting(entries) {
     if (typeof entries === "undefined") return;
 
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
-        console.log('out', );
-        handleIntersection(entry);
+        mobileNavigation.classList.add("MobileNavigation--Active");
       } else {
-        console.log('in', );
+        
+        mobileNavigation.classList.remove("MobileNavigation--Active");
+        mobileNavigationButton.classList.remove("MobileNavigation__ToggleButton--Open");
+        navigationLinkList.classList.remove("MobileNavigation__LinkList--Active");
       }
     });
   }
@@ -52,6 +52,13 @@ export function Navigation() {
     if (determineIfTouchDevice()) {
       headerNavigation = navigationRef.current;
       header = headerNavigation.closest(".Header");
+      app = headerNavigation.closest(".App");
+      mobileNavigation = app.querySelector(".MobileNavigation");
+      mobileNavigationButton = app.querySelector(".MobileNavigation__ToggleButton");
+      navigationLinkList = app.querySelector(".MobileNavigation__LinkList");
+      
+      console.log('mobileNavigationButton', mobileNavigationButton);
+      console.log('navigationLinkList', navigationLinkList);
       
       initIntersectionObserver();
   
