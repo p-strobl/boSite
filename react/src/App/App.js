@@ -5,7 +5,7 @@ import "~server-assets/images/favicon.png";
 import "~assets/fonts";
 
 import "~src/helper/ExpandPrototype";
-import { determineIfTouchDevice } from "~src/helper/Utilities";
+import { isTouchDevice } from "~src/helper/Utilities";
 import { GridLayer } from "~components/GridLayer";
 import { BoundingBar } from "~components/BoundingBar";
 import { Header } from "~components/Header";
@@ -20,7 +20,7 @@ export function App() {
   const [ifIsTouchDevice, setIfIsTouchDevice] = useState(true);
 
   useEffect(() => {
-    setIfIsTouchDevice(determineIfTouchDevice());
+    setIfIsTouchDevice(isTouchDevice());
   }, []);
 
   return (
@@ -31,7 +31,7 @@ export function App() {
       <Main />
       <BoundingBar />
       <Footer />
-      {determineIfTouchDevice() && <MobileNavigation />}
+      {isTouchDevice() && <MobileNavigation />}
     </div>
   );
 }
