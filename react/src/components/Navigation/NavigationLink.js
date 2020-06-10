@@ -15,15 +15,22 @@ export function NavigationLink({ linkList, routePath, routeTitle }) {
     navigationLinkListActive: "Navigation__LinkList--Active",
     navigationLink: "Navigation__Link",
   };
-  
+
   return (
     <div
-      className={Class(`${uiClasses.navigationLinkList} ${uiClasses.navigationLinkList}--${capitalizeFirstLetter(linkList)}`, {
-        [`${uiClasses.navigationLinkListActive}`]: currentPath === routePath,
-      })}
+      className={Class(
+        `${uiClasses.navigationLinkList} ${uiClasses.navigationLinkList}--${capitalizeFirstLetter(
+          linkList,
+        )}`,
+        { [`${uiClasses.navigationLinkListActive}`]: currentPath === routePath },
+      )}
       key={uuid()}>
       <A
-        className={Class(`${uiClasses.navigationLink} ${uiClasses.navigationLink}--${capitalizeFirstLetter(linkList)}`)}
+        className={Class(
+          `${uiClasses.navigationLink} ${uiClasses.navigationLink}--${capitalizeFirstLetter(
+            linkList,
+          )}`,
+        )}
         href={routePath}
         title={routeTitle}
         key={uuid()}
