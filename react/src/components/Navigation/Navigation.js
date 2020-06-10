@@ -26,23 +26,9 @@ export function Navigation() {
     mobileNavigationActive: "MobileNavigation--Active",
     navigation: "Navigation",
     navigationLinkList: "MobileNavigation__LinkList",
-    navigationLinkListActive: "MobileNavigation__LinkList--Active"
+    navigationLinkListActive: "MobileNavigation__LinkList--Active",
   };
-  
-  const init = () => {
-    headerNavigation = navigationRef.current;
 
-    if (isTouchDevice()) {
-      header = headerNavigation.closest("." + uiClasses.header);
-      app = headerNavigation.closest("." +  uiClasses.app);
-      mobileNavigation = app.querySelector("." + uiClasses.mobileNavigation);
-      mobileNavigationButton = app.querySelector("." + uiClasses.mobileNavigationButton);
-      navigationLinkList = app.querySelector("." + uiClasses.navigationLinkList);
-
-      initIntersectionObserver();
-    }
-  };
-  
   function observerIsIntersecting(entries) {
     if (typeof entries === "undefined") return;
 
@@ -50,7 +36,6 @@ export function Navigation() {
       if (!entry.isIntersecting) {
         mobileNavigation.classList.add(uiClasses.mobileNavigationActive);
       } else {
-        
         mobileNavigation.classList.remove(uiClasses.mobileNavigationActive);
         mobileNavigationButton.classList.remove(uiClasses.mobileNavigationButtonOpen);
         navigationLinkList.classList.remove(uiClasses.navigationLinkListActive);
@@ -62,7 +47,7 @@ export function Navigation() {
     observer = new IntersectionObserver(observerIsIntersecting, {
       threshold: [0],
     });
-    
+
     observer.observe(headerNavigation);
   }
 
@@ -74,6 +59,20 @@ export function Navigation() {
     });
   }
 
+  const init = () => {
+    headerNavigation = navigationRef.current;
+
+    if (isTouchDevice()) {
+      header = headerNavigation.closest(`.${uiClasses.header}`);
+      app = headerNavigation.closest(`.${uiClasses.app}`);
+      mobileNavigation = app.querySelector(`.${uiClasses.mobileNavigation}`);
+      mobileNavigationButton = app.querySelector(`.${uiClasses.mobileNavigationButton}`);
+      navigationLinkList = app.querySelector(`.${uiClasses.navigationLinkList}`);
+
+      initIntersectionObserver();
+    }
+  };
+
   useEffect(() => {
     init();
 
@@ -81,7 +80,7 @@ export function Navigation() {
       clearIntersectionObserver();
     };
   }, []);
-  
+
   return (
     <nav className={Class(uiClasses.navigation)} ref={navigationRef}>
       <NavigationLinkList />
