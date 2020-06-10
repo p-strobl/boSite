@@ -13,7 +13,6 @@ import { Main } from "~components/Main";
 import { Footer } from "~components/Footer";
 import { MobileNavigation } from "~components/MobileNavigation";
 
-
 import "./App.scss";
 
 export function App() {
