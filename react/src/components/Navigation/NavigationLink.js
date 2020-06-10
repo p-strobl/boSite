@@ -1,4 +1,4 @@
-import uuidv4 from "uuid/v4";
+import uuid from "uuid/v4";
 import React from "react";
 import PropTypes from "prop-types";
 import Class from "classnames";
@@ -10,17 +10,23 @@ import "./NavigationLink.scss";
 
 export function NavigationLink({ linkList, routePath, routeTitle }) {
   const currentPath = usePath();
+  const uiClasses = {
+    navigationLinkList: "Navigation__LinkList",
+    navigationLinkListActive: "Navigation__LinkList--Active",
+    navigationLink: "Navigation__Link",
+  };
+  
   return (
     <div
-      className={Class(`Navigation__LinkList Navigation__LinkList--${capitalizeFirstLetter(linkList)}`, {
-        "Navigation__LinkList--Active": currentPath === routePath,
+      className={Class(`${uiClasses.navigationLinkList} ${uiClasses.navigationLinkList}--${capitalizeFirstLetter(linkList)}`, {
+        [`${uiClasses.navigationLinkListActive}`]: currentPath === routePath,
       })}
-      key={uuidv4()}>
+      key={uuid()}>
       <A
-        className={Class(`Navigation__Link Navigation__Link--${capitalizeFirstLetter(linkList)}`)}
+        className={Class(`${uiClasses.navigationLink} ${uiClasses.navigationLink}--${capitalizeFirstLetter(linkList)}`)}
         href={routePath}
         title={routeTitle}
-        key={uuidv4()}
+        key={uuid()}
       />
     </div>
   );
