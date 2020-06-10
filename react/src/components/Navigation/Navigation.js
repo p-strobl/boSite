@@ -38,6 +38,8 @@ export function Navigation() {
       mobileNavigation = app.querySelector("." + uiClasses.mobileNavigation);
       mobileNavigationButton = app.querySelector("." + uiClasses.mobileNavigationButton);
       navigationLinkList = app.querySelector("." + uiClasses.navigationLinkList);
+
+      initIntersectionObserver();
     }
   };
   
@@ -74,7 +76,6 @@ export function Navigation() {
 
   useEffect(() => {
     init();
-    initIntersectionObserver();
 
     return () => {
       clearIntersectionObserver();
