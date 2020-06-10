@@ -3,30 +3,55 @@ import Class from "classnames";
 
 import "./Navigation.scss";
 
-import { determineIfTouchDevice } from "~src/helper/Utilities";
+import { isTouchDevice } from "~src/helper/Utilities";
 import { NavigationLinkList } from "./NavigationLinkList";
 
 export function Navigation() {
+  let observer;
+  let header;
+  let headerNavigation;
+  let app;
+  let mobileNavigation;
+  let mobileNavigationButton;
+  let navigationLinkList;
+
   const navigationRef = useRef(null);
-  let header = null;
-  let headerNavigation = null;
-  let observer = null;
-  let app = null;
-  let mobileNavigation = null;
-  let mobileNavigationButton = null;
-  let navigationLinkList = null;
+  const uiClasses = {
+    app: "App",
+    header: "Header",
+    headerNavigation: "",
+    mobileNavigation: "MobileNavigation",
+    mobileNavigationButton: "MobileNavigation__ToggleButton",
+    mobileNavigationButtonOpen: "MobileNavigation__ToggleButton--Open",
+    mobileNavigationActive: "MobileNavigation--Active",
+    navigation: "Navigation",
+    navigationLinkList: "MobileNavigation__LinkList",
+    navigationLinkListActive: "MobileNavigation__LinkList--Active"
+  };
+  
+  const init = () => {
+    headerNavigation = navigationRef.current;
+
+    if (isTouchDevice()) {
+      header = headerNavigation.closest("." + uiClasses.header);
+      app = headerNavigation.closest("." +  uiClasses.app);
+      mobileNavigation = app.querySelector("." + uiClasses.mobileNavigation);
+      mobileNavigationButton = app.querySelector("." + uiClasses.mobileNavigationButton);
+      navigationLinkList = app.querySelector("." + uiClasses.navigationLinkList);
+    }
+  };
   
   function observerIsIntersecting(entries) {
     if (typeof entries === "undefined") return;
 
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
-        mobileNavigation.classList.add("MobileNavigation--Active");
+        mobileNavigation.classList.add(uiClasses.mobileNavigationActive);
       } else {
         
-        mobileNavigation.classList.remove("MobileNavigation--Active");
-        mobileNavigationButton.classList.remove("MobileNavigation__ToggleButton--Open");
-        navigationLinkList.classList.remove("MobileNavigation__LinkList--Active");
+        mobileNavigation.classList.remove(uiClasses.mobileNavigationActive);
+        mobileNavigationButton.classList.remove(uiClasses.mobileNavigationButtonOpen);
+        navigationLinkList.classList.remove(uiClasses.navigationLinkListActive);
       }
     });
   }
@@ -48,24 +73,16 @@ export function Navigation() {
   }
 
   useEffect(() => {
-    if (determineIfTouchDevice()) {
-      headerNavigation = navigationRef.current;
-      header = headerNavigation.closest(".Header");
-      app = headerNavigation.closest(".App");
-      mobileNavigation = app.querySelector(".MobileNavigation");
-      mobileNavigationButton = app.querySelector(".MobileNavigation__ToggleButton");
-      navigationLinkList = app.querySelector(".MobileNavigation__LinkList");
-      
-      initIntersectionObserver();
-  
-      return () => {
-        clearIntersectionObserver();
-      };
-    }
+    init();
+    initIntersectionObserver();
+
+    return () => {
+      clearIntersectionObserver();
+    };
   }, []);
   
   return (
-    <nav className={Class("Navigation")} ref={navigationRef}>
+    <nav className={Class(uiClasses.navigation)} ref={navigationRef}>
       <NavigationLinkList />
     </nav>
   );
