@@ -7,6 +7,10 @@ import { AudioSampleBoxSamplesWrapper } from "./AudioSampleBoxSamplesWrapper";
 import "./AudioSampleBoxContent.scss";
 
 export const AudioSampleBoxContent = () => {
+  const uiClasses = {
+    audioSampleBoxContent: "AudioSampleBox__Content",
+  };
+
   const audioSampleData = useContext(AudioSampleBoxContext);
 
   const audioSampleContent = Object.values(audioSampleData).map((value) => {
@@ -20,5 +24,5 @@ export const AudioSampleBoxContent = () => {
     );
   });
 
-  return <div className="AudioSampleBox__Content">{audioSampleContent}</div>;
+  return <div className={uiClasses.audioSampleBoxContent}>{audioSampleContent}</div>;
 };

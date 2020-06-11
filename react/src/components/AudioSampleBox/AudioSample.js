@@ -6,8 +6,12 @@ import { Player } from "./Player";
 import "./AudioSample.scss";
 
 export const AudioSample = ({ title, audioSource }) => {
+  const uiClasses = {
+    sample: "Sample",
+  };
+
   return (
-    <div className="Sample">
+    <div className={uiClasses.sample}>
       <Player audioSource={audioSource} title={title} />
     </div>
   );

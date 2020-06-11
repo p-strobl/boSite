@@ -17,13 +17,17 @@ import "./App.scss";
 
 export function App() {
   const [ifIsTouchDevice, setIfIsTouchDevice] = useState(true);
+  const uiClasses = {
+    app: "App",
+    noTouch: "no-touch",
+  };
 
   useEffect(() => {
     setIfIsTouchDevice(isTouchDevice());
   }, []);
 
   return (
-    <div className={Class("App", { "no-touch": ifIsTouchDevice })}>
+    <div className={Class(uiClasses.app, { [uiClasses.noTouch]: ifIsTouchDevice })}>
       <GridLayer />
       <Header />
       <BoundingBar />

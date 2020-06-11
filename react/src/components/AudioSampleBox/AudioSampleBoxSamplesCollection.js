@@ -8,13 +8,17 @@ import { AudioSampleBoxSamplesDisclaimer } from "./AudioSampleBoxSamplesDisclaim
 import "./AudioSampleBoxSamplesCollection.scss";
 
 export const AudioSampleBoxSamplesCollection = ({ samples }) => {
+  const uiClasses = {
+    samplesCollection: "Samples__Collection",
+  };
+
   const AudioSamplesCollection = Object.values(samples).map((value) => {
     return <AudioSample title={value.title} audioSource={value.src} key={uuidv4()} />;
   });
 
   if (AudioSamplesCollection) {
     return (
-      <div className="Samples__Collection">
+      <div className={uiClasses.samplesCollection}>
         {AudioSamplesCollection}
         <AudioSampleBoxSamplesDisclaimer />
       </div>

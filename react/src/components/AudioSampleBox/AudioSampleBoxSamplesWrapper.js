@@ -7,6 +7,10 @@ import { AudioSampleBoxSamplesCollection } from "./AudioSampleBoxSamplesCollecti
 import "./AudioSampleBoxSamplesWrapper.scss";
 
 export const AudioSampleBoxSamplesWrapper = ({ category, samples, emoji }) => {
+  const uiClasses = {
+    audioSampleBoxSamplesWrapper: "AudioSampleBox__SamplesWrapper",
+  };
+
   const noSamples = Object.values(samples).every((sample) => {
     return !sample.src;
   });
@@ -14,7 +18,7 @@ export const AudioSampleBoxSamplesWrapper = ({ category, samples, emoji }) => {
   if (noSamples) return null;
 
   return (
-    <div className="AudioSampleBox__SamplesWrapper">
+    <div className={uiClasses.audioSampleBoxSamplesWrapper}>
       <AudioSampleBoxSamplesCategory category={category} emoji={emoji} />
       <AudioSampleBoxSamplesCollection samples={samples} />
     </div>

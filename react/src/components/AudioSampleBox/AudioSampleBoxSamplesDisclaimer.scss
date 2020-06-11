@@ -16,7 +16,7 @@
   z-index: 2;
 }
 
-.Samples__Disclaimer--Border {
+.Samples__DisclaimerBorder {
   background-color: $c_grey-003;
   bottom: 3px;
   height: 1px;
@@ -29,10 +29,10 @@
   z-index: 1;
 }
 
-.Samples__Disclaimer:hover .Samples__Disclaimer--Border {
+.Samples__Disclaimer:hover .Samples__DisclaimerBorder {
   transform: scaleX(1);
 }
 
-.no-touch .Samples__Disclaimer--Border {
+.no-touch .Samples__DisclaimerBorder {
   transform: scaleX(0);
 }

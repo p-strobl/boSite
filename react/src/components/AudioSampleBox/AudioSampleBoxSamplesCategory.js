@@ -5,21 +5,32 @@ import "./AudioSampleBoxSamplesCategory.scss";
 import { Emoji } from "~components/Emoji";
 
 export const AudioSampleBoxSamplesCategory = ({ category, emoji }) => {
+  const uiClasses = {
+    samplesCategory: "Samples__Category",
+    samplesCategoryExpanded: "Samples__Category--Expanded",
+    samplesCollectionExpanded: "Samples__Collection--Expanded",
+    emoji: "Emoji",
+  };
+
   const categoryEmoji = (
-    <Emoji classs="SamplesCategory__" emojiClass={`Emoji__${emoji}`} label={emoji} />
+    <Emoji
+      classs={`${uiClasses.samplesCategory}__`}
+      emojiClass={`${uiClasses.emoji}__${emoji}`}
+      label={emoji}
+    />
   );
 
   const toggleSampleCategory = (element) => {
     if (typeof element === "undefined") return;
 
     const siblingSampleCollection = element.currentTarget.nextSibling;
-    element.currentTarget.classList.toggle("Samples__Category--Expanded");
-    siblingSampleCollection.classList.toggle("Samples__Collection--Expanded");
+    element.currentTarget.classList.toggle(uiClasses.samplesCategoryExpanded);
+    siblingSampleCollection.classList.toggle(uiClasses.samplesCollectionExpanded);
   };
 
   return (
     <div
-      className="Samples__Category"
+      className={uiClasses.samplesCategory}
       onClick={toggleSampleCategory}
       onKeyUp={() => toggleSampleCategory}
       role="button"
