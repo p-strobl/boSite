@@ -5,14 +5,18 @@ import Class from "classnames";
 import "./Emoji.scss";
 
 export function Emoji({ classs, emojiClass, label }) {
+  const uiClasses = {
+    emoji: "Emoji",
+  };
+
   return (
     <span
       className={Class(
         {
-          [`${classs}Emoji`]: classs.length > 0,
+          [`${classs}${uiClasses.emoji}`]: classs.length > 0,
           [`${emojiClass}`]: classs.length > 0,
         },
-        "Emoji",
+        uiClasses.emoji,
       )}
       role="img"
       aria-label={label || ""}
