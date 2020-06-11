@@ -1,8 +1,11 @@
 import React from "react";
-import Class from "classnames";
 
 import "./BoundingBar.scss";
 
 export function BoundingBar() {
-  return <div className={Class("BoundingBar")} />;
+  const uiClasses = {
+    boundingBar: "BoundingBar",
+  };
+
+  return <div className={uiClasses.boundingBar} />;
 }
