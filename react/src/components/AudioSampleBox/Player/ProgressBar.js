@@ -1,11 +1,16 @@
 import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import uuidv4 from "uuid/v4";
+import uuid from "uuid/v4";
 
 import "./ProgressBar.scss";
 
 export const ProgressBar = ({ progressBar, isPlaying, paused }) => {
   const progressBarFillerRef = useRef(null);
+
+  const uiClasses = {
+    samplePlayerProgressBar: "SamplePlayer__ProgressBar",
+    samplePlayerProgressBarFiller: "SamplePlayer__ProgressBar--filler",
+  };
 
   const removeStyleProperty = () => {
     if (!isPlaying && !paused && progressBarFillerRef.current !== null) {
@@ -18,11 +23,11 @@ export const ProgressBar = ({ progressBar, isPlaying, paused }) => {
   });
 
   return (
-    <div className="SamplePlayer__ProgressBar">
+    <div className={uiClasses.samplePlayerProgressBar}>
       <div
-        className="SamplePlayer__ProgressBar--filler"
+        className={uiClasses.samplePlayerProgressBarFiller}
         style={{ transform: `scaleX(${progressBar})` }}
-        key={uuidv4()}
+        key={uuid()}
         ref={progressBarFillerRef}
       />
     </div>

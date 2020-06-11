@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import uuidv4 from "uuid/v4";
+import uuid from "uuid/v4";
 import Class from "classnames";
 
 import { Title } from "./Title";
@@ -21,6 +21,12 @@ export class Player extends Component {
       progressBar: 0,
       showAudioPlayer: false,
     };
+
+    this.uiClasses = {
+      samplePlayer: "Sample__Player",
+      samplePlayerLoaded: "Sample__Player--Loaded",
+    };
+
     this.audioPlayer = new Audio(props.audioSource);
   }
 
@@ -105,8 +111,10 @@ export class Player extends Component {
 
     return (
       <div
-        className={Class("Sample__Player", { "Sample__Player--Loaded": showAudioPlayer })}
-        key={uuidv4()}>
+        className={Class([this.uiClasses.samplePlayer], {
+          [this.uiClasses.samplePlayerLoaded]: showAudioPlayer,
+        })}
+        key={uuid()}>
         <Title title={title} />
         <TimeDuration audioDuration={audioDuration} currentTime={currentTime} />
         <Controls isPlaying={isPlaying} togglePlay={this.togglePlay} />

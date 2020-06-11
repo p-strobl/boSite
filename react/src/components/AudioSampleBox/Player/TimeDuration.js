@@ -4,11 +4,17 @@ import PropTypes from "prop-types";
 import "./TimeDuration.scss";
 
 export const TimeDuration = ({ currentTime, audioDuration }) => {
+  const uiClasses = {
+    samplePlayerTimeDuration: "SamplePlayer__TimeDuration",
+    currentTime: "TimeDuration--CurrentTime",
+    duration: "TimeDuration--Duration",
+  };
+
   return (
-    <div className="SamplePlayer__TimeDuration">
-      <div className="TimeDuration--CurrentTime">{currentTime}s</div>
+    <div className={uiClasses.samplePlayerTimeDuration}>
+      <div className={uiClasses.currentTime}>{currentTime}s</div>
       <span>/</span>
-      <div className="TimeDuration--Duration">{audioDuration}s</div>
+      <div className={uiClasses.duration}>{audioDuration}s</div>
     </div>
   );
 };

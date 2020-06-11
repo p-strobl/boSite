@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import uuidv4 from "uuid/v4";
+import uuid from "uuid/v4";
 
 import "./Title.scss";
 
 export const Title = ({ title }) => {
+  const uiClasses = {
+    sampleTitle: "Sample__Title",
+  };
+
   return (
-    <div className="Sample__Title" key={uuidv4()}>
+    <div className={uiClasses.sampleTitle} key={uuid()}>
       <div>{title}</div>
     </div>
   );

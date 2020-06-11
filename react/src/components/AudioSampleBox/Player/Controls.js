@@ -5,10 +5,16 @@ import Class from "classnames";
 import "./Controls.scss";
 
 export const Controls = ({ isPlaying, togglePlay }) => {
+  const uiClasses = {
+    samplePlayerControl: "SamplePlayer__Control",
+  };
+
   return (
     <div
       className={Class(
-        `SamplePlayer__Control SamplePlayer__Control--${isPlaying ? "Pause" : "Play"}`,
+        `${uiClasses.samplePlayerControl} ${uiClasses.samplePlayerControl}--${
+          isPlaying ? "Pause" : "Play"
+        }`,
       )}
       role="button"
       onClick={togglePlay}
