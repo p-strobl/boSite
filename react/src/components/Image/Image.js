@@ -3,10 +3,14 @@ import PropTypes from "prop-types";
 import Class from "classnames";
 
 export function Image({ alt, classs, imageSrc, src, title }) {
+  const uiClasses = {
+    asyncImage: "AsyncImage",
+  };
+
   return (
     <img
       alt={alt}
-      className={Class(`${classs} AsyncImage`)}
+      className={Class([classs, uiClasses.asyncImage])}
       data-image-src={imageSrc}
       src={src}
       title={`Visit ${title}`}
