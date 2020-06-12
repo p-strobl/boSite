@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import Class from "classnames";
 import { A } from "hookrouter";
 
 import Base64 from "~src/helper/Base64ImagePlaceholder";
@@ -12,8 +11,22 @@ import { Emoji } from "~components/Emoji";
 import "./SiteTile.scss";
 
 export function SiteTile({ site }) {
+  const uiClasses = {
+    siteTile: "SiteTile",
+    siteTileAnchor: "SiteTile__Anchor",
+    siteTileImageWrapper: "SiteTile__ImageWrapper",
+    siteTileImage: "SiteTile__Image",
+    siteTileTextContainer: "SiteTileText__Container",
+    siteTileText: "SiteTile__Text",
+    emoji: "Emoji",
+  };
+
   const emoji = (
-    <Emoji classs="SiteTileText__" emojiClass={`Emoji__${site.emoji}`} label={site.emoji} />
+    <Emoji
+      classs={`${uiClasses.siteTileText}`}
+      emojiClass={`${uiClasses.emoji}__${site.emoji}`}
+      label={site.emoji}
+    />
   );
 
   useEffect(() => {
@@ -21,20 +34,20 @@ export function SiteTile({ site }) {
   }, [loadImages]);
 
   return (
-    <div className={Class("SiteTile")}>
-      <A className={Class("SiteTile__Anchor")} href={site.path}>
-        <div className="SiteTile__ImageWrapper">
+    <div className={uiClasses.siteTile}>
+      <A className={uiClasses.siteTileAnchor} href={site.path}>
+        <div className={uiClasses.siteTileImageWrapper}>
           <Image
             alt="Page Icon"
-            classs="SiteTile__Image"
+            classs={uiClasses.siteTileImage}
             imageSrc={site.imageSrc}
             src={Base64.dataImageSvgXml}
             title={site.title}
           />
         </div>
-        <div className="SiteTileText__Container">
+        <div className={uiClasses.siteTileTextContainer}>
           {emoji}
-          <h4 className={Class("SiteTile__Text")}>{site.title}</h4>
+          <h4 className={uiClasses.siteTileText}>{site.title}</h4>
         </div>
       </A>
     </div>
