@@ -5,21 +5,22 @@ import PropTypes from "prop-types";
 import "./Headline.scss";
 
 export function Headline({ parentClass, h1, h2 }) {
+  const uiClasses = {
+    headline: "Headline",
+    headlineContainer: "Headline__Container",
+    parentHeadline: `${parentClass}__Headline`,
+    parentHeadlineContainer: `${parentClass}__HeadlineContainer`,
+  };
+
   return (
     <div
-      className={Class(
-        {
-          [`${parentClass}__Headline`]: parentClass.length > 0,
-        },
-        "Headline",
-      )}>
+      className={Class(uiClasses.headline, {
+        [uiClasses.parentHeadline]: parentClass.length > 0,
+      })}>
       <div
-        className={Class(
-          {
-            [`${parentClass}__HeadlineContainer`]: parentClass.length > 0,
-          },
-          "Headline__Container",
-        )}>
+        className={Class(uiClasses.headlineContainer, {
+          [uiClasses.parentHeadlineContainer]: parentClass.length > 0,
+        })}>
         {h1}
         {h2}
       </div>
