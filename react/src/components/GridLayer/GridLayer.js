@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import Class from "classnames";
 
 import { GridBar } from "./GridBar";
 
@@ -8,24 +7,29 @@ import "./GridLayer.scss";
 
 export function GridLayer() {
   const [gridLayer, setGridLayer] = useState("");
+  const uiClasses = {
+    root: "root",
+    gridLayer: "GridLayer",
+    gridLayerShow: "GridLayer--show",
+  };
 
   useEffect(() => {
-    setGridLayer(document.querySelector(".GridLayer"));
+    setGridLayer(document.querySelector(`.${uiClasses.gridLayer}`));
   });
 
   const hideGrid = (event) => {
-    event.currentTarget.classList.remove("GridLayer--show");
+    event.currentTarget.classList.remove(`${uiClasses.gridLayerShow}`);
   };
 
   const Grid = (
-    <div className={Class("GridLayer")} onClick={hideGrid} role="presentation">
+    <div className={uiClasses.gridLayer} onClick={hideGrid} role="presentation">
       <GridBar />
     </div>
   );
 
   window.addGrid = () => {
-    gridLayer.classList.add("GridLayer--show");
+    gridLayer.classList.add(`${uiClasses.gridLayerShow}`);
   };
 
-  return ReactDOM.createPortal(Grid, document.getElementById("root"));
+  return ReactDOM.createPortal(Grid, document.getElementById(`${uiClasses.root}`));
 }

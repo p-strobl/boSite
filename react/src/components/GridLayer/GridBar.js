@@ -1,14 +1,17 @@
 import React from "react";
-import uuidv4 from "uuid/v4";
-import Class from "classnames";
+import uuid from "uuid/v4";
 
 import "./GridBar.scss";
 
 export function GridBar() {
+  const uiClasses = {
+    gridBar: "GridBar",
+  };
+
   const gridBars = [];
 
   for (let i = 0; i < 12; i += 1) {
-    gridBars.push(<div className={Class("GridBar")} key={uuidv4()} />);
+    gridBars.push(<div className={uiClasses.gridBar} key={uuid()} />);
   }
 
   return gridBars;
