@@ -6,6 +6,7 @@
   opacity: 0;
   position: sticky;
   transition: opacity 0.25s;
+  z-index: 2;
 }
 
 .MobileNavigation--Active {
