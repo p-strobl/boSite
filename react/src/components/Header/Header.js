@@ -1,5 +1,4 @@
 import React from "react";
-import Class from "classnames";
 
 import "./Header.scss";
 
@@ -7,9 +6,14 @@ import { HeaderLogo } from "./HeaderLogo";
 import { Navigation } from "~components/Navigation";
 
 export function Header() {
+  const uiClasses = {
+    header: "Header",
+    headerContainer: "Header__Container",
+  };
+
   return (
-    <header className={Class("Header")}>
-      <div className={Class("Header__Container")}>
+    <header className={uiClasses.header}>
+      <div className={uiClasses.headerContainer}>
         <HeaderLogo />
         <Navigation />
       </div>

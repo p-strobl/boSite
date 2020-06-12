@@ -10,17 +10,24 @@ import Base64 from "~src/helper/Base64ImagePlaceholder";
 import "./HeaderLogo.scss";
 
 export function HeaderLogo() {
+  const uiClasses = {
+    asyncImage: "AsyncImage",
+    headerLogoContainer: "Header__LogoContainer",
+    headerLogoLink: "Header__LogoLink",
+    headerLogo: "Header__Logo",
+  };
+
   const { routes } = useContext(RouterContext);
 
   return (
-    <div className={Class("Header__LogoContainer")}>
-      <A className={Class("Header__LogoLink")} href={routes.home.path}>
+    <div className={uiClasses.headerLogoContainer}>
+      <A className={uiClasses.headerLogoLink} href={routes.home.path}>
         <img
           alt="boSite Icon"
-          className={Class("Header__Logo AsyncImage")}
+          className={Class([uiClasses.headerLogo, uiClasses.asyncImage])}
           data-image-src={Images.logo}
           src={Base64.dataImageSvgXml}
-          title="Back to Home"
+          title="Home"
         />
       </A>
     </div>
