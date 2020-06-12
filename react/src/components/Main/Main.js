@@ -1,13 +1,16 @@
 import React from "react";
-import Class from "classnames";
 
 import "./Main.scss";
 
 import { Routes } from "~routes/routes";
 
 export function Main() {
+  const uiClasses = {
+    main: "Main",
+  };
+
   return (
-    <main className={Class("Main")}>
+    <main className={uiClasses.main}>
       <Routes />
     </main>
   );
