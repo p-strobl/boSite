@@ -11,13 +11,10 @@ export function Emoji({ classs, emojiClass, label }) {
 
   return (
     <span
-      className={Class(
-        {
-          [`${classs}${uiClasses.emoji}`]: classs.length > 0,
-          [`${emojiClass}`]: classs.length > 0,
-        },
-        uiClasses.emoji,
-      )}
+      className={Class(uiClasses.emoji, {
+        [`${emojiClass}`]: classs.length > 0,
+        [`${classs}${uiClasses.emoji}`]: classs.length > 0,
+      })}
       role="img"
       aria-label={label || ""}
       aria-hidden={label ? "false" : "true"}
