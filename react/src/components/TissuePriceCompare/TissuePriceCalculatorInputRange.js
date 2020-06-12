@@ -14,6 +14,19 @@ export const TissuePriceCalculatorInputRange = ({
   step,
   text,
 }) => {
+  const uiClasses = {
+    inputContainer: "TissuePriceCalculatorInput__Container",
+    inputRangeOutput: "TissuePriceCalculatorInput__RangeOutput",
+    inputRangeOutputValue: "TissuePriceCalculatorInput__RangeOutputValue",
+    inputRangeOutputValueBlink: "TissuePriceCalculatorInput__RangeOutputValue--blink",
+    inputRangeOutputText: "TissuePriceCalculatorInput__RangeOutputText",
+    inputRangeInput: "TissuePriceCalculatorInput__RangeInput",
+    inputProgressBar: "TissuePriceCalculatorInput__ProgressBar",
+    inputProgressBarFiller: "TissuePriceCalculatorInput__ProgressBar--filler",
+    inputRangeSlider: "TissuePriceCalculatorInput__RangeSlider",
+    output: "output",
+  };
+
   const {
     [context]: [, setInput],
   } = useContext(TissuePriceCalculatorContext);
@@ -44,13 +57,9 @@ export const TissuePriceCalculatorInputRange = ({
   };
 
   const blinkRangeOutputValue = (rangeInputOutputValueContainer) => {
-    rangeInputOutputValueContainer.classList.add(
-      "TissuePriceCalculatorInput__RangeOutputValue--blink",
-    );
+    rangeInputOutputValueContainer.classList.add(`${uiClasses.inputRangeOutputValueBlink}`);
     setTimeout(() => {
-      rangeInputOutputValueContainer.classList.remove(
-        "TissuePriceCalculatorInput__RangeOutputValue--blink",
-      );
+      rangeInputOutputValueContainer.classList.remove(`${uiClasses.inputRangeOutputValueBlink}`);
     }, 50);
   };
 
@@ -59,13 +68,13 @@ export const TissuePriceCalculatorInputRange = ({
 
     const rangeInput = element.target;
     const rangeInputOutputContainer = rangeInput.previousElementSibling.getElementsByTagName(
-      "output",
+      `${uiClasses.output}`,
     );
     const rangeInputOutputValueContainer = rangeInput.parentElement.previousElementSibling
-      .getElementsByTagName("output")
+      .getElementsByTagName(`${uiClasses.output}`)
       .item(0);
     const progressBarFiller = rangeInput.previousElementSibling.querySelector(
-      ".TissuePriceCalculatorInput__ProgressBar--filler",
+      `.${uiClasses.inputProgressBarFiller}`,
     );
 
     setProgressBar(progressBarFiller, rangeInput);
@@ -74,20 +83,20 @@ export const TissuePriceCalculatorInputRange = ({
   };
 
   return (
-    <div className="TissuePriceCalculatorInput__Container">
-      <div className="TissuePriceCalculatorInput__RangeOutput">
-        <output className="TissuePriceCalculatorInput__RangeOutputValue">{defaultValue}</output>
-        <span className="TissuePriceCalculatorInput__RangeOutputText">{text}</span>
+    <div className={uiClasses.inputContainer}>
+      <div className={uiClasses.inputRangeOutput}>
+        <output className={uiClasses.inputRangeOutputValue}>{defaultValue}</output>
+        <span className={uiClasses.inputRangeOutputText}>{text}</span>
       </div>
-      <div className="TissuePriceCalculatorInput__RangeInput">
-        <div className="TissuePriceCalculatorInput__ProgressBar">
+      <div className={uiClasses.inputRangeInput}>
+        <div className={uiClasses.inputProgressBar}>
           <div
-            className="TissuePriceCalculatorInput__ProgressBar--filler"
+            className={uiClasses.inputProgressBarFiller}
             style={{ width: `${initialProgress()}%` }}
           />
         </div>
         <input
-          className="TissuePriceCalculatorInput__RangeSlider"
+          className={uiClasses.inputRangeSlider}
           type="range"
           defaultValue={defaultValue}
           data-default={dataDefaultValue}

@@ -11,6 +11,11 @@ export const TissuePriceCalculatorInputNumber = ({
   placeholder,
   value,
 }) => {
+  const uiClasses = {
+    inputRangeContainer: "TissuePriceCalculatorInput__RangeContainer",
+    inputRangePrice: "TissuePriceCalculatorInput__Price",
+  };
+
   const numbersOnly = (element, inputValue) => {
     const numberRegex = /[^0-9,]/g;
 
@@ -52,9 +57,9 @@ export const TissuePriceCalculatorInputNumber = ({
   };
 
   return (
-    <div className="TissuePriceCalculatorInput__RangeContainer">
+    <div className={uiClasses.inputRangeContainer}>
       <input
-        className="TissuePriceCalculatorInput__Price"
+        className={uiClasses.inputRangePrice}
         data-default={dataDefaultValue}
         defaultValue={value}
         placeholder={placeholder}

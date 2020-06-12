@@ -9,6 +9,13 @@ import { TissuePriceCalculatorOutput } from "~components/TissuePriceCompare/Tiss
 import "./TissuePriceCalculator.scss";
 
 export const TissuePriceCalculator = () => {
+  const uiClasses = {
+    calculator: "TissuePriceCalculator",
+    calculatorItem: "TissuePriceCalculator__Item",
+    calculatorInput: "TissuePriceCalculator__Input",
+    calculatorOutput: "TissuePriceCalculator__Output",
+  };
+
   const {
     rollCountContext: [rollCount],
     sheetCountContext: [sheetCount],
@@ -37,8 +44,8 @@ export const TissuePriceCalculator = () => {
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
-    <div className={Class("TissuePriceCalculator")}>
-      <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Input")}>
+    <div className={uiClasses.calculator}>
+      <div className={Class([uiClasses.calculatorItem, uiClasses.calculatorInput])}>
         <TissuePriceCalculatorInputRange
           context="rollCountContext"
           dataDefaultValue={defaultValues.rollCount}
@@ -74,7 +81,7 @@ export const TissuePriceCalculator = () => {
           text="Kaufpreis"
         />
       </div>
-      <div className={Class("TissuePriceCalculator__Item TissuePriceCalculator__Output")}>
+      <div className={Class([uiClasses.calculatorItem, uiClasses.calculatorOutput])}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
       </div>
     </div>
