@@ -18,10 +18,10 @@ export const AudioSampleBoxSamplesWrapper = ({ category, samples, emoji }) => {
   if (noSamples) return null;
 
   return (
-    <div className={uiClasses.audioSampleBoxSamplesWrapper}>
+    <section className={uiClasses.audioSampleBoxSamplesWrapper}>
       <AudioSampleBoxSamplesCategory category={category} emoji={emoji} />
       <AudioSampleBoxSamplesCollection samples={samples} />
-    </div>
+    </section>
   );
 };
 
