@@ -44,7 +44,7 @@ export const TissuePriceCalculator = () => {
   }, [rollCount, sheetCount, layerCount, price]);
 
   return (
-    <div className={uiClasses.calculator}>
+    <section className={uiClasses.calculator}>
       <div className={Class([uiClasses.calculatorItem, uiClasses.calculatorInput])}>
         <TissuePriceCalculatorInputRange
           context="rollCountContext"
@@ -84,6 +84,6 @@ export const TissuePriceCalculator = () => {
       <div className={Class([uiClasses.calculatorItem, uiClasses.calculatorOutput])}>
         <TissuePriceCalculatorOutput totalPrice={totalPrice} value={price} />
       </div>
-    </div>
+    </section>
   );
 };
