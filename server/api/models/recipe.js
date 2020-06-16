@@ -1,39 +1,57 @@
 const mongoose = require("mongoose");
 
-const recipeSchema = mongoose.Schema({
+const recipeSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
+  category: {
+    type: Array,
+  },
   title: {
     type: String,
     required: true,
   },
+  subtitle: {
+    type: String,
+  },
   ingredients: {
     type: Object,
-    amount: {
-      type: Number,
-    },
-    unit: {
-      type: String,
-    },
-    name: {
-      type: String,
+    ingredient: {
+      type: Object,
+      unit: {
+        type: String,
+      },
+      amount: {
+        type: Number,
+      },
     },
   },
   infos: {
     type: Object,
-    kind: {
-      type: String,
+    duration: {
+      type: Object,
+      text: {
+        type: String,
+      },
+      from: {
+        type: Number,
+      },
+      to: {
+        type: Number,
+      },
+      total: {
+        type: Number,
+      },
     },
     info: {
       type: String,
     },
   },
   preparation: {
+    type: Array,
+  },
+  images: {
     type: Object,
-    step: {
-      type: Number,
-    },
-    process: {
-      type: String,
+    url: {
+      type: Array,
     },
   },
 });
