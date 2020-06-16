@@ -1,22 +1,23 @@
 const Recipe = require("../../models/recipe");
 
 module.exports = (request, response) => {
-  Recipe
-    .find()
-    .select("_id name title ingredients infos preparation")
+  Recipe.find()
+    .select("_id category title subtitle ingredients infos preparation images")
     .exec()
     .then((result) => {
-      console.log("GET request successful", result);
+      console.log("result", result);
       const getResult = {
         count: result.length,
         collection: result.map((item) => {
           return {
             _id: item.id,
-            name: item.name,
+            category: item.category,
             title: item.title,
+            subtitle: item.subtitle,
             ingredients: item.ingredients,
             infos: item.infos,
             preparation: item.preparation,
+            images: item.images,
             request: {
               type: "GET",
               url: `http://localhost:5000/api/recipes/${item.id}`,
