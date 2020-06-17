@@ -6,6 +6,9 @@ import Class from "classnames";
 
 import { Emoji } from "~components/Emoji";
 import { Headline } from "~components/Headline";
+import { RecipesCategories } from "./RecipesCategories";
+
+import "./RecipesPage.scss";
 
 export const RecipesPage = () => {
   useTitle("boSite's Rezepte");
@@ -24,14 +27,13 @@ export const RecipesPage = () => {
     recipes: "Recipes",
   };
 
-  const [data, setData] = useState([]);
+  const [fetchedData, setFetchedData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({
     message: "",
     state: false,
   });
-
-  const recipesApiRoute = "http://localhost:5000/api/recipes";
 
   const emojiRecipe = (
     <Emoji
@@ -50,10 +52,16 @@ export const RecipesPage = () => {
   );
 
   const fetchRecipes = () => {
+    const recipesApiRoute = "http://localhost:5000/api/recipes";
+
     axios
-      .get(recipesApiRoute)
+      .get(recipesApiRoute, {
+        params: {
+          category: selectedCategory,
+        },
+      })
       .then((result) => {
-        setData(result.data.collection);
+        setFetchedData(result.data.collection);
         setLoading(false);
         console.log("result.data.collection", result.data.collection);
       })
@@ -65,21 +73,29 @@ export const RecipesPage = () => {
       });
   };
 
-  useEffect(() => {
+  const clickHandler = (ev) => {
     fetchRecipes();
-  }, []);
+    setSelectedCategory(ev.currentTarget.getAttribute("data-recipe-category"));
+    console.log("ec", ev.currentTarget.getAttribute("data-recipe-category"));
+  };
+
+  useEffect(() => {}, []);
 
   return (
     <div className={uiClasses.recipesPage}>
       <Headline parentClass={uiClasses.recipesPage} h1={headline} h2={subHeadline} />
-      {data.map((item) => {
-        return (
-          <div key={uuid()}>
-            <h1 key={uuid()}>{item.title}</h1>
-            <p key={uuid()}>{item.infos.info}</p>
-          </div>
-        );
-      })}
+      <div className="RecipesCategoryContainer">
+        <RecipesCategories clickHandler={clickHandler} />
+      </div>
+
+      {/*{data.map((item) => {*/}
+      {/*  return (*/}
+      {/*    <div key={uuid()}>*/}
+      {/*      <h1 key={uuid()}>{item.title}</h1>*/}
+      {/*      <p key={uuid()}>{item.infos.info}</p>*/}
+      {/*    </div>*/}
+      {/*  );*/}
+      {/*})}*/}
     </div>
   );
 };
