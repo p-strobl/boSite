@@ -37,8 +37,8 @@ app.use(bodyParser.json());
 app.use(routes);
 // app.use("/uploads", express.static("uploads"));
 
-app.get('*', function(req, res) {
-  res.sendFile('index.html', {root: path.join(__dirname, '/client/dist/')});
+app.get("*", function(req, res) {
+  res.sendFile("index.html", { root: path.join(__dirname, "/client/dist/") });
 });
 
 // Handle Errors
