@@ -23,7 +23,7 @@ export function App() {
   };
 
   useEffect(() => {
-    setIfIsTouchDevice(isTouchDevice());
+    setIfIsTouchDevice(!isTouchDevice());
   }, []);
 
   return (
