@@ -1,0 +1,10 @@
+@import "~scss/_utility.scss";
+
+.RecipesCategoryContainer {
+  @include module-margin-top();
+}
+
+.RecipesCategoryWrapper {
+  @include flex();
+  justify-content: space-between;
+}

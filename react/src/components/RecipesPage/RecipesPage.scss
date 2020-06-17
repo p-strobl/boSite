@@ -1,0 +1,13 @@
+@import "~scss/_utility.scss";
+
+.RecipesCategory {
+  @include responsive-font-size(20, 20);
+  background-color: $c_grey-002 !important;
+  border-radius: 5px;
+  min-width: 160px;
+  padding: 10px 20px;
+}
+
+.RecipesCategory:hover {
+  cursor: pointer;
+}
