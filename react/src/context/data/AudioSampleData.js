@@ -6,7 +6,7 @@ export const AudioSampleData = {
     emoji: "bathtub",
     samples: {
       toilet: {
-        src: "",
+        src: AudioSample.kitchen.blender,
         title: "Toilet",
       },
       shower: {
