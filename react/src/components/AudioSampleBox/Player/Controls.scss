@@ -11,9 +11,9 @@
 
 .SamplePlayer__Control:after {
   @include ligature-symbols-icon($i_sync);
+  @include responsive-font-size(20, 25);
   @include transform(translate, (-50%, -50%));
   @include transition(transform 0.5s);
-  animation: rotating 2s linear infinite;
   left: 50%;
   pointer-events: none;
   position: absolute;
@@ -22,12 +22,16 @@
 
 .SamplePlayer__Control--Play:after {
   @include ligature-symbols-icon($i_play);
-  animation: none;
 }
 
 .SamplePlayer__Control--Pause:after {
   @include ligature-symbols-icon($i_pause);
-  animation: none;
+}
+
+.SamplePlayer__Control--Loading:after {
+  @include ligature-symbols-icon($i_sync);
+  animation: rotating 2s linear infinite;
+  transform-origin: 50% 47%;
 }
 
 .SamplePlayer__Control:focus {
@@ -40,10 +44,6 @@
 }
 
 @keyframes rotating {
-  from {
-    @include transform(translate, (-50%, -50%) rotate, (0deg));
-  }
-  to {
-    @include transform(translate, (-50%, -50%) rotate, (360deg));
-  }
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
