@@ -4,17 +4,18 @@ import Class from "classnames";
 
 import "./Controls.scss";
 
-export const Controls = ({ isPlaying, togglePlay }) => {
+export const Controls = ({ isPlaying, isLoading, togglePlay }) => {
   const uiClasses = {
     samplePlayerControl: "SamplePlayer__Control",
+    samplePlayerControlLoading: "SamplePlayer__Control--Loading",
   };
 
   return (
     <div
       className={Class(
-        `${uiClasses.samplePlayerControl} ${uiClasses.samplePlayerControl}--${
-          isPlaying ? "Pause" : "Play"
-        }`,
+        [uiClasses.samplePlayerControl],
+        [`${uiClasses.samplePlayerControl}--${isPlaying ? "Pause" : "Play"}`],
+        { [uiClasses.samplePlayerControlLoading]: isLoading },
       )}
       role="button"
       onClick={togglePlay}
@@ -27,10 +28,12 @@ export const Controls = ({ isPlaying, togglePlay }) => {
 
 Controls.defaultProps = {
   isPlaying: false,
+  isLoading: false,
   togglePlay: () => {},
 };
 
 Controls.propTypes = {
   isPlaying: PropTypes.bool,
+  isLoading: PropTypes.bool,
   togglePlay: PropTypes.func,
 };
