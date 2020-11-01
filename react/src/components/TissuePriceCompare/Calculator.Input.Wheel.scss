@@ -1,0 +1,70 @@
+@import "~scss/_utility.scss";
+
+.WheelContainer {
+  @include grid-span(column, 1);
+}
+
+.Wheel {
+  height: 80px;
+  overflow-x: scroll;
+  scroll-snap-type: y mandatory;
+  text-align: center;
+  width: 100%;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.Wheel__Number {
+  //background-color: $c_blue-004;
+  font-size: 30px;
+  line-height: 1.4;
+  outline: 0;
+  opacity: 0.5;
+  padding: 0 10px;
+  transition: opacity 0.24s;
+  scroll-snap-align: center;
+
+  &:first-child {
+    padding-top: 20px;
+  }
+
+  &:last-child {
+    padding-bottom: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.Wheel__Number--Active {
+  //border-bottom: 1px dashed $c_vanta-black;
+  //border-top: 1px dashed $c_vanta-black;
+  opacity: 1;
+}
+
+.Wheel__Button {
+  border: 1px solid;
+  font-family: "LigatureSymbols", sans-serif;
+  width: 100%;
+
+  &:after {
+    @include flex();
+    place-content: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.Wheel__Button--Prev:after {
+  content: $i_up;
+}
+
+.Wheel__Button--Next:after {
+  content: $i_down;
+}

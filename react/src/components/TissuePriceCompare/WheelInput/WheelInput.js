@@ -2,110 +2,134 @@ import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Class from "classnames";
 import uuidv4 from "uuid/v4";
+import { useRecoilState, useSetRecoilState, useRecoilValue } from "recoil";
+
+import { wheel } from "../state";
 
 import "./WheelInput.scss";
 import { ArrowButton } from "./ArrowButton";
-import { WheelElements } from "./WheelElements";
+import { Wheel } from "./Wheel";
 
-export const WheelInput = ({ ownState, calculatorIndex, setGlobalCalculatorState }) => {
-  const [wheelValue, setWheelValue] = useState(Object.values(ownState)[0].value);
-  const wheelContext = Object.keys(ownState)[0];
-  const wheelRange = Object.values(ownState)[0].range;
-  const inputWheelRef = useRef(null);
-  let wheel = null;
-  let observer = null;
+export const WheelInput = ({ calculatorIndex, type }) => {
+  // const ref = useRef(null);
+  // const [wheelState, setWheelState] = useRecoilState(wheel[type](calculatorIndex));
+  // console.log("inView", inView);
+  // console.log("entry", entry);
+  // console.log("inputWheelRef", inputWheelRef);
+  // let wheelElements = null;
+  // const observer = null;
 
-  function focusDefaultValue() {
-    if (typeof wheelValue === "undefined") return;
+  // function focusInitialValue() {
+  //   if (typeof wheelState === "undefined") {
+  //     return;
+  //   }
 
-    wheel[wheelValue].focus();
-  }
+  //   const wheelElements = inputWheelRef.current.querySelectorAll(".Wheel__Number");
 
-  function removeActiveClassFromAllWheels(entry) {
-    if (typeof entry === "undefined") return;
+  //   // console.log("wheelElements", wheelElements);
+  //   // console.log("wheelState.value", wheelState.value);
+  //   wheelElements[wheelState.value].focus();
+  // }
 
-    const wheelElements = entry.parentNode.querySelectorAll(".Wheel__Number");
-    wheelElements.forEach((element) => {
-      element.classList.remove("Wheel__Number--Active");
-    });
-  }
+  // function removeActiveClassFromAllWheels(entry) {
+  //   if (typeof entry === "undefined") {
+  //     return;
+  //   }
 
-  function addActiveClassToWheel(entry) {
-    if (typeof entry === "undefined") return;
+  //   const currentWheelElements = entry.parentNode.querySelectorAll(".Wheel__Number");
 
-    entry.classList.add("Wheel__Number--Active");
-  }
+  //   currentWheelElements.forEach((element) => {
+  //     element.classList.remove("Wheel__Number--Active");
+  //   });
+  // }
 
-  function handleWheelIntersection(entry) {
-    if (typeof entry === "undefined") return;
+  // function addActiveClassToWheel(entry) {
+  //   if (typeof entry === "undefined") {
+  //     return;
+  //   }
 
-    removeActiveClassFromAllWheels(entry);
+  //   entry.classList.add("Wheel__Number--Active");
+  // }
 
-    setWheelValue(parseInt(entry.textContent, 10));
-    setGlobalCalculatorState({ wheelValue, wheelContext, calculatorIndex });
+  // function handleWheelIntersection(entry) {
+  //   if (typeof entry === "undefined") {
+  //     return;
+  //   }
 
-    addActiveClassToWheel(entry);
-  }
+  //   removeActiveClassFromAllWheels(entry);
+  //   setWheelState(parseInt(entry.textContent, 10));
+  //   addActiveClassToWheel(entry);
+  // }
 
-  function observerIsIntersecting(entries) {
-    if (typeof entries === "undefined") return;
+  // function observerIsIntersecting(entries) {
+  //   if (typeof entries === "undefined") {
+  //     return;
+  //   }
 
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+  //   entries.forEach((entry) => {
+  //     if (!entry.isIntersecting) {
+  //       return;
+  //     }
 
-      handleWheelIntersection(entry.target);
-    });
-  }
+  //     handleWheelIntersection(entry.target);
+  //   });
+  // }
 
-  function initIntersectionObserver() {
-    observer = new IntersectionObserver(observerIsIntersecting, {
-      root: inputWheelRef.current,
-      threshold: [0.9],
-    });
+  // function initIntersectionObserver() {
+  //   const wheelElements = inputWheelRef.current.querySelectorAll(".Wheel__Number");
 
-    wheel.forEach((element) => {
-      if (typeof element === "undefined") return;
+  //   observer = new IntersectionObserver(observerIsIntersecting, {
+  //     root: inputWheelRef.current,
+  //     threshold: [0.9],
+  //   });
 
-      observer.observe(element);
-    });
-  }
+  //   wheelElements.forEach((element) => {
+  //     if (typeof element === "undefined") {
+  //       return;
+  //     }
 
-  function clearInputWheelObserver() {
-    wheel.forEach((element) => {
-      if (typeof element === "undefined") return;
+  //     observer.observe(element);
+  //   });
+  // }
 
-      observer.unobserve(element);
-    });
-  }
+  // function clearInputWheelObserver() {
+  //   const wheelElements = inputWheelRef.current.querySelectorAll(".Wheel__Number");
 
-  useEffect(() => {
-    wheel = inputWheelRef.current.querySelectorAll(".Wheel__Number");
+  //   wheelElements.forEach((element) => {
+  //     if (typeof element === "undefined") {
+  //       return;
+  //     }
 
-    initIntersectionObserver();
-    focusDefaultValue();
+  //     observer.unobserve(element);
+  //   });
+  // }
 
-    return () => {
-      clearInputWheelObserver();
-    };
-  }, [wheelValue]);
+  // useEffect(() => {
+  //   wheelElements = inputWheelRef.current.querySelectorAll(".Wheel__Number");
+
+  //   initIntersectionObserver();
+  //   focusInitialValue();
+
+  //   return () => {
+  //     clearInputWheelObserver();
+  //   };
+  // }, []);
 
   return (
-    <div className={Class("WheelContainer")} key={uuidv4()} ref={inputWheelRef}>
-      <ArrowButton direction="Prev" wheel={inputWheelRef} />
-      <WheelElements wheelContext={wheelContext} range={wheelRange} />
-      <ArrowButton direction="Next" wheel={inputWheelRef} />
+    <div className={Class("WheelContainer")} key={uuidv4()}>
+      <ArrowButton direction="Prev" />
+      <Wheel calculatorIndex={calculatorIndex} type={type} />
+      <ArrowButton direction="Next" />
     </div>
   );
 };
 
 WheelInput.defaultProps = {
-  ownState: {},
   calculatorIndex: 0,
-  setGlobalCalculatorState: () => {},
+  type: "",
 };
 
 WheelInput.propTypes = {
-  ownState: PropTypes.PropTypes.objectOf(PropTypes.object),
   calculatorIndex: PropTypes.number,
-  setGlobalCalculatorState: PropTypes.func,
+  type: PropTypes.string,
 };

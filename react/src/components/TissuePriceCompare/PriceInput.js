@@ -1,74 +1,75 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { useSetRecoilState } from "recoil";
+
+import { price } from "~components/TissuePriceCompare/state";
 
 import "./PriceInput.scss";
-import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
 
-export const PriceInput = ({ context, dataDefaultValue, placeholder, value }) => {
-  const {
-    [context]: [, setInput],
-  } = useContext(TissuePriceCalculatorContext);
+export const PriceInput = ({ calculatorIndex }) => {
+  const setPriceState = useSetRecoilState(price(calculatorIndex));
+  const [priceInput, setPriceInput] = useState("");
 
-  const numbersOnly = (element, inputValue) => {
+  function displayDecimalizeValue(inputValue) {
+    const digitRegex = /\D/g;
+    const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
+
+    setPriceInput(inputValue.replace(digitRegex, "").replace(decimalCommaRegex, ","));
+  }
+
+  function numbersOnly(inputValue) {
     const numberRegex = /[^0-9,]/g;
 
     if (numberRegex.test(inputValue)) {
-      element.target.value = inputValue.replace(numberRegex, "");
+      setPriceInput(inputValue.replace(numberRegex, ""));
       return false;
     }
+
     return true;
-  };
+  }
 
-  const validatePrice = (clickedElement) => {
-    const inputValue = clickedElement.target.value;
+  function cleanNumberInput(validNumber) {
+    return validNumber.replace(/[,]+/g, "").trim();
+  }
 
-    if (inputValue.length === 0) return false;
+  function validatePrice(inputValue) {
+    const isValidNumber = numbersOnly(inputValue);
 
-    const inputIsValid = numbersOnly(clickedElement, inputValue);
-
-    if (inputIsValid) {
-      const digitRegex = /\D/g;
-      const decimalCommaRegex = /\B(?=(\d{2})(?!\d))/g;
-
-      clickedElement.target.value = inputValue
-        .replace(digitRegex, "")
-        .replace(decimalCommaRegex, ",");
-
-      return parseFloat(inputValue);
+    if (!isValidNumber) {
+      return false;
     }
-    return false;
-  };
 
-  const validateInput = (clickedElement) => {
-    if (typeof clickedElement === "undefined") return;
+    const cleanedValidNumber = cleanNumberInput(inputValue);
 
-    setInput(validatePrice(clickedElement));
+    setPriceState(cleanedValidNumber);
+    displayDecimalizeValue(inputValue);
+
+    return true;
+  }
+
+  const validateInput = (event) => {
+    event.preventDefault();
+
+    const inputValue = event.target.value;
+
+    if (typeof inputValue === "undefined") {
+      return;
+    }
+
+    validatePrice(inputValue);
   };
 
   return (
     <div className="PriceContainer">
-      <input
-        className="Price__Input"
-        data-default={dataDefaultValue}
-        defaultValue={value}
-        placeholder={placeholder}
-        type="tel"
-        onKeyUp={validateInput}
-      />
+      <input className="Price__Input" placeholder="Gesamtpreis eingeben" type="tel" onChange={validateInput} value={priceInput} />
     </div>
   );
 };
 
 PriceInput.defaultProps = {
-  context: "",
-  dataDefaultValue: "",
-  placeholder: "",
-  value: () => {},
+  calculatorIndex: 0,
 };
 
 PriceInput.propTypes = {
-  context: PropTypes.string,
-  dataDefaultValue: PropTypes.string,
-  placeholder: PropTypes.string,
-  value: PropTypes.func,
+  calculatorIndex: PropTypes.number,
 };

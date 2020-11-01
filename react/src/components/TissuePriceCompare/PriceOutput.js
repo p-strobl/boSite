@@ -1,30 +1,39 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Class from "classnames";
 import PropTypes from "prop-types";
+import { useRecoilValue } from "recoil";
 
-import { TissuePriceCalculatorContext } from "~context/TissuePriceCalculatorContext";
+import { calculator, price } from "~components/TissuePriceCompare/state";
 
 import "./PriceOutput.scss";
 
-export const PriceOutput = ({ localPrice }) => {
-  if (typeof localPrice === "undefined" || localPrice === 0) return false;
+export const PriceOutput = ({ calculatorIndex }) => {
+  const { roll, sheets, layer } = useRecoilValue(calculator(calculatorIndex));
+  const calculatorPriceState = useRecoilValue(price(calculatorIndex));
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  console.log("localPrice", localPrice);
+  const calculatePrice = () => {
+    if (roll === 0 || sheets === 0 || layer === 0 || calculatorPriceState === 0) {
+      return 0;
+    }
 
-  // const {
-  //   rollCountContext: [, setRollerCount],
-  //   sheetCountContext: [, setSheetCount],
-  //   layerCountContext: [, setLayerCount],
-  //   priceContext: [, setPrice],
-  //   defaultValues,
-  // } = useContext(TissuePriceCalculatorContext);
-  //
-  // const calculatorSetter = {
-  //   rollCount: setRollerCount,
-  //   sheetCount: setSheetCount,
-  //   layerCount: setLayerCount,
-  //   price: setPrice,
-  // };
+    const totalLayerCount = roll * sheets * layer;
+    const singleLayerPrice = calculatorPriceState / totalLayerCount;
+    const calculatedTotalPrice = singleLayerPrice.toFixed(6) / 100;
+
+    setTotalPrice(calculatedTotalPrice);
+  };
+
+  const toLocalPrice = (value) => {
+    if (value === 0) {
+    }
+
+    setLocalPrice(
+      value.toLocaleString("de-DE", {
+        minimumFractionDigits: 6,
+      }),
+    );
+  };
 
   function determineCheapestPrice() {
     const calculatorOutput = Array.from(document.querySelectorAll(".PriceOutput__Container"));
@@ -36,10 +45,7 @@ export const PriceOutput = ({ localPrice }) => {
       const dotRegex = ".";
       const euroRegex = /[€]+/g;
       const layerRegex = /pro Lage/g;
-      const parsedPrice = element.textContent
-        .replace(commaRegex, dotRegex)
-        .replace(euroRegex, "")
-        .replace(layerRegex, "");
+      const parsedPrice = element.textContent.replace(commaRegex, dotRegex).replace(euroRegex, "").replace(layerRegex, "");
 
       parsedElement.push([element, parseFloat(parsedPrice)]);
     });
@@ -112,13 +118,10 @@ export const PriceOutput = ({ localPrice }) => {
   }
 
   function resetCalculatorState() {
-    if (typeof calculatorSetter === "undefined" || typeof defaultValues === "undefined")
-      return false;
+    if (typeof calculatorSetter === "undefined" || typeof defaultValues === "undefined") return false;
 
     Object.entries(defaultValues).forEach(([defaultKey, defaultValue]) => {
-      const setter = Object.entries(calculatorSetter).find(
-        ([setterKey]) => defaultKey === setterKey,
-      );
+      const setter = Object.entries(calculatorSetter).find(([setterKey]) => defaultKey === setterKey);
       setter[1](defaultValue);
       return true;
     });
@@ -134,16 +137,17 @@ export const PriceOutput = ({ localPrice }) => {
   }
 
   useEffect(() => {
-    const filledOutputElements = determineCheapestPrice();
-    setClassOnOutputElements(filledOutputElements);
-  }, [localePrice]);
+    calculatePrice();
+    // const filledOutputElements = determineCheapestPrice();
+    // setClassOnOutputElements(filledOutputElements);
+  }, [roll, sheets, layer, calculatorPriceState]);
 
   return (
     <div
       className={Class("PriceOutput__Container", {
-        "PriceOutput__Container--Show": totalPrice,
+        "PriceOutput__Container--Show": price,
       })}>
-      {localePrice}
+      {totalPrice}
       <span className={Class("PriceOutput__Currency")}>€</span>
       <span className={Class("PriceOutput__Text")}>pro Lage</span>
       <button
@@ -157,9 +161,9 @@ export const PriceOutput = ({ localPrice }) => {
 };
 
 PriceOutput.defaultProps = {
-  totalPrice: 0,
+  calculatorIndex: 0,
 };
 
 PriceOutput.propTypes = {
-  totalPrice: PropTypes.number,
+  calculatorIndex: PropTypes.number,
 };
