@@ -19,8 +19,8 @@
     "react": "cd react && npm start",
     "server": "cd server && node server.js",
     "build:react": "cd react npm build",
-    "build": "npm-run-all build:react start",
-    "start": "cd server && npm install && node server.js"
+    "build": "cd react && npm run build",
+    "start": "cd server && node server.js"
   },
   "homepage": "https://github.com/p-strobl/boSite#readme",
   "devDependencies": {
